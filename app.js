@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
   bootstrap();
   document.getElementById("btnView").addEventListener("click", loadData);
 
-  ["spvSel", "roundSel", "projectSel"].forEach(id => {
+  ["spvSel", "roundSel"].forEach(id => {
     document.getElementById(id).addEventListener("change", refreshCascade);
   });
 });
@@ -69,9 +69,8 @@ async function bootstrap() {
 
 // ── CASCADING DROPDOWNS ─────────────────────────────────────────────────────
 function refreshCascade() {
-  const spv     = document.getElementById("spvSel").value;
-  const round_  = document.getElementById("roundSel").value;
-  const project = document.getElementById("projectSel").value;
+  const spv    = document.getElementById("spvSel").value;
+  const round_ = document.getElementById("roundSel").value;
 
   // Round options: only rounds present in taxonomy under the chosen SPV.
   const roundsForSpv = uniqueSorted(
@@ -79,22 +78,12 @@ function refreshCascade() {
   );
   resetSelect("roundSel", roundsForSpv, round_, "All Rounds");
 
-  // Project options: filtered by SPV + Round.
+  // Plaza options: filtered by SPV + Round.
   const newRound = document.getElementById("roundSel").value;
-  const projectsForScope = uniqueSorted(
-    TAXONOMY_ROWS
-      .filter(r => (!spv || r.spv === spv) && (!newRound || r.round === newRound))
-      .map(r => r.project)
-  );
-  resetSelect("projectSel", projectsForScope, project, "All Projects");
-
-  // Plaza options: filtered by SPV + Round + Project.
-  const newProject = document.getElementById("projectSel").value;
   const plazasForScope = uniqueSorted(
     TAXONOMY_ROWS
       .filter(r => (!spv || r.spv === spv)
-                && (!newRound || r.round === newRound)
-                && (!newProject || r.project === newProject))
+                && (!newRound || r.round === newRound))
       .map(r => r.excel_plaza)
   );
   resetSelect("plazaSel", plazasForScope, document.getElementById("plazaSel").value, "All Plazas");
@@ -114,12 +103,11 @@ function uniqueSorted(arr) {
 
 // ── ANALYTICS LOAD ──────────────────────────────────────────────────────────
 async function loadData() {
-  const spv     = document.getElementById("spvSel").value;
-  const round_  = document.getElementById("roundSel").value;
-  const project = document.getElementById("projectSel").value;
-  const plaza   = document.getElementById("plazaSel").value;
-  const year    = parseInt(document.getElementById("yearSel").value);
-  const month   = parseInt(document.getElementById("monthSel").value);
+  const spv    = document.getElementById("spvSel").value;
+  const round_ = document.getElementById("roundSel").value;
+  const plaza  = document.getElementById("plazaSel").value;
+  const year   = parseInt(document.getElementById("yearSel").value);
+  const month  = parseInt(document.getElementById("monthSel").value);
 
   if (!year || !month) {
     alert("Please select a Year and Month.");
@@ -128,14 +116,13 @@ async function loadData() {
 
   showOnly("loadingState");
 
-  const qs = new URLSearchParams({
-    spv, round: round_, project, plaza, year, month,
-  });
+  const filterQs   = new URLSearchParams({ spv, round: round_, plaza });
+  const dataQs     = new URLSearchParams({ spv, round: round_, plaza, year, month });
 
   try {
     const [dataRes, trendRes] = await Promise.all([
-      fetch(`${API}/api/aggregate?${qs}`),
-      fetch(`${API}/api/aggregate-trend?${new URLSearchParams({ spv, round: round_, project, plaza })}`),
+      fetch(`${API}/api/aggregate?${dataQs}`),
+      fetch(`${API}/api/aggregate-trend?${filterQs}`),
     ]);
 
     const dataJson = await dataRes.json().catch(() => ({}));
@@ -232,9 +219,8 @@ function renderResult(rec, trendArr) {
 function buildScopeMeta(rec) {
   const sc = rec.scope || {};
   const bits = [];
-  if (sc.spv)     bits.push(`SPV ${sc.spv}`);
-  if (sc.round)   bits.push(`Round ${sc.round}`);
-  if (sc.project) bits.push(`Project ${sc.project}`);
+  if (sc.spv)   bits.push(`SPV ${sc.spv}`);
+  if (sc.round) bits.push(`Round ${sc.round}`);
   const plazasN = rec.plazas_included?.length || sc.plaza_count || 0;
   bits.push(plazasN === 1
     ? `1 plaza`
