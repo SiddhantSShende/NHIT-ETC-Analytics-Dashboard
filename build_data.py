@@ -30,6 +30,7 @@ from typing import Optional
 
 from constants import MONTH_MAP, MONTH_NAMES, NHIT_PLAZAS
 from parser import parse_pdf
+from taxonomy import load_taxonomy
 
 logging.basicConfig(
     level=logging.INFO,
@@ -51,24 +52,50 @@ _PDF_NAME_RE = re.compile(
 )
 
 
+# Words that occur in nearly every plaza name and would cause spurious
+# substring/token matches if kept (e.g. "Bhadarabad TOLL PLAZA" must not
+# match "3M Toll Plaza" just because they share the words "toll plaza").
+_PLAZA_STOPWORDS = {"toll", "plaza", "fee", "ro"}
+
+
+def _plaza_key(s: str) -> str:
+    """Strip plaza/toll/fee stopwords and collapse to alphanumeric tokens."""
+    tokens = [
+        t for t in re.findall(r"[a-z0-9]+", s.lower())
+        if t not in _PLAZA_STOPWORDS
+    ]
+    return " ".join(tokens)
+
+
 # ── Plaza name reconciliation ───────────────────────────────────────────────
 def match_nhit_plaza(raw_name: str) -> Optional[str]:
-    """Map a raw PDF plaza string to its canonical NHIT entry, or None."""
-    raw = str(raw_name).lower().strip()
-    if not raw:
+    """Map a raw PDF plaza string to its canonical NHIT entry, or None.
+
+    Stopwords like "toll" and "plaza" are stripped first so that two plazas
+    aren't matched to each other simply because both end in "TOLL PLAZA".
+    """
+    if raw_name is None:
         return None
-    if raw in NHIT_LOWER:
-        return NHIT_PLAZAS[NHIT_LOWER.index(raw)]
-    for i, pl in enumerate(NHIT_LOWER):
-        if pl == raw or pl in raw or raw in pl:
-            return NHIT_PLAZAS[i]
-    raw_tokens = set(re.split(r"\s+", raw))
-    best, best_score = None, 0
-    for i, pl in enumerate(NHIT_LOWER):
-        score = len(raw_tokens & set(pl.split()))
-        if score >= 2 and score > best_score:
-            best, best_score = NHIT_PLAZAS[i], score
-    return best
+    raw_key = _plaza_key(raw_name)
+    if not raw_key:
+        return None
+    if raw_key in _CANON_KEYS:
+        return _CANON_KEYS[raw_key]
+    # Tight substring match on the cleaned keys (catches small typos like
+    # "kalajhar"/"kalajhar toll plaza").
+    for canon_key, canon_name in _CANON_KEYS.items():
+        if canon_key == raw_key or canon_key in raw_key or raw_key in canon_key:
+            # Avoid empty-side matches and very short keys (< 4 chars) that
+            # could swallow many plazas.
+            if min(len(canon_key), len(raw_key)) >= 4:
+                return canon_name
+    return None
+
+
+# Pre-compute canonical key -> canonical name once so match_nhit_plaza is O(1)
+# in the common path. Built lazily to allow test-time monkey-patching of
+# NHIT_PLAZAS if ever needed.
+_CANON_KEYS: dict[str, str] = {_plaza_key(p): p for p in NHIT_PLAZAS}
 
 
 # ── PDF discovery ───────────────────────────────────────────────────────────
@@ -269,6 +296,20 @@ def main(argv: list[str] | None = None) -> int:
         cur = conn.execute("INSERT INTO plazas(name) VALUES(?)", (p,))
         plaza_ids[p] = cur.lastrowid
 
+    # Load the SPV/Round/Project/Plaza taxonomy from data/Project details.xlsx
+    # so cascading dropdowns + aggregations stay driven by the analyst's source
+    # spreadsheet rather than a hardcoded table.
+    try:
+        taxonomy = load_taxonomy(canonical_plazas=NHIT_PLAZAS)
+        log.info(
+            "Taxonomy: %d rows, SPVs=%s, rounds=%s, unmatched=%s",
+            len(taxonomy["rows"]), taxonomy["spvs"],
+            taxonomy["rounds"], taxonomy["unmatched"],
+        )
+    except FileNotFoundError as e:
+        log.warning("Taxonomy unavailable (%s) — proceeding without it.", e)
+        taxonomy = {"rows": [], "spvs": [], "rounds": [], "unmatched": []}
+
     snapshot = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "plazas": sorted(NHIT_PLAZAS),
@@ -278,6 +319,7 @@ def main(argv: list[str] | None = None) -> int:
         "data": {p: {} for p in NHIT_PLAZAS},
         "monthly_totals": {p: [] for p in NHIT_PLAZAS},
         "validation_warnings": [],
+        "taxonomy": taxonomy,
     }
 
     for entry in parsed:

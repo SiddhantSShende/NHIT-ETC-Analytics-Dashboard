@@ -8,14 +8,15 @@ NHIT_PLAZAS: list[str] = [
     "Chamari Toll Plaza", "Chhapar TOLL PLAZA", "Dahalapara", "Daroada",
     "Dasarkhed Toll Plaza", "Dhaneshwar", "Dukkavanipalam Toll Plaza",
     "Faridpur Toll Plaza", "Gadanki toll plaza", "Galia", "Hattargi", "Hebbalu",
-    "KHEMANA TOLL PLAZA", "Kalaparru Toll Plaza", "Kelapur",
-    "Khawasa Toll Plaza", "Kherwasani", "Kognoli", "Kurankhed Toll Plaza",
-    "Madai Fee Plaza", "Madapam Toll Plaza", "Mahasamudram",
-    "Maigalganj Toll Plaza", "Marripalem Toll Plaza", "Mohtara Toll Plaza",
-    "Mokha Toll Plaza", "Mudhipar TOLL PLAZA", "Nashirabad Toll Plaza",
-    "Nathavalasa", "Odaki Pipkhar", "Patgaon Toll Plaza", "Pullur Toll Plaza",
-    "Raibha", "Raksha", "Tarapoungi plaza", "Taroda-Kasba Toll Plaza",
-    "UNDVARIYA TOLL PLAZA", "VeeraValli TOLL PLAZA",
+    "KHEMANA TOLL PLAZA", "Kalajhar Toll Plaza", "Kalaparru Toll Plaza",
+    "Kelapur", "Khawasa Toll Plaza", "Kherwasani", "Kognoli",
+    "Kurankhed Toll Plaza", "Madai Fee Plaza", "Madapam Toll Plaza",
+    "Mahasamudram", "Maigalganj Toll Plaza", "Marripalem Toll Plaza",
+    "Mohtara Toll Plaza", "Mokha Toll Plaza", "Mudhipar TOLL PLAZA",
+    "Nashirabad Toll Plaza", "Nathavalasa", "Odaki Pipkhar",
+    "Patgaon Toll Plaza", "Pullur Toll Plaza", "Raibha", "Raksha",
+    "Tarapoungi plaza", "Taroda-Kasba Toll Plaza", "UNDVARIYA TOLL PLAZA",
+    "VeeraValli TOLL PLAZA",
 ]
 
 MONTH_MAP: dict[str, int] = {

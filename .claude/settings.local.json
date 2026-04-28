@@ -6,7 +6,8 @@
       "Bash(curl -sS \"http://localhost:5050/api/meta\")",
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('plazas:', len\\(d['plazas']\\), '| years:', d['years'], '| months:', [m['name'] for m in d['months']]\\)\")",
       "Bash(netstat -ano)",
-      "Bash(python build_data.py)"
+      "Bash(python build_data.py)",
+      "Bash(pip install *)"
     ]
   }
 }

@@ -138,6 +138,186 @@ def meta():
     })
 
 
+@app.route("/api/taxonomy")
+def taxonomy():
+    """Hierarchy used to drive the cascading SPV → Round → Project → Plaza
+    dropdowns in the UI. Each row carries its canonical plaza name (or null
+    if no PDF data is available for it)."""
+    tx = SNAPSHOT.get("taxonomy", {})
+    return jsonify({
+        "rows":      tx.get("rows", []),
+        "spvs":      tx.get("spvs", []),
+        "rounds":    tx.get("rounds", []),
+        "unmatched": tx.get("unmatched", []),
+    })
+
+
+# ── Aggregation helpers ─────────────────────────────────────────────────────
+def _filter_taxonomy_rows(spv: str, round_: str, project: str, plaza: str):
+    """Return all taxonomy rows whose canonical plaza has parsed data, after
+    applying any non-empty filters. Filter values are case-insensitive
+    exact matches on the corresponding column."""
+    rows = SNAPSHOT.get("taxonomy", {}).get("rows", [])
+    out = []
+    for r in rows:
+        if not r.get("canonical_plaza"):
+            continue
+        if spv     and r["spv"].lower()           != spv.lower():     continue
+        if round_  and r["round"].lower()         != round_.lower():  continue
+        if project and r["project"].lower()       != project.lower(): continue
+        if plaza   and r["excel_plaza"].lower()   != plaza.lower():   continue
+        out.append(r)
+    return out
+
+
+def _aggregate_plazas_for_month(plazas: list[str], year: int, month: int) -> dict | None:
+    """Sum per-category totals across the given canonical plazas for one
+    (year, month). Returns a record matching the shape of /api/data."""
+    key = f"{year}-{month:02d}"
+    cat_map: dict[str, dict] = {}
+    plazas_with_data = []
+
+    for plaza in plazas:
+        rec = SNAPSHOT["data"].get(plaza, {}).get(key)
+        if not rec:
+            continue
+        plazas_with_data.append(plaza)
+        for c in rec["categories"]:
+            d = cat_map.setdefault(c["name"], {"count": 0, "amount": 0.0})
+            d["count"]  += c["count"]
+            d["amount"] += c["amount"]
+
+    if not cat_map:
+        return None
+
+    cats = [
+        {"name": k, "count": v["count"], "amount": round(v["amount"], 2)}
+        for k, v in cat_map.items()
+    ]
+    cats.sort(key=lambda c: c["amount"], reverse=True)
+
+    total_count  = sum(c["count"]  for c in cats)
+    total_amount = round(sum(c["amount"] for c in cats), 2)
+
+    enriched = []
+    for c in cats:
+        enriched.append({
+            "name":         c["name"],
+            "count":        c["count"],
+            "amount":       c["amount"],
+            "share_count":  round(c["count"]  / total_count  * 100, 2) if total_count  else 0.0,
+            "share_amount": round(c["amount"] / total_amount * 100, 2) if total_amount else 0.0,
+            "avg_fare":     round(c["amount"] / c["count"], 2) if c["count"] else 0.0,
+        })
+
+    top_amt = max(enriched, key=lambda c: c["amount"])
+    top_cnt = max(enriched, key=lambda c: c["count"])
+
+    from constants import MONTH_NAMES as _MN
+    return {
+        "year":          year,
+        "month":         month,
+        "month_name":    _MN[month],
+        "categories":    enriched,
+        "total_count":   total_count,
+        "total_amount":  total_amount,
+        "avg_per_txn":   round(total_amount / total_count, 2) if total_count else 0.0,
+        "avg_count_per_day":   int(round(total_count / 30.0)) if total_count else 0,
+        "avg_revenue_per_day": round(total_amount / 30.0, 2) if total_amount else 0.0,
+        "category_count": len(enriched),
+        "top_by_amount": {"name": top_amt["name"], "amount": top_amt["amount"]},
+        "top_by_count":  {"name": top_cnt["name"], "count":  top_cnt["count"]},
+        "plazas_included": plazas_with_data,
+    }
+
+
+def _scope_label(spv, round_, project, plaza):
+    """Human-readable description of which scope is being aggregated."""
+    if plaza:   return plaza
+    if project: return f"{project} ({round_ or 'All Rounds'}, {spv or 'All SPVs'})"
+    if round_:  return f"{spv or 'All SPVs'} · {round_}"
+    if spv:     return f"{spv} · All Rounds"
+    return "All NHIT Plazas"
+
+
+@app.route("/api/aggregate")
+def aggregate():
+    """Hierarchical aggregation. Any of `spv`, `round`, `project`, `plaza`
+    may be empty — empty means "include everything below this level"."""
+    spv     = request.args.get("spv",     "").strip()
+    round_  = request.args.get("round",   "").strip()
+    project = request.args.get("project", "").strip()
+    plaza   = request.args.get("plaza",   "").strip()
+    try:
+        year  = int(request.args.get("year",  "") or 0)
+        month = int(request.args.get("month", "") or 0)
+    except ValueError:
+        return jsonify({"error": "year and month must be integers"}), 400
+    if not year or not month:
+        return jsonify({"error": "year and month are required"}), 400
+    if not (1 <= month <= 12):
+        return jsonify({"error": "month must be between 1 and 12"}), 400
+
+    rows = _filter_taxonomy_rows(spv, round_, project, plaza)
+    if not rows:
+        return jsonify({
+            "error": "No plazas match the selected filters.",
+            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
+        }), 404
+
+    canon_plazas = sorted({r["canonical_plaza"] for r in rows})
+    rec = _aggregate_plazas_for_month(canon_plazas, year, month)
+    if not rec:
+        return jsonify({
+            "error": f"No data found for the selected filters in {year}-{month:02d}.",
+            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
+            "candidate_plazas": canon_plazas,
+        }), 404
+
+    rec["scope"] = {
+        "label":   _scope_label(spv, round_, project, plaza),
+        "spv":     spv     or None,
+        "round":   round_  or None,
+        "project": project or None,
+        "plaza":   plaza   or None,
+        "plaza_count": len(canon_plazas),
+    }
+    return jsonify({"record": rec})
+
+
+@app.route("/api/aggregate-trend")
+def aggregate_trend():
+    """Monthly count + revenue series across every available report, summed
+    across all plazas matching the SPV/Round/Project/Plaza filters."""
+    spv     = request.args.get("spv",     "").strip()
+    round_  = request.args.get("round",   "").strip()
+    project = request.args.get("project", "").strip()
+    plaza   = request.args.get("plaza",   "").strip()
+
+    rows = _filter_taxonomy_rows(spv, round_, project, plaza)
+    if not rows:
+        return jsonify({"trend": [], "scope": _scope_label(spv, round_, project, plaza)})
+
+    canon_plazas = sorted({r["canonical_plaza"] for r in rows})
+    trend = []
+    for m in SNAPSHOT["months"]:
+        rec = _aggregate_plazas_for_month(canon_plazas, m["year"], m["month"])
+        if rec:
+            trend.append({
+                "year":       m["year"],
+                "month":      m["month"],
+                "month_name": rec["month_name"],
+                "label":      m["label"],
+                "count":      rec["total_count"],
+                "amount":     rec["total_amount"],
+            })
+    trend.sort(key=lambda x: (x["year"], x["month"]))
+    return jsonify({
+        "scope": _scope_label(spv, round_, project, plaza),
+        "trend": trend,
+    })
+
+
 @app.route("/api/data")
 def data():
     """Full analytics for one (plaza, year, month)."""

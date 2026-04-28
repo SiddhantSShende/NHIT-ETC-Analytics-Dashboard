@@ -1,11 +1,11 @@
 /* NHIT | ETC Analytics Dashboard — frontend.
  *
- * The backend serves everything from a pre-built in-memory snapshot, so every
- * call returns in a few milliseconds. We keep this file focused on:
- *  - dropdown population (/api/meta)
- *  - one analytics fetch on submit (/api/data)
- *  - one trend fetch in parallel (/api/trend)
- *  - rendering KPIs, tables, pies, dual-axis bar comparison and trend chart
+ * Hierarchical filter flow:
+ *   SPV → Round → Project → Plaza → Year + Month
+ *
+ * Each filter has an "All …" option. Leaving a level blank means
+ * "include everything below it"; the backend (`/api/aggregate`) sums
+ * across every plaza that matches.
  */
 
 const API = "";   // same-origin (Flask serves index.html on :5050)
@@ -16,68 +16,129 @@ const PIE_COLORS = [
   "#ef476f", "#118ab2", "#ffa552", "#4cc9f0",
 ];
 
-// Chart instances are tracked here. We can't stash them on `window` because
-// elements with an `id` attribute (e.g. <canvas id="barChart">) are auto-
-// exposed on the global object by the browser, which would shadow our
-// references and explode the `.destroy()` call.
+// Chart instances — kept off `window` to avoid colliding with elements
+// whose `id` attribute the browser exposes as global properties.
 const charts = {};
-
-// One source of truth for which UI state is visible.
 const STATES = ["hintState", "loadingState", "noDataState", "dashboard"];
 function showOnly(id) {
   STATES.forEach(s => document.getElementById(s)?.classList.toggle("hidden", s !== id));
 }
 
+// Taxonomy held in memory so cascading dropdowns don't need round-trips.
+let TAXONOMY_ROWS = [];
+let META = { plazas: [], years: [], months: [] };
+
 window.addEventListener("DOMContentLoaded", () => {
-  loadMeta();
+  bootstrap();
   document.getElementById("btnView").addEventListener("click", loadData);
+
+  ["spvSel", "roundSel", "projectSel"].forEach(id => {
+    document.getElementById(id).addEventListener("change", refreshCascade);
+  });
 });
 
-// ── META ─────────────────────────────────────────────────────────────────────
-async function loadMeta() {
+// ── BOOTSTRAP ────────────────────────────────────────────────────────────────
+async function bootstrap() {
   try {
-    const res = await fetch(`${API}/api/meta`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const d = await res.json();
+    const [meta, taxonomy] = await Promise.all([
+      fetch(`${API}/api/meta`).then(r => r.ok ? r.json() : Promise.reject(r.status)),
+      fetch(`${API}/api/taxonomy`).then(r => r.ok ? r.json() : Promise.reject(r.status)),
+    ]);
+    META = meta;
+    TAXONOMY_ROWS = taxonomy.rows || [];
 
-    fillSelect("plazaSel", d.plazas || [], p => ({ v: p, t: p }));
-    fillSelect("yearSel",  d.years  || [], y => ({ v: y, t: y }));
-    fillSelect("monthSel", d.months || [], m => ({ v: m.num, t: m.name }));
+    // Year + Month — populated once.
+    fillSelect("yearSel",  meta.years  || [], y => ({ v: y, t: y }), "-- Year --");
+    fillSelect("monthSel", meta.months || [], m => ({ v: m.num, t: m.name }), "-- Month --");
+
+    // SPV first — once chosen it filters the rest. We seed the others empty
+    // and let `refreshCascade` populate them based on current selection.
+    fillSelect("spvSel",     taxonomy.spvs   || [], v => ({ v, t: v }), "All SPVs");
+    refreshCascade();
 
     const sub = document.getElementById("hintSub");
-    if (d.plazas && d.plazas.length) {
-      sub.textContent =
-        `${d.plazas.length} NHIT plazas · ${d.years?.length || 0} year(s) · ${d.months?.length || 0} month(s) of data ready.`;
-    } else {
-      sub.textContent = "No reports loaded. Drop PDFs in downloads/vc_monthly and run python build_data.py.";
-    }
+    sub.textContent =
+      `${TAXONOMY_ROWS.length} plazas across ${(taxonomy.spvs || []).length} SPVs · ` +
+      `${(meta.years || []).length} year(s) · ${(meta.months || []).length} month(s) of data ready.`;
   } catch (e) {
+    console.error(e);
     document.getElementById("hintSub").textContent =
       "Cannot reach API. Run `python server.py` and reload.";
   }
 }
 
+// ── CASCADING DROPDOWNS ─────────────────────────────────────────────────────
+function refreshCascade() {
+  const spv     = document.getElementById("spvSel").value;
+  const round_  = document.getElementById("roundSel").value;
+  const project = document.getElementById("projectSel").value;
+
+  // Round options: only rounds present in taxonomy under the chosen SPV.
+  const roundsForSpv = uniqueSorted(
+    TAXONOMY_ROWS.filter(r => !spv || r.spv === spv).map(r => r.round)
+  );
+  resetSelect("roundSel", roundsForSpv, round_, "All Rounds");
+
+  // Project options: filtered by SPV + Round.
+  const newRound = document.getElementById("roundSel").value;
+  const projectsForScope = uniqueSorted(
+    TAXONOMY_ROWS
+      .filter(r => (!spv || r.spv === spv) && (!newRound || r.round === newRound))
+      .map(r => r.project)
+  );
+  resetSelect("projectSel", projectsForScope, project, "All Projects");
+
+  // Plaza options: filtered by SPV + Round + Project.
+  const newProject = document.getElementById("projectSel").value;
+  const plazasForScope = uniqueSorted(
+    TAXONOMY_ROWS
+      .filter(r => (!spv || r.spv === spv)
+                && (!newRound || r.round === newRound)
+                && (!newProject || r.project === newProject))
+      .map(r => r.excel_plaza)
+  );
+  resetSelect("plazaSel", plazasForScope, document.getElementById("plazaSel").value, "All Plazas");
+}
+
+function resetSelect(id, values, prevValue, allLabel) {
+  const sel = document.getElementById(id);
+  sel.innerHTML = `<option value="">${allLabel}</option>` +
+    values.map(v => `<option value="${escapeAttr(v)}">${escapeHtml(v)}</option>`).join("");
+  // Preserve previous selection if it's still valid.
+  if (values.includes(prevValue)) sel.value = prevValue;
+}
+
+function uniqueSorted(arr) {
+  return Array.from(new Set(arr.filter(Boolean))).sort();
+}
+
 // ── ANALYTICS LOAD ──────────────────────────────────────────────────────────
 async function loadData() {
-  const plaza = document.getElementById("plazaSel").value;
-  const year  = parseInt(document.getElementById("yearSel").value);
-  const month = parseInt(document.getElementById("monthSel").value);
+  const spv     = document.getElementById("spvSel").value;
+  const round_  = document.getElementById("roundSel").value;
+  const project = document.getElementById("projectSel").value;
+  const plaza   = document.getElementById("plazaSel").value;
+  const year    = parseInt(document.getElementById("yearSel").value);
+  const month   = parseInt(document.getElementById("monthSel").value);
 
-  if (!plaza || !year || !month) {
-    alert("Please select a Plaza, Year and Month.");
+  if (!year || !month) {
+    alert("Please select a Year and Month.");
     return;
   }
 
   showOnly("loadingState");
 
+  const qs = new URLSearchParams({
+    spv, round: round_, project, plaza, year, month,
+  });
+
   try {
-    // Both calls are O(ms) on the new backend, so fire in parallel.
     const [dataRes, trendRes] = await Promise.all([
-      fetch(`${API}/api/data?plaza=${encodeURIComponent(plaza)}&year=${year}&month=${month}`),
-      fetch(`${API}/api/trend?plaza=${encodeURIComponent(plaza)}`),
+      fetch(`${API}/api/aggregate?${qs}`),
+      fetch(`${API}/api/aggregate-trend?${new URLSearchParams({ spv, round: round_, project, plaza })}`),
     ]);
 
-    const dataJson  = await dataRes.json().catch(() => ({}));
+    const dataJson = await dataRes.json().catch(() => ({}));
 
     if (!dataRes.ok) {
       document.getElementById("errorTitle").textContent = "No Data";
@@ -89,7 +150,7 @@ async function loadData() {
     if (!dataJson.record || !dataJson.record.categories?.length) {
       document.getElementById("errorTitle").textContent = "No Data Found";
       document.getElementById("errorTxt").textContent =
-        `No transaction data for ${plaza} in ${month}/${year}.`;
+        `No transaction data matched the selected filters in ${month}/${year}.`;
       showOnly("noDataState");
       return;
     }
@@ -122,8 +183,9 @@ async function loadData() {
 // ── RENDER ───────────────────────────────────────────────────────────────────
 function renderResult(rec, trendArr) {
   // Header
-  setText("resultTitle", rec.plaza);
+  setText("resultTitle", rec.scope?.label || "All NHIT Plazas");
   setText("resultSub",  `${rec.month_name} ${rec.year} · ETC FASTag Transaction Report`);
+  setText("scopeMeta",  buildScopeMeta(rec));
 
   // KPI row
   setText("kpiCount",     fmtInt(rec.total_count));
@@ -162,11 +224,22 @@ function renderResult(rec, trendArr) {
   drawPie("cntPie", cats.map(c => short(c.name)), cats.map(c => c.count),  "cntChart", false);
   drawPie("amtPie", cats.map(c => short(c.name)), cats.map(c => c.amount), "amtChart", true);
 
-  // Bar comparison (count vs revenue per category)
+  // Bar comparison + trend
   drawBar(cats);
-
-  // Trend
   drawTrend(trendArr, rec.year, rec.month);
+}
+
+function buildScopeMeta(rec) {
+  const sc = rec.scope || {};
+  const bits = [];
+  if (sc.spv)     bits.push(`SPV ${sc.spv}`);
+  if (sc.round)   bits.push(`Round ${sc.round}`);
+  if (sc.project) bits.push(`Project ${sc.project}`);
+  const plazasN = rec.plazas_included?.length || sc.plaza_count || 0;
+  bits.push(plazasN === 1
+    ? `1 plaza`
+    : `${plazasN} plazas aggregated`);
+  return bits.join(" · ");
 }
 
 function renderShareTable(bodyId, cats, total, valueFn, fmtFn) {
@@ -177,7 +250,7 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn) {
     const pct = total ? (v / total * 100).toFixed(1) : "0.0";
     const bar = (v / max * 100).toFixed(1);
     return `<tr>
-      <td><span class="cat-dot" style="background:${color}"></span>${c.name}</td>
+      <td><span class="cat-dot" style="background:${color}"></span>${escapeHtml(c.name)}</td>
       <td>${fmtFn(v)}</td>
       <td>${pct}%</td>
       <td style="width:140px">
@@ -191,7 +264,7 @@ function renderDetailTable(cats) {
   document.getElementById("detailTbody").innerHTML = cats.map((c, i) => {
     const color = PIE_COLORS[i % PIE_COLORS.length];
     return `<tr>
-      <td><span class="cat-dot" style="background:${color}"></span>${c.name}</td>
+      <td><span class="cat-dot" style="background:${color}"></span>${escapeHtml(c.name)}</td>
       <td>${fmtInt(c.count)}</td>
       <td>${c.share_count.toFixed(2)}%</td>
       <td>₹${fmtAmt(c.amount)}</td>
@@ -297,7 +370,7 @@ function drawTrend(trend, selYear, selMonth) {
   destroy("trendChart");
 
   if (!trend || !trend.length) {
-    sub.textContent = "No additional months available for this plaza.";
+    sub.textContent = "No additional months available for this scope.";
     return;
   }
   sub.textContent = `Transactions and revenue across ${trend.length} month(s). Selected month is highlighted.`;
@@ -355,11 +428,9 @@ function destroy(key) {
   charts[key] = null;
 }
 
-function fillSelect(id, items, mapper) {
+function fillSelect(id, items, mapper, allLabel) {
   const sel = document.getElementById(id);
-  const first = sel.options[0];
-  sel.innerHTML = "";
-  sel.appendChild(first);
+  sel.innerHTML = `<option value="">${allLabel ?? "-- Select --"}</option>`;
   items.forEach(item => {
     const { v, t } = mapper(item);
     const o = document.createElement("option");
@@ -396,3 +467,10 @@ function setText(id, txt) {
   const el = document.getElementById(id);
   if (el) el.textContent = txt;
 }
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+}
+
+function escapeAttr(s) { return escapeHtml(s); }

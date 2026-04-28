@@ -35,8 +35,20 @@
 <div class="selector-bar">
   <div class="selector-inner">
     <div class="sel-group">
+      <label class="sel-label" for="spvSel">SPV</label>
+      <select id="spvSel" class="sel-ctrl"><option value="">All SPVs</option></select>
+    </div>
+    <div class="sel-group">
+      <label class="sel-label" for="roundSel">Round</label>
+      <select id="roundSel" class="sel-ctrl"><option value="">All Rounds</option></select>
+    </div>
+    <div class="sel-group">
+      <label class="sel-label" for="projectSel">Project</label>
+      <select id="projectSel" class="sel-ctrl wide"><option value="">All Projects</option></select>
+    </div>
+    <div class="sel-group">
       <label class="sel-label" for="plazaSel">Fee Plaza</label>
-      <select id="plazaSel" class="sel-ctrl wide"><option value="">-- Select Plaza --</option></select>
+      <select id="plazaSel" class="sel-ctrl wide"><option value="">All Plazas</option></select>
     </div>
     <div class="sel-group">
       <label class="sel-label" for="yearSel">Year</label>
@@ -82,6 +94,7 @@
       <div class="rh-left">
         <h1 id="resultTitle">Plaza Name</h1>
         <p id="resultSub">January 2025 · ETC Transaction Report</p>
+        <p class="scope-meta" id="scopeMeta"></p>
       </div>
     </div>
 
