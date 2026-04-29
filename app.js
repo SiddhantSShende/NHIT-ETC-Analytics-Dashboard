@@ -16,6 +16,11 @@ const PIE_COLORS = [
   "#ef476f", "#118ab2", "#ffa552", "#4cc9f0",
 ];
 
+const MONTH_LABELS = [
+  "", "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
 // Chart instances — kept off `window` to avoid colliding with elements
 // whose `id` attribute the browser exposes as global properties.
 const charts = {};
@@ -31,6 +36,7 @@ let META = { plazas: [], years: [], months: [] };
 window.addEventListener("DOMContentLoaded", () => {
   bootstrap();
   document.getElementById("btnView").addEventListener("click", loadData);
+  document.getElementById("rangeToggle").addEventListener("change", toggleRangeMode);
 
   ["spvSel", "roundSel"].forEach(id => {
     document.getElementById(id).addEventListener("change", refreshCascade);
@@ -50,11 +56,16 @@ async function bootstrap() {
     // Year + Month — populated once.
     fillSelect("yearSel",  meta.years  || [], y => ({ v: y, t: y }), "-- Year --");
     fillSelect("monthSel", meta.months || [], m => ({ v: m.num, t: m.name }), "-- Month --");
+    fillSelect("startYearSel",  meta.years  || [], y => ({ v: y, t: y }), "-- Year --");
+    fillSelect("startMonthSel", meta.months || [], m => ({ v: m.num, t: m.name }), "-- Month --");
+    fillSelect("endYearSel",    meta.years  || [], y => ({ v: y, t: y }), "-- Year --");
+    fillSelect("endMonthSel",   meta.months || [], m => ({ v: m.num, t: m.name }), "-- Month --");
 
     // SPV first — once chosen it filters the rest. We seed the others empty
     // and let `refreshCascade` populate them based on current selection.
     fillSelect("spvSel",     taxonomy.spvs   || [], v => ({ v, t: v }), "All SPVs");
     refreshCascade();
+    toggleRangeMode();
 
     const sub = document.getElementById("hintSub");
     sub.textContent =
@@ -89,6 +100,16 @@ function refreshCascade() {
   resetSelect("plazaSel", plazasForScope, document.getElementById("plazaSel").value, "All Plazas");
 }
 
+function toggleRangeMode() {
+  const useRange = document.getElementById("rangeToggle").checked;
+  document.querySelectorAll(".single-only").forEach(el => {
+    el.classList.toggle("hidden", useRange);
+  });
+  document.querySelectorAll(".range-only").forEach(el => {
+    el.classList.toggle("hidden", !useRange);
+  });
+}
+
 function resetSelect(id, values, prevValue, allLabel) {
   const sel = document.getElementById(id);
   sel.innerHTML = `<option value="">${allLabel}</option>` +
@@ -106,11 +127,20 @@ async function loadData() {
   const spv    = document.getElementById("spvSel").value;
   const round_ = document.getElementById("roundSel").value;
   const plaza  = document.getElementById("plazaSel").value;
+  const useRange = document.getElementById("rangeToggle").checked;
   const year   = parseInt(document.getElementById("yearSel").value);
   const month  = parseInt(document.getElementById("monthSel").value);
+  const startYear  = parseInt(document.getElementById("startYearSel").value);
+  const startMonth = parseInt(document.getElementById("startMonthSel").value);
+  const endYear    = parseInt(document.getElementById("endYearSel").value);
+  const endMonth   = parseInt(document.getElementById("endMonthSel").value);
 
-  if (!year || !month) {
+  if (!useRange && (!year || !month)) {
     alert("Please select a Year and Month.");
+    return;
+  }
+  if (useRange && (!startYear || !startMonth || !endYear || !endMonth)) {
+    alert("Please select a Start and End date.");
     return;
   }
 
@@ -118,10 +148,22 @@ async function loadData() {
 
   const filterQs   = new URLSearchParams({ spv, round: round_, plaza });
   const dataQs     = new URLSearchParams({ spv, round: round_, plaza, year, month });
+  const rangeQs    = new URLSearchParams({
+    spv,
+    round: round_,
+    plaza,
+    start_year: startYear,
+    start_month: startMonth,
+    end_year: endYear,
+    end_month: endMonth,
+  });
+  const opts = useRange
+    ? { mode: "range", startYear, startMonth, endYear, endMonth }
+    : { mode: "single", year, month };
 
   try {
     const [dataRes, trendRes] = await Promise.all([
-      fetch(`${API}/api/aggregate?${dataQs}`),
+      fetch(`${API}/${useRange ? "api/aggregate-range" : "api/aggregate"}?${useRange ? rangeQs : dataQs}`),
       fetch(`${API}/api/aggregate-trend?${filterQs}`),
     ]);
 
@@ -136,8 +178,13 @@ async function loadData() {
     }
     if (!dataJson.record || !dataJson.record.categories?.length) {
       document.getElementById("errorTitle").textContent = "No Data Found";
-      document.getElementById("errorTxt").textContent =
-        `No transaction data matched the selected filters in ${month}/${year}.`;
+      if (useRange) {
+        document.getElementById("errorTxt").textContent =
+          `No transaction data matched the selected filters in the chosen range.`;
+      } else {
+        document.getElementById("errorTxt").textContent =
+          `No transaction data matched the selected filters in ${month}/${year}.`;
+      }
       showOnly("noDataState");
       return;
     }
@@ -150,7 +197,7 @@ async function loadData() {
 
     showOnly("dashboard");
     try {
-      renderResult(dataJson.record, trendArr);
+      renderResult(dataJson.record, trendArr, opts);
     } catch (renderErr) {
       console.error("Render failed:", renderErr);
       document.getElementById("errorTitle").textContent = "Render Error";
@@ -168,15 +215,31 @@ async function loadData() {
 }
 
 // ── RENDER ───────────────────────────────────────────────────────────────────
-function renderResult(rec, trendArr) {
+function renderResult(rec, trendArr, opts = {}) {
+  const isRange = opts.mode === "range" || !!rec.period;
+  const start = rec.period?.start || { year: opts.startYear, month: opts.startMonth };
+  const end = rec.period?.end || { year: opts.endYear, month: opts.endMonth };
+  const rangeText = isRange
+    ? `${formatMonthYear(start.year, start.month)} - ${formatMonthYear(end.year, end.month)}`
+    : "";
+
   // Header
   setText("resultTitle", rec.scope?.label || "All NHIT Plazas");
-  setText("resultSub",  `${rec.month_name} ${rec.year} · ETC FASTag Transaction Report`);
+  if (isRange) {
+    setText("resultSub",  `${rangeText} · ETC FASTag Transaction Report`);
+  } else {
+    setText("resultSub",  `${rec.month_name} ${rec.year} · ETC FASTag Transaction Report`);
+  }
   setText("scopeMeta",  buildScopeMeta(rec));
 
   // KPI row
   setText("kpiCount",     fmtInt(rec.total_count));
-  setText("kpiCountSub",  `Total ETC transactions in ${rec.month_name} ${rec.year}`);
+  setText(
+    "kpiCountSub",
+    isRange
+      ? `Total ETC transactions from ${formatMonthYear(start.year, start.month)} - ${formatMonthYear(end.year, end.month)}`
+      : `Total ETC transactions in ${rec.month_name} ${rec.year}`
+  );
 
   setText("kpiAmount",    "₹" + fmtAmt(rec.total_amount));
   setText("kpiAmountSub", "Toll revenue collected via FASTag");
@@ -213,7 +276,7 @@ function renderResult(rec, trendArr) {
 
   // Bar comparison + trend
   drawBar(cats);
-  drawTrend(trendArr, rec.year, rec.month);
+  drawTrend(trendArr, isRange ? null : rec.year, isRange ? null : rec.month);
 }
 
 function buildScopeMeta(rec) {
@@ -221,6 +284,7 @@ function buildScopeMeta(rec) {
   const bits = [];
   if (sc.spv)   bits.push(`SPV ${sc.spv}`);
   if (sc.round) bits.push(`Round ${sc.round}`);
+  if (rec.months_included?.length) bits.push(`${rec.months_included.length} month(s) aggregated`);
   const plazasN = rec.plazas_included?.length || sc.plaza_count || 0;
   bits.push(plazasN === 1
     ? `1 plaza`
@@ -359,12 +423,20 @@ function drawTrend(trend, selYear, selMonth) {
     sub.textContent = "No additional months available for this scope.";
     return;
   }
-  sub.textContent = `Transactions and revenue across ${trend.length} month(s). Selected month is highlighted.`;
+  if (Number.isInteger(selYear) && Number.isInteger(selMonth)) {
+    sub.textContent = `Transactions and revenue across ${trend.length} month(s). Selected month is highlighted.`;
+  } else {
+    sub.textContent = `Transactions and revenue across ${trend.length} month(s).`;
+  }
 
   const labels = trend.map(t => t.label);
   const counts = trend.map(t => t.count);
   const amts   = trend.map(t => t.amount);
-  const colors = trend.map(t => (t.year === selYear && t.month === selMonth) ? "#f47920" : "#003087");
+  const colors = trend.map(t => (
+    Number.isInteger(selYear) && Number.isInteger(selMonth) && t.year === selYear && t.month === selMonth
+      ? "#f47920"
+      : "#003087"
+  ));
 
   charts.trendChart = new Chart(document.getElementById("trendChart"), {
     data: {
@@ -443,6 +515,11 @@ function fmtAmt(n) {
 function fmtMoney(n) {
   n = parseFloat(n) || 0;
   return n.toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function formatMonthYear(year, month) {
+  if (!year || !month) return "Unknown";
+  return `${MONTH_LABELS[month] || "Month"} ${year}`;
 }
 
 function short(name) {

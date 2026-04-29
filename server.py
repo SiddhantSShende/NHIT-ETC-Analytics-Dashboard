@@ -35,6 +35,7 @@ _OR_TEMPERATURE: float = float(os.getenv("OPENROUTER_TEMPERATURE", "0.2"))
 from flask import Flask, g, jsonify, request, send_from_directory
 from flask_cors import CORS
 from werkzeug.exceptions import HTTPException
+from analytics import aggregate_plazas_for_month, aggregate_plazas_for_range
 
 # ── Paths & logging ─────────────────────────────────────────────────────────
 DIR = Path(__file__).parent
@@ -206,64 +207,25 @@ def _filter_taxonomy_rows(spv: str, round_: str, project: str, plaza: str):
 
 
 def _aggregate_plazas_for_month(plazas: list[str], year: int, month: int) -> dict | None:
-    """Sum per-category totals across the given canonical plazas for one
-    (year, month). Returns a record matching the shape of /api/data."""
-    key = f"{year}-{month:02d}"
-    cat_map: dict[str, dict] = {}
-    plazas_with_data = []
+    """Wrapper so the server always uses the shared analytics helpers."""
+    return aggregate_plazas_for_month(SNAPSHOT, plazas, year, month)
 
-    for plaza in plazas:
-        rec = SNAPSHOT["data"].get(plaza, {}).get(key)
-        if not rec:
-            continue
-        plazas_with_data.append(plaza)
-        for c in rec["categories"]:
-            d = cat_map.setdefault(c["name"], {"count": 0, "amount": 0.0})
-            d["count"]  += c["count"]
-            d["amount"] += c["amount"]
 
-    if not cat_map:
-        return None
-
-    cats = [
-        {"name": k, "count": v["count"], "amount": round(v["amount"], 2)}
-        for k, v in cat_map.items()
-    ]
-    cats.sort(key=lambda c: c["amount"], reverse=True)
-
-    total_count  = sum(c["count"]  for c in cats)
-    total_amount = round(sum(c["amount"] for c in cats), 2)
-
-    enriched = []
-    for c in cats:
-        enriched.append({
-            "name":         c["name"],
-            "count":        c["count"],
-            "amount":       c["amount"],
-            "share_count":  round(c["count"]  / total_count  * 100, 2) if total_count  else 0.0,
-            "share_amount": round(c["amount"] / total_amount * 100, 2) if total_amount else 0.0,
-            "avg_fare":     round(c["amount"] / c["count"], 2) if c["count"] else 0.0,
-        })
-
-    top_amt = max(enriched, key=lambda c: c["amount"])
-    top_cnt = max(enriched, key=lambda c: c["count"])
-
-    from constants import MONTH_NAMES as _MN
-    return {
-        "year":          year,
-        "month":         month,
-        "month_name":    _MN[month],
-        "categories":    enriched,
-        "total_count":   total_count,
-        "total_amount":  total_amount,
-        "avg_per_txn":   round(total_amount / total_count, 2) if total_count else 0.0,
-        "avg_count_per_day":   int(round(total_count / 30.0)) if total_count else 0,
-        "avg_revenue_per_day": round(total_amount / 30.0, 2) if total_amount else 0.0,
-        "category_count": len(enriched),
-        "top_by_amount": {"name": top_amt["name"], "amount": top_amt["amount"]},
-        "top_by_count":  {"name": top_cnt["name"], "count":  top_cnt["count"]},
-        "plazas_included": plazas_with_data,
-    }
+def _aggregate_plazas_for_range(
+    plazas: list[str],
+    start_year: int,
+    start_month: int,
+    end_year: int,
+    end_month: int,
+) -> dict | None:
+    return aggregate_plazas_for_range(
+        SNAPSHOT,
+        plazas,
+        start_year,
+        start_month,
+        end_year,
+        end_month,
+    )
 
 
 def _scope_label(spv, round_, project, plaza):
@@ -359,6 +321,63 @@ def aggregate_trend():
     })
 
 
+@app.route("/api/aggregate-range")
+def aggregate_range():
+    """Sum totals across a month range for the given filters."""
+    spv     = request.args.get("spv",     "").strip()
+    round_  = request.args.get("round",   "").strip()
+    project = request.args.get("project", "").strip()
+    plaza   = request.args.get("plaza",   "").strip()
+    try:
+        start_year  = int(request.args.get("start_year",  "") or 0)
+        start_month = int(request.args.get("start_month", "") or 0)
+        end_year    = int(request.args.get("end_year",    "") or 0)
+        end_month   = int(request.args.get("end_month",   "") or 0)
+    except ValueError:
+        return jsonify({"error": "year and month must be integers"}), 400
+    if not (start_year and start_month and end_year and end_month):
+        return jsonify({"error": "start/end year and month are required"}), 400
+    if not (1 <= start_month <= 12 and 1 <= end_month <= 12):
+        return jsonify({"error": "month must be between 1 and 12"}), 400
+    if (start_year, start_month) > (end_year, end_month):
+        return jsonify({"error": "start date must be before end date"}), 400
+
+    rows = _filter_taxonomy_rows(spv, round_, project, plaza)
+    if not rows:
+        return jsonify({
+            "error": "No plazas match the selected filters.",
+            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
+        }), 404
+
+    canon_plazas = sorted({r["canonical_plaza"] for r in rows})
+    if len(canon_plazas) == 0 or (not spv and not round_ and not project and not plaza):
+        canon_plazas = SNAPSHOT["plazas"]
+
+    rec = _aggregate_plazas_for_range(
+        canon_plazas,
+        start_year,
+        start_month,
+        end_year,
+        end_month,
+    )
+    if not rec:
+        return jsonify({
+            "error": "No data found for the selected filters in the range.",
+            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
+            "candidate_plazas": canon_plazas,
+        }), 404
+
+    rec["scope"] = {
+        "label":   _scope_label(spv, round_, project, plaza),
+        "spv":     spv     or None,
+        "round":   round_  or None,
+        "project": project or None,
+        "plaza":   plaza   or None,
+        "plaza_count": len(canon_plazas),
+    }
+    return jsonify({"record": rec})
+
+
 @app.route("/api/data")
 def data():
     """Full analytics for one (plaza, year, month)."""
@@ -437,32 +456,91 @@ def _build_data_context(message: str) -> str:
     msg_lower = message.lower()
     from constants import MONTH_MAP, MONTH_NAMES
 
-    # ── Detect month ────────────────────────────────────────────────────────
-    detected_month: int | None = None
-    for token, m in MONTH_MAP.items():
-        if token in msg_lower:
-            detected_month = m
-            break
-
-    # ── Detect year ─────────────────────────────────────────────────────────
     import re
-    years_in_msg = [int(y) for y in re.findall(r'\b(20\d{2})\b', message)]
-    detected_year: int | None = years_in_msg[0] if years_in_msg else None
 
-    # ── Detect plaza names (case-insensitive substring match) ────────────────
+    month_tokens = sorted(MONTH_MAP.keys(), key=len, reverse=True)
+    month_pattern = r"\b(" + "|".join(re.escape(t) for t in month_tokens) + r")\b"
+    months_found: list[int] = []
+    for m in re.finditer(month_pattern, msg_lower, flags=re.IGNORECASE):
+        token = m.group(1).lower()
+        month_num = MONTH_MAP.get(token)
+        if month_num and (not months_found or months_found[-1] != month_num):
+            months_found.append(month_num)
+
+    years_in_msg = [int(y) for y in re.findall(r"\b(20\d{2})\b", message)]
+    detected_year: int | None = years_in_msg[0] if years_in_msg else None
+    detected_month: int | None = months_found[0] if months_found else None
+
+    range_start = None
+    range_end = None
+    if len(months_found) >= 2:
+        start_month = months_found[0]
+        end_month = months_found[-1]
+        if years_in_msg:
+            start_year = years_in_msg[0]
+            end_year = years_in_msg[-1] if len(years_in_msg) > 1 else start_year
+            range_start = (start_year, start_month)
+            range_end = (end_year, end_month)
+
+    # ── Detect plaza names (case-insensitive substring match + aliases) ─────
     all_plazas = list(SNAPSHOT["data"].keys())
-    matched_plazas: list[str] = [
-        p for p in all_plazas
-        if p.lower() in msg_lower
-        or any(word in msg_lower for word in p.lower().split() if len(word) > 3)
-    ]
-    if not matched_plazas:
-        matched_plazas = all_plazas  # global query — use all
+    alias_map = SNAPSHOT.get("plaza_aliases", {})
+    alias_lookup = {a.lower(): c for a, c in alias_map.items()}
+
+    matched_set: set[str] = set()
+    for p in all_plazas:
+        pl = p.lower()
+        if pl in msg_lower or any(word in msg_lower for word in pl.split() if len(word) > 3):
+            matched_set.add(p)
+    for alias, canon in alias_lookup.items():
+        if alias in msg_lower:
+            matched_set.add(canon)
+
+    matched_plazas = sorted(matched_set) if matched_set else all_plazas
 
     lines: list[str] = []
 
-    # ── Per-plaza monthly data ───────────────────────────────────────────────
-    for plaza in matched_plazas[:8]:   # cap to 8 plazas to keep context tight
+    # ── Aggregate summary (single month or range) ───────────────────────────
+    if range_start and range_end:
+        start_year, start_month = range_start
+        end_year, end_month = range_end
+        rec = aggregate_plazas_for_range(
+            SNAPSHOT,
+            matched_plazas,
+            start_year,
+            start_month,
+            end_year,
+            end_month,
+        )
+        if rec:
+            range_label = (
+                f"{MONTH_NAMES[start_month]} {start_year} to "
+                f"{MONTH_NAMES[end_month]} {end_year}"
+            )
+            lines.append(
+                f"AGGREGATE | {range_label} | Plazas: {len(rec['plazas_included'])} | "
+                f"Total txns: {rec['total_count']} | Total revenue: ₹{rec['total_amount']:,.0f}"
+            )
+    elif detected_year and detected_month:
+        rec = aggregate_plazas_for_month(SNAPSHOT, matched_plazas, detected_year, detected_month)
+        if rec:
+            month_label = f"{MONTH_NAMES[detected_month]} {detected_year}"
+            lines.append(
+                f"AGGREGATE | {month_label} | Plazas: {len(rec['plazas_included'])} | "
+                f"Total txns: {rec['total_count']} | Total revenue: ₹{rec['total_amount']:,.0f}"
+            )
+
+    # ── Per-plaza monthly data ─────────────────────────────────────────────
+    plaza_sample = matched_plazas
+    if detected_year and detected_month:
+        key = f"{detected_year}-{detected_month:02d}"
+        plaza_sample = sorted(
+            matched_plazas,
+            key=lambda p: SNAPSHOT["data"].get(p, {}).get(key, {}).get("total_amount", 0),
+            reverse=True,
+        )
+
+    for plaza in plaza_sample[:8]:
         plaza_data = SNAPSHOT["data"].get(plaza, {})
         for key, rec in plaza_data.items():
             yr, mo = map(int, key.split("-"))

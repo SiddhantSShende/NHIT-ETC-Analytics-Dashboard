@@ -29,6 +29,7 @@ from pathlib import Path
 from typing import Optional
 
 from constants import MONTH_MAP, MONTH_NAMES, NHIT_PLAZAS
+from ingestor import build_plaza_alias_map, bucket_rows_by_canonical_plaza
 from parser import parse_pdf
 from taxonomy import load_taxonomy
 
@@ -115,26 +116,6 @@ def find_pdfs() -> list[dict]:
 
 
 # ── Per-plaza record builder ────────────────────────────────────────────────
-def _bucket_rows_by_canonical_plaza(rows: list[dict]) -> dict[str, dict]:
-    """Pre-bucket every parsed row by its canonical NHIT plaza so that the
-    per-plaza record builder is O(rows) instead of O(rows * plazas)."""
-    cache: dict[str, str | None] = {}
-    out: dict[str, dict[str, dict]] = {}
-    for r in rows:
-        raw = r["plaza_name"]
-        canon = cache.get(raw)
-        if canon is None and raw not in cache:
-            canon = match_nhit_plaza(raw)
-            cache[raw] = canon
-        if not canon:
-            continue
-        plaza_bucket = out.setdefault(canon, {})
-        d = plaza_bucket.setdefault(r["vehicle_category"], {"count": 0, "amount": 0.0})
-        d["count"]  += r["count"]
-        d["amount"] += r["amount"]
-    return out
-
-
 def _build_record_from_bucket(cat_map: dict[str, dict], plaza: str, year: int, month: int):
     """Turn a category->totals map into the dashboard record."""
     if not cat_map:
@@ -295,13 +276,21 @@ def main(argv: list[str] | None = None) -> int:
                 log.error("  FAILED %s: %s", label, e)
     parsed.sort(key=lambda x: (x["year"], x["month"]))
 
-    all_plazas = set(NHIT_PLAZAS)
+    all_rows: list[dict] = []
     for entry in parsed:
-        for r in entry.get("rows", []):
-            canon = match_nhit_plaza(r["plaza_name"])
-            if canon:
-                all_plazas.add(canon)
-    all_plazas_list = sorted(list(all_plazas))
+        all_rows.extend(entry.get("rows", []))
+
+    alias_map = build_plaza_alias_map(all_rows, preferred_names=NHIT_PLAZAS)
+    if not alias_map:
+        log.error("No plaza rows parsed from PDFs")
+        return 1
+
+    all_plazas_list = sorted(set(alias_map.values()))
+    log.info(
+        "Plaza aliases: %d raw names -> %d canonical plazas",
+        len(alias_map),
+        len(all_plazas_list),
+    )
 
     # Reset SQLite.
     if DB_PATH.exists():
@@ -356,6 +345,7 @@ def main(argv: list[str] | None = None) -> int:
         "data": {p: {} for p in all_plazas_list},
         "monthly_totals": {p: [] for p in all_plazas_list},
         "validation_warnings": [],
+        "plaza_aliases": alias_map,
         "taxonomy": taxonomy,
     }
 
@@ -384,9 +374,8 @@ def main(argv: list[str] | None = None) -> int:
         cur = conn.execute("SELECT id FROM reports WHERE year=? AND month=?", (y, m))
         report_id = cur.fetchone()[0]
 
-        plaza_buckets = _bucket_rows_by_canonical_plaza(rows)
-        for plaza in NHIT_PLAZAS:
-            cat_map = plaza_buckets.get(plaza)
+        plaza_buckets = bucket_rows_by_canonical_plaza(rows, alias_map)
+        for plaza, cat_map in plaza_buckets.items():
             rec = _build_record_from_bucket(cat_map or {}, plaza, y, m)
             if not rec:
                 continue
