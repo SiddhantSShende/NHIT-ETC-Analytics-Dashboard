@@ -79,17 +79,38 @@ body {
 .selector-bar {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 16px 0;
+  padding: 14px 0;
 }
 .selector-inner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  gap: 14px;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
 }
+
+/* Left area: wraps freely across up to 2 rows */
+.sel-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  align-items: flex-end;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Right area: buttons always pinned to the right */
+.sel-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  align-self: center;
+  padding-top: 2px;
+}
+
 .sel-group { display: flex; flex-direction: column; gap: 6px; }
 .sel-label { font-size: 0.75rem; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; }
 .sel-ctrl {
@@ -136,13 +157,15 @@ body {
   background: var(--primary);
   color: var(--white);
   border: none;
-  padding: 10px 24px;
-  font-size: 0.95rem;
+  padding: 10px 20px;
+  font-size: 0.92rem;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
   height: 41px;
+  white-space: nowrap;
+  width: 100%;
 }
 .btn-view:hover { background: var(--primary-hover); transform: translateY(-1px); }
 
@@ -160,9 +183,10 @@ body {
   height: 41px;
   display: flex;
   align-items: center;
+  justify-content: center;
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(244,121,32,0.35);
-  margin-left: 6px;
+  width: 100%;
 }
 .btn-ask-ai:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 4px 16px rgba(244,121,32,0.45); }
 .btn-ask-ai--active {
@@ -363,6 +387,10 @@ body {
 @media(max-width: 700px) {
   .hdr-inner { flex-direction: column; height: auto; padding: 16px; gap: 12px; }
   .selector-inner { flex-direction: column; align-items: stretch; gap: 12px; }
+  .sel-controls { flex-direction: column; align-items: stretch; }
+  .sel-actions { flex-direction: row; justify-content: stretch; }
+  .sel-actions .btn-view,
+  .sel-actions .btn-ask-ai { flex: 1; }
   .sel-ctrl.wide { min-width: 100%; }
   .kpi-grid, .highlight-row { grid-template-columns: 1fr; }
   .bar-wrap { height: 300px; }

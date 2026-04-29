@@ -42,72 +42,81 @@
   <!-- SELECTOR BAR -->
   <div class="selector-bar">
     <div class="selector-inner">
-      <div class="sel-group">
-        <label class="sel-label" for="spvSel">SPV</label>
-        <select id="spvSel" class="sel-ctrl">
-          <option value="">All SPVs</option>
-        </select>
-      </div>
-      <div class="sel-group">
-        <label class="sel-label" for="roundSel">Round</label>
-        <select id="roundSel" class="sel-ctrl">
-          <option value="">All Rounds</option>
-        </select>
-      </div>
-      <div class="sel-group">
-        <label class="sel-label" for="plazaSel">Fee Plaza</label>
-        <select id="plazaSel" class="sel-ctrl wide">
-          <option value="">All Plazas</option>
-        </select>
-      </div>
-      <div class="sel-group">
-        <label class="sel-label" for="rangeToggle">Mode</label>
-        <label class="range-toggle" for="rangeToggle">
-          <input type="checkbox" id="rangeToggle" />
-          <span>Use Date Range</span>
-        </label>
-      </div>
-      <div class="sel-group single-only">
-        <label class="sel-label" for="yearSel">Year</label>
-        <select id="yearSel" class="sel-ctrl">
-          <option value="">-- Year --</option>
-        </select>
-      </div>
-      <div class="sel-group single-only">
-        <label class="sel-label" for="monthSel">Month</label>
-        <select id="monthSel" class="sel-ctrl">
-          <option value="">-- Month --</option>
-        </select>
-      </div>
-      <div class="sel-group range-only hidden">
-        <label class="sel-label" for="startYearSel">Start</label>
-        <div class="sel-inline">
-          <select id="startYearSel" class="sel-ctrl">
+
+      <!-- Left: all dropdowns/toggles, allowed to wrap to 2 lines -->
+      <div class="sel-controls">
+        <div class="sel-group">
+          <label class="sel-label" for="spvSel">SPV</label>
+          <select id="spvSel" class="sel-ctrl">
+            <option value="">All SPVs</option>
+          </select>
+        </div>
+        <div class="sel-group">
+          <label class="sel-label" for="roundSel">Round</label>
+          <select id="roundSel" class="sel-ctrl">
+            <option value="">All Rounds</option>
+          </select>
+        </div>
+        <div class="sel-group">
+          <label class="sel-label" for="plazaSel">Fee Plaza</label>
+          <select id="plazaSel" class="sel-ctrl wide">
+            <option value="">All Plazas</option>
+          </select>
+        </div>
+        <div class="sel-group">
+          <label class="sel-label" for="rangeToggle">Mode</label>
+          <label class="range-toggle" for="rangeToggle">
+            <input type="checkbox" id="rangeToggle" />
+            <span>Use Date Range</span>
+          </label>
+        </div>
+        <div class="sel-group single-only">
+          <label class="sel-label" for="yearSel">Year</label>
+          <select id="yearSel" class="sel-ctrl">
             <option value="">-- Year --</option>
           </select>
-          <select id="startMonthSel" class="sel-ctrl">
+        </div>
+        <div class="sel-group single-only">
+          <label class="sel-label" for="monthSel">Month</label>
+          <select id="monthSel" class="sel-ctrl">
             <option value="">-- Month --</option>
           </select>
         </div>
-      </div>
-      <div class="sel-group range-only hidden">
-        <label class="sel-label" for="endYearSel">End</label>
-        <div class="sel-inline">
-          <select id="endYearSel" class="sel-ctrl">
-            <option value="">-- Year --</option>
-          </select>
-          <select id="endMonthSel" class="sel-ctrl">
-            <option value="">-- Month --</option>
-          </select>
+        <div class="sel-group range-only hidden">
+          <label class="sel-label" for="startYearSel">Start</label>
+          <div class="sel-inline">
+            <select id="startYearSel" class="sel-ctrl">
+              <option value="">-- Year --</option>
+            </select>
+            <select id="startMonthSel" class="sel-ctrl">
+              <option value="">-- Month --</option>
+            </select>
+          </div>
+        </div>
+        <div class="sel-group range-only hidden">
+          <label class="sel-label" for="endYearSel">End</label>
+          <div class="sel-inline">
+            <select id="endYearSel" class="sel-ctrl">
+              <option value="">-- Year --</option>
+            </select>
+            <select id="endMonthSel" class="sel-ctrl">
+              <option value="">-- Month --</option>
+            </select>
+          </div>
         </div>
       </div>
-      <button class="btn-view" id="btnView" type="button">View Analytics</button>
-      <button class="btn-ask-ai" id="btnAskAI" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"
-          style="margin-right:6px;vertical-align:-2px">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-        </svg>Ask AI
-      </button>
+
+      <!-- Right: action buttons, always pinned to the right -->
+      <div class="sel-actions">
+        <button class="btn-view" id="btnView" type="button">View Analytics</button>
+        <button class="btn-ask-ai" id="btnAskAI" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"
+            style="margin-right:6px;vertical-align:-2px">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>Ask AI
+        </button>
+      </div>
+
     </div>
   </div>
 
