@@ -39,7 +39,7 @@ logging.basicConfig(
 log = logging.getLogger("nhit.build")
 
 DIR = Path(__file__).parent
-DOWNLOADS_DIR = DIR / "downloads" / "vc_monthly"
+DOWNLOADS_DIR = DIR / "downloads"
 DATA_DIR = DIR / "data"
 SNAPSHOT_PATH = DATA_DIR / "snapshot.json"
 DB_PATH = DATA_DIR / "etc.db"
@@ -89,7 +89,7 @@ def match_nhit_plaza(raw_name: str) -> Optional[str]:
             # could swallow many plazas.
             if min(len(canon_key), len(raw_key)) >= 4:
                 return canon_name
-    return None
+    return raw_name
 
 
 # Pre-compute canonical key -> canonical name once so match_nhit_plaza is O(1)
@@ -102,7 +102,7 @@ _CANON_KEYS: dict[str, str] = {_plaza_key(p): p for p in NHIT_PLAZAS}
 def find_pdfs() -> list[dict]:
     """Discover monthly PDFs under DOWNLOADS_DIR, oldest first."""
     out: list[dict] = []
-    for f in DOWNLOADS_DIR.glob("*.pdf"):
+    for f in DOWNLOADS_DIR.rglob("*.pdf"):
         m = _PDF_NAME_RE.match(f.name.lower())
         if not m:
             continue
@@ -256,6 +256,15 @@ def main(argv: list[str] | None = None) -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     pdfs = find_pdfs()
+    # Deduplicate PDFs by (year, month). If multiple exist, take the first found.
+    unique_pdfs = {}
+    for entry in pdfs:
+        key = (entry["year"], entry["month"])
+        if key not in unique_pdfs:
+            unique_pdfs[key] = entry
+    pdfs = list(unique_pdfs.values())
+    pdfs.sort(key=lambda x: (x["year"], x["month"]))
+
     if not pdfs:
         log.error("No PDF reports found in %s", DOWNLOADS_DIR)
         return 1
@@ -286,13 +295,21 @@ def main(argv: list[str] | None = None) -> int:
                 log.error("  FAILED %s: %s", label, e)
     parsed.sort(key=lambda x: (x["year"], x["month"]))
 
+    all_plazas = set(NHIT_PLAZAS)
+    for entry in parsed:
+        for r in entry.get("rows", []):
+            canon = match_nhit_plaza(r["plaza_name"])
+            if canon:
+                all_plazas.add(canon)
+    all_plazas_list = sorted(list(all_plazas))
+
     # Reset SQLite.
     if DB_PATH.exists():
         DB_PATH.unlink()
     conn = sqlite3.connect(DB_PATH)
     conn.executescript(SCHEMA)
     plaza_ids: dict[str, int] = {}
-    for p in NHIT_PLAZAS:
+    for p in all_plazas_list:
         cur = conn.execute("INSERT INTO plazas(name) VALUES(?)", (p,))
         plaza_ids[p] = cur.lastrowid
 
@@ -300,7 +317,7 @@ def main(argv: list[str] | None = None) -> int:
     # so cascading dropdowns + aggregations stay driven by the analyst's source
     # spreadsheet rather than a hardcoded table.
     try:
-        taxonomy = load_taxonomy(canonical_plazas=NHIT_PLAZAS)
+        taxonomy = load_taxonomy(canonical_plazas=all_plazas_list)
         log.info(
             "Taxonomy: %d rows, SPVs=%s, rounds=%s, unmatched=%s",
             len(taxonomy["rows"]), taxonomy["spvs"],
@@ -310,14 +327,34 @@ def main(argv: list[str] | None = None) -> int:
         log.warning("Taxonomy unavailable (%s) — proceeding without it.", e)
         taxonomy = {"rows": [], "spvs": [], "rounds": [], "unmatched": []}
 
+    known_canon_in_tax = {r["canonical_plaza"] for r in taxonomy["rows"] if r.get("canonical_plaza")}
+    extra_plazas = [p for p in all_plazas_list if p not in known_canon_in_tax]
+    if extra_plazas:
+        for p in extra_plazas:
+            taxonomy["rows"].append({
+                "s_no": 9999,
+                "spv": "Unknown SPV",
+                "round": "Unknown Round",
+                "project": "Unknown Project",
+                "excel_plaza": p,
+                "canonical_plaza": p,
+            })
+        if "Unknown SPV" not in taxonomy["spvs"]:
+            taxonomy["spvs"].append("Unknown SPV")
+            taxonomy["spvs"].sort()
+        if "Unknown Round" not in taxonomy["rounds"]:
+            taxonomy["rounds"].append("Unknown Round")
+            taxonomy["rounds"].sort()
+
+
     snapshot = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "plazas": sorted(NHIT_PLAZAS),
+        "plazas": all_plazas_list,
         "months": [],                       # all (year, month) pairs available
         "available_months": [],             # unique month names for the dropdown
         "years": [],
-        "data": {p: {} for p in NHIT_PLAZAS},
-        "monthly_totals": {p: [] for p in NHIT_PLAZAS},
+        "data": {p: {} for p in all_plazas_list},
+        "monthly_totals": {p: [] for p in all_plazas_list},
         "validation_warnings": [],
         "taxonomy": taxonomy,
     }
@@ -339,11 +376,13 @@ def main(argv: list[str] | None = None) -> int:
             "label": f"{MONTH_NAMES[m][:3]} {y}",
         })
 
+        # Insert into reports - ignore if it already exists
         cur = conn.execute(
-            "INSERT INTO reports(year,month,source_pdf,parsed_at) VALUES(?,?,?,?)",
+            "INSERT OR IGNORE INTO reports(year,month,source_pdf,parsed_at) VALUES(?,?,?,?)",
             (y, m, path.name, datetime.now(timezone.utc).isoformat()),
         )
-        report_id = cur.lastrowid
+        cur = conn.execute("SELECT id FROM reports WHERE year=? AND month=?", (y, m))
+        report_id = cur.fetchone()[0]
 
         plaza_buckets = _bucket_rows_by_canonical_plaza(rows)
         for plaza in NHIT_PLAZAS:
@@ -361,11 +400,14 @@ def main(argv: list[str] | None = None) -> int:
                 "amount": rec["total_amount"],
             })
             for c in rec["categories"]:
-                conn.execute(
-                    "INSERT INTO transactions(plaza_id, report_id, vehicle_category, count, amount) "
-                    "VALUES(?,?,?,?,?)",
-                    (plaza_ids[plaza], report_id, c["name"], c["count"], c["amount"]),
-                )
+                try:
+                    conn.execute(
+                        "INSERT INTO transactions(plaza_id, report_id, vehicle_category, count, amount) "
+                        "VALUES(?,?,?,?,?)",
+                        (plaza_ids[plaza], report_id, c["name"], c["count"], c["amount"]),
+                    )
+                except sqlite3.IntegrityError:
+                    pass
 
     # Sort everything for deterministic output.
     snapshot["months"].sort(key=lambda x: (x["year"], x["month"]), reverse=True)

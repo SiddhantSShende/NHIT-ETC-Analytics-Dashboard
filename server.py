@@ -134,6 +134,7 @@ def _on_error(exc):
     return jsonify({
         "error":      "Internal server error",
         "request_id": getattr(g, "req_id", None),
+        "details":    str(exc),
     }), 500
 
 
@@ -300,6 +301,9 @@ def aggregate():
         }), 404
 
     canon_plazas = sorted({r["canonical_plaza"] for r in rows})
+    if len(canon_plazas) == 0 or (not spv and not round_ and not project and not plaza):
+        canon_plazas = SNAPSHOT["plazas"]
+    
     rec = _aggregate_plazas_for_month(canon_plazas, year, month)
     if not rec:
         return jsonify({
@@ -333,6 +337,9 @@ def aggregate_trend():
         return jsonify({"trend": [], "scope": _scope_label(spv, round_, project, plaza)})
 
     canon_plazas = sorted({r["canonical_plaza"] for r in rows})
+    if len(canon_plazas) == 0 or (not spv and not round_ and not project and not plaza):
+        canon_plazas = SNAPSHOT["plazas"]
+        
     trend = []
     for m in SNAPSHOT["months"]:
         rec = _aggregate_plazas_for_month(canon_plazas, m["year"], m["month"])
