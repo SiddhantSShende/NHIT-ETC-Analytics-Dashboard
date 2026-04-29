@@ -1,0 +1,47 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.tox/
+venv/
+.venv/
+env/
+pip-log.txt
+
+# ── Generated / large data files ─────────────────────────────────────────────
+data/snapshot.json
+data/etc.db
+data/*.db
+downloads/
+*.pdf
+*.csv
+
+# ── Editor & OS ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Node (if ever added) ──────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+
+# ── Vercel ────────────────────────────────────────────────────────────────────
+.vercel/
+
+# ── Claude AI context ─────────────────────────────────────────────────────────
+.claude/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/

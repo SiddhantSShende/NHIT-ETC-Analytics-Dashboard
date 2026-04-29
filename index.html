@@ -1,271 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>NHIT | ETC Analytics Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="hdr-inner">
-    <div class="hdr-logo">
-      <div class="logo-icon">
-        <span class="logo-n">n</span><span class="logo-h">h</span><span class="logo-i">i</span><span class="logo-t">t</span>
-        <div class="logo-arrow"></div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="hdr-inner">
+      <div class="hdr-logo">
+        <div class="logo-icon">
+          <span class="logo-n">n</span><span class="logo-h">h</span><span class="logo-i">i</span><span
+            class="logo-t">t</span>
+          <div class="logo-arrow"></div>
+        </div>
+        <div class="logo-words">
+          <span class="lw-nhit">NHIT</span>
+          <span class="lw-sub">National Highways Infra Trust</span>
+        </div>
       </div>
-      <div class="logo-words">
-        <span class="lw-nhit">NHIT</span>
-        <span class="lw-sub">National Highways Infra Trust</span>
+      <div class="hdr-center">
+        <span class="portal-label">ETC Analytics Dashboard</span>
       </div>
     </div>
-    <div class="hdr-center">
-      <span class="portal-label">ETC Analytics Dashboard</span>
+    <div class="colour-bar">
+      <div class="cb-b"></div>
+      <div class="cb-o"></div>
+      <div class="cb-g"></div>
+    </div>
+  </header>
+
+  <!-- SELECTOR BAR -->
+  <div class="selector-bar">
+    <div class="selector-inner">
+      <div class="sel-group">
+        <label class="sel-label" for="spvSel">SPV</label>
+        <select id="spvSel" class="sel-ctrl">
+          <option value="">All SPVs</option>
+        </select>
+      </div>
+      <div class="sel-group">
+        <label class="sel-label" for="roundSel">Round</label>
+        <select id="roundSel" class="sel-ctrl">
+          <option value="">All Rounds</option>
+        </select>
+      </div>
+      <div class="sel-group">
+        <label class="sel-label" for="plazaSel">Fee Plaza</label>
+        <select id="plazaSel" class="sel-ctrl wide">
+          <option value="">All Plazas</option>
+        </select>
+      </div>
+      <div class="sel-group">
+        <label class="sel-label" for="yearSel">Year</label>
+        <select id="yearSel" class="sel-ctrl">
+          <option value="">-- Year --</option>
+        </select>
+      </div>
+      <div class="sel-group">
+        <label class="sel-label" for="monthSel">Month</label>
+        <select id="monthSel" class="sel-ctrl">
+          <option value="">-- Month --</option>
+        </select>
+      </div>
+      <button class="btn-view" id="btnView" type="button">View Analytics</button>
+      <button class="btn-ask-ai" id="btnAskAI" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"
+          style="margin-right:6px;vertical-align:-2px">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>Ask AI
+      </button>
     </div>
   </div>
-  <div class="colour-bar"><div class="cb-b"></div><div class="cb-o"></div><div class="cb-g"></div></div>
-</header>
 
-<!-- SELECTOR BAR -->
-<div class="selector-bar">
-  <div class="selector-inner">
-    <div class="sel-group">
-      <label class="sel-label" for="spvSel">SPV</label>
-      <select id="spvSel" class="sel-ctrl"><option value="">All SPVs</option></select>
+  <!-- MAIN -->
+  <main class="main-wrap">
+
+    <div class="hint-state" id="hintState">
+      <div class="hint-icon">
+        <svg viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" fill="#EEF3FB" stroke="#003087" stroke-width="1.5" />
+          <path d="M20 32h24M20 22h24M20 42h16" stroke="#003087" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+      </div>
+      <h2>Select a Plaza, Year &amp; Month to view analytics</h2>
+      <p id="hintSub">Loading available data…</p>
     </div>
-    <div class="sel-group">
-      <label class="sel-label" for="roundSel">Round</label>
-      <select id="roundSel" class="sel-ctrl"><option value="">All Rounds</option></select>
+
+    <div class="hint-state hidden" id="loadingState">
+      <div class="spinner"></div>
+      <h2>Reading PDF report…</h2>
+      <p>Extracting plaza data. First request for a month takes a few seconds.</p>
     </div>
-    <div class="sel-group">
-      <label class="sel-label" for="plazaSel">Fee Plaza</label>
-      <select id="plazaSel" class="sel-ctrl wide"><option value="">All Plazas</option></select>
+
+    <div class="hint-state hidden" id="noDataState">
+      <div class="hint-icon">
+        <svg viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" fill="#FFF3EA" stroke="#f47920" stroke-width="1.5" />
+          <path d="M32 20v14M32 38v4" stroke="#f47920" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </div>
+      <h2 id="errorTitle">No Data Found</h2>
+      <p id="errorTxt">Try a different plaza, year or month.</p>
     </div>
-    <div class="sel-group">
-      <label class="sel-label" for="yearSel">Year</label>
-      <select id="yearSel" class="sel-ctrl"><option value="">-- Year --</option></select>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard hidden" id="dashboard">
+
+      <div class="result-header">
+        <div class="rh-left">
+          <h1 id="resultTitle">Plaza Name</h1>
+          <p id="resultSub">January 2025 · ETC Transaction Report</p>
+          <p class="scope-meta" id="scopeMeta"></p>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-label">Total Transactions</div>
+          <div class="kpi-value" id="kpiCount">—</div>
+          <div class="kpi-sub" id="kpiCountSub">&nbsp;</div>
+        </div>
+        <div class="kpi-card kpi-orange">
+          <div class="kpi-label">Total Revenue</div>
+          <div class="kpi-value" id="kpiAmount">—</div>
+          <div class="kpi-sub" id="kpiAmountSub">&nbsp;</div>
+        </div>
+        <div class="kpi-card kpi-green">
+          <div class="kpi-label">Avg. Fare per Transaction</div>
+          <div class="kpi-value" id="kpiAvg">—</div>
+          <div class="kpi-sub" id="kpiAvgSub">&nbsp;</div>
+        </div>
+        <div class="kpi-card kpi-purple">
+          <div class="kpi-label">Vehicle Categories</div>
+          <div class="kpi-value" id="kpiCats">—</div>
+          <div class="kpi-sub" id="kpiCatsSub">&nbsp;</div>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHT STRIP -->
+      <div class="highlight-row">
+        <div class="hl-card">
+          <div class="hl-title">Top Category by Revenue</div>
+          <div class="hl-value" id="hlTopAmt">—</div>
+          <div class="hl-meta" id="hlTopAmtMeta">&nbsp;</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-title">Top Category by Volume</div>
+          <div class="hl-value" id="hlTopCnt">—</div>
+          <div class="hl-meta" id="hlTopCntMeta">&nbsp;</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-title">Avg. Daily Revenue</div>
+          <div class="hl-value" id="hlAvgRev">—</div>
+          <div class="hl-meta" id="hlAvgRevMeta">approx., over 30 days</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-title">Avg. Daily Transactions</div>
+          <div class="hl-value" id="hlAvgCnt">—</div>
+          <div class="hl-meta" id="hlAvgCntMeta">approx., over 30 days</div>
+        </div>
+      </div>
+
+      <!-- COUNT SECTION -->
+      <div class="section-card">
+        <div class="sec-header blue">
+          <div class="sec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>
+          </div>
+          <div>
+            <div class="sec-title">Transaction Count</div>
+            <div class="sec-desc">Volume of ETC FASTag transactions by category</div>
+          </div>
+          <div class="sec-total blue" id="totalCount">—</div>
+        </div>
+
+        <div class="sec-body">
+          <div class="cat-table-wrap">
+            <table class="cat-table" id="countTable">
+              <thead>
+                <tr>
+                  <th>Vehicle Category</th>
+                  <th>Transactions</th>
+                  <th>Share</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="countTbody"></tbody>
+            </table>
+          </div>
+          <div class="pie-wrap">
+            <canvas id="cntPie"></canvas>
+            <div class="pie-label">Count by Category</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AMOUNT SECTION -->
+      <div class="section-card">
+        <div class="sec-header orange">
+          <div class="sec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+            </svg>
+          </div>
+          <div>
+            <div class="sec-title">Revenue Collected</div>
+            <div class="sec-desc">Toll collected (₹) per vehicle category</div>
+          </div>
+          <div class="sec-total orange" id="totalAmount">—</div>
+        </div>
+
+        <div class="sec-body">
+          <div class="cat-table-wrap">
+            <table class="cat-table" id="amtTable">
+              <thead>
+                <tr>
+                  <th>Vehicle Category</th>
+                  <th>Amount (₹)</th>
+                  <th>Share</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="amtTbody"></tbody>
+            </table>
+          </div>
+          <div class="pie-wrap">
+            <canvas id="amtPie"></canvas>
+            <div class="pie-label">Revenue by Category</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DETAIL TABLE -->
+      <div class="section-card">
+        <div class="sec-header green">
+          <div class="sec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 3v18" />
+            </svg>
+          </div>
+          <div>
+            <div class="sec-title">Detailed Breakdown</div>
+            <div class="sec-desc">Per-category counts, revenue, share and average fare</div>
+          </div>
+        </div>
+        <div class="sec-body solo">
+          <div class="cat-table-wrap">
+            <table class="cat-table detail-table">
+              <thead>
+                <tr>
+                  <th>Vehicle Category</th>
+                  <th>Transactions</th>
+                  <th>Count Share</th>
+                  <th>Revenue (₹)</th>
+                  <th>Revenue Share</th>
+                  <th>Avg Fare (₹)</th>
+                </tr>
+              </thead>
+              <tbody id="detailTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- BAR COMPARISON -->
+      <div class="section-card">
+        <div class="sec-header dark">
+          <div class="sec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20V10M18 20V4M6 20v-6" />
+            </svg>
+          </div>
+          <div>
+            <div class="sec-title">Category Comparison</div>
+            <div class="sec-desc">Side-by-side count and revenue per category</div>
+          </div>
+        </div>
+        <div class="sec-body solo">
+          <div class="bar-wrap"><canvas id="barChart"></canvas></div>
+        </div>
+      </div>
+
+      <!-- TREND -->
+      <div class="section-card" id="trendCard">
+        <div class="sec-header dark">
+          <div class="sec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 17l6-6 4 4 8-8" />
+              <path d="M17 7h4v4" />
+            </svg>
+          </div>
+          <div>
+            <div class="sec-title">Monthly Trend</div>
+            <div class="sec-desc" id="trendSub">Transactions and revenue across all available months</div>
+          </div>
+        </div>
+        <div class="sec-body solo">
+          <div class="bar-wrap"><canvas id="trendChart"></canvas></div>
+        </div>
+      </div>
+
+    </div><!-- /dashboard -->
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 National Highways Infra Trust</span>
+    <span>Data Source: IHMCL — ihmcl.co.in</span>
+  </footer>
+
+  <script src="app.js"></script>
+
+
+  <!-- Chat panel -->
+  <div class="chat-panel" id="chatPanel" role="dialog" aria-modal="true" aria-label="Analytics Assistant">
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <div class="chat-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M20 21a8 8 0 10-16 0" />
+          </svg>
+        </div>
+        <div>
+          <div class="chat-title">Analytics Assistant</div>
+          <div class="chat-subtitle" id="chatStatus">Powered by NHIT ETC Data</div>
+        </div>
+      </div>
+      <div class="chat-header-actions">
+        <button class="chat-icon-btn" id="chatClearBtn" title="Clear conversation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 6 5 6 21 6" />
+            <path d="M19 6l-1 14H6L5 6M10 11v6M14 11v6M9 6V4h6v2" />
+          </svg>
+        </button>
+        <button class="chat-icon-btn chat-close-btn" id="chatCloseBtn" title="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="sel-group">
-      <label class="sel-label" for="monthSel">Month</label>
-      <select id="monthSel" class="sel-ctrl"><option value="">-- Month --</option></select>
+
+
+
+    <!-- Message history -->
+    <div class="chat-messages" id="chatMessages">
+      <!-- Welcome bubble -->
+      <div class="chat-msg chat-msg-bot">
+        <div class="chat-bubble">
+          👋 Hi! Ask me anything about NHIT toll data — revenue, transactions, plaza comparisons, trends, and more.
+          <br><br>
+          <strong>Examples:</strong><br>
+          • Revenue for Bassi in January 2026?<br>
+          • Which plaza had the most transactions last month?<br>
+          • Compare Aroli and Kognoli revenue.
+        </div>
+        <div class="chat-time">Now</div>
+      </div>
     </div>
-    <button class="btn-view" id="btnView" type="button">View Analytics</button>
+
+    <!-- Suggested prompts -->
+    <div class="chat-suggestions" id="chatSuggestions">
+      <button class="chat-chip" data-q="What is the total revenue for all plazas?">Total revenue all plazas</button>
+      <button class="chat-chip" data-q="Which plaza has the highest transactions?">Top plaza by volume</button>
+      <button class="chat-chip" data-q="Show me Bassi plaza revenue trend">Bassi trend</button>
+      <button class="chat-chip" data-q="What are the available plazas?">List all plazas</button>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input-wrap">
+      <textarea class="chat-input" id="chatInput" rows="1" placeholder="Ask our AI Assistant…"
+        aria-label="Chat message"></textarea>
+      <button class="chat-send" id="chatSend" title="Send" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="22" y1="2" x2="11" y2="13" />
+          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+        </svg>
+      </button>
+    </div>
   </div>
-</div>
 
-<!-- MAIN -->
-<main class="main-wrap">
+  <!-- Chat overlay (mobile) -->
+  <div class="chat-overlay" id="chatOverlay"></div>
 
-  <div class="hint-state" id="hintState">
-    <div class="hint-icon">
-      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" fill="#EEF3FB" stroke="#003087" stroke-width="1.5"/><path d="M20 32h24M20 22h24M20 42h16" stroke="#003087" stroke-width="2.5" stroke-linecap="round"/></svg>
-    </div>
-    <h2>Select a Plaza, Year &amp; Month to view analytics</h2>
-    <p id="hintSub">Loading available data…</p>
-  </div>
-
-  <div class="hint-state hidden" id="loadingState">
-    <div class="spinner"></div>
-    <h2>Reading PDF report…</h2>
-    <p>Extracting plaza data. First request for a month takes a few seconds.</p>
-  </div>
-
-  <div class="hint-state hidden" id="noDataState">
-    <div class="hint-icon">
-      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" fill="#FFF3EA" stroke="#f47920" stroke-width="1.5"/><path d="M32 20v14M32 38v4" stroke="#f47920" stroke-width="3" stroke-linecap="round"/></svg>
-    </div>
-    <h2 id="errorTitle">No Data Found</h2>
-    <p id="errorTxt">Try a different plaza, year or month.</p>
-  </div>
-
-  <!-- DASHBOARD -->
-  <div class="dashboard hidden" id="dashboard">
-
-    <div class="result-header">
-      <div class="rh-left">
-        <h1 id="resultTitle">Plaza Name</h1>
-        <p id="resultSub">January 2025 · ETC Transaction Report</p>
-        <p class="scope-meta" id="scopeMeta"></p>
-      </div>
-    </div>
-
-    <!-- KPI CARDS -->
-    <div class="kpi-grid">
-      <div class="kpi-card kpi-blue">
-        <div class="kpi-label">Total Transactions</div>
-        <div class="kpi-value" id="kpiCount">—</div>
-        <div class="kpi-sub" id="kpiCountSub">&nbsp;</div>
-      </div>
-      <div class="kpi-card kpi-orange">
-        <div class="kpi-label">Total Revenue</div>
-        <div class="kpi-value" id="kpiAmount">—</div>
-        <div class="kpi-sub" id="kpiAmountSub">&nbsp;</div>
-      </div>
-      <div class="kpi-card kpi-green">
-        <div class="kpi-label">Avg. Fare per Transaction</div>
-        <div class="kpi-value" id="kpiAvg">—</div>
-        <div class="kpi-sub" id="kpiAvgSub">&nbsp;</div>
-      </div>
-      <div class="kpi-card kpi-purple">
-        <div class="kpi-label">Vehicle Categories</div>
-        <div class="kpi-value" id="kpiCats">—</div>
-        <div class="kpi-sub" id="kpiCatsSub">&nbsp;</div>
-      </div>
-    </div>
-
-    <!-- HIGHLIGHT STRIP -->
-    <div class="highlight-row">
-      <div class="hl-card">
-        <div class="hl-title">Top Category by Revenue</div>
-        <div class="hl-value" id="hlTopAmt">—</div>
-        <div class="hl-meta" id="hlTopAmtMeta">&nbsp;</div>
-      </div>
-      <div class="hl-card">
-        <div class="hl-title">Top Category by Volume</div>
-        <div class="hl-value" id="hlTopCnt">—</div>
-        <div class="hl-meta" id="hlTopCntMeta">&nbsp;</div>
-      </div>
-      <div class="hl-card">
-        <div class="hl-title">Avg. Daily Revenue</div>
-        <div class="hl-value" id="hlAvgRev">—</div>
-        <div class="hl-meta" id="hlAvgRevMeta">approx., over 30 days</div>
-      </div>
-      <div class="hl-card">
-        <div class="hl-title">Avg. Daily Transactions</div>
-        <div class="hl-value" id="hlAvgCnt">—</div>
-        <div class="hl-meta" id="hlAvgCntMeta">approx., over 30 days</div>
-      </div>
-    </div>
-
-    <!-- COUNT SECTION -->
-    <div class="section-card">
-      <div class="sec-header blue">
-        <div class="sec-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <div>
-          <div class="sec-title">Transaction Count</div>
-          <div class="sec-desc">Volume of ETC FASTag transactions by category</div>
-        </div>
-        <div class="sec-total blue" id="totalCount">—</div>
-      </div>
-
-      <div class="sec-body">
-        <div class="cat-table-wrap">
-          <table class="cat-table" id="countTable">
-            <thead><tr><th>Vehicle Category</th><th>Transactions</th><th>Share</th><th></th></tr></thead>
-            <tbody id="countTbody"></tbody>
-          </table>
-        </div>
-        <div class="pie-wrap">
-          <canvas id="cntPie"></canvas>
-          <div class="pie-label">Count by Category</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- AMOUNT SECTION -->
-    <div class="section-card">
-      <div class="sec-header orange">
-        <div class="sec-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <div>
-          <div class="sec-title">Revenue Collected</div>
-          <div class="sec-desc">Toll collected (₹) per vehicle category</div>
-        </div>
-        <div class="sec-total orange" id="totalAmount">—</div>
-      </div>
-
-      <div class="sec-body">
-        <div class="cat-table-wrap">
-          <table class="cat-table" id="amtTable">
-            <thead><tr><th>Vehicle Category</th><th>Amount (₹)</th><th>Share</th><th></th></tr></thead>
-            <tbody id="amtTbody"></tbody>
-          </table>
-        </div>
-        <div class="pie-wrap">
-          <canvas id="amtPie"></canvas>
-          <div class="pie-label">Revenue by Category</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- DETAIL TABLE -->
-    <div class="section-card">
-      <div class="sec-header green">
-        <div class="sec-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
-        </div>
-        <div>
-          <div class="sec-title">Detailed Breakdown</div>
-          <div class="sec-desc">Per-category counts, revenue, share and average fare</div>
-        </div>
-      </div>
-      <div class="sec-body solo">
-        <div class="cat-table-wrap">
-          <table class="cat-table detail-table">
-            <thead>
-              <tr>
-                <th>Vehicle Category</th>
-                <th>Transactions</th>
-                <th>Count Share</th>
-                <th>Revenue (₹)</th>
-                <th>Revenue Share</th>
-                <th>Avg Fare (₹)</th>
-              </tr>
-            </thead>
-            <tbody id="detailTbody"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- BAR COMPARISON -->
-    <div class="section-card">
-      <div class="sec-header dark">
-        <div class="sec-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-6"/></svg>
-        </div>
-        <div>
-          <div class="sec-title">Category Comparison</div>
-          <div class="sec-desc">Side-by-side count and revenue per category</div>
-        </div>
-      </div>
-      <div class="sec-body solo">
-        <div class="bar-wrap"><canvas id="barChart"></canvas></div>
-      </div>
-    </div>
-
-    <!-- TREND -->
-    <div class="section-card" id="trendCard">
-      <div class="sec-header dark">
-        <div class="sec-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
-        </div>
-        <div>
-          <div class="sec-title">Monthly Trend</div>
-          <div class="sec-desc" id="trendSub">Transactions and revenue across all available months</div>
-        </div>
-      </div>
-      <div class="sec-body solo">
-        <div class="bar-wrap"><canvas id="trendChart"></canvas></div>
-      </div>
-    </div>
-
-  </div><!-- /dashboard -->
-</main>
-
-<footer class="site-footer">
-  <span>© 2026 National Highways Infra Trust</span>
-  <span>Data Source: IHMCL — ihmcl.co.in</span>
-</footer>
-
-<script src="app.js"></script>
+  <script src="chatbot.js"></script>
 </body>
+
 </html>
