@@ -1,19 +1,22 @@
 """
 NHIT | ETC Analytics API Server.
 
-Loads the pre-built snapshot.json (and SQLite mirror) at startup and
-serves every endpoint from in-memory dictionaries. No PDFs are touched
-on the request path.
+The frontend now reads `downloads/json/` directly via data-layer.js, so
+this server exposes only:
+  - GET  /api/health   liveness + diagnostics
+  - POST /api/chat     OpenRouter proxy with snapshot-derived data context
+  - static file serving (index.html, app.js, data-layer.js, etc.)
 
-If snapshot.json is missing the server will trigger a build automatically
-so that a fresh checkout works with `python server.py`.
+The aggregation/meta/taxonomy endpoints have been retired; they were
+replaced by the static JSON files in downloads/json/. This file still
+loads the same data into memory because the chatbot's `_build_data_context`
+needs to fuzzy-match plazas/months and surface concrete numbers.
 """
 from __future__ import annotations
 
 import json
 import logging
 import os
-import sqlite3
 import time
 import urllib.request
 import uuid
@@ -36,12 +39,11 @@ from flask import Flask, g, jsonify, request, send_from_directory
 from flask_cors import CORS
 from werkzeug.exceptions import HTTPException
 from analytics import aggregate_plazas_for_month, aggregate_plazas_for_range
+from static_loader import load_snapshot, DEFAULT_JSON_DIR
 
 # ── Paths & logging ─────────────────────────────────────────────────────────
 DIR = Path(__file__).parent
-DATA_DIR = DIR / "data"
-SNAPSHOT_PATH = DATA_DIR / "snapshot.json"
-DB_PATH = DATA_DIR / "etc.db"
+JSON_DIR = DEFAULT_JSON_DIR
 
 logging.basicConfig(
     level=logging.INFO,
@@ -70,25 +72,17 @@ SNAPSHOT: dict | None = None
 
 # ── Snapshot loader ─────────────────────────────────────────────────────────
 def _ensure_snapshot() -> None:
-    """Load snapshot.json into the SNAPSHOT global. Build it first if missing."""
+    """Load downloads/json/* into the SNAPSHOT global for the chatbot."""
     global SNAPSHOT
-
-    if not SNAPSHOT_PATH.exists():
-        log.warning("%s missing — running build_data.py", SNAPSHOT_PATH)
-        from build_data import main as build_main
-        rc = build_main([])
-        if rc != 0:
-            raise RuntimeError("build_data.py failed; cannot start server")
-
-    log.info("Loading snapshot from %s", SNAPSHOT_PATH)
-    with SNAPSHOT_PATH.open(encoding="utf-8") as f:
-        SNAPSHOT = json.load(f)
-
+    if not (JSON_DIR / "_index.json").exists():
+        raise RuntimeError(
+            f"{JSON_DIR}/_index.json missing — run scripts/build_json_export.py first"
+        )
+    SNAPSHOT = load_snapshot(JSON_DIR)
     log.info(
-        "Snapshot loaded: %d plazas, %d months, %d validation warnings",
+        "Snapshot loaded: %d plazas, %d months",
         len(SNAPSHOT["plazas"]),
         len(SNAPSHOT["months"]),
-        len(SNAPSHOT.get("validation_warnings", [])),
     )
 
 
@@ -159,293 +153,8 @@ def health():
         "snapshot_generated_at": SNAPSHOT.get("generated_at"),
         "plazas":           len(SNAPSHOT["plazas"]),
         "months_available": len(SNAPSHOT["months"]),
-        "validation_warnings": len(SNAPSHOT.get("validation_warnings", [])),
-        "sqlite_present": DB_PATH.exists(),
+        "data_source": str(JSON_DIR.relative_to(DIR)),
     })
-
-
-@app.route("/api/meta")
-def meta():
-    """Dropdown data: plaza list, available years, available months."""
-    return jsonify({
-        "plazas": SNAPSHOT["plazas"],
-        "years":  SNAPSHOT["years"],
-        "months": SNAPSHOT["available_months"],
-    })
-
-
-@app.route("/api/taxonomy")
-def taxonomy():
-    """Hierarchy used to drive the cascading SPV → Round → Project → Plaza
-    dropdowns in the UI. Each row carries its canonical plaza name (or null
-    if no PDF data is available for it)."""
-    tx = SNAPSHOT.get("taxonomy", {})
-    return jsonify({
-        "rows":      tx.get("rows", []),
-        "spvs":      tx.get("spvs", []),
-        "rounds":    tx.get("rounds", []),
-        "unmatched": tx.get("unmatched", []),
-    })
-
-
-# ── Aggregation helpers ─────────────────────────────────────────────────────
-def _filter_taxonomy_rows(spv: str, round_: str, project: str, plaza: str):
-    """Return all taxonomy rows whose canonical plaza has parsed data, after
-    applying any non-empty filters. Filter values are case-insensitive
-    exact matches on the corresponding column."""
-    rows = SNAPSHOT.get("taxonomy", {}).get("rows", [])
-    out = []
-    for r in rows:
-        if not r.get("canonical_plaza"):
-            continue
-        if spv     and r["spv"].lower()           != spv.lower():     continue
-        if round_  and r["round"].lower()         != round_.lower():  continue
-        if project and r["project"].lower()       != project.lower(): continue
-        if plaza   and r["excel_plaza"].lower()   != plaza.lower():   continue
-        out.append(r)
-    return out
-
-
-def _aggregate_plazas_for_month(plazas: list[str], year: int, month: int) -> dict | None:
-    """Wrapper so the server always uses the shared analytics helpers."""
-    return aggregate_plazas_for_month(SNAPSHOT, plazas, year, month)
-
-
-def _aggregate_plazas_for_range(
-    plazas: list[str],
-    start_year: int,
-    start_month: int,
-    end_year: int,
-    end_month: int,
-) -> dict | None:
-    return aggregate_plazas_for_range(
-        SNAPSHOT,
-        plazas,
-        start_year,
-        start_month,
-        end_year,
-        end_month,
-    )
-
-
-def _scope_label(spv, round_, project, plaza):
-    """Human-readable description of which scope is being aggregated."""
-    if plaza:   return plaza
-    if project: return f"{project} ({round_ or 'All Rounds'}, {spv or 'All SPVs'})"
-    if round_:  return f"{spv or 'All SPVs'} · {round_}"
-    if spv:     return f"{spv} · All Rounds"
-    return "All NHIT Plazas"
-
-
-@app.route("/api/aggregate")
-def aggregate():
-    """Hierarchical aggregation. Any of `spv`, `round`, `project`, `plaza`
-    may be empty — empty means "include everything below this level"."""
-    spv     = request.args.get("spv",     "").strip()
-    round_  = request.args.get("round",   "").strip()
-    project = request.args.get("project", "").strip()
-    plaza   = request.args.get("plaza",   "").strip()
-    try:
-        year  = int(request.args.get("year",  "") or 0)
-        month = int(request.args.get("month", "") or 0)
-    except ValueError:
-        return jsonify({"error": "year and month must be integers"}), 400
-    if not year or not month:
-        return jsonify({"error": "year and month are required"}), 400
-    if not (1 <= month <= 12):
-        return jsonify({"error": "month must be between 1 and 12"}), 400
-
-    rows = _filter_taxonomy_rows(spv, round_, project, plaza)
-    if not rows:
-        return jsonify({
-            "error": "No plazas match the selected filters.",
-            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
-        }), 404
-
-    canon_plazas = sorted({r["canonical_plaza"] for r in rows})
-    if len(canon_plazas) == 0 or (not spv and not round_ and not project and not plaza):
-        canon_plazas = SNAPSHOT["plazas"]
-    
-    rec = _aggregate_plazas_for_month(canon_plazas, year, month)
-    if not rec:
-        return jsonify({
-            "error": f"No data found for the selected filters in {year}-{month:02d}.",
-            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
-            "candidate_plazas": canon_plazas,
-        }), 404
-
-    rec["scope"] = {
-        "label":   _scope_label(spv, round_, project, plaza),
-        "spv":     spv     or None,
-        "round":   round_  or None,
-        "project": project or None,
-        "plaza":   plaza   or None,
-        "plaza_count": len(canon_plazas),
-    }
-    return jsonify({"record": rec})
-
-
-@app.route("/api/aggregate-trend")
-def aggregate_trend():
-    """Monthly count + revenue series across every available report, summed
-    across all plazas matching the SPV/Round/Project/Plaza filters."""
-    spv     = request.args.get("spv",     "").strip()
-    round_  = request.args.get("round",   "").strip()
-    project = request.args.get("project", "").strip()
-    plaza   = request.args.get("plaza",   "").strip()
-
-    rows = _filter_taxonomy_rows(spv, round_, project, plaza)
-    if not rows:
-        return jsonify({"trend": [], "scope": _scope_label(spv, round_, project, plaza)})
-
-    canon_plazas = sorted({r["canonical_plaza"] for r in rows})
-    if len(canon_plazas) == 0 or (not spv and not round_ and not project and not plaza):
-        canon_plazas = SNAPSHOT["plazas"]
-        
-    trend = []
-    for m in SNAPSHOT["months"]:
-        rec = _aggregate_plazas_for_month(canon_plazas, m["year"], m["month"])
-        if rec:
-            trend.append({
-                "year":       m["year"],
-                "month":      m["month"],
-                "month_name": rec["month_name"],
-                "label":      m["label"],
-                "count":      rec["total_count"],
-                "amount":     rec["total_amount"],
-            })
-    trend.sort(key=lambda x: (x["year"], x["month"]))
-    return jsonify({
-        "scope": _scope_label(spv, round_, project, plaza),
-        "trend": trend,
-    })
-
-
-@app.route("/api/aggregate-range")
-def aggregate_range():
-    """Sum totals across a month range for the given filters."""
-    spv     = request.args.get("spv",     "").strip()
-    round_  = request.args.get("round",   "").strip()
-    project = request.args.get("project", "").strip()
-    plaza   = request.args.get("plaza",   "").strip()
-    try:
-        start_year  = int(request.args.get("start_year",  "") or 0)
-        start_month = int(request.args.get("start_month", "") or 0)
-        end_year    = int(request.args.get("end_year",    "") or 0)
-        end_month   = int(request.args.get("end_month",   "") or 0)
-    except ValueError:
-        return jsonify({"error": "year and month must be integers"}), 400
-    if not (start_year and start_month and end_year and end_month):
-        return jsonify({"error": "start/end year and month are required"}), 400
-    if not (1 <= start_month <= 12 and 1 <= end_month <= 12):
-        return jsonify({"error": "month must be between 1 and 12"}), 400
-    if (start_year, start_month) > (end_year, end_month):
-        return jsonify({"error": "start date must be before end date"}), 400
-
-    rows = _filter_taxonomy_rows(spv, round_, project, plaza)
-    if not rows:
-        return jsonify({
-            "error": "No plazas match the selected filters.",
-            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
-        }), 404
-
-    canon_plazas = sorted({r["canonical_plaza"] for r in rows})
-    if len(canon_plazas) == 0 or (not spv and not round_ and not project and not plaza):
-        canon_plazas = SNAPSHOT["plazas"]
-
-    rec = _aggregate_plazas_for_range(
-        canon_plazas,
-        start_year,
-        start_month,
-        end_year,
-        end_month,
-    )
-    if not rec:
-        return jsonify({
-            "error": "No data found for the selected filters in the range.",
-            "filters": {"spv": spv, "round": round_, "project": project, "plaza": plaza},
-            "candidate_plazas": canon_plazas,
-        }), 404
-
-    rec["scope"] = {
-        "label":   _scope_label(spv, round_, project, plaza),
-        "spv":     spv     or None,
-        "round":   round_  or None,
-        "project": project or None,
-        "plaza":   plaza   or None,
-        "plaza_count": len(canon_plazas),
-    }
-    return jsonify({"record": rec})
-
-
-@app.route("/api/data")
-def data():
-    """Full analytics for one (plaza, year, month)."""
-    plaza = request.args.get("plaza", "").strip()
-    try:
-        year = int(request.args.get("year", "") or 0)
-        month = int(request.args.get("month", "") or 0)
-    except ValueError:
-        return jsonify({"error": "year and month must be integers"}), 400
-
-    if not plaza or not year or not month:
-        return jsonify({"error": "Missing parameters: plaza, year, month required."}), 400
-    if not (1 <= month <= 12):
-        return jsonify({"error": "month must be between 1 and 12"}), 400
-    if plaza not in SNAPSHOT["data"]:
-        return jsonify({"error": f"Unknown plaza: {plaza}"}), 404
-
-    rec = SNAPSHOT["data"][plaza].get(f"{year}-{month:02d}")
-    if not rec:
-        return jsonify({
-            "error": f"No data found for {plaza} in {year}-{month:02d}.",
-        }), 404
-
-    return jsonify({"record": rec})
-
-
-@app.route("/api/trend")
-def trend():
-    """Monthly totals for one plaza across every available report."""
-    plaza = request.args.get("plaza", "").strip()
-    if not plaza:
-        return jsonify({"error": "plaza parameter required"}), 400
-    if plaza not in SNAPSHOT["monthly_totals"]:
-        return jsonify({"error": f"Unknown plaza: {plaza}"}), 404
-    return jsonify({"plaza": plaza, "trend": SNAPSHOT["monthly_totals"][plaza]})
-
-
-@app.route("/api/validation")
-def validation():
-    """Surfaces parsing-vs-PDF-total discrepancies for transparency."""
-    return jsonify({
-        "warnings": SNAPSHOT.get("validation_warnings", []),
-    })
-
-
-@app.route("/api/raw")
-def raw():
-    """Direct SQLite query for a plaza — handy for analysts."""
-    plaza = request.args.get("plaza", "").strip()
-    if not DB_PATH.exists():
-        return jsonify({"error": "etc.db not built yet — run build_data.py"}), 503
-    if not plaza:
-        return jsonify({"error": "plaza parameter required"}), 400
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    rows = conn.execute(
-        """
-        SELECT r.year, r.month, t.vehicle_category, t.count, t.amount
-        FROM transactions t
-        JOIN plazas  p ON p.id = t.plaza_id
-        JOIN reports r ON r.id = t.report_id
-        WHERE p.name = ?
-        ORDER BY r.year, r.month, t.vehicle_category
-        """,
-        (plaza,),
-    ).fetchall()
-    conn.close()
-    return jsonify({"plaza": plaza, "rows": [dict(r) for r in rows]})
 
 
 # ── Chat / AI endpoint ──────────────────────────────────────────────────────

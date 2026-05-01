@@ -4,11 +4,10 @@
  *   SPV → Round → Project → Plaza → Year + Month
  *
  * Each filter has an "All …" option. Leaving a level blank means
- * "include everything below it"; the backend (`/api/aggregate`) sums
- * across every plaza that matches.
+ * "include everything below it"; window.DataLayer (data-layer.js) sums
+ * across every plaza that matches by reading the static JSON files in
+ * downloads/json/ and caching them in the browser.
  */
-
-const API = "";   // same-origin (Flask serves index.html on :5050)
 
 const PIE_COLORS = [
   "#003087", "#f47920", "#7ab648", "#00adef",
@@ -47,8 +46,8 @@ window.addEventListener("DOMContentLoaded", () => {
 async function bootstrap() {
   try {
     const [meta, taxonomy] = await Promise.all([
-      fetch(`${API}/api/meta`).then(r => r.ok ? r.json() : Promise.reject(r.status)),
-      fetch(`${API}/api/taxonomy`).then(r => r.ok ? r.json() : Promise.reject(r.status)),
+      DataLayer.getMeta(),
+      DataLayer.getTaxonomy(),
     ]);
     META = meta;
     TAXONOMY_ROWS = taxonomy.rows || [];
@@ -74,7 +73,7 @@ async function bootstrap() {
   } catch (e) {
     console.error(e);
     document.getElementById("hintSub").textContent =
-      "Cannot reach API. Run `python server.py` and reload.";
+      "Cannot load data files from downloads/json/. Re-run scripts/build_json_export.py.";
   }
 }
 
@@ -146,37 +145,26 @@ async function loadData() {
 
   showOnly("loadingState");
 
-  const filterQs   = new URLSearchParams({ spv, round: round_, plaza });
-  const dataQs     = new URLSearchParams({ spv, round: round_, plaza, year, month });
-  const rangeQs    = new URLSearchParams({
-    spv,
-    round: round_,
-    plaza,
-    start_year: startYear,
-    start_month: startMonth,
-    end_year: endYear,
-    end_month: endMonth,
-  });
+  const filterArgs = { spv, round: round_, plaza };
   const opts = useRange
     ? { mode: "range", startYear, startMonth, endYear, endMonth }
     : { mode: "single", year, month };
 
   try {
-    const [dataRes, trendRes] = await Promise.all([
-      fetch(`${API}/${useRange ? "api/aggregate-range" : "api/aggregate"}?${useRange ? rangeQs : dataQs}`),
-      fetch(`${API}/api/aggregate-trend?${filterQs}`),
+    const dataPromise = useRange
+      ? DataLayer.aggregateRange({
+          ...filterArgs,
+          start_year: startYear, start_month: startMonth,
+          end_year: endYear,     end_month: endMonth,
+        })
+      : DataLayer.aggregate({ ...filterArgs, year, month });
+
+    const [dataJson, trendJson] = await Promise.all([
+      dataPromise.catch(err => ({ __error: err })),
+      DataLayer.aggregateTrend(filterArgs).catch(() => ({ trend: [] })),
     ]);
 
-    const dataJson = await dataRes.json().catch(() => ({}));
-
-    if (!dataRes.ok) {
-      document.getElementById("errorTitle").textContent = "No Data";
-      document.getElementById("errorTxt").textContent =
-        dataJson.error || `HTTP ${dataRes.status}`;
-      showOnly("noDataState");
-      return;
-    }
-    if (!dataJson.record || !dataJson.record.categories?.length) {
+    if (dataJson.__error) {
       document.getElementById("errorTitle").textContent = "No Data Found";
       if (useRange) {
         document.getElementById("errorTxt").textContent =
@@ -188,16 +176,19 @@ async function loadData() {
       showOnly("noDataState");
       return;
     }
-
-    let trendArr = [];
-    if (trendRes.ok) {
-      const tJson = await trendRes.json().catch(() => ({}));
-      trendArr = tJson.trend || [];
+    if (!dataJson.record || !dataJson.record.categories?.length) {
+      document.getElementById("errorTitle").textContent = "No Data Found";
+      document.getElementById("errorTxt").textContent =
+        useRange
+          ? `No transaction data matched the selected filters in the chosen range.`
+          : `No transaction data matched the selected filters in ${month}/${year}.`;
+      showOnly("noDataState");
+      return;
     }
 
     showOnly("dashboard");
     try {
-      renderResult(dataJson.record, trendArr, opts);
+      renderResult(dataJson.record, trendJson.trend || [], opts);
     } catch (renderErr) {
       console.error("Render failed:", renderErr);
       document.getElementById("errorTitle").textContent = "Render Error";
@@ -207,9 +198,9 @@ async function loadData() {
     }
   } catch (e) {
     console.error(e);
-    document.getElementById("errorTitle").textContent = "Network Error";
+    document.getElementById("errorTitle").textContent = "Data Error";
     document.getElementById("errorTxt").textContent =
-      "Could not reach the API. Is server.py running?";
+      e.message || "Could not load data files from downloads/json/.";
     showOnly("noDataState");
   }
 }

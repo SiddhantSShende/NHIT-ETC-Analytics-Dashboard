@@ -16,12 +16,21 @@
     {
       "src": "*.css",
       "use": "@vercel/static"
+    },
+    {
+      "src": "downloads/json/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/server.py"
+    },
+    {
+      "src": "/downloads/json/(.*)",
+      "dest": "/downloads/json/$1",
+      "headers": { "Cache-Control": "public, max-age=86400" }
     },
     {
       "src": "/(.*)",
