@@ -1,0 +1,86 @@
+{
+  "plaza_name": "Darwha Toll plaza",
+  "plaza_slug": "darwha",
+  "piu": "Chandrapur",
+  "ro": "Nagpur",
+  "source_raw_names": [
+    "Darwha Toll plaza"
+  ],
+  "period_count": 2,
+  "months": {
+    "2026-02": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 11258,
+          "amount": 395390.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 324,
+          "amount": 20625.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2804,
+          "amount": 395195.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 559,
+          "amount": 80990.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2495,
+          "amount": 587415.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 250.0
+        }
+      },
+      "total": {
+        "count": 17441,
+        "amount": 1479865.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Feb-2026.pdf"
+      ]
+    },
+    "2026-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 31457,
+          "amount": 1063370.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1047,
+          "amount": 64665.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8574,
+          "amount": 1066075.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1492,
+          "amount": 211700.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9169,
+          "amount": 2144655.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 550.0
+        }
+      },
+      "total": {
+        "count": 51741,
+        "amount": 4551015.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    }
+  }
+}

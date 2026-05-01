@@ -1,0 +1,86 @@
+{
+  "plaza_name": "Kukma Toll Plaza",
+  "plaza_slug": "kukma",
+  "piu": "Gandhidham",
+  "ro": "Gandhinagar",
+  "source_raw_names": [
+    "Kukma Toll Plaza"
+  ],
+  "period_count": 2,
+  "months": {
+    "2026-02": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 22166,
+          "amount": 944025.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 819,
+          "amount": 65155.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2844,
+          "amount": 470995.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2604,
+          "amount": 477750.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11960,
+          "amount": 3069155.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 3310.0
+        }
+      },
+      "total": {
+        "count": 40403,
+        "amount": 5030390.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Feb-2026.pdf"
+      ]
+    },
+    "2026-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 181259,
+          "amount": 7402875.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6308,
+          "amount": 480705.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23503,
+          "amount": 3733670.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11690,
+          "amount": 1852690.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 90782,
+          "amount": 18526685.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 93,
+          "amount": 30845.0
+        }
+      },
+      "total": {
+        "count": 313635,
+        "amount": 32027470.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    }
+  }
+}

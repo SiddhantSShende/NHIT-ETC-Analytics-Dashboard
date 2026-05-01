@@ -1,0 +1,86 @@
+{
+  "plaza_name": "Chhajarsi Toll Plaza",
+  "plaza_slug": "chhajarsi",
+  "piu": "Ghaziabad",
+  "ro": "Delhi",
+  "source_raw_names": [
+    "Chhajarsi Toll Plaza"
+  ],
+  "period_count": 2,
+  "months": {
+    "2026-02": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1469760,
+          "amount": 107786940.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 62029,
+          "amount": 13678300.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 150733,
+          "amount": 72670445.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21253,
+          "amount": 12582825.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 46141,
+          "amount": 39850435.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 37,
+          "amount": 34565.0
+        }
+      },
+      "total": {
+        "count": 1749953,
+        "amount": 246603510.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Feb-2026.pdf"
+      ]
+    },
+    "2026-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1548708,
+          "amount": 113444135.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 64914,
+          "amount": 14234060.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 161245,
+          "amount": 77254450.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21453,
+          "amount": 12670135.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 49347,
+          "amount": 42431430.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 36,
+          "amount": 34345.0
+        }
+      },
+      "total": {
+        "count": 1845703,
+        "amount": 260068555.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    }
+  }
+}

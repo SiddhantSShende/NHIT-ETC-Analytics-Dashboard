@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Chandithan Toll Plaza",
+  "plaza_slug": "chandithan",
+  "piu": "Gorakhpur",
+  "ro": "varanasi",
+  "source_raw_names": [
+    "Chandithan Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 80954,
+          "amount": 1160475.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3933,
+          "amount": 112255.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11831,
+          "amount": 717730.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2500,
+          "amount": 175780.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12695,
+          "amount": 1268825.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 105.0
+        }
+      },
+      "total": {
+        "count": 111914,
+        "amount": 3435170.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    }
+  }
+}

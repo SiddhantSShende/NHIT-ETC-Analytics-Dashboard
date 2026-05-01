@@ -1,0 +1,86 @@
+{
+  "plaza_name": "Kothagudem Toll Plaza",
+  "plaza_slug": "kothagudem-2",
+  "piu": "Khammam",
+  "ro": "Hyderabad",
+  "source_raw_names": [
+    "Kothagudem Toll Plaza"
+  ],
+  "period_count": 2,
+  "months": {
+    "2026-02": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19948,
+          "amount": 1068775.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 693,
+          "amount": 70505.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 922,
+          "amount": 206105.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 218,
+          "amount": 54040.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3902,
+          "amount": 1284700.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 405.0
+        }
+      },
+      "total": {
+        "count": 25684,
+        "amount": 2684530.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Feb-2026.pdf"
+      ]
+    },
+    "2026-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 22571,
+          "amount": 1194735.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 740,
+          "amount": 76965.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1012,
+          "amount": 228020.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 224,
+          "amount": 56560.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2715,
+          "amount": 920610.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 405.0
+        }
+      },
+      "total": {
+        "count": 27263,
+        "amount": 2477295.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    }
+  }
+}

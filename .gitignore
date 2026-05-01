@@ -19,7 +19,14 @@ pip-log.txt
 data/snapshot.json
 data/etc.db
 data/*.db
-downloads/
+
+# Exclude raw PDF source directories but keep the generated JSON files in
+# downloads/json/ so the static dashboard can ship to Vercel.
+downloads/ETC_Monthly_Data/
+downloads/ETC_Transaction_Report/
+downloads/Monthly_Annual_Pass_Report/
+downloads/VC_Wise_Monthly_ETC_FASTag_Report/
+downloads/vc_monthly/
 *.pdf
 *.csv
 

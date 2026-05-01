@@ -1,0 +1,86 @@
+{
+  "plaza_name": "Bakhtyarpur Toll Plaza",
+  "plaza_slug": "bakhtyarpur",
+  "piu": "Agra",
+  "ro": "Lucknow - West",
+  "source_raw_names": [
+    "Bakhtyarpur Toll Plaza"
+  ],
+  "period_count": 2,
+  "months": {
+    "2026-02": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 54330,
+          "amount": 1965235.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2543,
+          "amount": 197675.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7767,
+          "amount": 1241565.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1540,
+          "amount": 285100.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22269,
+          "amount": 5192205.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 690.0
+        }
+      },
+      "total": {
+        "count": 88452,
+        "amount": 8882470.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Feb-2026.pdf"
+      ]
+    },
+    "2026-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 52195,
+          "amount": 1852130.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2774,
+          "amount": 216620.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10616,
+          "amount": 1698565.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2041,
+          "amount": 375405.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 28018,
+          "amount": 6506395.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 3250.0
+        }
+      },
+      "total": {
+        "count": 95655,
+        "amount": 10652365.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    }
+  }
+}

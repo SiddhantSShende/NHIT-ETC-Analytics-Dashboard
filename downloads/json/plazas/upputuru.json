@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Upputuru Toll Plaza",
+  "plaza_slug": "upputuru",
+  "piu": "Ongole",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Upputuru Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 65526,
+          "amount": 3651590.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1038,
+          "amount": 146560.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10061,
+          "amount": 2265620.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4301,
+          "amount": 1164845.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3247,
+          "amount": 1404900.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 630.0
+        }
+      },
+      "total": {
+        "count": 84174,
+        "amount": 8634145.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    }
+  }
+}
