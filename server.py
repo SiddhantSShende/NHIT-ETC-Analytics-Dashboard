@@ -308,6 +308,8 @@ def _build_data_context(message: str) -> str:
         period_phrase = f"{MONTH_NAMES[detected_month]} {detected_year}"
 
     auth_sentence = ""
+    no_data_sentence = ""
+    period_requested = bool(period_phrase)
     if rec:
         auth_sentence = (
             f"For {scope_label} ({len(rec['plazas_included'])} plazas with data) "
@@ -319,12 +321,30 @@ def _build_data_context(message: str) -> str:
             f"({_fmt_inr(rec['top_by_amount']['amount'])}); top category by volume = "
             f"{rec['top_by_count']['name']} ({_fmt_int(rec['top_by_count']['count'])} txns)."
         )
+    elif period_requested:
+        # User asked for a specific period that has no data. Build a
+        # complete, deterministic "no data" sentence so the LLM cannot
+        # silently lift a number from the trend block.
+        avail_months = ", ".join(
+            f"{MONTH_NAMES[m['month']][:3]} {m['year']}"
+            for m in SNAPSHOT.get("months", [])
+        )
+        no_data_sentence = (
+            f"For {scope_label} in {period_phrase}, NO DATA is available in "
+            f"the dataset. Do NOT estimate, extrapolate, or substitute another "
+            f"period. Available months on record: {avail_months}."
+        )
 
     lines: list[str] = []
     if auth_sentence:
         # Repeat for emphasis; small models tend to anchor on what's at the top.
         lines.append("=" * 8 + " AUTHORITATIVE_ANSWER (use this sentence verbatim, do NOT recompute) " + "=" * 8)
         lines.append(auth_sentence)
+        lines.append("=" * 8 + " END AUTHORITATIVE_ANSWER " + "=" * 8)
+        lines.append("")
+    elif no_data_sentence:
+        lines.append("=" * 8 + " AUTHORITATIVE_ANSWER (use this sentence verbatim, do NOT recompute) " + "=" * 8)
+        lines.append(no_data_sentence)
         lines.append("=" * 8 + " END AUTHORITATIVE_ANSWER " + "=" * 8)
         lines.append("")
 
@@ -349,13 +369,18 @@ def _build_data_context(message: str) -> str:
 
     if is_single_plaza:
         plaza = scope_plazas[0]
-        trend = SNAPSHOT.get("monthly_totals", {}).get(plaza, [])
-        if trend:
-            trend_str = " | ".join(
-                f"{t['label']}: {_fmt_int(t['count'])} txns / {_fmt_inr(t['amount'])}"
-                for t in trend
-            )
-            lines.append(f"TREND_FOR_{plaza}: {trend_str}")
+        # Suppress the trend block when the user asked about a specific period
+        # that has NO data — otherwise the LLM may pluck a number from a
+        # different month and label it with the requested period.
+        suppress_trend = period_requested and not rec
+        if not suppress_trend:
+            trend = SNAPSHOT.get("monthly_totals", {}).get(plaza, [])
+            if trend:
+                trend_str = " | ".join(
+                    f"{t['label']}: {_fmt_int(t['count'])} txns / {_fmt_inr(t['amount'])}"
+                    for t in trend
+                )
+                lines.append(f"TREND_FOR_{plaza}: {trend_str}")
     elif rec and detected_year and detected_month:
         # Rank top plazas in the chosen scope so the model can answer
         # follow-up questions like "which plaza is highest in NSPPL".
