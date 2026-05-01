@@ -1,6 +1,12 @@
 """
 NHIT | PDF parser for IHMCL VC-Wise monthly reports.
 
+BUILD-TIME ONLY. This module is invoked exclusively by
+scripts/build_json_export.py to regenerate downloads/json/* from raw PDFs.
+The Flask server (server.py) never imports it; runtime data flows from
+downloads/json/* via static_loader.py. Removing pdfplumber would not
+affect the live dashboard or chatbot.
+
 Pure functions — no Flask, no global state. Parses one PDF and emits
 per-plaza category rows plus the per-plaza TOTAL_CNT/TOTAL_AMT cells
 so the build pipeline can validate that our parsing matches the

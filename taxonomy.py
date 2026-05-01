@@ -1,6 +1,11 @@
 """
 NHIT | Taxonomy ingestion.
 
+BUILD-TIME ONLY. Reads data/Project details.xlsx during
+scripts/build_json_export.py runs and writes downloads/json/_taxonomy.json.
+server.py never imports openpyxl or this module — at runtime the
+taxonomy comes from the static JSON sidecar.
+
 Reads `data/Project details.xlsx` and produces a clean list of
 (spv, project, round, excel_plaza, canonical_plaza) records. Excel
 "Project Name" column has merged cells (blank rows mean "same project as

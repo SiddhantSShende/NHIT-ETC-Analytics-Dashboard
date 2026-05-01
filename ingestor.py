@@ -1,6 +1,10 @@
 """
 NHIT | Ingestor helpers.
 
+BUILD-TIME ONLY. Used by scripts/build_json_export.py to canonicalise
+plaza names while regenerating downloads/json/*. Not loaded at request
+time by server.py.
+
 Normalizes plaza names and builds stable aliases so slight variations
 across PDFs resolve to a single canonical plaza name.
 """

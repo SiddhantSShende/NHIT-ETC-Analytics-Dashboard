@@ -158,137 +158,233 @@ def health():
 
 
 # ── Chat / AI endpoint ──────────────────────────────────────────────────────
-def _build_data_context(message: str) -> str:
-    """Extract a compact, relevant slice of snapshot data to include as
-    AI context.  We fuzzy-match plaza names and months from the user
-    message so the model always has concrete numbers to cite."""
+def _detect_scope(message: str) -> tuple[list[str], str, dict]:
+    """Resolve a user message to a concrete plaza set + human-readable scope.
+
+    Detection order (most specific wins):
+      1. Single plaza name → that plaza only.
+      2. SPV (NSPPL/NEPPL/NWPPL) and/or Round (R1..R5) → canonical_plaza
+         set from taxonomy filtered by that SPV/Round.
+      3. None of the above → the full network (all plazas).
+
+    Returns (plazas, label, meta) where meta carries spv/round/plaza filters
+    used so the chatbot can echo the scope verbatim.
+    """
+    import re
     msg_lower = message.lower()
+    tax_rows = SNAPSHOT.get("taxonomy", {}).get("rows", [])
+    spvs = SNAPSHOT.get("taxonomy", {}).get("spvs", [])
+    rounds = SNAPSHOT.get("taxonomy", {}).get("rounds", [])
+    all_plazas = list(SNAPSHOT["data"].keys())
+
+    # 1. Try to spot any plaza name as a substring (longest first to prefer
+    #    "Bhadarabad TOLL PLAZA" over a possible substring of another name).
+    matched_plaza = None
+    for p in sorted(all_plazas, key=lambda x: -len(x)):
+        if p.lower() in msg_lower:
+            matched_plaza = p
+            break
+
+    # 2. Detect SPV codes (NSPPL etc.) and Round labels (R1, R2 …) via word
+    #    boundaries so "NSPPL" doesn't accidentally match inside another word.
+    matched_spv = None
+    for s in spvs:
+        if re.search(rf"\b{re.escape(s)}\b", message, flags=re.IGNORECASE):
+            matched_spv = s
+            break
+    matched_round = None
+    for r in rounds:
+        if re.search(rf"\b{re.escape(r)}\b", message, flags=re.IGNORECASE):
+            matched_round = r
+            break
+
+    if matched_plaza:
+        return [matched_plaza], matched_plaza, {"plaza": matched_plaza}
+
+    if matched_spv or matched_round:
+        rows = [
+            r for r in tax_rows
+            if r.get("canonical_plaza")
+            and (not matched_spv   or r.get("spv")   == matched_spv)
+            and (not matched_round or r.get("round") == matched_round)
+        ]
+        plazas = sorted({r["canonical_plaza"] for r in rows})
+        if plazas:
+            label_bits = []
+            if matched_spv:   label_bits.append(f"SPV {matched_spv}")
+            if matched_round: label_bits.append(f"Round {matched_round}")
+            return plazas, " · ".join(label_bits), {
+                "spv": matched_spv, "round": matched_round, "plaza_count": len(plazas),
+            }
+        # Fall back to SPV-only when SPV+Round combo is empty but the SPV
+        # itself has data (e.g. user asked for "NEPPL R1" but NEPPL only
+        # has Round R3 in the portfolio).
+        if matched_spv and matched_round:
+            spv_rows = [
+                r for r in tax_rows
+                if r.get("canonical_plaza") and r.get("spv") == matched_spv
+            ]
+            spv_plazas = sorted({r["canonical_plaza"] for r in spv_rows})
+            if spv_plazas:
+                actual_rounds = sorted({r["round"] for r in spv_rows})
+                label = (
+                    f"SPV {matched_spv} (NOTE: {matched_spv} has no Round "
+                    f"{matched_round} in this portfolio — only Round(s) "
+                    f"{', '.join(actual_rounds)})"
+                )
+                return spv_plazas, label, {
+                    "spv": matched_spv, "round": None,
+                    "plaza_count": len(spv_plazas),
+                    "note": f"requested Round {matched_round} not present",
+                }
+        # SPV/Round was specified but matches no plazas at all.
+        return [], (
+            f"No plazas match the requested filter "
+            f"({(matched_spv or '')} {(matched_round or '')}".strip() + ")"
+        ), {"spv": matched_spv, "round": matched_round, "plaza_count": 0}
+
+    # 3. Default: whole network.
+    return all_plazas, "All NHIT Plazas (whole network)", {"plaza_count": len(all_plazas)}
+
+
+def _fmt_inr(amount: float) -> str:
+    """Indian convention: ₹X.XX Cr / ₹X.XX L / ₹X,XX,XXX."""
+    a = float(amount or 0)
+    if a >= 1e7:  return f"₹{a / 1e7:.2f} Cr"
+    if a >= 1e5:  return f"₹{a / 1e5:.2f} L"
+    return "₹{:,.2f}".format(a).replace(",", ",")  # default Indian-ish grouping
+
+
+def _fmt_int(n: int) -> str:
+    n = int(n or 0)
+    if n >= 1e7: return f"{n / 1e7:.2f} Cr"
+    if n >= 1e5: return f"{n / 1e5:.2f} L"
+    return f"{n:,}"
+
+
+def _build_data_context(message: str) -> str:
+    """Build a compact, scope-aware context block for the LLM. Detects SPV/
+    Round/Plaza/Month/Year from the message and produces a single
+    AUTHORITATIVE_ANSWER sentence the model can echo verbatim. All numbers
+    are computed from downloads/json/* via static_loader."""
+    import re
     from constants import MONTH_MAP, MONTH_NAMES
 
-    import re
+    msg_lower = message.lower()
 
     month_tokens = sorted(MONTH_MAP.keys(), key=len, reverse=True)
     month_pattern = r"\b(" + "|".join(re.escape(t) for t in month_tokens) + r")\b"
     months_found: list[int] = []
     for m in re.finditer(month_pattern, msg_lower, flags=re.IGNORECASE):
         token = m.group(1).lower()
-        month_num = MONTH_MAP.get(token)
-        if month_num and (not months_found or months_found[-1] != month_num):
-            months_found.append(month_num)
+        mn = MONTH_MAP.get(token)
+        if mn and (not months_found or months_found[-1] != mn):
+            months_found.append(mn)
 
     years_in_msg = [int(y) for y in re.findall(r"\b(20\d{2})\b", message)]
-    detected_year: int | None = years_in_msg[0] if years_in_msg else None
-    detected_month: int | None = months_found[0] if months_found else None
+    detected_year  = years_in_msg[0]  if years_in_msg  else None
+    detected_month = months_found[0] if months_found else None
+    range_start = range_end = None
+    if len(months_found) >= 2 and years_in_msg:
+        start_month, end_month = months_found[0], months_found[-1]
+        start_year = years_in_msg[0]
+        end_year = years_in_msg[-1] if len(years_in_msg) > 1 else start_year
+        range_start = (start_year, start_month)
+        range_end   = (end_year,   end_month)
 
-    range_start = None
-    range_end = None
-    if len(months_found) >= 2:
-        start_month = months_found[0]
-        end_month = months_found[-1]
-        if years_in_msg:
-            start_year = years_in_msg[0]
-            end_year = years_in_msg[-1] if len(years_in_msg) > 1 else start_year
-            range_start = (start_year, start_month)
-            range_end = (end_year, end_month)
+    scope_plazas, scope_label, scope_meta = _detect_scope(message)
+    is_single_plaza = "plaza" in scope_meta
 
-    # ── Detect plaza names (case-insensitive substring match + aliases) ─────
-    all_plazas = list(SNAPSHOT["data"].keys())
-    alias_map = SNAPSHOT.get("plaza_aliases", {})
-    alias_lookup = {a.lower(): c for a, c in alias_map.items()}
+    # Compute the authoritative numbers up front. We will paste them at the
+    # very top of the context as a complete sentence the LLM should quote.
+    period_phrase = ""
+    rec = None
+    if range_start and range_end:
+        sy, sm = range_start; ey, em = range_end
+        rec = aggregate_plazas_for_range(SNAPSHOT, scope_plazas, sy, sm, ey, em)
+        period_phrase = f"the period {MONTH_NAMES[sm]} {sy} to {MONTH_NAMES[em]} {ey}"
+    elif detected_year and detected_month:
+        rec = aggregate_plazas_for_month(SNAPSHOT, scope_plazas, detected_year, detected_month)
+        period_phrase = f"{MONTH_NAMES[detected_month]} {detected_year}"
 
-    matched_set: set[str] = set()
-    for p in all_plazas:
-        pl = p.lower()
-        if pl in msg_lower or any(word in msg_lower for word in pl.split() if len(word) > 3):
-            matched_set.add(p)
-    for alias, canon in alias_lookup.items():
-        if alias in msg_lower:
-            matched_set.add(canon)
-
-    matched_plazas = sorted(matched_set) if matched_set else all_plazas
+    auth_sentence = ""
+    if rec:
+        auth_sentence = (
+            f"For {scope_label} ({len(rec['plazas_included'])} plazas with data) "
+            f"in {period_phrase}: total revenue = {_fmt_inr(rec['total_amount'])} "
+            f"(₹{rec['total_amount']:,.0f}); total transactions = "
+            f"{_fmt_int(rec['total_count'])} ({rec['total_count']:,}); "
+            f"average fare per transaction = ₹{rec['avg_per_txn']:,.2f}; "
+            f"top category by revenue = {rec['top_by_amount']['name']} "
+            f"({_fmt_inr(rec['top_by_amount']['amount'])}); top category by volume = "
+            f"{rec['top_by_count']['name']} ({_fmt_int(rec['top_by_count']['count'])} txns)."
+        )
 
     lines: list[str] = []
+    if auth_sentence:
+        # Repeat for emphasis; small models tend to anchor on what's at the top.
+        lines.append("=" * 8 + " AUTHORITATIVE_ANSWER (use this sentence verbatim, do NOT recompute) " + "=" * 8)
+        lines.append(auth_sentence)
+        lines.append("=" * 8 + " END AUTHORITATIVE_ANSWER " + "=" * 8)
+        lines.append("")
 
-    # ── Aggregate summary (single month or range) ───────────────────────────
-    if range_start and range_end:
-        start_year, start_month = range_start
-        end_year, end_month = range_end
-        rec = aggregate_plazas_for_range(
-            SNAPSHOT,
-            matched_plazas,
-            start_year,
-            start_month,
-            end_year,
-            end_month,
+    available_months = SNAPSHOT.get("available_months", [])
+    spvs = SNAPSHOT.get("taxonomy", {}).get("spvs", [])
+    rounds = SNAPSHOT.get("taxonomy", {}).get("rounds", [])
+    lines.append(
+        f"PORTFOLIO: {len(SNAPSHOT['plazas'])} plazas · "
+        f"{len(available_months)} months of data · "
+        f"SPVs={','.join(spvs)} · Rounds={','.join(rounds)}"
+    )
+    lines.append(f"SCOPE: {scope_label} (covers {len(scope_plazas)} plaza(s))")
+
+    if rec:
+        cats_str = "; ".join(
+            f"{c['name']}: {_fmt_int(c['count'])} txns / {_fmt_inr(c['amount'])}"
+            for c in rec["categories"]
         )
-        if rec:
-            range_label = (
-                f"{MONTH_NAMES[start_month]} {start_year} to "
-                f"{MONTH_NAMES[end_month]} {end_year}"
-            )
-            lines.append(
-                f"AGGREGATE | {range_label} | Plazas: {len(rec['plazas_included'])} | "
-                f"Total txns: {rec['total_count']} | Total revenue: ₹{rec['total_amount']:,.0f}"
-            )
-    elif detected_year and detected_month:
-        rec = aggregate_plazas_for_month(SNAPSHOT, matched_plazas, detected_year, detected_month)
-        if rec:
-            month_label = f"{MONTH_NAMES[detected_month]} {detected_year}"
-            lines.append(
-                f"AGGREGATE | {month_label} | Plazas: {len(rec['plazas_included'])} | "
-                f"Total txns: {rec['total_count']} | Total revenue: ₹{rec['total_amount']:,.0f}"
-            )
+        lines.append(f"CATEGORY_BREAKDOWN: {cats_str}")
+        if not range_start:
+            lines.append(f"AVG_REVENUE_PER_DAY: {_fmt_inr(rec.get('avg_revenue_per_day', 0))}")
 
-    # ── Per-plaza monthly data ─────────────────────────────────────────────
-    plaza_sample = matched_plazas
-    if detected_year and detected_month:
-        key = f"{detected_year}-{detected_month:02d}"
-        plaza_sample = sorted(
-            matched_plazas,
-            key=lambda p: SNAPSHOT["data"].get(p, {}).get(key, {}).get("total_amount", 0),
-            reverse=True,
-        )
-
-    for plaza in plaza_sample[:8]:
-        plaza_data = SNAPSHOT["data"].get(plaza, {})
-        for key, rec in plaza_data.items():
-            yr, mo = map(int, key.split("-"))
-            if detected_year and yr != detected_year:
-                continue
-            if detected_month and mo != detected_month:
-                continue
-            cats_summary = ", ".join(
-                f"{c['name']}: {c['count']} txns / ₹{c['amount']:,.0f}"
-                for c in rec.get("categories", [])[:6]
-            )
-            lines.append(
-                f"Plaza: {plaza} | {MONTH_NAMES.get(mo, mo)} {yr} | "
-                f"Total txns: {rec['total_count']} | "
-                f"Total revenue: ₹{rec['total_amount']:,.0f} | "
-                f"Avg fare: ₹{rec.get('avg_per_txn', 0):,.2f} | "
-                f"Categories → {cats_summary}"
-            )
-
-    # ── Monthly totals overview (trend) ─────────────────────────────────────
-    for plaza in matched_plazas[:4]:
+    if is_single_plaza:
+        plaza = scope_plazas[0]
         trend = SNAPSHOT.get("monthly_totals", {}).get(plaza, [])
         if trend:
             trend_str = " | ".join(
-                f"{t['label']}: {t['count']} txns ₹{t['amount']:,.0f}"
-                for t in trend[-6:]   # last 6 months
+                f"{t['label']}: {_fmt_int(t['count'])} txns / {_fmt_inr(t['amount'])}"
+                for t in trend
             )
-            lines.append(f"Trend for {plaza}: {trend_str}")
+            lines.append(f"TREND_FOR_{plaza}: {trend_str}")
+    elif rec and detected_year and detected_month:
+        # Rank top plazas in the chosen scope so the model can answer
+        # follow-up questions like "which plaza is highest in NSPPL".
+        key = f"{detected_year}-{detected_month:02d}"
+        ranked = sorted(
+            scope_plazas,
+            key=lambda p: SNAPSHOT["data"].get(p, {}).get(key, {}).get("total_amount", 0),
+            reverse=True,
+        )
+        top_lines = []
+        for plaza in ranked[:10]:
+            r = SNAPSHOT["data"].get(plaza, {}).get(key)
+            if not r:
+                continue
+            top_lines.append(
+                f"  {plaza}: txns={_fmt_int(r['total_count'])} revenue={_fmt_inr(r['total_amount'])}"
+            )
+        if top_lines:
+            lines.append(f"TOP_PLAZAS_IN_SCOPE ({MONTH_NAMES[detected_month]} {detected_year}):")
+            lines.extend(top_lines)
 
-    # ── Portfolio summary ────────────────────────────────────────────────────
-    total_plazas = len(SNAPSHOT["plazas"])
-    available_months = SNAPSHOT.get("available_months", [])
-    lines.insert(0, (
-        f"Portfolio: {total_plazas} NHIT toll plazas · "
-        f"{len(available_months)} months of data · "
-        f"Plazas: {', '.join(all_plazas[:20])}"
-    ))
+    if not rec and (detected_year or detected_month):
+        # Period mentioned but no data — surface what IS available.
+        avail = ", ".join(
+            f"{MONTH_NAMES[m['month']][:3]} {m['year']}" for m in SNAPSHOT.get("months", [])
+        )
+        lines.append(f"NO_DATA_FOR_REQUESTED_PERIOD. Available months: {avail}")
 
-    return "\n".join(lines) if lines else "No matching data found in snapshot."
+    return "\n".join(lines) if lines else "No matching data found in JSON files."
 
 
 @app.route("/api/chat", methods=["POST"])
@@ -312,17 +408,22 @@ def chat():
     data_ctx = _build_data_context(user_message)
 
     system_prompt = (
-        "You are NHIT Analytics Assistant — a professional, data-driven assistant "
-        "for the National Highways Infra Trust ETC Analytics Dashboard.\n"
-        "Rules:\n"
-        "- Provide comprehensive and insightful answers based on the data.\n"
-        "- Use bullet points for readability when comparing multiple plazas or metrics.\n"
-        "- Always cite actual numbers (transactions, revenue in ₹) from the data.\n"
-        "- Format currency as ₹X.XX Cr / ₹X.XX L / ₹X,XX,XXX as appropriate.\n"
-        "- If data for the exact query is missing, say so clearly and suggest "
-        "  what data IS available.\n"
-        "- Do NOT make up numbers. Only use the provided data.\n\n"
-        "DATA CONTEXT (current snapshot):\n"
+        "You are NHIT Analytics Assistant for the National Highways Infra Trust "
+        "ETC Analytics Dashboard.\n\n"
+        "STRICT RULES:\n"
+        "1. The DATA CONTEXT below contains a SCOPE line and an ANSWER line that "
+        "have already been computed from the source-of-truth JSON files. You MUST "
+        "cite numbers from the ANSWER line VERBATIM — do not recompute, sum, "
+        "estimate, scale, or 'extrapolate' anything yourself.\n"
+        "2. Format revenue using Indian conventions: ₹X.XX Cr (≥1,00,00,000), "
+        "₹X.XX L (≥1,00,000), or ₹X,XX,XXX otherwise. Do not invent figures.\n"
+        "3. The SCOPE line tells you which plazas the ANSWER covers. If the user "
+        "asked about a different scope than what SCOPE shows, say so explicitly "
+        "and answer for the scope shown.\n"
+        "4. If no ANSWER line is present (data missing for the requested period), "
+        "say so plainly and list which months ARE available.\n"
+        "5. NEVER fabricate plaza names, revenue figures, or transaction counts.\n\n"
+        "DATA CONTEXT:\n"
         + data_ctx
     )
 
