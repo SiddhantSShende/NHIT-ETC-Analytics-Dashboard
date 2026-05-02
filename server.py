@@ -39,6 +39,7 @@ from flask import Flask, g, jsonify, request, send_from_directory
 from flask_cors import CORS
 from werkzeug.exceptions import HTTPException
 from analytics import aggregate_plazas_for_month, aggregate_plazas_for_range
+from chatbot_engine import answer as engine_answer
 from static_loader import load_snapshot, DEFAULT_JSON_DIR
 
 # ── Paths & logging ─────────────────────────────────────────────────────────
@@ -429,7 +430,24 @@ def chat():
 
     history = body.get("history", [])  # [{role, content}, ...]
 
-    # Build data context
+    # ── Deterministic engine first ──────────────────────────────────────────
+    # The engine reads numbers directly from the loaded JSON snapshot, so its
+    # output never hallucinates. We only fall through to the LLM if the engine
+    # crashes or explicitly chooses not to handle the question.
+    try:
+        engine_result = engine_answer(SNAPSHOT, user_message)
+        if engine_result and engine_result.get("matched") and engine_result.get("reply"):
+            log.info("[%s] engine answered intent=%s",
+                     getattr(g, "req_id", "?"), engine_result.get("intent"))
+            return jsonify({
+                "reply": engine_result["reply"],
+                "source": "engine",
+                "intent": engine_result.get("intent"),
+            })
+    except Exception as exc:
+        log.exception("Engine failed, falling back to LLM: %s", exc)
+
+    # ── LLM fallback (only when engine cannot answer) ───────────────────────
     data_ctx = _build_data_context(user_message)
 
     system_prompt = (
