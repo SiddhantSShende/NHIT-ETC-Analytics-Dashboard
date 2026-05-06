@@ -27,7 +27,7 @@ from typing import Iterable, Optional
 
 import openpyxl
 
-EXCEL_PATH_DEFAULT = Path(__file__).parent / "data" / "Project details.xlsx"
+EXCEL_PATH_DEFAULT = Path(__file__).resolve().parents[2] / "data" / "Project details.xlsx"
 
 # Excel plaza name -> canonical NHIT plaza name. Use this for entries the
 # fuzzy matcher refuses (typo too far from canonical, or one Excel name

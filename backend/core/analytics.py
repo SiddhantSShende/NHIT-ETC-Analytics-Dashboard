@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from typing import Iterable, List, Tuple
 
-from constants import MONTH_NAMES
+from .constants import MONTH_NAMES
 
 
 def _iter_months(start_year: int, start_month: int, end_year: int, end_month: int):

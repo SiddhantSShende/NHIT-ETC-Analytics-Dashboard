@@ -1,6 +1,6 @@
 import unittest
 
-from analytics import aggregate_plazas_for_month, aggregate_plazas_for_range
+from backend.core.analytics import aggregate_plazas_for_month, aggregate_plazas_for_range
 
 
 class TestAnalytics(unittest.TestCase):

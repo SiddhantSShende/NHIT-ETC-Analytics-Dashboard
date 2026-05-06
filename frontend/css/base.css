@@ -1,0 +1,47 @@
+/* ── Tokens, reset, root ─────────────────────────────────────────────────── */
+:root {
+  --primary: #003087;
+  --primary-hover: #002266;
+  --secondary: #f47920;
+  --green: #7ab648;
+  --purple: #8338ec;
+  --bg: #f3f6fb;
+  --white: #ffffff;
+  --text: #1e293b;
+  --text2: #64748b;
+  --border: #e2e8f0;
+  --radius: 14px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+
+  /* Touch / sizing tokens used across components */
+  --touch-target: 44px;
+  --container-max: 1280px;
+  --container-pad: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Prevent iOS Safari from auto-zooming form fields. */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Block any horizontal overflow that might leak from charts/tables. */
+  overflow-x: hidden;
+}
+
+.hidden { display: none !important; }

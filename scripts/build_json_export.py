@@ -30,10 +30,10 @@ import pdfplumber
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from parser import to_number, CATEGORY_LABEL, _detect_columns, _SKIP_PLAZA_VALUES  # noqa: E402
-from ingestor import normalize_plaza_name  # noqa: E402
-from constants import MONTH_MAP, MONTH_NAMES, NHIT_PLAZAS  # noqa: E402
-from taxonomy import load_taxonomy, EXCEL_PATH_DEFAULT  # noqa: E402
+from backend.core.parser import to_number, CATEGORY_LABEL, _detect_columns, _SKIP_PLAZA_VALUES  # noqa: E402
+from backend.core.ingestor import normalize_plaza_name  # noqa: E402
+from backend.core.constants import MONTH_MAP, MONTH_NAMES, NHIT_PLAZAS  # noqa: E402
+from backend.core.taxonomy import load_taxonomy, EXCEL_PATH_DEFAULT  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("build_json_export")

@@ -1,6 +1,6 @@
 import unittest
 
-from ingestor import (
+from backend.core.ingestor import (
     normalize_plaza_name,
     build_plaza_alias_map,
     bucket_rows_by_canonical_plaza,

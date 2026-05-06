@@ -33,7 +33,9 @@ from pathlib import Path
 
 log = logging.getLogger(__name__)
 
-DEFAULT_JSON_DIR = Path(__file__).parent / "downloads" / "json"
+# `downloads/json/` lives at the project root; resolve from this module up
+# two levels (backend/core/ → backend/ → root).
+DEFAULT_JSON_DIR = Path(__file__).resolve().parents[2] / "downloads" / "json"
 
 MONTH_NAMES = {
     1: "January",   2: "February",  3: "March",     4: "April",

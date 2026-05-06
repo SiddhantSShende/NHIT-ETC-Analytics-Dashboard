@@ -1,40 +1,18 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "server.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "downloads/json/**",
-      "use": "@vercel/static"
-    }
+    { "src": "server.py",          "use": "@vercel/python" },
+    { "src": "index.html",         "use": "@vercel/static" },
+    { "src": "frontend/**",        "use": "@vercel/static" },
+    { "src": "downloads/json/**",  "use": "@vercel/static" }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/server.py"
-    },
-    {
-      "src": "/downloads/json/(.*)",
-      "dest": "/downloads/json/$1",
-      "headers": { "Cache-Control": "public, max-age=86400" }
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+    { "src": "/api/(.*)",            "dest": "/server.py" },
+    { "src": "/frontend/(.*)",       "dest": "/frontend/$1",
+      "headers": { "Cache-Control": "public, max-age=86400" } },
+    { "src": "/downloads/json/(.*)", "dest": "/downloads/json/$1",
+      "headers": { "Cache-Control": "public, max-age=86400" } },
+    { "src": "/",                    "dest": "/index.html" },
+    { "src": "/(.*)",                "dest": "/$1" }
   ]
 }

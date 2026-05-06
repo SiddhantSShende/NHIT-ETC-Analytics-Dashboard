@@ -37,8 +37,8 @@ import re
 import statistics
 from typing import Iterable
 
-from analytics import aggregate_plazas_for_month, aggregate_plazas_for_range
-from constants import MONTH_MAP, MONTH_NAMES
+from ..core.analytics import aggregate_plazas_for_month, aggregate_plazas_for_range
+from ..core.constants import MONTH_MAP, MONTH_NAMES
 
 
 # ───────────────────────────── Formatting helpers ─────────────────────────────

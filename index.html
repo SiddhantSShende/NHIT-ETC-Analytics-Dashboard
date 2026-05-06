@@ -9,7 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="frontend/css/base.css" />
+  <link rel="stylesheet" href="frontend/css/header.css" />
+  <link rel="stylesheet" href="frontend/css/selector.css" />
+  <link rel="stylesheet" href="frontend/css/dashboard.css" />
+  <link rel="stylesheet" href="frontend/css/chatbot.css" />
+  <link rel="stylesheet" href="frontend/css/responsive.css" />
 </head>
 
 <body>
@@ -362,8 +367,12 @@
     <span>Data Source: IHMCL — ihmcl.co.in</span>
   </footer>
 
-  <script src="data-layer.js"></script>
-  <script src="app.js"></script>
+  <script src="frontend/js/utils.js"></script>
+  <script src="frontend/js/data-layer.js"></script>
+  <script src="frontend/js/filters.js"></script>
+  <script src="frontend/js/charts.js"></script>
+  <script src="frontend/js/render.js"></script>
+  <script src="frontend/js/app.js"></script>
 
 
   <!-- Chat panel -->
@@ -440,7 +449,7 @@
   <!-- Chat overlay (mobile) -->
   <div class="chat-overlay" id="chatOverlay"></div>
 
-  <script src="chatbot.js"></script>
+  <script src="frontend/js/chatbot.js"></script>
 </body>
 
 </html>

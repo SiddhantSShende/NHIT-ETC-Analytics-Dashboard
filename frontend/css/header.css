@@ -1,0 +1,77 @@
+/* ── Site header + footer + colour bar ───────────────────────────────────── */
+.site-header {
+  background: var(--white);
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+.hdr-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 var(--container-pad);
+}
+.hdr-logo { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.logo-icon {
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 4px 12px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.logo-icon .logo-t { color: var(--secondary); }
+.logo-arrow {
+  width: 0; height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid var(--secondary);
+  margin-left: 4px;
+}
+.logo-words { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.lw-nhit { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+.lw-sub {
+  font-size: 0.65rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hdr-center { min-width: 0; }
+.portal-label {
+  color: var(--text2);
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.colour-bar { display: flex; height: 3px; width: 100%; }
+.cb-b { background: var(--primary); flex: 1; }
+.cb-o { background: var(--secondary); flex: 1; }
+.cb-g { background: var(--green); flex: 1; }
+
+.site-footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 16px var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text2);
+}
