@@ -1,0 +1,312 @@
+/* ── Motion layer ────────────────────────────────────────────────────────────
+ * All keyframes, scroll-reveal helpers, and futuristic micro-interactions
+ * live here so the structural CSS files stay readable.
+ *
+ * Authoring notes
+ * ───────────────
+ * • Page-load entrance is staged by `.stage` (parent) + `.stage-item`
+ *   (children with `--i: <index>`) so a single class on a container fires
+ *   a clean stagger across its children.
+ * • Anything tagged `.reveal` starts hidden and animates in when an
+ *   IntersectionObserver in animations.js adds `.reveal--in`.
+ * • `.shine` paints a soft moving highlight across glass surfaces.
+ * • `.spotlight` cards listen for `--mx` / `--my` CSS vars set by JS to
+ *   render a cursor-following radial light.
+ * • Honour `prefers-reduced-motion: reduce` at the bottom of this file —
+ *   everything collapses to a static, accessible state.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Keyframes ──────────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes blurIn {
+  from { opacity: 0; filter: blur(10px); transform: translateY(8px); }
+  to   { opacity: 1; filter: blur(0);    transform: translateY(0); }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 48, 135, 0.18); }
+  50%      { box-shadow: 0 0 0 12px rgba(0, 48, 135, 0); }
+}
+@keyframes shimmer {
+  0%   { transform: translateX(-150%) skewX(-12deg); }
+  100% { transform: translateX(250%)  skewX(-12deg); }
+}
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 0.55; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+@keyframes spinSlow { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes spinRev  { from { transform: rotate(0); } to { transform: rotate(-360deg); } }
+@keyframes orbDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(8px, -6px) scale(1.05); }
+}
+@keyframes scanline {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0 100vh; }
+}
+@keyframes gridShift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+/* ── Page-load entrance staging ─────────────────────────────────────────── */
+.stage-item {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: blurIn .7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 80ms + 80ms);
+}
+
+/* ── Scroll-reveal ──────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform .7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal[data-stagger] { transition-delay: calc(var(--i, 0) * 70ms); }
+
+/* ── Cursor-follow spotlight ────────────────────────────────────────────── */
+.spotlight { position: relative; }
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle 280px at var(--mx, 50%) var(--my, 50%),
+    rgba(77, 139, 255, 0.10),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.spotlight > * { position: relative; z-index: 1; }
+.spotlight:hover::before { opacity: 1; }
+
+/* ── Ripple (added by JS as a child span) ───────────────────────────────── */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.55);
+  width: 14px; height: 14px;
+  margin-left: -7px; margin-top: -7px;
+  animation: ripple .65s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  z-index: 2;
+}
+
+/* ── Animated number — sits in place with a tiny upward drift ───────────── */
+.kpi-value, .sec-total {
+  transition: filter .3s;
+}
+.kpi-value.counting {
+  animation: blurIn .55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Shine sweep across glass surfaces ──────────────────────────────────── */
+.shine { position: relative; overflow: hidden; isolation: isolate; }
+.shine::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -60%;
+  width: 60%; height: 200%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 100%
+  );
+  filter: blur(2px);
+  transform: translateX(-150%) skewX(-12deg);
+  pointer-events: none;
+  z-index: 3;
+}
+.shine:hover::after,
+.shine.shine--play::after {
+  animation: shimmer 1.4s ease forwards;
+}
+
+/* ── Cyber grid layer behind the aurora ─────────────────────────────────── */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 48, 135, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 48, 135, 0.045) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  animation: gridShift 28s linear infinite;
+  opacity: 0.55;
+}
+
+/* ── KPI halo: animated saturation pulse so the corner glow feels alive.
+   Avoids the `transform` property so the hover lift in dashboard.css still
+   wins. ───────────────────────────────────────────────────────────────── */
+@keyframes haloPulse {
+  0%, 100% { background-size: 220px 220px; filter: saturate(1) brightness(1); }
+  50%      { background-size: 260px 260px; filter: saturate(1.15) brightness(1.05); }
+}
+.kpi-card {
+  animation: haloPulse 6s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 700ms);
+}
+.kpi-card:hover { animation-play-state: paused; }
+
+/* ── Hint icon: subtle continuous breathing motion ──────────────────────── */
+.hint-icon { animation: float 6s ease-in-out infinite; }
+
+/* ── Logo shimmer ───────────────────────────────────────────────────────── */
+.logo-icon { position: relative; overflow: hidden; }
+.logo-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.55) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: shimmer 4.5s ease-in-out infinite;
+  animation-delay: 1.2s;
+  pointer-events: none;
+}
+
+/* ── Futuristic loader — concentric rings + orbiting dot ────────────────── */
+.fx-loader {
+  position: relative;
+  width: 96px; height: 96px;
+  margin: 0 auto 22px;
+}
+.fx-loader::before,
+.fx-loader::after,
+.fx-loader span {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.fx-loader::before {
+  border-top-color: var(--primary);
+  border-right-color: rgba(0, 48, 135, 0.35);
+  animation: spinSlow 1.6s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 48, 135, 0.45));
+}
+.fx-loader::after {
+  inset: 14px;
+  border-bottom-color: var(--secondary);
+  border-left-color: rgba(244, 121, 32, 0.35);
+  animation: spinRev 1.2s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(244, 121, 32, 0.45));
+}
+.fx-loader span {
+  inset: 28px;
+  border: 1px dashed rgba(0, 48, 135, 0.30);
+  animation: spinSlow 4s linear infinite;
+}
+.fx-loader span::after {
+  content: "";
+  position: absolute;
+  top: -4px; left: 50%;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-left: -4px;
+  box-shadow: 0 0 14px rgba(0, 48, 135, 0.6);
+}
+
+/* ── Loader text gradient with soft pulse ───────────────────────────────── */
+.loader-title {
+  background: linear-gradient(90deg, #0f172a, #4d8bff, #0f172a);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 2.4s linear infinite;
+}
+@keyframes shimmerText {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Soft glow ring on focused buttons / inputs ─────────────────────────── */
+.btn-view:focus-visible,
+.btn-ask-ai:focus-visible {
+  outline: none;
+  animation: glowPulse 1.6s ease-out 1;
+}
+
+/* ── Section card hover lift + glow accent ──────────────────────────────── */
+.section-card { transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1),
+                          border-color .35s, box-shadow .35s; }
+.section-card:hover { transform: translateY(-2px); }
+
+/* ── Table row staggered fade on first paint ────────────────────────────── */
+.cat-table tbody tr {
+  animation: slideUp .45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 35ms);
+}
+
+/* ── Chat panel: gentle drop entrance is in chatbot.css; we add a glow on
+   the avatar so the assistant feels alive. ─────────────────────────────── */
+.chat-avatar { animation: float 5s ease-in-out infinite; }
+.chat-avatar::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+  opacity: 0;
+  animation: glowAvatar 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes glowAvatar {
+  0%, 100% { opacity: 0; transform: scale(0.95); }
+  50%      { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* ── Reduced motion: collapse everything to a static, accessible state ──── */
+@media (prefers-reduced-motion: reduce) {
+  .stage > .stage-item,
+  .reveal,
+  .kpi-card,
+  .chat-avatar,
+  .hint-icon,
+  .bg-grid,
+  .logo-icon::after,
+  .loader-title {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .reveal { transform: none; }
+  .shine::after { display: none; }
+}

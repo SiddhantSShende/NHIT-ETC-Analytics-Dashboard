@@ -1,49 +1,66 @@
-/* ── Site header + footer + colour bar ───────────────────────────────────── */
+/* ── Site header + footer + colour bar ─────────────────────────────────────── */
 .site-header {
-  background: var(--white);
-  position: relative;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid var(--hairline);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 8px 32px rgba(15, 23, 42, 0.06);
 }
 .hdr-inner {
   max-width: var(--container-max);
   margin: 0 auto;
-  height: 72px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 0 var(--container-pad);
 }
-.hdr-logo { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.hdr-logo { display: flex; align-items: center; gap: 14px; min-width: 0; }
 .logo-icon {
-  background: var(--primary);
-  color: var(--white);
+  background: linear-gradient(135deg, #003087 0%, #4d8bff 100%);
+  color: #fff;
   font-weight: 800;
-  font-size: 1.2rem;
-  padding: 4px 12px;
-  border-radius: 6px;
+  font-size: 1.15rem;
+  padding: 6px 14px;
+  border-radius: 10px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
   position: relative;
   flex-shrink: 0;
+  box-shadow:
+    0 8px 24px rgba(0, 48, 135, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.30);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
-.logo-icon .logo-t { color: var(--secondary); }
+.logo-icon .logo-t { color: #ffce8f; text-shadow: 0 0 12px rgba(255, 152, 68, 0.8); }
 .logo-arrow {
   width: 0; height: 0;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  border-left: 6px solid var(--secondary);
-  margin-left: 4px;
+  border-left: 6px solid #ffce8f;
+  margin-left: 5px;
+  filter: drop-shadow(0 0 4px rgba(255, 152, 68, 0.7));
 }
 .logo-words { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
-.lw-nhit { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+.lw-nhit {
+  font-weight: 700;
+  font-size: 1.15rem;
+  background: linear-gradient(135deg, #003087 0%, #4d8bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
 .lw-sub {
-  font-size: 0.65rem;
+  font-size: 0.66rem;
   color: var(--text2);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -51,22 +68,51 @@
 .hdr-center { min-width: 0; }
 .portal-label {
   color: var(--text2);
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 0.92rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 6px 14px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
 }
 
-.colour-bar { display: flex; height: 3px; width: 100%; }
-.cb-b { background: var(--primary); flex: 1; }
-.cb-o { background: var(--secondary); flex: 1; }
-.cb-g { background: var(--green); flex: 1; }
+/* Brand colour bar — glowing accent line */
+.colour-bar {
+  display: flex;
+  height: 2px;
+  width: 100%;
+  position: relative;
+}
+.colour-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 48, 135, 0.7) 20%,
+    rgba(244, 121, 32, 0.7) 50%,
+    rgba(122, 182, 72, 0.7) 80%,
+    transparent 100%
+  );
+  filter: blur(4px);
+  opacity: 0.6;
+}
+.cb-b { background: linear-gradient(90deg, transparent, #003087); flex: 1; }
+.cb-o { background: #f47920; flex: 1; }
+.cb-g { background: linear-gradient(90deg, #7ab648, transparent); flex: 1; }
 
 .site-footer {
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  padding: 16px var(--container-pad);
+  margin-top: 32px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--hairline);
+  padding: 18px var(--container-pad);
   display: flex;
   align-items: center;
   justify-content: space-between;

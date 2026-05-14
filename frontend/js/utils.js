@@ -5,11 +5,11 @@
  * use them without a bundler.
  */
 
-// Chart palette
+// Chart palette — saturated brand-aligned colours that pop on light glass.
 const PIE_COLORS = [
-  "#003087", "#f47920", "#7ab648", "#00adef",
-  "#e63946", "#8338ec", "#ffd60a", "#06d6a0",
-  "#ef476f", "#118ab2", "#ffa552", "#4cc9f0",
+  "#003087", "#f47920", "#7ab648", "#0ea5e9",
+  "#ec4899", "#8338ec", "#eab308", "#14b8a6",
+  "#ef4444", "#1d4ed8", "#f97316", "#10b981",
 ];
 
 const MONTH_LABELS = [

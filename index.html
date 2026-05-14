@@ -4,9 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#f1f4fb" />
+  <meta name="color-scheme" content="light" />
   <title>NHIT | ETC Analytics Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <link rel="stylesheet" href="frontend/css/base.css" />
@@ -14,13 +17,24 @@
   <link rel="stylesheet" href="frontend/css/selector.css" />
   <link rel="stylesheet" href="frontend/css/dashboard.css" />
   <link rel="stylesheet" href="frontend/css/chatbot.css" />
+  <link rel="stylesheet" href="frontend/css/animations.css" />
   <link rel="stylesheet" href="frontend/css/responsive.css" />
 </head>
 
 <body>
 
+  <!-- ANIMATED BACKDROP — drifting colour blobs + cyber grid + grain -->
+  <div class="bg-stage" aria-hidden="true">
+    <div class="bg-blob bg-blob--a"></div>
+    <div class="bg-blob bg-blob--b"></div>
+    <div class="bg-blob bg-blob--c"></div>
+    <div class="bg-blob bg-blob--d"></div>
+  </div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
   <!-- HEADER -->
-  <header class="site-header">
+  <header class="site-header stage-item" style="--i:0">
     <div class="hdr-inner">
       <div class="hdr-logo">
         <div class="logo-icon">
@@ -45,7 +59,7 @@
   </header>
 
   <!-- SELECTOR BAR -->
-  <div class="selector-bar">
+  <div class="selector-bar stage-item" style="--i:1">
     <div class="selector-inner">
 
       <!-- Left: all dropdowns/toggles, allowed to wrap to 2 lines -->
@@ -140,9 +154,9 @@
     </div>
 
     <div class="hint-state hidden" id="loadingState">
-      <div class="spinner"></div>
-      <h2>Reading PDF report…</h2>
-      <p>Extracting plaza data. First request for a month takes a few seconds.</p>
+      <div class="fx-loader" aria-hidden="true"><span></span></div>
+      <h2 class="loader-title">Loading dataset…</h2>
+      <p>Streaming JSON snapshots for the selected scope. Only takes a moment.</p>
     </div>
 
     <div class="hint-state hidden" id="noDataState">
@@ -159,7 +173,7 @@
     <!-- DASHBOARD -->
     <div class="dashboard hidden" id="dashboard">
 
-      <div class="result-header">
+      <div class="result-header reveal" data-stagger>
         <div class="rh-left">
           <h1 id="resultTitle">Plaza Name</h1>
           <p id="resultSub">January 2025 · ETC Transaction Report</p>
@@ -168,23 +182,23 @@
       </div>
 
       <!-- KPI CARDS -->
-      <div class="kpi-grid">
-        <div class="kpi-card kpi-blue">
+      <div class="kpi-grid stage">
+        <div class="kpi-card kpi-blue stage-item shine spotlight reveal" data-stagger>
           <div class="kpi-label">Total Transactions</div>
           <div class="kpi-value" id="kpiCount">—</div>
           <div class="kpi-sub" id="kpiCountSub">&nbsp;</div>
         </div>
-        <div class="kpi-card kpi-orange">
+        <div class="kpi-card kpi-orange stage-item shine spotlight reveal" data-stagger>
           <div class="kpi-label">Total Revenue</div>
           <div class="kpi-value" id="kpiAmount">—</div>
           <div class="kpi-sub" id="kpiAmountSub">&nbsp;</div>
         </div>
-        <div class="kpi-card kpi-green">
+        <div class="kpi-card kpi-green stage-item shine spotlight reveal" data-stagger>
           <div class="kpi-label">Avg. Fare per Transaction</div>
           <div class="kpi-value" id="kpiAvg">—</div>
           <div class="kpi-sub" id="kpiAvgSub">&nbsp;</div>
         </div>
-        <div class="kpi-card kpi-purple">
+        <div class="kpi-card kpi-purple stage-item shine spotlight reveal" data-stagger>
           <div class="kpi-label">Vehicle Categories</div>
           <div class="kpi-value" id="kpiCats">—</div>
           <div class="kpi-sub" id="kpiCatsSub">&nbsp;</div>
@@ -192,23 +206,23 @@
       </div>
 
       <!-- HIGHLIGHT STRIP -->
-      <div class="highlight-row">
-        <div class="hl-card">
+      <div class="highlight-row stage">
+        <div class="hl-card stage-item reveal" data-stagger>
           <div class="hl-title">Top Category by Revenue</div>
           <div class="hl-value" id="hlTopAmt">—</div>
           <div class="hl-meta" id="hlTopAmtMeta">&nbsp;</div>
         </div>
-        <div class="hl-card">
+        <div class="hl-card stage-item reveal" data-stagger>
           <div class="hl-title">Top Category by Volume</div>
           <div class="hl-value" id="hlTopCnt">—</div>
           <div class="hl-meta" id="hlTopCntMeta">&nbsp;</div>
         </div>
-        <div class="hl-card">
+        <div class="hl-card stage-item reveal" data-stagger>
           <div class="hl-title">Avg. Daily Revenue</div>
           <div class="hl-value" id="hlAvgRev">—</div>
           <div class="hl-meta" id="hlAvgRevMeta">approx., over 30 days</div>
         </div>
-        <div class="hl-card">
+        <div class="hl-card stage-item reveal" data-stagger>
           <div class="hl-title">Avg. Daily Transactions</div>
           <div class="hl-value" id="hlAvgCnt">—</div>
           <div class="hl-meta" id="hlAvgCntMeta">approx., over 30 days</div>
@@ -216,7 +230,7 @@
       </div>
 
       <!-- COUNT SECTION -->
-      <div class="section-card">
+      <div class="section-card reveal spotlight">
         <div class="sec-header blue">
           <div class="sec-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -253,7 +267,7 @@
       </div>
 
       <!-- AMOUNT SECTION -->
-      <div class="section-card">
+      <div class="section-card reveal spotlight">
         <div class="sec-header orange">
           <div class="sec-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -290,7 +304,7 @@
       </div>
 
       <!-- DETAIL TABLE -->
-      <div class="section-card">
+      <div class="section-card reveal spotlight">
         <div class="sec-header green">
           <div class="sec-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -323,7 +337,7 @@
       </div>
 
       <!-- BAR COMPARISON -->
-      <div class="section-card">
+      <div class="section-card reveal spotlight">
         <div class="sec-header dark">
           <div class="sec-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -341,7 +355,7 @@
       </div>
 
       <!-- TREND -->
-      <div class="section-card" id="trendCard">
+      <div class="section-card reveal spotlight" id="trendCard">
         <div class="sec-header dark">
           <div class="sec-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -368,6 +382,7 @@
   </footer>
 
   <script src="frontend/js/utils.js"></script>
+  <script src="frontend/js/animations.js"></script>
   <script src="frontend/js/data-layer.js"></script>
   <script src="frontend/js/filters.js"></script>
   <script src="frontend/js/charts.js"></script>
