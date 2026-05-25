@@ -193,39 +193,39 @@
           <div class="kpi-value" id="kpiAmount">—</div>
           <div class="kpi-sub" id="kpiAmountSub">&nbsp;</div>
         </div>
-        <div class="kpi-card kpi-green stage-item shine spotlight reveal" data-stagger>
-          <div class="kpi-label">Avg. Fare per Transaction</div>
-          <div class="kpi-value" id="kpiAvg">—</div>
-          <div class="kpi-sub" id="kpiAvgSub">&nbsp;</div>
-        </div>
-        <div class="kpi-card kpi-purple stage-item shine spotlight reveal" data-stagger>
-          <div class="kpi-label">Vehicle Categories</div>
-          <div class="kpi-value" id="kpiCats">—</div>
-          <div class="kpi-sub" id="kpiCatsSub">&nbsp;</div>
-        </div>
       </div>
 
       <!-- HIGHLIGHT STRIP -->
-      <div class="highlight-row stage">
+      <div class="highlight-row stage" id="highlightRow">
         <div class="hl-card stage-item reveal" data-stagger>
-          <div class="hl-title">Top Category by Revenue</div>
-          <div class="hl-value" id="hlTopAmt">—</div>
-          <div class="hl-meta" id="hlTopAmtMeta">&nbsp;</div>
-        </div>
-        <div class="hl-card stage-item reveal" data-stagger>
-          <div class="hl-title">Top Category by Volume</div>
-          <div class="hl-value" id="hlTopCnt">—</div>
-          <div class="hl-meta" id="hlTopCntMeta">&nbsp;</div>
+          <div class="hl-title">Avg. Daily Transactions</div>
+          <div class="hl-value" id="hlAvgCnt">—</div>
+          <div class="hl-meta" id="hlAvgCntMeta">&nbsp;</div>
         </div>
         <div class="hl-card stage-item reveal" data-stagger>
           <div class="hl-title">Avg. Daily Revenue</div>
           <div class="hl-value" id="hlAvgRev">—</div>
-          <div class="hl-meta" id="hlAvgRevMeta">approx., over 30 days</div>
+          <div class="hl-meta" id="hlAvgRevMeta">&nbsp;</div>
         </div>
-        <div class="hl-card stage-item reveal" data-stagger>
-          <div class="hl-title">Avg. Daily Transactions</div>
-          <div class="hl-value" id="hlAvgCnt">—</div>
-          <div class="hl-meta" id="hlAvgCntMeta">approx., over 30 days</div>
+        <div class="hl-card hl-mom stage-item reveal" data-stagger data-mom-yoy>
+          <div class="hl-title">Txn MoM</div>
+          <div class="hl-value" id="hlTxnMom">—</div>
+          <div class="hl-meta" id="hlTxnMomMeta">&nbsp;</div>
+        </div>
+        <div class="hl-card hl-yoy stage-item reveal" data-stagger data-mom-yoy>
+          <div class="hl-title">Txn YoY</div>
+          <div class="hl-value" id="hlTxnYoy">—</div>
+          <div class="hl-meta" id="hlTxnYoyMeta">&nbsp;</div>
+        </div>
+        <div class="hl-card hl-mom stage-item reveal" data-stagger data-mom-yoy>
+          <div class="hl-title">Revenue MoM</div>
+          <div class="hl-value" id="hlRevMom">—</div>
+          <div class="hl-meta" id="hlRevMomMeta">&nbsp;</div>
+        </div>
+        <div class="hl-card hl-yoy stage-item reveal" data-stagger data-mom-yoy>
+          <div class="hl-title">Revenue YoY</div>
+          <div class="hl-value" id="hlRevYoy">—</div>
+          <div class="hl-meta" id="hlRevYoyMeta">&nbsp;</div>
         </div>
       </div>
 
@@ -299,39 +299,6 @@
           <div class="pie-wrap">
             <canvas id="amtPie"></canvas>
             <div class="pie-label">Revenue by Category</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DETAIL TABLE -->
-      <div class="section-card reveal spotlight">
-        <div class="sec-header green">
-          <div class="sec-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <path d="M3 9h18M9 3v18" />
-            </svg>
-          </div>
-          <div>
-            <div class="sec-title">Detailed Breakdown</div>
-            <div class="sec-desc">Per-category counts, revenue, share and average fare</div>
-          </div>
-        </div>
-        <div class="sec-body solo">
-          <div class="cat-table-wrap">
-            <table class="cat-table detail-table">
-              <thead>
-                <tr>
-                  <th>Vehicle Category</th>
-                  <th>Transactions</th>
-                  <th>Count Share</th>
-                  <th>Revenue (₹)</th>
-                  <th>Revenue Share</th>
-                  <th>Avg Fare (₹)</th>
-                </tr>
-              </thead>
-              <tbody id="detailTbody"></tbody>
-            </table>
           </div>
         </div>
       </div>

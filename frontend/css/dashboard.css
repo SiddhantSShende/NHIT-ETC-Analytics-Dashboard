@@ -108,7 +108,7 @@
 /* ── KPI cards ────────────────────────────────────────────────────────────── */
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   margin-bottom: 22px;
 }
@@ -190,10 +190,17 @@
 /* ── Highlight strip ─────────────────────────────────────────────────────── */
 .highlight-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-bottom: 32px;
 }
+/* In range mode the 4 MoM/YoY cards are hidden, so collapse to 2 cols. */
+.highlight-row[data-mode="range"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+/* MoM / YoY delta colours. The class is toggled by renderDelta(). */
+.hl-card .hl-value.delta-up   { color: #16a34a; }
+.hl-card .hl-value.delta-down { color: #dc2626; }
 .hl-card {
   background: var(--glass-soft);
   backdrop-filter: blur(20px) saturate(170%);

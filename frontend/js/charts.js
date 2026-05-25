@@ -90,7 +90,7 @@ function drawBar(cats) {
   charts.barChart = new Chart(document.getElementById("barChart"), {
     type: "bar",
     data: {
-      labels: cats.map(c => short(c.name)),
+      labels: cats.map(c => shortCat(c.name)),
       datasets: [
         {
           label: "Transactions",

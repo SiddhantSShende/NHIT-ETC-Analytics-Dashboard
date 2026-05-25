@@ -31,7 +31,17 @@ import json
 import logging
 from pathlib import Path
 
+from .constants import CATEGORY_ORDER
+
 log = logging.getLogger(__name__)
+
+
+def _category_sort_key(name: str) -> int:
+    """Canonical display order index; unknown labels go last."""
+    try:
+        return CATEGORY_ORDER.index(name)
+    except ValueError:
+        return 999
 
 # `downloads/json/` lives at the project root; resolve from this module up
 # two levels (backend/core/ → backend/ → root).
@@ -54,7 +64,7 @@ def _enrich_categories(vehicles: dict | None) -> tuple[list[dict], int, float]:
         {"name": name, "count": int(v.get("count") or 0), "amount": float(v.get("amount") or 0.0)}
         for name, v in vehicles.items()
     ]
-    raw.sort(key=lambda c: c["amount"], reverse=True)
+    raw.sort(key=lambda c: _category_sort_key(c["name"]))
 
     total_count = sum(c["count"] for c in raw)
     total_amount = round(sum(c["amount"] for c in raw), 2)

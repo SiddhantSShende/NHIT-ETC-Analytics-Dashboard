@@ -120,7 +120,12 @@ async function loadData() {
 
     showOnly("dashboard");
     try {
-      renderResult(dataJson.record, trendJson.trend || [], opts);
+      renderResult(
+        dataJson.record,
+        trendJson.trend || [],
+        opts,
+        { prevMonth: dataJson.prev_month || null, prevYear: dataJson.prev_year || null },
+      );
     } catch (renderErr) {
       console.error("Render failed:", renderErr);
       document.getElementById("errorTitle").textContent = "Render Error";

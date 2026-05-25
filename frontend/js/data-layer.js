@@ -8,7 +8,8 @@
  * Public surface (UMD-ish, attached to window.DataLayer):
  *   getMeta(): {plazas, years, months}
  *   getTaxonomy(): {rows, spvs, rounds, unmatched}
- *   aggregate({spv, round, plaza, year, month}): {record}
+ *   aggregate({spv, round, plaza, year, month}): {record, prev_month, prev_year}
+ *     — prev_month / prev_year may be null when comparison data is missing.
  *   aggregateRange({spv, round, plaza, start_year, start_month, end_year, end_month}): {record}
  *   aggregateTrend({spv, round, plaza}): {trend}
  *
@@ -132,6 +133,11 @@
     return out;
   }
 
+  function _prevMonth(year, month) {
+    if (month === 1) return { year: year - 1, month: 12 };
+    return { year, month: month - 1 };
+  }
+
   // ── Per-plaza category extraction from a monthly file ─────────────────────
   // The new monthly files store `vehicles` as {label: {count, amount}} per
   // plaza. We need to convert that into the same `categories` array shape
@@ -175,13 +181,18 @@
   }
 
   function _enrich(catMap, plazasIncluded, year, month, extra = {}) {
+    // Canonical display order (CJV → OSV); unknown names go last.
+    const orderIx = n => {
+      const i = CATEGORY_ORDER.indexOf(n);
+      return i === -1 ? 999 : i;
+    };
     const cats = Array.from(catMap.entries())
       .map(([name, v]) => ({
         name,
         count: v.count,
         amount: Math.round(v.amount * 100) / 100,
       }))
-      .sort((a, b) => b.amount - a.amount);
+      .sort((a, b) => orderIx(a.name) - orderIx(b.name));
 
     const totalCount = cats.reduce((a, c) => a + c.count, 0);
     const totalAmount = Math.round(cats.reduce((a, c) => a + c.amount, 0) * 100) / 100;
@@ -195,10 +206,22 @@
       avg_fare:     c.count     ? Math.round(c.amount / c.count     * 100)   / 100 : 0,
     }));
 
+    // Kept for backward compatibility — chatbot engine still reads these
+    // even though the dashboard no longer renders the corresponding cards.
     const topAmt = enriched.reduce((a, b) => (b.amount > a.amount ? b : a), enriched[0]);
     const topCnt = enriched.reduce((a, b) => (b.count  > a.count  ? b : a), enriched[0]);
 
-    const days = (extra.monthsCount || 1) * 30;
+    // Days-in-period: range mode passes pre-summed daysCount; single month
+    // uses the actual calendar days. Defensive fallback = 30.
+    let days;
+    if (extra.daysCount && extra.daysCount > 0) {
+      days = extra.daysCount;
+    } else if (year && month) {
+      days = daysInMonth(year, month);
+    } else {
+      days = 30;
+    }
+
     return {
       year,
       month,
@@ -209,6 +232,7 @@
       avg_per_txn: totalCount ? Math.round(totalAmount / totalCount * 100) / 100 : 0,
       avg_count_per_day:  totalCount  ? Math.round(totalCount / days)               : 0,
       avg_revenue_per_day: totalAmount ? Math.round(totalAmount / days * 100) / 100 : 0,
+      days_in_period: days,
       category_count: enriched.length,
       top_by_amount: { name: topAmt.name, amount: topAmt.amount },
       top_by_count:  { name: topCnt.name, count: topCnt.count },
@@ -217,30 +241,44 @@
     };
   }
 
+  // ── Internal: aggregate a single (year, month) for given plazas. Returns
+  // the enriched record or null on missing data / missing month file.
+  async function _tryAggregateSingle(plazas, year, month) {
+    if (!year || !month) return null;
+    const period = `${year}-${String(month).padStart(2, "0")}`;
+    let doc;
+    try { doc = await getMonthFile(period); } catch (_) { return null; }
+    return _aggregateMonth(_buildPlazaIndex(doc), plazas, year, month);
+  }
+
   // ── Public: aggregate for a single month with filters ─────────────────────
+  // Also returns prev_month and prev_year aggregates (computed with the same
+  // resolved plaza scope) so the dashboard can render MoM / YoY deltas
+  // without making separate API-style calls. prev_month / prev_year may be
+  // null when the corresponding month file does not exist or contains no
+  // matching plaza data — callers must handle null gracefully.
   async function aggregate({ spv = "", round = "", project = "", plaza = "", year, month }) {
     if (!year || !month) throw new Error("year and month are required");
     const filters = { spv, round, project, plaza };
-    const { plazas, scopeRows } = await _resolvePlazaScope(filters);
+    const { plazas } = await _resolvePlazaScope(filters);
     if (!plazas.length) {
       const err = new Error("No plazas match the selected filters.");
       err.status = 404; throw err;
     }
 
-    const period = `${year}-${String(month).padStart(2, "0")}`;
-    let monthlyDoc;
-    try {
-      monthlyDoc = await getMonthFile(period);
-    } catch (_) {
-      const err = new Error(`No data file for ${period}.`); err.status = 404; throw err;
-    }
-    const plazaIndex = _buildPlazaIndex(monthlyDoc);
-    const rec = _aggregateMonth(plazaIndex, plazas, year, month);
-    if (!rec) {
+    const pm = _prevMonth(year, month);
+    const [mainRec, prevMonthRec, prevYearRec] = await Promise.all([
+      _tryAggregateSingle(plazas, year,    month),
+      _tryAggregateSingle(plazas, pm.year, pm.month),
+      _tryAggregateSingle(plazas, year - 1, month),
+    ]);
+
+    if (!mainRec) {
+      const period = `${year}-${String(month).padStart(2, "0")}`;
       const err = new Error(`No data found for the selected filters in ${period}.`);
       err.status = 404; throw err;
     }
-    rec.scope = {
+    mainRec.scope = {
       label:   _scopeLabel(filters),
       spv:     spv     || null,
       round:   round   || null,
@@ -248,7 +286,11 @@
       plaza:   plaza   || null,
       plaza_count: plazas.length,
     };
-    return { record: rec };
+    return {
+      record:     mainRec,
+      prev_month: prevMonthRec,
+      prev_year:  prevYearRec,
+    };
   }
 
   // ── Public: aggregate across a range ──────────────────────────────────────
@@ -305,8 +347,11 @@
       const err = new Error("No data found for the selected filters in the range.");
       err.status = 404; throw err;
     }
+    const daysCount = monthsIncluded.reduce(
+      (acc, mi) => acc + daysInMonth(mi.year, mi.month), 0
+    );
     const rec = _enrich(catMap, plazas.filter(p => plazasSet.has(p)), null, null, {
-      monthsCount: Math.max(monthsIncluded.length, 1),
+      daysCount: Math.max(daysCount, 1),
       monthsIncluded,
       period: {
         start: { year: start_year, month: start_month },

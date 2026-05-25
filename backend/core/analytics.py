@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from typing import Iterable, List, Tuple
 
-from .constants import MONTH_NAMES
+from .constants import MONTH_NAMES, CATEGORY_ORDER, days_in_month
 
 
 def _iter_months(start_year: int, start_month: int, end_year: int, end_month: int):
@@ -16,6 +16,14 @@ def _iter_months(start_year: int, start_month: int, end_year: int, end_month: in
         if m > 12:
             y += 1
             m = 1
+
+
+def _category_sort_key(name: str) -> int:
+    """Canonical display order index; unknown labels go last."""
+    try:
+        return CATEGORY_ORDER.index(name)
+    except ValueError:
+        return 999
 
 
 def aggregate_plazas_for_month(
@@ -46,7 +54,7 @@ def aggregate_plazas_for_month(
         {"name": k, "count": v["count"], "amount": round(v["amount"], 2)}
         for k, v in cat_map.items()
     ]
-    cats.sort(key=lambda c: c["amount"], reverse=True)
+    cats.sort(key=lambda c: _category_sort_key(c["name"]))
 
     total_count = sum(c["count"] for c in cats)
     total_amount = round(sum(c["amount"] for c in cats), 2)
@@ -65,6 +73,8 @@ def aggregate_plazas_for_month(
     top_amt = max(enriched, key=lambda c: c["amount"])
     top_cnt = max(enriched, key=lambda c: c["count"])
 
+    days = days_in_month(year, month)
+
     return {
         "year": year,
         "month": month,
@@ -73,8 +83,9 @@ def aggregate_plazas_for_month(
         "total_count": total_count,
         "total_amount": total_amount,
         "avg_per_txn": round(total_amount / total_count, 2) if total_count else 0.0,
-        "avg_count_per_day": int(round(total_count / 30.0)) if total_count else 0,
-        "avg_revenue_per_day": round(total_amount / 30.0, 2) if total_amount else 0.0,
+        "avg_count_per_day": int(round(total_count / days)) if total_count else 0,
+        "avg_revenue_per_day": round(total_amount / days, 2) if total_amount else 0.0,
+        "days_in_period": days,
         "category_count": len(enriched),
         "top_by_amount": {"name": top_amt["name"], "amount": top_amt["amount"]},
         "top_by_count": {"name": top_cnt["name"], "count": top_cnt["count"]},
@@ -125,7 +136,7 @@ def aggregate_plazas_for_range(
         {"name": k, "count": v["count"], "amount": round(v["amount"], 2)}
         for k, v in cat_map.items()
     ]
-    cats.sort(key=lambda c: c["amount"], reverse=True)
+    cats.sort(key=lambda c: _category_sort_key(c["name"]))
 
     total_count = sum(c["count"] for c in cats)
     total_amount = round(sum(c["amount"] for c in cats), 2)
@@ -144,8 +155,10 @@ def aggregate_plazas_for_range(
     top_amt = max(enriched, key=lambda c: c["amount"])
     top_cnt = max(enriched, key=lambda c: c["count"])
 
-    months_with_data = max(len(months_included), 1)
-    days = months_with_data * 30.0
+    days = max(
+        sum(days_in_month(mi["year"], mi["month"]) for mi in months_included),
+        1,
+    )
 
     plazas_included = [p for p in plazas if p in plazas_set]
 
@@ -161,6 +174,7 @@ def aggregate_plazas_for_range(
         "avg_per_txn": round(total_amount / total_count, 2) if total_count else 0.0,
         "avg_count_per_day": int(round(total_count / days)) if total_count else 0,
         "avg_revenue_per_day": round(total_amount / days, 2) if total_amount else 0.0,
+        "days_in_period": days,
         "category_count": len(enriched),
         "top_by_amount": {"name": top_amt["name"], "amount": top_amt["amount"]},
         "top_by_count": {"name": top_cnt["name"], "count": top_cnt["count"]},
