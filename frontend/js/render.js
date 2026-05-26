@@ -42,22 +42,36 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   setText("hlAvgCntMeta", dayMeta);
   setText("hlAvgRevMeta", dayMeta);
 
-  // MoM/YoY top KPI cards — single-month mode only. Range mode hides them.
+  // MoM/YoY top KPI cards + section-card pills — single-month mode only.
   const momCard = document.getElementById("kpiMom")?.closest(".kpi-card");
   const yoyCard = document.getElementById("kpiYoy")?.closest(".kpi-card");
+  const sectionPillWraps = document.querySelectorAll(".sec-growth-pills");
   if (isRange) {
     momCard?.classList.add("hidden");
     yoyCard?.classList.add("hidden");
+    sectionPillWraps.forEach(w => w.classList.add("hidden"));
   } else {
     momCard?.classList.remove("hidden");
     yoyCard?.classList.remove("hidden");
+    sectionPillWraps.forEach(w => w.classList.remove("hidden"));
     const { prevMonth, prevYear } = deltas;
     const pmLabel = prevMonthLabel(rec.year, rec.month);
     const pyLabel = prevYearLabel(rec.year, rec.month);
+    const fmtTxn  = v => fmtTxnL(v);
     const fmtRev  = v => "₹" + fmtRevCr(v);
     renderDelta("kpiMom", "kpiMomSub", null,
       rec.total_amount, prevMonth?.total_amount, pmLabel, fmtRev);
     renderDelta("kpiYoy", "kpiYoySub", null,
+      rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
+
+    // Section-card pills — Transaction Count uses counts, Revenue uses amounts.
+    renderDelta("countMom", "countMomSub", null,
+      rec.total_count,  prevMonth?.total_count,  pmLabel, fmtTxn);
+    renderDelta("countYoy", "countYoySub", null,
+      rec.total_count,  prevYear?.total_count,   pyLabel, fmtTxn);
+    renderDelta("amtMom",   "amtMomSub",   null,
+      rec.total_amount, prevMonth?.total_amount, pmLabel, fmtRev);
+    renderDelta("amtYoy",   "amtYoySub",   null,
       rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
   }
 
@@ -65,11 +79,10 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   setVal("totalCount",  fmtTxnL(rec.total_count));
   setVal("totalAmount", "₹" + fmtRevCr(rec.total_amount));
 
-  // Tables — per-category share tables keep the smart fmtInt/fmtAmt so
-  // small per-slice values stay readable.
+  // Tables — strict unit rule: transactions always in Lakhs, revenue always in Crores.
   const cats = rec.categories;
-  renderShareTable("countTbody", cats, rec.total_count,  c => c.count,  fmtInt);
-  renderShareTable("amtTbody",   cats, rec.total_amount, c => c.amount, v => "₹" + fmtAmt(v));
+  renderShareTable("countTbody", cats, rec.total_count,  c => c.count,  fmtTxnL);
+  renderShareTable("amtTbody",   cats, rec.total_amount, c => c.amount, v => "₹" + fmtRevCr(v));
 
   // Pies + bar comparison + trend — use short labels everywhere.
   drawPie("cntPie", cats.map(c => shortCat(c.name)), cats.map(c => c.count),  "cntChart", false);
@@ -130,7 +143,7 @@ function renderDelta(valueId, metaId, prevId, curr, prev, comparisonLabel, fmt) 
   const prevEl = prevId ? document.getElementById(prevId) : null;
   if (!valEl || !metaEl) return;
 
-  const kpiCard = valEl.closest(".kpi-card");
+  const kpiCard = valEl.closest(".kpi-card, .sec-growth-pill");
   const pct = pctDelta(curr, prev);
 
   valEl.classList.remove("delta-up", "delta-down");

@@ -79,12 +79,13 @@
   /* Dashboard typography */
   .rh-left h1 { font-size: 1.75rem; }
   .rh-left p  { font-size: 0.92rem; }
-  .kpi-card   { padding: 18px 20px; }
-  .kpi-value  { font-size: 1.7rem; }
+  .kpi-card   { padding: 14px 16px; }
+  .kpi-value  { font-size: 1.4rem; }
 
   /* Section internals scale down */
   .sec-header { padding: 16px 18px; gap: 12px; }
   .sec-total  { font-size: 1.5rem; width: 100%; margin-left: 0; order: 3; }
+  .sec-growth-pills { width: 100%; margin-left: 0; order: 4; }
   .cat-table-wrap { padding: 18px 16px; }
   .bar-wrap { padding: 18px; height: 320px; }
 
@@ -117,9 +118,10 @@
   .highlight-row { grid-template-columns: 1fr; }
   .bar-wrap      { height: 280px; }
   .rh-left h1    { font-size: 1.5rem; }
-  .kpi-value     { font-size: 1.55rem; }
+  .kpi-value     { font-size: 1.3rem; }
   .sec-title     { font-size: 0.98rem; }
   .sec-desc      { font-size: 0.78rem; }
+  .sec-growth-pill { flex: 1; min-width: 0; }
   .hint-state    { padding: 64px 18px; }
   .hint-state h2 { font-size: 1.15rem; }
 
