@@ -12,13 +12,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <link rel="stylesheet" href="frontend/css/base.css?v=2" />
-  <link rel="stylesheet" href="frontend/css/header.css?v=2" />
-  <link rel="stylesheet" href="frontend/css/selector.css?v=2" />
-  <link rel="stylesheet" href="frontend/css/dashboard.css?v=2" />
-  <link rel="stylesheet" href="frontend/css/chatbot.css?v=2" />
-  <link rel="stylesheet" href="frontend/css/animations.css?v=2" />
-  <link rel="stylesheet" href="frontend/css/responsive.css?v=2" />
+  <link rel="stylesheet" href="frontend/css/base.css?v=4" />
+  <link rel="stylesheet" href="frontend/css/header.css?v=4" />
+  <link rel="stylesheet" href="frontend/css/selector.css?v=4" />
+  <link rel="stylesheet" href="frontend/css/dashboard.css?v=4" />
+  <link rel="stylesheet" href="frontend/css/chatbot.css?v=4" />
+  <link rel="stylesheet" href="frontend/css/animations.css?v=4" />
+  <link rel="stylesheet" href="frontend/css/responsive.css?v=4" />
 </head>
 
 <body>
@@ -193,6 +193,16 @@
           <div class="kpi-value" id="kpiAmount">—</div>
           <div class="kpi-sub" id="kpiAmountSub">&nbsp;</div>
         </div>
+        <div class="kpi-card kpi-growth stage-item shine spotlight reveal" data-stagger data-mom-yoy>
+          <div class="kpi-label">MoM Revenue Growth</div>
+          <div class="kpi-value" id="kpiMom">—</div>
+          <div class="kpi-sub" id="kpiMomSub">&nbsp;</div>
+        </div>
+        <div class="kpi-card kpi-growth stage-item shine spotlight reveal" data-stagger data-mom-yoy>
+          <div class="kpi-label">YoY Revenue Growth</div>
+          <div class="kpi-value" id="kpiYoy">—</div>
+          <div class="kpi-sub" id="kpiYoySub">&nbsp;</div>
+        </div>
       </div>
 
       <!-- HIGHLIGHT STRIP -->
@@ -207,29 +217,9 @@
           <div class="hl-value" id="hlAvgRev">—</div>
           <div class="hl-meta" id="hlAvgRevMeta">&nbsp;</div>
         </div>
-        <div class="hl-card hl-mom stage-item reveal" data-stagger data-mom-yoy>
-          <div class="hl-title">Txn MoM</div>
-          <div class="hl-value" id="hlTxnMom">—</div>
-          <div class="hl-meta" id="hlTxnMomMeta">&nbsp;</div>
-        </div>
-        <div class="hl-card hl-yoy stage-item reveal" data-stagger data-mom-yoy>
-          <div class="hl-title">Txn YoY</div>
-          <div class="hl-value" id="hlTxnYoy">—</div>
-          <div class="hl-meta" id="hlTxnYoyMeta">&nbsp;</div>
-        </div>
-        <div class="hl-card hl-mom stage-item reveal" data-stagger data-mom-yoy>
-          <div class="hl-title">Revenue MoM</div>
-          <div class="hl-value" id="hlRevMom">—</div>
-          <div class="hl-meta" id="hlRevMomMeta">&nbsp;</div>
-        </div>
-        <div class="hl-card hl-yoy stage-item reveal" data-stagger data-mom-yoy>
-          <div class="hl-title">Revenue YoY</div>
-          <div class="hl-value" id="hlRevYoy">—</div>
-          <div class="hl-meta" id="hlRevYoyMeta">&nbsp;</div>
-        </div>
       </div>
 
-      <!-- COUNT SECTION -->
+<!-- COUNT SECTION -->
       <div class="section-card reveal spotlight">
         <div class="sec-header blue">
           <div class="sec-icon">
@@ -348,13 +338,13 @@
     <span>Data Source: IHMCL — ihmcl.co.in</span>
   </footer>
 
-  <script src="frontend/js/utils.js?v=2"></script>
-  <script src="frontend/js/animations.js?v=2"></script>
-  <script src="frontend/js/data-layer.js?v=2"></script>
-  <script src="frontend/js/filters.js?v=2"></script>
-  <script src="frontend/js/charts.js?v=2"></script>
-  <script src="frontend/js/render.js?v=2"></script>
-  <script src="frontend/js/app.js?v=2"></script>
+  <script src="frontend/js/utils.js?v=4"></script>
+  <script src="frontend/js/animations.js?v=4"></script>
+  <script src="frontend/js/data-layer.js?v=4"></script>
+  <script src="frontend/js/filters.js?v=4"></script>
+  <script src="frontend/js/charts.js?v=4"></script>
+  <script src="frontend/js/render.js?v=4"></script>
+  <script src="frontend/js/app.js?v=4"></script>
 
 
   <!-- Chat panel -->
@@ -431,7 +421,7 @@
   <!-- Chat overlay (mobile) -->
   <div class="chat-overlay" id="chatOverlay"></div>
 
-  <script src="frontend/js/chatbot.js?v=2"></script>
+  <script src="frontend/js/chatbot.js?v=4"></script>
 </body>
 
 </html>

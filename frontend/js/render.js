@@ -42,24 +42,23 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   setText("hlAvgCntMeta", dayMeta);
   setText("hlAvgRevMeta", dayMeta);
 
-  // MoM/YoY cards only make sense in single-month mode. Range mode hides
-  // them and collapses the highlight row to a 2-col grid.
-  const row = document.getElementById("highlightRow");
-  if (row) {
-    if (isRange) {
-      row.setAttribute("data-mode", "range");
-      row.querySelectorAll("[data-mom-yoy]").forEach(c => c.classList.add("hidden"));
-    } else {
-      row.removeAttribute("data-mode");
-      row.querySelectorAll("[data-mom-yoy]").forEach(c => c.classList.remove("hidden"));
-      const { prevMonth, prevYear } = deltas;
-      const pmLabel = prevMonthLabel(rec.year, rec.month);
-      const pyLabel = prevYearLabel(rec.year, rec.month);
-      renderDelta("hlTxnMom", "hlTxnMomMeta", rec.total_count,  prevMonth?.total_count,  pmLabel);
-      renderDelta("hlTxnYoy", "hlTxnYoyMeta", rec.total_count,  prevYear?.total_count,   pyLabel);
-      renderDelta("hlRevMom", "hlRevMomMeta", rec.total_amount, prevMonth?.total_amount, pmLabel);
-      renderDelta("hlRevYoy", "hlRevYoyMeta", rec.total_amount, prevYear?.total_amount,  pyLabel);
-    }
+  // MoM/YoY top KPI cards — single-month mode only. Range mode hides them.
+  const momCard = document.getElementById("kpiMom")?.closest(".kpi-card");
+  const yoyCard = document.getElementById("kpiYoy")?.closest(".kpi-card");
+  if (isRange) {
+    momCard?.classList.add("hidden");
+    yoyCard?.classList.add("hidden");
+  } else {
+    momCard?.classList.remove("hidden");
+    yoyCard?.classList.remove("hidden");
+    const { prevMonth, prevYear } = deltas;
+    const pmLabel = prevMonthLabel(rec.year, rec.month);
+    const pyLabel = prevYearLabel(rec.year, rec.month);
+    const fmtRev  = v => "₹" + fmtRevCr(v);
+    renderDelta("kpiMom", "kpiMomSub", null,
+      rec.total_amount, prevMonth?.total_amount, pmLabel, fmtRev);
+    renderDelta("kpiYoy", "kpiYoySub", null,
+      rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
   }
 
   // Section totals
@@ -121,24 +120,60 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn) {
 }
 
 // ── MoM / YoY delta rendering ───────────────────────────────────────────────
-function renderDelta(valueId, metaId, curr, prev, comparisonLabel) {
-  const valEl = document.getElementById(valueId);
+// Writes the signed percentage into valueId, a description sentence into
+// metaId, and (optionally) the previous absolute value into prevId. When the
+// value element is inside a `.kpi-growth` KPI card, this also flips the
+// card's themed halo + value gradient via `kpi-up` / `kpi-down`.
+function renderDelta(valueId, metaId, prevId, curr, prev, comparisonLabel, fmt) {
+  const valEl  = document.getElementById(valueId);
   const metaEl = document.getElementById(metaId);
+  const prevEl = prevId ? document.getElementById(prevId) : null;
   if (!valEl || !metaEl) return;
+
+  const kpiCard = valEl.closest(".kpi-card");
   const pct = pctDelta(curr, prev);
+
   valEl.classList.remove("delta-up", "delta-down");
+  if (kpiCard) kpiCard.classList.remove("kpi-up", "kpi-down");
+
   if (pct === null) {
     valEl.textContent = "—";
     metaEl.textContent = prev == null
-      ? "No comparison data"
+      ? "No comparison data available"
       : `vs ${comparisonLabel}`;
+    if (prevEl) {
+      prevEl.innerHTML = (prev != null && fmt)
+        ? `Previous: <strong>${fmt(prev)}</strong>`
+        : "&nbsp;";
+    }
     return;
   }
+
   const arrow = pct > 0 ? "▲" : pct < 0 ? "▼" : "•";
   valEl.textContent = `${arrow} ${fmtPct(pct)}`;
-  if (pct > 0) valEl.classList.add("delta-up");
-  else if (pct < 0) valEl.classList.add("delta-down");
-  metaEl.textContent = `vs ${comparisonLabel}`;
+  if (pct > 0) {
+    valEl.classList.add("delta-up");
+    if (kpiCard) kpiCard.classList.add("kpi-up");
+  } else if (pct < 0) {
+    valEl.classList.add("delta-down");
+    if (kpiCard) kpiCard.classList.add("kpi-down");
+  }
+
+  const verb = pct > 0 ? "increase" : pct < 0 ? "decrease" : "change";
+  // When a separate prev element exists, meta gets the verb sentence and
+  // prev gets the value. When no prev element is provided (e.g. top-of-page
+  // KPI cards that only have a sub line), fold the prev value into the meta
+  // so users still see the comparison number.
+  if (prevEl) {
+    metaEl.textContent = `${verb} vs ${comparisonLabel}`;
+    prevEl.innerHTML = (prev != null && fmt)
+      ? `${comparisonLabel}: <strong>${fmt(prev)}</strong>`
+      : "&nbsp;";
+  } else {
+    metaEl.textContent = (prev != null && fmt)
+      ? `${verb} vs ${comparisonLabel} (${fmt(prev)})`
+      : `${verb} vs ${comparisonLabel}`;
+  }
 }
 
 function prevMonthLabel(year, month) {
