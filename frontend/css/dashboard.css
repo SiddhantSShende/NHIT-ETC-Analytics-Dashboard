@@ -111,6 +111,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-bottom: 22px;
+  width: 100%;
 }
 .kpi-card {
   position: relative;
@@ -207,48 +208,7 @@
 }
 .kpi-sub { font-size: 0.7rem; color: var(--text2); }
 
-/* ── Highlight strip ─────────────────────────────────────────────────────── */
-.highlight-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 22px;
-}
-/* YoY delta colours. The class is toggled by renderDelta(). */
-.hl-card .hl-value.delta-up   { color: #16a34a; }
-.hl-card .hl-value.delta-down { color: #dc2626; }
-
-.hl-card {
-  background: var(--glass-soft);
-  backdrop-filter: blur(20px) saturate(170%);
-  -webkit-backdrop-filter: blur(20px) saturate(170%);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  transition: transform .25s, border-color .25s, background .25s, box-shadow .25s;
-}
-.hl-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(0, 48, 135, 0.18);
-  background: var(--glass-strong);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
-}
-.hl-title {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--text2);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 8px;
-}
-.hl-value {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.3;
-  word-break: break-word;
-}
-.hl-meta { font-size: 0.78rem; color: var(--text2); margin-top: 6px; }
+/* YoY delta colours used by .kpi-card and .sec-growth-pill via renderDelta(). */
 
 /* ── Section card ────────────────────────────────────────────────────────── */
 .section-card {
@@ -378,22 +338,18 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-.cat-table-disclaimer {
-  margin: 14px 0 0;
-  font-size: 0.72rem;
-  font-style: italic;
-  color: var(--text3);
-  text-align: right;
-  letter-spacing: 0.02em;
-}
+.cat-table-disclaimer,
 .chart-disclaimer {
-  margin: 4px 24px 18px;
-  font-size: 0.72rem;
+  margin: 16px 0 0;
+  padding: 12px 16px;
+  font-size: 0.78rem;
   font-style: italic;
-  color: var(--text3);
-  text-align: right;
+  color: var(--text2);
+  text-align: center;
   letter-spacing: 0.02em;
+  border-top: 1px solid var(--hairline);
 }
+.chart-disclaimer { margin: 8px 0 0; }
 .cat-table {
   width: 100%;
   border-collapse: collapse;
@@ -435,9 +391,6 @@
 .cat-table td.delta-up   { color: #16a34a; font-weight: 600; }
 .cat-table td.delta-down { color: #dc2626; font-weight: 600; }
 
-/* Range mode has no meaningful single prior period, so hide YoY entirely
-   (matches the section-header pill hiding in render.js when isRange). */
-.cat-table.is-range .yoy-col { display: none; }
 
 .cat-dot {
   display: inline-block;

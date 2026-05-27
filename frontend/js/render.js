@@ -32,54 +32,42 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   setVal("kpiAmount",    "₹" + fmtRevCr(rec.total_amount));
   setText("kpiAmountSub", "Toll revenue collected via FASTag");
 
-  // Highlight strip — Avg daily uses the actual days-in-period.
-  const days = rec.days_in_period || 30;
-  const dayMeta = isRange
-    ? `across ${days} days in this range`
-    : `across ${days} days in ${rec.month_name}`;
-  setVal("hlAvgCnt", fmtTxnL(rec.avg_count_per_day));
-  setVal("hlAvgRev", "₹" + fmtRevCr(rec.avg_revenue_per_day));
-  setText("hlAvgCntMeta", dayMeta);
-  setText("hlAvgRevMeta", dayMeta);
-
-  // YoY top KPI card + section-card pills — single-month mode only.
+  // YoY top KPI card + section-card pills — works in both single-month and
+  // range mode. For range mode, prevYear is the same start..end window
+  // shifted back by one year; if that window doesn't exist (e.g. anything
+  // before Jan 2022), prevYear is null and renderDelta falls back to
+  // "No comparison data available".
   const yoyCard = document.getElementById("kpiYoy")?.closest(".kpi-card");
   const sectionPillWraps = document.querySelectorAll(".sec-growth-pills");
-  if (isRange) {
-    yoyCard?.classList.add("hidden");
-    sectionPillWraps.forEach(w => w.classList.add("hidden"));
-  } else {
-    yoyCard?.classList.remove("hidden");
-    sectionPillWraps.forEach(w => w.classList.remove("hidden"));
-    const { prevYear } = deltas;
-    const pyLabel = prevYearLabel(rec.year, rec.month);
-    const fmtTxn  = v => fmtTxnL(v);
-    const fmtRev  = v => "₹" + fmtRevCr(v);
-    renderDelta("kpiYoy", "kpiYoySub", null,
-      rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
-
-    // Section-card pills — Transaction Count uses counts, Revenue uses amounts.
-    renderDelta("countYoy", "countYoySub", null,
-      rec.total_count,  prevYear?.total_count,   pyLabel, fmtTxn);
-    renderDelta("amtYoy",   "amtYoySub",   null,
-      rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
-  }
+  yoyCard?.classList.remove("hidden");
+  sectionPillWraps.forEach(w => w.classList.remove("hidden"));
+  const { prevYear } = deltas || {};
+  const pyLabel = isRange
+    ? rangePrevYearLabel(start, end)
+    : prevYearLabel(rec.year, rec.month);
+  const fmtTxn  = v => fmtTxnL(v);
+  const fmtRev  = v => "₹" + fmtRevCr(v);
+  renderDelta("kpiYoy", "kpiYoySub", null,
+    rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
+  renderDelta("countYoy", "countYoySub", null,
+    rec.total_count,  prevYear?.total_count,   pyLabel, fmtTxn);
+  renderDelta("amtYoy",   "amtYoySub",   null,
+    rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
 
   // Section totals
   setVal("totalCount",  fmtTxnL(rec.total_count));
   setVal("totalAmount", "₹" + fmtRevCr(rec.total_amount));
 
   // Tables — strict unit rule: transactions always in Lakhs, revenue always in Crores.
-  // Per-category YoY: prior-year category array comes from the same
-  // aggregate() call that populates the section pill; in range mode no
-  // single prior period is meaningful, so we suppress the column entirely
-  // (CSS hides .yoy-col when the table has .is-range).
+  // Per-category YoY: prior-period category array comes from the same
+  // aggregate() / aggregateRange() call that populates the section pill.
+  // Works in both single-month mode (vs same month last year) and range
+  // mode (vs the same range shifted back one year).
   const cats = rec.categories;
-  const { prevYear: prevYearRec } = deltas || {};
-  const pyCats = isRange ? null : prevYearRec?.categories;
+  const pyCats = prevYear?.categories || null;
 
-  document.getElementById("countTable")?.classList.toggle("is-range", isRange);
-  document.getElementById("amtTable")?.classList.toggle("is-range", isRange);
+  document.getElementById("countTable")?.classList.remove("is-range");
+  document.getElementById("amtTable")?.classList.remove("is-range");
 
   renderShareTable("countTbody", cats, rec.total_count,  c => c.count,  fmtTxnL,                pyCats);
   renderShareTable("amtTbody",   cats, rec.total_amount, c => c.amount, v => "₹" + fmtRevCr(v), pyCats);
@@ -222,4 +210,10 @@ function renderDelta(valueId, metaId, prevId, curr, prev, comparisonLabel, fmt) 
 
 function prevYearLabel(year, month) {
   return `${MONTH_LABELS[month].slice(0, 3)} ${year - 1}`;
+}
+
+function rangePrevYearLabel(start, end) {
+  const sm = MONTH_LABELS[start.month].slice(0, 3);
+  const em = MONTH_LABELS[end.month].slice(0, 3);
+  return `${sm} ${start.year - 1} – ${em} ${end.year - 1}`;
 }

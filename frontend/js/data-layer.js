@@ -366,14 +366,38 @@
       const err = new Error("No plazas match the selected filters."); err.status = 404; throw err;
     }
 
-    const months = _iterMonths(start_year, start_month, end_year, end_month);
+    const [mainRec, prevYearRec] = await Promise.all([
+      _aggregateRangeOnly(plazas, start_year, start_month, end_year, end_month),
+      _aggregateRangeOnly(plazas, start_year - 1, start_month, end_year - 1, end_month),
+    ]);
+
+    if (!mainRec) {
+      const err = new Error("No data found for the selected filters in the range.");
+      err.status = 404; throw err;
+    }
+    mainRec.scope = {
+      label:   _scopeLabel(filters),
+      spv:     spv     || null,
+      round:   round   || null,
+      project: project || null,
+      plaza:   plaza   || null,
+      plaza_count: plazas.length,
+    };
+    return { record: mainRec, prev_year: prevYearRec };
+  }
+
+  // ── Internal: aggregate plazas across a [start..end] inclusive range.
+  // Mirrors aggregateRange()'s body but takes a pre-resolved plaza list and
+  // returns null instead of throwing when no data is found (lets the caller
+  // treat "no prior-year window" as a soft "no comparison" rather than 404).
+  async function _aggregateRangeOnly(plazas, sy, sm, ey, em) {
+    const months = _iterMonths(sy, sm, ey, em);
     const catMap = new Map();
     const plazasSet = new Set();
     const monthsIncluded = [];
     let extraCount = 0, extraAmount = 0;
     const knownPeriods = await getPeriodsSet();
 
-    // Load each month file lazily; missing periods are skipped.
     for (const [y, m] of months) {
       const period = `${y}-${String(m).padStart(2, "0")}`;
       if (!knownPeriods.has(period)) continue;
@@ -409,31 +433,18 @@
       }
     }
     if (!catMap.size && extraCount === 0 && extraAmount === 0) {
-      const err = new Error("No data found for the selected filters in the range.");
-      err.status = 404; throw err;
+      return null;
     }
     const daysCount = monthsIncluded.reduce(
       (acc, mi) => acc + daysInMonth(mi.year, mi.month), 0
     );
-    const rec = _enrich(catMap, plazas.filter(p => plazasSet.has(p)), null, null, {
+    return _enrich(catMap, plazas.filter(p => plazasSet.has(p)), null, null, {
       daysCount: Math.max(daysCount, 1),
       monthsIncluded,
       extraCount,
       extraAmount,
-      period: {
-        start: { year: start_year, month: start_month },
-        end:   { year: end_year,   month: end_month },
-      },
+      period: { start: { year: sy, month: sm }, end: { year: ey, month: em } },
     });
-    rec.scope = {
-      label:   _scopeLabel(filters),
-      spv:     spv     || null,
-      round:   round   || null,
-      project: project || null,
-      plaza:   plaza   || null,
-      plaza_count: plazas.length,
-    };
-    return { record: rec };
   }
 
   // ── Public: monthly trend (count + amount per period) ─────────────────────
