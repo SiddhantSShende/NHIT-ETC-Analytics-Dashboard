@@ -382,7 +382,7 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  min-width: 480px;
+  min-width: 620px;
 }
 .cat-table th {
   text-align: left;
@@ -406,6 +406,21 @@
 }
 .cat-table tbody tr:hover { background: rgba(0, 48, 135, 0.04); }
 .cat-table tbody tr:last-child td { border-bottom: none; }
+
+/* Per-category MoM / YoY delta cells. Color convention matches renderDelta()
+   on the section pills (green for growth, red for decline, neutral for null). */
+.cat-table td.delta-cell {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.cat-table td.delta-up   { color: #16a34a; font-weight: 600; }
+.cat-table td.delta-down { color: #dc2626; font-weight: 600; }
+
+/* Range mode has no meaningful single prior period, so hide MoM/YoY entirely
+   (matches the section-header pill hiding in render.js when isRange). */
+.cat-table.is-range .mom-col,
+.cat-table.is-range .yoy-col { display: none; }
 
 .cat-dot {
   display: inline-block;

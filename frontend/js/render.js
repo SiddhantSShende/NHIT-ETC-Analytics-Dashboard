@@ -80,9 +80,20 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   setVal("totalAmount", "₹" + fmtRevCr(rec.total_amount));
 
   // Tables — strict unit rule: transactions always in Lakhs, revenue always in Crores.
+  // Per-category MoM/YoY: prior-period category arrays come from the same
+  // aggregate() call that populates the section pills; in range mode no
+  // single prior period is meaningful, so we suppress the columns entirely
+  // (CSS hides .mom-col / .yoy-col when the table has .is-range).
   const cats = rec.categories;
-  renderShareTable("countTbody", cats, rec.total_count,  c => c.count,  fmtTxnL);
-  renderShareTable("amtTbody",   cats, rec.total_amount, c => c.amount, v => "₹" + fmtRevCr(v));
+  const { prevMonth: prevMonthRec, prevYear: prevYearRec } = deltas || {};
+  const pmCats = isRange ? null : prevMonthRec?.categories;
+  const pyCats = isRange ? null : prevYearRec?.categories;
+
+  document.getElementById("countTable")?.classList.toggle("is-range", isRange);
+  document.getElementById("amtTable")?.classList.toggle("is-range", isRange);
+
+  renderShareTable("countTbody", cats, rec.total_count,  c => c.count,  fmtTxnL,                pmCats, pyCats);
+  renderShareTable("amtTbody",   cats, rec.total_amount, c => c.amount, v => "₹" + fmtRevCr(v), pmCats, pyCats);
 
   // Pies + bar comparison + trend — use short labels everywhere.
   drawPie("cntPie", cats.map(c => shortCat(c.name)), cats.map(c => c.count),  "cntChart", false);
@@ -114,8 +125,25 @@ function buildScopeMeta(rec) {
   return bits.join(" · ");
 }
 
-function renderShareTable(bodyId, cats, total, valueFn, fmtFn) {
+function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, prevYearCats) {
   const max = Math.max(...cats.map(valueFn), 1);
+  const pmByName = new Map((prevMonthCats || []).map(c => [c.name, c]));
+  const pyByName = new Map((prevYearCats  || []).map(c => [c.name, c]));
+
+  const deltaCell = (curr, prev, colClass) => {
+    // Short-circuit when the category was absent in the prior period —
+    // otherwise valueFn(undefined) would throw on c.count / c.amount.
+    const prevVal = prev != null ? valueFn(prev) : null;
+    const pct = pctDelta(curr, prevVal);
+    if (pct === null) {
+      return `<td class="delta-cell ${colClass}" aria-label="No comparison data">—</td>`;
+    }
+    const arrow = pct > 0 ? "▲" : pct < 0 ? "▼" : "•";
+    const dirCls = pct > 0 ? "delta-up" : pct < 0 ? "delta-down" : "";
+    const verb   = pct > 0 ? "increase" : pct < 0 ? "decrease" : "no change";
+    return `<td class="delta-cell ${colClass} ${dirCls}" aria-label="${fmtPct(pct)} ${verb}">${arrow} ${fmtPct(pct)}</td>`;
+  };
+
   document.getElementById(bodyId).innerHTML = cats.map((c, i) => {
     const color = PIE_COLORS[i % PIE_COLORS.length];
     const v   = valueFn(c);
@@ -125,6 +153,8 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn) {
       <td><span class="cat-dot" style="background:${color};color:${color}"></span>${escapeHtml(shortCat(c.name))}</td>
       <td>${fmtFn(v)}</td>
       <td>${pct}%</td>
+      ${deltaCell(v, pmByName.get(c.name), "mom-col")}
+      ${deltaCell(v, pyByName.get(c.name), "yoy-col")}
       <td style="width:140px">
         <div class="share-bar-bg"><div class="share-bar-fill" style="width:${bar}%;background:${color};color:${color}"></div></div>
       </td>
