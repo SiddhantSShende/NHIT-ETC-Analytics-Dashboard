@@ -249,8 +249,12 @@ def parse_vc_wise(pdf_path: Path) -> tuple[dict[str, dict], dict[str, dict]]:
 def parse_annual_pass(pdf_path: Path) -> dict[str, dict]:
     """Annual-Pass monthly PDF -> raw_plaza -> {piu, ro, transaction_count}.
 
-    Header: Month - Year | Plaza Name | PIU | RO | Total number of Annual Pass
-            Transaction count, including single journey, return journey etc.
+    Supports two header layouts seen in IHMCL reports:
+      - 5-col (2025): "... | Plaza Name | PIU | RO | Total number of Annual Pass
+        Transaction Count, including single journey, return journey etc."
+      - 7-col (2026): "... | Plaza Name | PIU | RO | Sum of QUALIFIED_SJ_TXN
+        | Sum of QUALIFIED_RJ_TXN | Sum of TOTAL_QUALIFIED_TXN"
+    For the 7-col layout we use TOTAL_QUALIFIED_TXN (single + return journeys).
     """
     out: dict[str, dict] = {}
     with pdfplumber.open(pdf_path) as pdf:
@@ -263,19 +267,29 @@ def parse_annual_pass(pdf_path: Path) -> dict[str, dict]:
                 if plaza_idx is None:
                     for r in table[:3]:
                         rl = [str(c or "").strip() for c in r]
-                        joined = " | ".join(rl).upper()
-                        if "PLAZA NAME" in joined and "PIU" in joined and (
-                            "ANNUAL PASS" in joined or "TRANSACTION COUNT" in joined
+                        # Collapse whitespace so split words like
+                        # "QUALIFIED\n_SJ_TXN" still match TOTAL_QUALIFIED_TXN.
+                        joined = re.sub(r"\s+", "", " | ".join(rl).upper())
+                        if "PLAZANAME" in joined and "PIU" in joined and (
+                            "ANNUALPASS" in joined
+                            or "TRANSACTIONCOUNT" in joined
+                            or "TOTAL_QUALIFIED_TXN" in joined
+                            or "QUALIFIED_TXN" in joined
                         ):
                             for j, h in enumerate(rl):
                                 hu = h.upper()
+                                hu_compact = re.sub(r"\s+", "", hu)
                                 if "PLAZA" in hu and plaza_idx is None:
                                     plaza_idx = j
-                                elif hu == "PIU":
+                                elif hu.strip() == "PIU":
                                     piu_idx = j
-                                elif hu == "RO":
+                                elif hu.strip() == "RO":
                                     ro_idx = j
-                                elif "ANNUAL PASS" in hu or "TRANSACTION COUNT" in hu:
+                                elif "TOTAL_QUALIFIED_TXN" in hu_compact:
+                                    count_idx = j  # prefer TOTAL over SJ/RJ
+                                elif count_idx is None and (
+                                    "ANNUAL PASS" in hu or "TRANSACTION COUNT" in hu
+                                ):
                                     count_idx = j
                             break
                 if plaza_idx is None or count_idx is None:

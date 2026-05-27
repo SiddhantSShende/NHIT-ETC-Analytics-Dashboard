@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Loni Toll Plaza (RO Nagpur)",
+  "plaza_slug": "loni-nagpur",
+  "piu": "Aurangabad",
+  "ro": "Nagpur",
+  "source_raw_names": [
+    "Loni Toll Plaza (RO Nagpur)"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 22808,
+          "amount": 799485.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 684,
+          "amount": 43620.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2168,
+          "amount": 284590.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 571,
+          "amount": 83725.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1672,
+          "amount": 389480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 27903,
+        "amount": 1600900.0
+      },
+      "annual_pass": {
+        "transaction_count": 2535
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "GMR dapar"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 1139058,
         "amount": 63055250.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 352847
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 1245724,
         "amount": 70275535.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 275841
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 977380,
+          "amount": 28860020.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 38112,
+          "amount": 2534745.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 136079,
+          "amount": 20164260.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 26929,
+          "amount": 6837755.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 31271,
+          "amount": 8052295.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 40,
+          "amount": 14440.0
+        }
+      },
+      "total": {
+        "count": 1209811,
+        "amount": 66463515.0
+      },
+      "annual_pass": {
+        "transaction_count": 356395
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

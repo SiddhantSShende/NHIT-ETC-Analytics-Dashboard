@@ -6,7 +6,7 @@
   "source_raw_names": [
     "DEORIYA"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 400243,
         "amount": 65202860.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 96560
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 413703,
         "amount": 70913085.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 70029
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 296971,
+          "amount": 15095790.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13275,
+          "amount": 2149665.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 40912,
+          "amount": 15155015.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20837,
+          "amount": 8123650.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 62229,
+          "amount": 35362600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 26,
+          "amount": 20120.0
+        }
+      },
+      "total": {
+        "count": 434250,
+        "amount": 75906840.0
+      },
+      "annual_pass": {
+        "transaction_count": 94645
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "LADPALWAN TOLL PLAZA"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 318482,
         "amount": 63951930.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 67691
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 339091,
         "amount": 68102425.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 54072
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 224639,
+          "amount": 15465430.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6055,
+          "amount": 1131915.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 33938,
+          "amount": 12711010.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 16761,
+          "amount": 9983025.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 43951,
+          "amount": 26681740.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 21,
+          "amount": 17070.0
+        }
+      },
+      "total": {
+        "count": 325365,
+        "amount": 65990190.0
+      },
+      "annual_pass": {
+        "transaction_count": 67986
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

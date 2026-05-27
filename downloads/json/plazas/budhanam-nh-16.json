@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Budhanam Plaza (NH- 16)"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 660273,
         "amount": 87456450.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 125009
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 738138,
         "amount": 97850580.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 99391
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 332819,
+          "amount": 13041560.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 41904,
+          "amount": 6893665.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 109020,
+          "amount": 19647555.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 47738,
+          "amount": 8621355.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 194812,
+          "amount": 43984185.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 363,
+          "amount": 139755.0
+        }
+      },
+      "total": {
+        "count": 726656,
+        "amount": 92328075.0
+      },
+      "annual_pass": {
+        "transaction_count": 131605
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ludhwai Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 488017,
         "amount": 32856150.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 85166
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 516913,
         "amount": 33344830.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 68332
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 315436,
+          "amount": 6619660.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9506,
+          "amount": 423780.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 63317,
+          "amount": 5987520.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9770,
+          "amount": 1512335.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 104664,
+          "amount": 16161705.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 85,
+          "amount": 13175.0
+        }
+      },
+      "total": {
+        "count": 502778,
+        "amount": 30718175.0
+      },
+      "annual_pass": {
+        "transaction_count": 88608
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

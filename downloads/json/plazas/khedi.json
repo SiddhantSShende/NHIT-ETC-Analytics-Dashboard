@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khedi"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 555693,
         "amount": 213560725.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 92051
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 567439,
         "amount": 221186085.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 64446
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 226338,
+          "amount": 18407185.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 24302,
+          "amount": 5712665.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 83252,
+          "amount": 40463060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 50895,
+          "amount": 28289835.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 160622,
+          "amount": 120186510.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 110,
+          "amount": 107370.0
+        }
+      },
+      "total": {
+        "count": 545519,
+        "amount": 213166625.0
+      },
+      "annual_pass": {
+        "transaction_count": 84537
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

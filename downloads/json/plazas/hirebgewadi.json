@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hirebgewadi toll plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 411535,
         "amount": 101771070.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 43985
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 428115,
         "amount": 108431335.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 31955
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 253869,
+          "amount": 22417125.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 37441,
+          "amount": 7014590.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 89082,
+          "amount": 33467025.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23109,
+          "amount": 14397330.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 49734,
+          "amount": 31460345.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 116,
+          "amount": 83130.0
+        }
+      },
+      "total": {
+        "count": 453351,
+        "amount": 108839545.0
+      },
+      "annual_pass": {
+        "transaction_count": 48126
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

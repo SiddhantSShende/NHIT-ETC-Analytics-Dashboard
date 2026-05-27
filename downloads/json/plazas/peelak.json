@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Peelak Toll Plaza"
   ],
-  "period_count": 14,
+  "period_count": 15,
   "months": {
     "2025-02": {
       "vehicles": {
@@ -518,6 +518,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 54080,
+          "amount": 1710765.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4720,
+          "amount": 312255.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11683,
+          "amount": 1656665.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2997,
+          "amount": 469655.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 14242,
+          "amount": 2990115.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 51,
+          "amount": 5735.0
+        }
+      },
+      "total": {
+        "count": 87773,
+        "amount": 7145190.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

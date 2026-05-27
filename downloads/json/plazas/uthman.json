@@ -6,7 +6,7 @@
   "source_raw_names": [
     "UTHMAN"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 432806,
         "amount": 187673200.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 50629
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 429236,
         "amount": 178300370.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 37199
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 185044,
+          "amount": 15107110.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9900,
+          "amount": 2186280.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 50006,
+          "amount": 22439750.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17340,
+          "amount": 9039855.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 146492,
+          "amount": 111546970.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 113,
+          "amount": 104485.0
+        }
+      },
+      "total": {
+        "count": 408895,
+        "amount": 160424450.0
+      },
+      "annual_pass": {
+        "transaction_count": 51533
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

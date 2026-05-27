@@ -6,7 +6,7 @@
   "source_raw_names": [
     "TP26 Tharad"
   ],
-  "period_count": 12,
+  "period_count": 13,
   "months": {
     "2025-04": {
       "vehicles": {
@@ -448,10 +448,51 @@
         "count": 17149,
         "amount": 4495525.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 2
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 9247,
+          "amount": 855090.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 226,
+          "amount": 60725.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1606,
+          "amount": 1465740.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 340,
+          "amount": 281650.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3613,
+          "amount": 7198025.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 1130.0
+        }
+      },
+      "total": {
+        "count": 15035,
+        "amount": 9862360.0
+      },
+      "annual_pass": {
+        "transaction_count": 281
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

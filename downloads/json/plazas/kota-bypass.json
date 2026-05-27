@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kota Bypass Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 269007,
         "amount": 53556150.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 50378
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 271288,
         "amount": 54987700.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 36143
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 136345,
+          "amount": 5718335.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7022,
+          "amount": 880570.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 28105,
+          "amount": 7394885.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19541,
+          "amount": 5492500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 86189,
+          "amount": 35144105.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 58,
+          "amount": 31070.0
+        }
+      },
+      "total": {
+        "count": 277260,
+        "amount": 54661465.0
+      },
+      "annual_pass": {
+        "transaction_count": 49866
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

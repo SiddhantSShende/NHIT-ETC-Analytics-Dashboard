@@ -6,7 +6,7 @@
   "source_raw_names": [
     "KOKHRAJ (Sirohi) Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -554,6 +554,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 52479,
+          "amount": 5879120.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6918,
+          "amount": 2124190.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 26052,
+          "amount": 17543540.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 14208,
+          "amount": 10777680.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 73563,
+          "amount": 71776720.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 48,
+          "amount": 64950.0
+        }
+      },
+      "total": {
+        "count": 173268,
+        "amount": 108166200.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

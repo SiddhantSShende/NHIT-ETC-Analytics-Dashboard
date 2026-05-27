@@ -7,7 +7,8 @@
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('plazas:', len\\(d['plazas']\\), '| years:', d['years'], '| months:', [m['name'] for m in d['months']]\\)\")",
       "Bash(netstat -ano)",
       "Bash(python build_data.py)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(curl -L -o \"C:\\\\Users\\\\satis\\\\OneDrive\\\\Desktop\\\\Products\\\\NHIT_dashboard\\\\downloads\\\\vc_monthly\\\\Apr-2026.pdf\" \"https://ihmcl.co.in/wp-content/uploads/2026/05/Apr-2026.pdf\")"
     ]
   }
 }

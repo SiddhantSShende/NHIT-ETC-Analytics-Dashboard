@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mormugao port Toll Plaza"
   ],
-  "period_count": 8,
+  "period_count": 9,
   "months": {
     "2025-08": {
       "vehicles": {
@@ -308,6 +308,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 17,
+          "amount": 935.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 27,
+          "amount": 1710.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3008,
+          "amount": 405305.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1411,
+          "amount": 207845.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3014,
+          "amount": 644140.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 7477,
+        "amount": 1259935.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

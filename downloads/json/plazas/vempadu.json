@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vempadu"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 594137,
         "amount": 201055535.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 86010
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 666048,
         "amount": 221456065.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 72379
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 316586,
+          "amount": 25945220.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 32263,
+          "amount": 6596410.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 97580,
+          "amount": 39925060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 45044,
+          "amount": 23021865.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 158696,
+          "amount": 116046020.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 150,
+          "amount": 134000.0
+        }
+      },
+      "total": {
+        "count": 650319,
+        "amount": 211668575.0
+      },
+      "annual_pass": {
+        "transaction_count": 93641
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

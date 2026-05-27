@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Vemsoor",
+  "plaza_slug": "vemsoor",
+  "piu": "Khammam",
+  "ro": "Hyderabad",
+  "source_raw_names": [
+    "Vemsoor"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 4938,
+          "amount": 211000.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 81,
+          "amount": 10340.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 208,
+          "amount": 53540.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 73,
+          "amount": 17505.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 462,
+          "amount": 199050.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 5762,
+        "amount": 491435.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

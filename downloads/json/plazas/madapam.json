@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Madapam Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -523,7 +523,9 @@
         "count": 403611,
         "amount": 93008085.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 64216
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +562,51 @@
         "count": 443884,
         "amount": 100748220.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 53048
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 224079,
+          "amount": 11931215.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13709,
+          "amount": 1993720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 63777,
+          "amount": 18273565.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 34570,
+          "amount": 12138405.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 99443,
+          "amount": 52004150.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 99,
+          "amount": 61890.0
+        }
+      },
+      "total": {
+        "count": 435677,
+        "amount": 96402945.0
+      },
+      "annual_pass": {
+        "transaction_count": 67122
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

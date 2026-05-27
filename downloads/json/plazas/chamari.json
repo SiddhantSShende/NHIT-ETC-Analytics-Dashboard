@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chamari Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 366870,
         "amount": 99529780.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 68290
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 360511,
         "amount": 99921610.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 47561
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 164732,
+          "amount": 8605115.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9200,
+          "amount": 1546915.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 46256,
+          "amount": 16002745.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20336,
+          "amount": 8265420.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 126840,
+          "amount": 65540085.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 52,
+          "amount": 34415.0
+        }
+      },
+      "total": {
+        "count": 367416,
+        "amount": 99994695.0
+      },
+      "annual_pass": {
+        "transaction_count": 66333
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

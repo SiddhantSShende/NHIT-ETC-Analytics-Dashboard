@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pargaon TP"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 261038,
         "amount": 53680185.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 31796
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 273773,
         "amount": 56405985.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 23293
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 137907,
+          "amount": 7489335.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9004,
+          "amount": 1132375.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 46722,
+          "amount": 12464955.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28201,
+          "amount": 8607955.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 54402,
+          "amount": 24072730.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 477,
+          "amount": 245545.0
+        }
+      },
+      "total": {
+        "count": 276713,
+        "amount": 54012895.0
+      },
+      "annual_pass": {
+        "transaction_count": 34338
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

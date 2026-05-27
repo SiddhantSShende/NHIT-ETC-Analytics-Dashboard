@@ -6,7 +6,7 @@
   "source_raw_names": [
     "DodakaToll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -556,10 +556,51 @@
         "count": 282309,
         "amount": 180849300.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 12520
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 184589,
+          "amount": 25973430.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14202,
+          "amount": 6395055.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 38212,
+          "amount": 40849865.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 14865,
+          "amount": 17553120.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 62970,
+          "amount": 99140290.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 28,
+          "amount": 27380.0
+        }
+      },
+      "total": {
+        "count": 314866,
+        "amount": 189939140.0
+      },
+      "annual_pass": {
+        "transaction_count": 7799
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

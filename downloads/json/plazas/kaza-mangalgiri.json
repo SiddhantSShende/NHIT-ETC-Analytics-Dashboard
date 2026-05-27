@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kaza Toll Plaza Mangalgiri"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -486,7 +486,9 @@
         "count": 1220986,
         "amount": 241158930.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 371833
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jan-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jan-2026.pdf"
@@ -523,7 +525,9 @@
         "count": 1111734,
         "amount": 227901320.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 337929
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +564,51 @@
         "count": 1231736,
         "amount": 254626715.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 385560
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 917045,
+          "amount": 45253940.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 33560,
+          "amount": 5754015.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 144223,
+          "amount": 42292460.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 49378,
+          "amount": 19032160.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 104122,
+          "amount": 65082435.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 148,
+          "amount": 109910.0
+        }
+      },
+      "total": {
+        "count": 1248476,
+        "amount": 177524920.0
+      },
+      "annual_pass": {
+        "transaction_count": 414579
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

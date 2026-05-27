@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Daroada"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 276387,
         "amount": 102036665.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 20005
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 291688,
         "amount": 109097560.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 14262
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 78914,
+          "amount": 5281225.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 15417,
+          "amount": 2993900.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 73086,
+          "amount": 29693405.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 48833,
+          "amount": 22212240.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 75159,
+          "amount": 49190225.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 209,
+          "amount": 144905.0
+        }
+      },
+      "total": {
+        "count": 291618,
+        "amount": 109515900.0
+      },
+      "annual_pass": {
+        "transaction_count": 21450
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

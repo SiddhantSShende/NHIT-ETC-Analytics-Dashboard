@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Inagaluru Toll plaza",
+  "plaza_slug": "inagaluru",
+  "piu": "Anantpur",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Inagaluru Toll plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 5517,
+          "amount": 289765.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 241,
+          "amount": 30940.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1139,
+          "amount": 280955.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 134,
+          "amount": 38560.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1943,
+          "amount": 845480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 460.0
+        }
+      },
+      "total": {
+        "count": 8975,
+        "amount": 1486160.0
+      },
+      "annual_pass": {
+        "transaction_count": 2092
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

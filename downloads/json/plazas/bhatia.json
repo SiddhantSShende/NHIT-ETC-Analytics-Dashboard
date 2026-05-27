@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhatia Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 531568,
         "amount": 96564675.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 142979
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 536563,
         "amount": 95169720.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 108381
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 399808,
+          "amount": 18280660.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14273,
+          "amount": 2608680.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 24695,
+          "amount": 9471680.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10395,
+          "amount": 6226490.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 89647,
+          "amount": 55268080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 182,
+          "amount": 145600.0
+        }
+      },
+      "total": {
+        "count": 539000,
+        "amount": 92001190.0
+      },
+      "annual_pass": {
+        "transaction_count": 146205
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

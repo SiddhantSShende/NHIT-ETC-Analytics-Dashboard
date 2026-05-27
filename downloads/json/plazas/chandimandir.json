@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chandimandir Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 1165448,
         "amount": 37842535.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 168002
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 1295633,
         "amount": 42869005.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 143328
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1123656,
+          "amount": 22265230.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 29510,
+          "amount": 1266060.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 91947,
+          "amount": 9787810.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23439,
+          "amount": 4063355.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 24637,
+          "amount": 3832305.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 54,
+          "amount": 10720.0
+        }
+      },
+      "total": {
+        "count": 1293243,
+        "amount": 41225480.0
+      },
+      "annual_pass": {
+        "transaction_count": 198899
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

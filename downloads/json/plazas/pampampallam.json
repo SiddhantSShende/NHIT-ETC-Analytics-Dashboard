@@ -6,7 +6,7 @@
   "source_raw_names": [
     "PamPamPallam Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 662368,
         "amount": 87350890.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 72091
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 701023,
         "amount": 91663440.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 55788
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 507346,
+          "amount": 29583435.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 63637,
+          "amount": 6754935.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 77735,
+          "amount": 18308475.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 16869,
+          "amount": 6741865.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 69552,
+          "amount": 27653155.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 94,
+          "amount": 37635.0
+        }
+      },
+      "total": {
+        "count": 735233,
+        "amount": 89079500.0
+      },
+      "annual_pass": {
+        "transaction_count": 89592
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

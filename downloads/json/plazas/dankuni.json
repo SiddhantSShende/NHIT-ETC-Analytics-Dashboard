@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dankuni"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 877150,
         "amount": 244657085.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 77138
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 763123,
         "amount": 207097785.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 46447
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 375098,
+          "amount": 26630935.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 29229,
+          "amount": 4501335.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 85966,
+          "amount": 28061720.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 42663,
+          "amount": 16102550.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 301937,
+          "amount": 155090345.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 143,
+          "amount": 93605.0
+        }
+      },
+      "total": {
+        "count": 835036,
+        "amount": 230480490.0
+      },
+      "annual_pass": {
+        "transaction_count": 74205
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

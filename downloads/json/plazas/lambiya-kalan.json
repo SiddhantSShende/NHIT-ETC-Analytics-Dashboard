@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lambiya Kalan"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 608517,
         "amount": 152892395.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 105933
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 618356,
         "amount": 157979210.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 74010
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 266064,
+          "amount": 14553090.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 26687,
+          "amount": 4158485.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 86828,
+          "amount": 28788105.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 51469,
+          "amount": 19366785.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 161371,
+          "amount": 85037120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 124,
+          "amount": 81355.0
+        }
+      },
+      "total": {
+        "count": 592543,
+        "amount": 151984940.0
+      },
+      "annual_pass": {
+        "transaction_count": 98120
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

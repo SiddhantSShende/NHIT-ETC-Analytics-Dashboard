@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Badkapara Fee Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -552,10 +552,51 @@
         "count": 72901,
         "amount": 36295685.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 8544
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 40267,
+          "amount": 4419120.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2089,
+          "amount": 830925.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8568,
+          "amount": 7641965.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6002,
+          "amount": 6092795.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17098,
+          "amount": 19057720.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 5880.0
+        }
+      },
+      "total": {
+        "count": 74028,
+        "amount": 38048405.0
+      },
+      "annual_pass": {
+        "transaction_count": 8925
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

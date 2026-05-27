@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Ganeshpur Toll plaza",
+  "plaza_slug": "ganeshpur",
+  "piu": "Roorkee",
+  "ro": "Dehradun",
+  "source_raw_names": [
+    "Ganeshpur Toll plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 88582,
+          "amount": 7687080.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2686,
+          "amount": 541320.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 6706,
+          "amount": 2807280.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 581,
+          "amount": 273090.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1819,
+          "amount": 1235705.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 100374,
+        "amount": 12544475.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

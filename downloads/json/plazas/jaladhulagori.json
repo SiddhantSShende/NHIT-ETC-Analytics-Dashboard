@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jaladhulagori toll plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 1298267,
         "amount": 347954550.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 149692
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 1411679,
         "amount": 367802380.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 121739
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 767138,
+          "amount": 78626895.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 69117,
+          "amount": 12184005.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 165819,
+          "amount": 63298735.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 75932,
+          "amount": 47940045.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 221954,
+          "amount": 141232085.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 281,
+          "amount": 192280.0
+        }
+      },
+      "total": {
+        "count": 1300241,
+        "amount": 343474045.0
+      },
+      "annual_pass": {
+        "transaction_count": 147936
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

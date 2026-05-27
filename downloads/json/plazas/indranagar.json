@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Indranagar"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 378822,
         "amount": 101057985.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 46483
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 362765,
         "amount": 92720555.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 32994
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 171382,
+          "amount": 8407760.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9269,
+          "amount": 1198025.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 36695,
+          "amount": 9852290.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13126,
+          "amount": 4115340.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 130658,
+          "amount": 61929210.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 122,
+          "amount": 52090.0
+        }
+      },
+      "total": {
+        "count": 361252,
+        "amount": 85554715.0
+      },
+      "annual_pass": {
+        "transaction_count": 47383
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

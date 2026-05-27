@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Parsoni Khem"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 309054,
         "amount": 99298760.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 30767
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 315388,
         "amount": 99393775.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 23038
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 151365,
+          "amount": 12633265.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14248,
+          "amount": 2655825.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 55081,
+          "amount": 22196000.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28705,
+          "amount": 13695695.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 73997,
+          "amount": 51406600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 45,
+          "amount": 35905.0
+        }
+      },
+      "total": {
+        "count": 323441,
+        "amount": 102623290.0
+      },
+      "annual_pass": {
+        "transaction_count": 32112
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

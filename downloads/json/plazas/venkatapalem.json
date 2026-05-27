@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Venkatapalem Toll Plaza",
+  "plaza_slug": "venkatapalem",
+  "piu": "Amravati - BZA",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Venkatapalem Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 263451,
+          "amount": 11814281.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18799,
+          "amount": 2196655.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 47128,
+          "amount": 11468855.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 45818,
+          "amount": 11422710.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 79263,
+          "amount": 31452020.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 143,
+          "amount": 67850.0
+        }
+      },
+      "total": {
+        "count": 454602,
+        "amount": 68422371.0
+      },
+      "annual_pass": {
+        "transaction_count": 138548
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

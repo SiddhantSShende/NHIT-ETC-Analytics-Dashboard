@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gudipada or Gangapada Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -486,7 +486,9 @@
         "count": 392252,
         "amount": 104758420.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 40126
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jan-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jan-2026.pdf"
@@ -523,7 +525,9 @@
         "count": 358322,
         "amount": 101704080.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 33962
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +564,51 @@
         "count": 382336,
         "amount": 109681490.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 37620
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 184034,
+          "amount": 14602425.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13246,
+          "amount": 2281540.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 50195,
+          "amount": 18645790.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 34536,
+          "amount": 14357850.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 94449,
+          "amount": 57371340.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 119,
+          "amount": 83040.0
+        }
+      },
+      "total": {
+        "count": 376579,
+        "amount": 107341985.0
+      },
+      "annual_pass": {
+        "transaction_count": 41340
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

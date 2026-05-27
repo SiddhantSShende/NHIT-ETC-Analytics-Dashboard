@@ -6,7 +6,7 @@
   "source_raw_names": [
     "ATTIBELLE"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 1402008,
         "amount": 89973400.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 291155
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 1503633,
         "amount": 97009760.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 225152
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1060460,
+          "amount": 27426300.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 106575,
+          "amount": 5840975.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 182944,
+          "amount": 16226580.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 55705,
+          "amount": 11273230.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 129858,
+          "amount": 31617650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 847,
+          "amount": 222430.0
+        }
+      },
+      "total": {
+        "count": 1536389,
+        "amount": 92607165.0
+      },
+      "annual_pass": {
+        "transaction_count": 312871
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

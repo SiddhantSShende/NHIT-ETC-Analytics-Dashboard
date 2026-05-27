@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhandaraj Fee Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -552,10 +552,51 @@
         "count": 66588,
         "amount": 22568380.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 23
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 44987,
+          "amount": 5197020.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1263,
+          "amount": 416980.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5694,
+          "amount": 4636400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1876,
+          "amount": 1716995.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12165,
+          "amount": 10895575.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 9005.0
+        }
+      },
+      "total": {
+        "count": 65996,
+        "amount": 22871975.0
+      },
+      "annual_pass": {
+        "transaction_count": 2593
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

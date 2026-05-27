@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vighakhet Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 250935,
         "amount": 63823795.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 33769
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 256632,
         "amount": 66869775.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 24243
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 87822,
+          "amount": 4102295.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10820,
+          "amount": 1580325.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 57884,
+          "amount": 17777755.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 45980,
+          "amount": 15698685.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 58460,
+          "amount": 28108835.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 95,
+          "amount": 56375.0
+        }
+      },
+      "total": {
+        "count": 261061,
+        "amount": 67324270.0
+      },
+      "annual_pass": {
+        "transaction_count": 32694
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

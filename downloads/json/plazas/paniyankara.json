@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Paniyankara Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 726039,
         "amount": 125762045.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 63789
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 785343,
         "amount": 135696055.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 50375
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 575515,
+          "amount": 46203860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 63736,
+          "amount": 9517485.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 89250,
+          "amount": 28196840.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22547,
+          "amount": 11022500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 77811,
+          "amount": 38437285.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 83,
+          "amount": 50790.0
+        }
+      },
+      "total": {
+        "count": 828942,
+        "amount": 133428760.0
+      },
+      "annual_pass": {
+        "transaction_count": 81136
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

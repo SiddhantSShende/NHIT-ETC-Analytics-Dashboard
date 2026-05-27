@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Odaki Pipkhar"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 269853,
         "amount": 76351745.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 41322
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 283140,
         "amount": 80531175.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 30016
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 152203,
+          "amount": 11157450.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10027,
+          "amount": 1726000.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 31676,
+          "amount": 12175345.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9521,
+          "amount": 4110755.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 69151,
+          "amount": 42256350.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 73,
+          "amount": 53180.0
+        }
+      },
+      "total": {
+        "count": 272651,
+        "amount": 71479080.0
+      },
+      "annual_pass": {
+        "transaction_count": 42856
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

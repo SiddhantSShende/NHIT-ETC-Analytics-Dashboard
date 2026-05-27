@@ -6,7 +6,7 @@
   "source_raw_names": [
     "BIRAMI"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 422792,
         "amount": 145625105.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 51851
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 415530,
         "amount": 138324175.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 36878
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 167341,
+          "amount": 11120810.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10194,
+          "amount": 1676985.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 51341,
+          "amount": 17431530.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17719,
+          "amount": 7035450.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 148301,
+          "amount": 87604200.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 116,
+          "amount": 80960.0
+        }
+      },
+      "total": {
+        "count": 395012,
+        "amount": 124949935.0
+      },
+      "annual_pass": {
+        "transaction_count": 51314
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

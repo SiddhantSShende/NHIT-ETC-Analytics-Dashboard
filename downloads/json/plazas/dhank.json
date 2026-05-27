@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dhank Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 257940,
         "amount": 123293720.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 35953
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 265738,
         "amount": 128803890.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 26160
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 104445,
+          "amount": 10793260.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9404,
+          "amount": 2361905.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 37810,
+          "amount": 20846400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20515,
+          "amount": 12932425.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 75500,
+          "amount": 66819615.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 111,
+          "amount": 118920.0
+        }
+      },
+      "total": {
+        "count": 247785,
+        "amount": 113872525.0
+      },
+      "annual_pass": {
+        "transaction_count": 36238
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

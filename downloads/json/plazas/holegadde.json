@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Holegadde"
   ],
-  "period_count": 7,
+  "period_count": 8,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -226,7 +226,9 @@
         "count": 230121,
         "amount": 48906995.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 19308
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -263,10 +265,51 @@
         "count": 247472,
         "amount": 52930455.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 14610
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 160112,
+          "amount": 13546595.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10377,
+          "amount": 1628605.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 50653,
+          "amount": 14568575.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8218,
+          "amount": 3154920.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 36779,
+          "amount": 21364970.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 20,
+          "amount": 10430.0
+        }
+      },
+      "total": {
+        "count": 266159,
+        "amount": 54274095.0
+      },
+      "annual_pass": {
+        "transaction_count": 23466
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Moti Naroli"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -113,10 +113,51 @@
         "count": 355501,
         "amount": 105747360.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 40
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 196590,
+          "amount": 20815965.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20667,
+          "amount": 5323380.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 42463,
+          "amount": 22584245.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11766,
+          "amount": 6351255.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 81834,
+          "amount": 52296065.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 54,
+          "amount": 32725.0
+        }
+      },
+      "total": {
+        "count": 353374,
+        "amount": 107403635.0
+      },
+      "annual_pass": {
+        "transaction_count": 11058
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

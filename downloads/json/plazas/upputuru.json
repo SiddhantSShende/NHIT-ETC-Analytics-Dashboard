@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Upputuru Toll Plaza"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-03": {
       "vehicles": {
@@ -39,10 +39,51 @@
         "count": 84174,
         "amount": 8634145.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 23582
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 78034,
+          "amount": 4200570.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1128,
+          "amount": 156370.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11041,
+          "amount": 2339370.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4950,
+          "amount": 1285195.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3789,
+          "amount": 1605805.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 530.0
+        }
+      },
+      "total": {
+        "count": 98943,
+        "amount": 9587840.0
+      },
+      "annual_pass": {
+        "transaction_count": 30173
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

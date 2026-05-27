@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pabanawa Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -556,10 +556,51 @@
         "count": 151386,
         "amount": 63188370.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 8907
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 97131,
+          "amount": 8691480.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4639,
+          "amount": 1726835.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18138,
+          "amount": 14366395.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7510,
+          "amount": 7366595.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 21683,
+          "amount": 31491045.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 15060.0
+        }
+      },
+      "total": {
+        "count": 149109,
+        "amount": 63657410.0
+      },
+      "annual_pass": {
+        "transaction_count": 6468
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

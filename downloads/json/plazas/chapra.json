@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chapra"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 290722,
         "amount": 80340015.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 40577
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 301700,
         "amount": 82463825.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 30002
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 130984,
+          "amount": 8484270.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16184,
+          "amount": 2514065.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 63631,
+          "amount": 22578305.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25536,
+          "amount": 10211515.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 59112,
+          "amount": 34031745.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 58,
+          "amount": 38245.0
+        }
+      },
+      "total": {
+        "count": 295505,
+        "amount": 77858145.0
+      },
+      "annual_pass": {
+        "transaction_count": 42146
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

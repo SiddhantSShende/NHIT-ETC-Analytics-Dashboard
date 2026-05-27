@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nallur Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -486,7 +486,9 @@
         "count": 1092350,
         "amount": 150893590.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 151804
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jan-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jan-2026.pdf"
@@ -523,7 +525,9 @@
         "count": 1068717,
         "amount": 150826550.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 142232
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +564,51 @@
         "count": 1156728,
         "amount": 166052360.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 155985
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 621364,
+          "amount": 30499245.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 107283,
+          "amount": 11134010.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 114592,
+          "amount": 25959550.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 45540,
+          "amount": 12034385.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 196290,
+          "amount": 73959685.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 589,
+          "amount": 260475.0
+        }
+      },
+      "total": {
+        "count": 1085658,
+        "amount": 153847350.0
+      },
+      "annual_pass": {
+        "transaction_count": 161095
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

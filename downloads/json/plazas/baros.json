@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Baros Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 277948,
         "amount": 15330655.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 45586
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 271980,
         "amount": 15824830.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 30888
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 204716,
+          "amount": 5069730.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13412,
+          "amount": 677590.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 31986,
+          "amount": 3363990.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7977,
+          "amount": 1481600.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 31119,
+          "amount": 5375995.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 4020.0
+        }
+      },
+      "total": {
+        "count": 289228,
+        "amount": 15972925.0
+      },
+      "annual_pass": {
+        "transaction_count": 45729
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

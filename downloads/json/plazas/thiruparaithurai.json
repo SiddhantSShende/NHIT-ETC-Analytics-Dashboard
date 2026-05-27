@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Thiruparaithurai Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 321596,
         "amount": 12756410.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 50764
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 339270,
         "amount": 13668215.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 38105
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 246237,
+          "amount": 6004580.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13646,
+          "amount": 622745.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 57704,
+          "amount": 2890400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10723,
+          "amount": 1656580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9937,
+          "amount": 1583440.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 42,
+          "amount": 7300.0
+        }
+      },
+      "total": {
+        "count": 338289,
+        "amount": 12765045.0
+      },
+      "annual_pass": {
+        "transaction_count": 49886
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

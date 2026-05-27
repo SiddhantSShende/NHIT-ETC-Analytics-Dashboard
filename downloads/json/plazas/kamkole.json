@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kamkole"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 604144,
         "amount": 119432920.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 82405
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 643024,
         "amount": 125636045.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 64328
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 446682,
+          "amount": 32280855.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 30425,
+          "amount": 5076830.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 89669,
+          "amount": 30096455.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25542,
+          "amount": 10479150.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 77435,
+          "amount": 46981120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 185,
+          "amount": 140790.0
+        }
+      },
+      "total": {
+        "count": 669938,
+        "amount": 125055200.0
+      },
+      "annual_pass": {
+        "transaction_count": 89462
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

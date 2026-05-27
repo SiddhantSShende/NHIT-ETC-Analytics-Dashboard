@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Malkisar Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -552,10 +552,51 @@
         "count": 7335,
         "amount": 5148065.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 1
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 4122,
+          "amount": 341835.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 78,
+          "amount": 30145.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 584,
+          "amount": 678805.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 225,
+          "amount": 213345.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2029,
+          "amount": 3741765.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1655.0
+        }
+      },
+      "total": {
+        "count": 7040,
+        "amount": 5007550.0
+      },
+      "annual_pass": {
+        "transaction_count": 117
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

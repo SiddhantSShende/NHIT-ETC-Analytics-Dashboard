@@ -6,7 +6,7 @@
   "source_raw_names": [
     "TASAWADE TOLL PLAZA"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 820577,
         "amount": 102120625.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 95582
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 850346,
         "amount": 107533030.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 73224
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 571224,
+          "amount": 33221100.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 56973,
+          "amount": 6172500.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 152303,
+          "amount": 33014545.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 27187,
+          "amount": 6861645.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 70571,
+          "amount": 25998765.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 255,
+          "amount": 92660.0
+        }
+      },
+      "total": {
+        "count": 878513,
+        "amount": 105361215.0
+      },
+      "annual_pass": {
+        "transaction_count": 99670
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

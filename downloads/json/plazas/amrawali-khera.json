@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Amrawali Khera Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -556,10 +556,51 @@
         "count": 27967,
         "amount": 2692485.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 795
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 23084,
+          "amount": 708920.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 510,
+          "amount": 69140.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2044,
+          "amount": 456835.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 395,
+          "amount": 90915.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2854,
+          "amount": 1637000.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 955.0
+        }
+      },
+      "total": {
+        "count": 28894,
+        "amount": 2963765.0
+      },
+      "annual_pass": {
+        "transaction_count": 1717
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

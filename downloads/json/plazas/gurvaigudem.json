@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Gurvaigudem",
+  "plaza_slug": "gurvaigudem",
+  "piu": "Khammam",
+  "ro": "Hyderabad",
+  "source_raw_names": [
+    "Gurvaigudem"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 6261,
+          "amount": 257110.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 153,
+          "amount": 18335.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 359,
+          "amount": 95150.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 432,
+          "amount": 55635.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 631,
+          "amount": 235055.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 160.0
+        }
+      },
+      "total": {
+        "count": 7837,
+        "amount": 661445.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

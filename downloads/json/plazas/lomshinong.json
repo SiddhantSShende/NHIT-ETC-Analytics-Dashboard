@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Lomshinong",
+  "plaza_slug": "lomshinong",
+  "piu": "Shillong",
+  "ro": "Guwahati",
+  "source_raw_names": [
+    "Lomshinong"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 5465,
+          "amount": 335305.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 857,
+          "amount": 82250.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11342,
+          "amount": 2280110.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10847,
+          "amount": 1989545.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15049,
+          "amount": 4662895.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 325.0
+        }
+      },
+      "total": {
+        "count": 43561,
+        "amount": 9350430.0
+      },
+      "annual_pass": {
+        "transaction_count": 239
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

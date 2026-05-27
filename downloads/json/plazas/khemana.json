@@ -6,7 +6,7 @@
   "source_raw_names": [
     "KHEMANA TOLL PLAZA"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 410640,
         "amount": 81371865.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 40249
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 409306,
         "amount": 76619550.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 30872
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 221504,
+          "amount": 10162565.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9634,
+          "amount": 1134930.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 45094,
+          "amount": 10952010.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 15560,
+          "amount": 4364470.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 114593,
+          "amount": 46514310.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 158,
+          "amount": 77440.0
+        }
+      },
+      "total": {
+        "count": 406543,
+        "amount": 73205725.0
+      },
+      "annual_pass": {
+        "transaction_count": 43538
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

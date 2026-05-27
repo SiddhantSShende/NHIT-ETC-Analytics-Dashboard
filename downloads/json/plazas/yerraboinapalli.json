@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Yerraboinapalli",
+  "plaza_slug": "yerraboinapalli",
+  "piu": "Khammam",
+  "ro": "Hyderabad",
+  "source_raw_names": [
+    "Yerraboinapalli"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 2164,
+          "amount": 66090.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 60,
+          "amount": 7055.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 88,
+          "amount": 19210.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 55,
+          "amount": 8415.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 318,
+          "amount": 109745.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 2685,
+        "amount": 210515.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

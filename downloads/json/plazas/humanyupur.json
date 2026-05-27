@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Humanyupur"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -556,10 +556,51 @@
         "count": 15945,
         "amount": 799955.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 422
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15749,
+          "amount": 441450.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 433,
+          "amount": 40255.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1025,
+          "amount": 170455.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 284,
+          "amount": 50550.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 949,
+          "amount": 235385.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 155.0
+        }
+      },
+      "total": {
+        "count": 18441,
+        "amount": 938250.0
+      },
+      "annual_pass": {
+        "transaction_count": 993
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

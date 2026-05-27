@@ -6,7 +6,7 @@
   "source_raw_names": [
     "SONWAY Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 606423,
         "amount": 58209380.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 65624
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 616421,
         "amount": 60099410.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 46977
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 292113,
+          "amount": 8027840.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 40562,
+          "amount": 1911880.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 111256,
+          "amount": 12275515.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 48160,
+          "amount": 8959060.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 112931,
+          "amount": 23727000.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 210,
+          "amount": 57915.0
+        }
+      },
+      "total": {
+        "count": 605232,
+        "amount": 54959210.0
+      },
+      "annual_pass": {
+        "transaction_count": 66451
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

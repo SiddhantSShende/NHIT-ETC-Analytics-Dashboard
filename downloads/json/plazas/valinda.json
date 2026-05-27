@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Valinda Toll Plaza",
+  "plaza_slug": "valinda",
+  "piu": "Ahmedabad",
+  "ro": "Gandhinagar",
+  "source_raw_names": [
+    "Valinda Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 6368,
+          "amount": 725990.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 195,
+          "amount": 55565.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 426,
+          "amount": 221010.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 105,
+          "amount": 66975.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 758,
+          "amount": 671540.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 5660.0
+        }
+      },
+      "total": {
+        "count": 7858,
+        "amount": 1746740.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Madai Fee Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 377284,
         "amount": 121278870.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 44174
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 394455,
         "amount": 129086555.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 31047
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 150060,
+          "amount": 10491465.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17789,
+          "amount": 3084705.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 88695,
+          "amount": 33357215.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 48890,
+          "amount": 20598160.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 99270,
+          "amount": 60235965.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 160,
+          "amount": 116235.0
+        }
+      },
+      "total": {
+        "count": 404864,
+        "amount": 127883745.0
+      },
+      "annual_pass": {
+        "transaction_count": 44527
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

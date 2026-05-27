@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Babina Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 283842,
         "amount": 90928725.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 46400
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 288211,
         "amount": 94880300.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 33176
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 114198,
+          "amount": 6372605.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11096,
+          "amount": 2214680.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 59536,
+          "amount": 24740250.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 46187,
+          "amount": 21509520.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 61803,
+          "amount": 40529115.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 101,
+          "amount": 81080.0
+        }
+      },
+      "total": {
+        "count": 292921,
+        "amount": 95447250.0
+      },
+      "annual_pass": {
+        "transaction_count": 45040
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

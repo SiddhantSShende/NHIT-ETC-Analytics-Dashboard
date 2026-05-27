@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Belekeri"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 106155,
         "amount": 18157340.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 10587
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 108871,
         "amount": 17913900.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 8108
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 84958,
+          "amount": 7287480.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3751,
+          "amount": 622725.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19374,
+          "amount": 5185050.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3800,
+          "amount": 1368580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8876,
+          "amount": 4796400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 6795.0
+        }
+      },
+      "total": {
+        "count": 120770,
+        "amount": 19267030.0
+      },
+      "annual_pass": {
+        "transaction_count": 13065
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

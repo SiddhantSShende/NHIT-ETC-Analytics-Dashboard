@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Devanahalli Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 2660579,
         "amount": 255066095.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 378755
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 2677803,
         "amount": 256735905.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 290686
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 2506703,
+          "amount": 197607845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 38769,
+          "amount": 6192860.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 109889,
+          "amount": 31472205.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22332,
+          "amount": 10738265.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27786,
+          "amount": 14235220.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 52,
+          "amount": 35780.0
+        }
+      },
+      "total": {
+        "count": 2705531,
+        "amount": 260282175.0
+      },
+      "annual_pass": {
+        "transaction_count": 381090
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

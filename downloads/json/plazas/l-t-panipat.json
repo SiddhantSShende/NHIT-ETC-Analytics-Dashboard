@@ -6,7 +6,7 @@
   "source_raw_names": [
     "L&T PANIPAT"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 1840949,
         "amount": 84589275.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 639468
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 1925777,
         "amount": 87045760.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 489527
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1458610,
+          "amount": 36941095.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 75968,
+          "amount": 4808895.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 191377,
+          "amount": 23662615.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 38103,
+          "amount": 4703130.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 104726,
+          "amount": 12953050.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 144,
+          "amount": 18000.0
+        }
+      },
+      "total": {
+        "count": 1868928,
+        "amount": 83086785.0
+      },
+      "annual_pass": {
+        "transaction_count": 619577
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

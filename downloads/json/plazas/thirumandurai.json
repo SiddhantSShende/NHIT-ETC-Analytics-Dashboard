@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Thirumandurai Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 692988,
         "amount": 72165525.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 143504
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 701143,
         "amount": 76710895.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 97994
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 488052,
+          "amount": 20924860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 43083,
+          "amount": 4039320.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 119011,
+          "amount": 19189330.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22443,
+          "amount": 6986300.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 67933,
+          "amount": 23024470.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 380,
+          "amount": 141625.0
+        }
+      },
+      "total": {
+        "count": 740902,
+        "amount": 74305905.0
+      },
+      "annual_pass": {
+        "transaction_count": 148748
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bajheri Toll Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -39,7 +39,9 @@
         "count": 351615,
         "amount": 29578640.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 102584
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -76,10 +78,51 @@
         "count": 403282,
         "amount": 32941135.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 129391
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 338091,
+          "amount": 15737125.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13144,
+          "amount": 1471875.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 26178,
+          "amount": 6348530.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8007,
+          "amount": 2101920.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19176,
+          "amount": 7074395.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 3860.0
+        }
+      },
+      "total": {
+        "count": 404604,
+        "amount": 32737705.0
+      },
+      "annual_pass": {
+        "transaction_count": 145049
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

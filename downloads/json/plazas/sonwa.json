@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sonwa Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 300519,
         "amount": 72309240.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 63061
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 295393,
         "amount": 71461950.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 42996
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 158187,
+          "amount": 9030845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8642,
+          "amount": 1304160.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 30046,
+          "amount": 10015485.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12173,
+          "amount": 6766570.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 87103,
+          "amount": 44115640.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 67,
+          "amount": 27495.0
+        }
+      },
+      "total": {
+        "count": 296218,
+        "amount": 71260195.0
+      },
+      "annual_pass": {
+        "transaction_count": 57311
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

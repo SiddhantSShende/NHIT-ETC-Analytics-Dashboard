@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kognoli"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 527451,
         "amount": 54188235.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 58134
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 560433,
         "amount": 58226905.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 44827
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 392996,
+          "amount": 17142580.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 34379,
+          "amount": 3255900.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 84802,
+          "amount": 15985525.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20655,
+          "amount": 4568950.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 53328,
+          "amount": 16775055.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 70,
+          "amount": 26725.0
+        }
+      },
+      "total": {
+        "count": 586230,
+        "amount": 57754735.0
+      },
+      "annual_pass": {
+        "transaction_count": 63750
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

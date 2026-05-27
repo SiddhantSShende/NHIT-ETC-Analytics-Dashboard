@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dasarkhed Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -486,7 +486,9 @@
         "count": 282751,
         "amount": 62769790.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 25357
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jan-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jan-2026.pdf"
@@ -523,7 +525,9 @@
         "count": 271820,
         "amount": 60131825.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 25712
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +564,51 @@
         "count": 280013,
         "amount": 63580885.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 26119
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 102464,
+          "amount": 5346735.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11842,
+          "amount": 1358685.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 55787,
+          "amount": 13983300.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19953,
+          "amount": 5743810.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 80477,
+          "amount": 33427365.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 52,
+          "amount": 25380.0
+        }
+      },
+      "total": {
+        "count": 270575,
+        "amount": 59885275.0
+      },
+      "annual_pass": {
+        "transaction_count": 29532
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

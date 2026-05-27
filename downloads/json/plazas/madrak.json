@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Madrak Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 306867,
         "amount": 15324625.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 59078
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 296339,
         "amount": 15333070.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 40515
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 233964,
+          "amount": 5669985.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16862,
+          "amount": 812285.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 34599,
+          "amount": 3675490.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7589,
+          "amount": 1418400.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 20487,
+          "amount": 3721300.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 37,
+          "amount": 6960.0
+        }
+      },
+      "total": {
+        "count": 313538,
+        "amount": 15304420.0
+      },
+      "annual_pass": {
+        "transaction_count": 60156
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

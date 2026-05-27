@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ghoti toll plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 492928,
         "amount": 101997460.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 54952
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 494030,
         "amount": 102971825.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 40348
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 319923,
+          "amount": 30822865.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 29814,
+          "amount": 4874700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 71741,
+          "amount": 22400750.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12714,
+          "amount": 7438460.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 69168,
+          "amount": 34586570.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 85,
+          "amount": 61180.0
+        }
+      },
+      "total": {
+        "count": 503445,
+        "amount": 100184525.0
+      },
+      "annual_pass": {
+        "transaction_count": 55301
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

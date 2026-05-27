@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Sisiya toll plaza",
+  "plaza_slug": "sisiya",
+  "piu": "Bahraich",
+  "ro": "Lucknow - East",
+  "source_raw_names": [
+    "Sisiya toll plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 17096,
+          "amount": 658944.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 692,
+          "amount": 49640.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5681,
+          "amount": 871781.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2988,
+          "amount": 541830.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3920,
+          "amount": 993850.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 30377,
+        "amount": 3116045.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

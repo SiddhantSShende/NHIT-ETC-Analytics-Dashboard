@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sullurpet Plaza (NH- 16), (old NH-5)"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 425557,
         "amount": 91078570.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 65574
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 468079,
         "amount": 100082530.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 51036
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 174536,
+          "amount": 9586805.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 32387,
+          "amount": 7924810.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 67837,
+          "amount": 17756530.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 29942,
+          "amount": 7933230.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 142246,
+          "amount": 48473940.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 241,
+          "amount": 133340.0
+        }
+      },
+      "total": {
+        "count": 447189,
+        "amount": 91808655.0
+      },
+      "annual_pass": {
+        "transaction_count": 65596
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

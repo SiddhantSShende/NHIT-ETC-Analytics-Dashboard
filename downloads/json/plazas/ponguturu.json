@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Ponguturu",
+  "plaza_slug": "ponguturu",
+  "piu": "Khammam",
+  "ro": "Hyderabad",
+  "source_raw_names": [
+    "Ponguturu"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 17855,
+          "amount": 1431575.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1747,
+          "amount": 476305.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3789,
+          "amount": 2054960.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1911,
+          "amount": 982735.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10764,
+          "amount": 9839210.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 4780.0
+        }
+      },
+      "total": {
+        "count": 36072,
+        "amount": 14789565.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

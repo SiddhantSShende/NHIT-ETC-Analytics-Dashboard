@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nathavalasa"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -523,7 +523,9 @@
         "count": 463489,
         "amount": 121592830.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 71218
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +562,51 @@
         "count": 516124,
         "amount": 134797460.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 58896
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 256212,
+          "amount": 16718195.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17377,
+          "amount": 2847065.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 70876,
+          "amount": 22657420.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 38905,
+          "amount": 15512795.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 121612,
+          "amount": 70269925.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 113,
+          "amount": 78655.0
+        }
+      },
+      "total": {
+        "count": 505095,
+        "amount": 128084055.0
+      },
+      "annual_pass": {
+        "transaction_count": 75736
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

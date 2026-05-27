@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Varahi Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 240798,
         "amount": 58825605.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 11177
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 232309,
         "amount": 53369240.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 8530
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 81189,
+          "amount": 3849315.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2908,
+          "amount": 279015.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15556,
+          "amount": 2929650.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5283,
+          "amount": 1197625.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 114989,
+          "amount": 40210255.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 178,
+          "amount": 71395.0
+        }
+      },
+      "total": {
+        "count": 220103,
+        "amount": 48537255.0
+      },
+      "annual_pass": {
+        "transaction_count": 12366
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

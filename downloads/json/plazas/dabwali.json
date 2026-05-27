@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dabwali Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -556,10 +556,51 @@
         "count": 32152,
         "amount": 875720.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 1726
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 23432,
+          "amount": 339425.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 537,
+          "amount": 15190.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1885,
+          "amount": 114985.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 322,
+          "amount": 20845.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3206,
+          "amount": 317460.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 485.0
+        }
+      },
+      "total": {
+        "count": 29386,
+        "amount": 808390.0
+      },
+      "annual_pass": {
+        "transaction_count": 1154
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

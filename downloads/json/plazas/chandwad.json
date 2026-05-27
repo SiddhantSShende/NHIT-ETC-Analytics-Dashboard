@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chandwad toll plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 441980,
         "amount": 90342015.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 74653
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 445886,
         "amount": 93684545.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 52962
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 274950,
+          "amount": 19605845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17517,
+          "amount": 2935015.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 75076,
+          "amount": 22715560.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17817,
+          "amount": 8545780.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 67303,
+          "amount": 35240780.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 122,
+          "amount": 84920.0
+        }
+      },
+      "total": {
+        "count": 452785,
+        "amount": 89127900.0
+      },
+      "annual_pass": {
+        "transaction_count": 71562
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

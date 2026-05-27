@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Vejalka toll plaza",
+  "plaza_slug": "vejalka",
+  "piu": "Ahmedabad",
+  "ro": "Gandhinagar",
+  "source_raw_names": [
+    "Vejalka toll plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 3189,
+          "amount": 213525.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 93,
+          "amount": 15425.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 247,
+          "amount": 87405.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 52,
+          "amount": 19220.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 282,
+          "amount": 155740.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 3863,
+        "amount": 491315.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    }
+  }
+}

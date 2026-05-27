@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mudhipar TOLL PLAZA"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -523,7 +523,9 @@
         "count": 121606,
         "amount": 15209760.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 17018
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +562,51 @@
         "count": 115575,
         "amount": 14610415.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 11819
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 55528,
+          "amount": 1857065.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2174,
+          "amount": 153305.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8960,
+          "amount": 1390910.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1857,
+          "amount": 303505.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 52641,
+          "amount": 12355075.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 58,
+          "amount": 16575.0
+        }
+      },
+      "total": {
+        "count": 121218,
+        "amount": 16076435.0
+      },
+      "annual_pass": {
+        "transaction_count": 16117
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

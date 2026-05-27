@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kherki Daula Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -486,7 +486,9 @@
         "count": 1719351,
         "amount": 134856085.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 615307
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jan-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jan-2026.pdf"
@@ -523,7 +525,9 @@
         "count": 1721495,
         "amount": 134381520.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 636669
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -560,10 +564,51 @@
         "count": 1881774,
         "amount": 146647165.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 727341
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1594383,
+          "amount": 64738410.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 120788,
+          "amount": 13618315.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 139438,
+          "amount": 32617465.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17313,
+          "amount": 5620300.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 75956,
+          "amount": 33467915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 41,
+          "amount": 21250.0
+        }
+      },
+      "total": {
+        "count": 1947919,
+        "amount": 150083655.0
+      },
+      "annual_pass": {
+        "transaction_count": 785611
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

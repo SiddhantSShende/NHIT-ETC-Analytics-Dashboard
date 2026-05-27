@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kukma Toll Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -39,7 +39,9 @@
         "count": 40403,
         "amount": 5030390.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 3975
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -76,10 +78,51 @@
         "count": 313635,
         "amount": 32027470.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 32917
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 182365,
+          "amount": 7302345.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5908,
+          "amount": 452830.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 22766,
+          "amount": 3705835.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12824,
+          "amount": 1953475.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 94564,
+          "amount": 19143600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 88,
+          "amount": 30410.0
+        }
+      },
+      "total": {
+        "count": 318515,
+        "amount": 32588495.0
+      },
+      "annual_pass": {
+        "transaction_count": 38369
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

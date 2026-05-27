@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dadri Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -556,10 +556,51 @@
         "count": 76907,
         "amount": 12958845.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 2920
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 39721,
+          "amount": 1837665.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 966,
+          "amount": 134070.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2094,
+          "amount": 716315.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 595,
+          "amount": 158805.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 36857,
+          "amount": 11175575.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 2770.0
+        }
+      },
+      "total": {
+        "count": 80244,
+        "amount": 14025200.0
+      },
+      "annual_pass": {
+        "transaction_count": 2408
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

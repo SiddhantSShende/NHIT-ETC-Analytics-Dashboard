@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mansar Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 358453,
         "amount": 89772255.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 43072
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 374375,
         "amount": 92810815.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 30975
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 144351,
+          "amount": 9641930.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 15436,
+          "amount": 2257335.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 81877,
+          "amount": 24646245.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 47276,
+          "amount": 20083510.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 93748,
+          "amount": 35924890.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 153,
+          "amount": 96760.0
+        }
+      },
+      "total": {
+        "count": 382841,
+        "amount": 92650670.0
+      },
+      "annual_pass": {
+        "transaction_count": 43895
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

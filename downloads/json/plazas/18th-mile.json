@@ -6,7 +6,7 @@
   "source_raw_names": [
     "18th Mile Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -515,7 +515,9 @@
         "count": 366703,
         "amount": 153989715.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 19275
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -552,10 +554,51 @@
         "count": 382309,
         "amount": 158959990.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 15251
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 99990,
+          "amount": 9472005.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17873,
+          "amount": 3637600.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 44792,
+          "amount": 19650000.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19904,
+          "amount": 13782275.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 164824,
+          "amount": 103895725.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 21240.0
+        }
+      },
+      "total": {
+        "count": 347407,
+        "amount": 150458845.0
+      },
+      "annual_pass": {
+        "transaction_count": 17012
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

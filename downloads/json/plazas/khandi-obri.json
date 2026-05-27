@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khandi Obri Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 576733,
         "amount": 263483310.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 89779
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 584503,
         "amount": 262320905.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 65191
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 278698,
+          "amount": 29006550.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 25417,
+          "amount": 7159230.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 91797,
+          "amount": 53369375.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 54506,
+          "amount": 37269570.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 127875,
+          "amount": 125256050.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 95,
+          "amount": 112985.0
+        }
+      },
+      "total": {
+        "count": 578388,
+        "amount": 252173760.0
+      },
+      "annual_pass": {
+        "transaction_count": 89190
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

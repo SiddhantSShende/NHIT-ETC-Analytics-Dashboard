@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karman Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -550,10 +550,51 @@
         "count": 1150507,
         "amount": 179670360.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 222305
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 771340,
+          "amount": 38963530.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 45853,
+          "amount": 6575085.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 150071,
+          "amount": 46727975.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 59781,
+          "amount": 31023045.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 110632,
+          "amount": 56745090.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 153,
+          "amount": 94030.0
+        }
+      },
+      "total": {
+        "count": 1137830,
+        "amount": 180128755.0
+      },
+      "annual_pass": {
+        "transaction_count": 293867
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }

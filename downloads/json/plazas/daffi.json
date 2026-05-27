@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Daffi Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-01": {
       "vehicles": {
@@ -513,7 +513,9 @@
         "count": 625480,
         "amount": 172865125.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 47653
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Feb-2026.pdf"
@@ -550,10 +552,51 @@
         "count": 614064,
         "amount": 167103615.0
       },
-      "annual_pass": null,
+      "annual_pass": {
+        "transaction_count": 37469
+      },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Mar-2026.pdf"
+      ]
+    },
+    "2026-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 181430,
+          "amount": 8915170.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 21636,
+          "amount": 2726710.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 91225,
+          "amount": 24286630.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 41971,
+          "amount": 18228570.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 324130,
+          "amount": 131948840.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 183,
+          "amount": 84905.0
+        }
+      },
+      "total": {
+        "count": 660575,
+        "amount": 186190825.0
+      },
+      "annual_pass": {
+        "transaction_count": 45594
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Apr-2026.pdf"
       ]
     }
   }
