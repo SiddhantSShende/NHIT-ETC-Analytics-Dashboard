@@ -54,6 +54,18 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   renderDelta("amtYoy",   "amtYoySub",   null,
     rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
 
+  // Average revenue per day — already computed by data-layer.js as
+  // total_amount / days_in_period (single-month: calendar days; range:
+  // summed days across all months in the window).
+  const days = rec.days_in_period || 0;
+  setVal("kpiAvgDaily", "₹" + fmtRevCr(rec.avg_revenue_per_day || 0));
+  setText(
+    "kpiAvgDailySub",
+    isRange
+      ? `Daily average across ${days} day${days === 1 ? "" : "s"} in selected range`
+      : `Daily average · ${days} days in ${rec.month_name} ${rec.year}`
+  );
+
   // Section totals
   setVal("totalCount",  fmtTxnL(rec.total_count));
   setVal("totalAmount", "₹" + fmtRevCr(rec.total_amount));

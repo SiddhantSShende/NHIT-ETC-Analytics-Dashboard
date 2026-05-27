@@ -4,8 +4,7 @@ NHIT | ETC Analytics — Flask entry point.
 This file is intentionally thin. Real implementation lives in the
 `backend/` package:
     backend.api.security  — CORS + security headers
-    backend.api.routes    — HTTP handlers (/, /api/health, /api/chat)
-    backend.chatbot       — engine + LLM context builder
+    backend.api.routes    — HTTP handlers (/, /api/health)
     backend.core          — analytics, parser, snapshot loader, …
 
 Frontend assets are served from the project root (index.html) plus

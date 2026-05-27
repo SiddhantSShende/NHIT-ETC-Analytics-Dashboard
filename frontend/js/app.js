@@ -15,7 +15,7 @@ let META = { plazas: [], years: [], months: [] };
 
 window.addEventListener("DOMContentLoaded", () => {
   bootstrap();
-  document.getElementById("btnView").addEventListener("click", loadData);
+  document.getElementById("btnView").addEventListener("click", handleViewClick);
   document.getElementById("rangeToggle").addEventListener("change", toggleRangeMode);
 
   ["spvSel", "roundSel"].forEach(id => {
@@ -82,6 +82,67 @@ async function bootstrap() {
     console.error(e);
     document.getElementById("hintSub").textContent =
       "Cannot load data files from downloads/json/. Re-run scripts/build_json_export.py.";
+  }
+}
+
+// ── DISCLAIMER GATE ───────────────────────────────────────────────────────
+// Browser-session cookie (no Expires/Max-Age) — survives reloads, cleared
+// when the browser session ends, on new browser, or when cookies are cleared.
+const DISCLAIMER_COOKIE = "nhit_disclaimer_accepted";
+
+function hasAcceptedDisclaimer() {
+  return document.cookie
+    .split(";")
+    .some(c => c.trim().startsWith(DISCLAIMER_COOKIE + "="));
+}
+
+function setDisclaimerAcceptedCookie() {
+  document.cookie = `${DISCLAIMER_COOKIE}=1; path=/; SameSite=Lax`;
+}
+
+function showDisclaimer(onAccept) {
+  const modal    = document.getElementById("disclaimerModal");
+  const accept   = document.getElementById("disclaimerAccept");
+  const close    = document.getElementById("disclaimerClose");
+  const backdrop = document.getElementById("disclaimerBackdrop");
+  if (!modal || !accept || !close || !backdrop) { onAccept(); return; }
+
+  modal.hidden = false;
+  // Defer the open-class so the transition fires from the hidden state.
+  requestAnimationFrame(() => modal.classList.add("disclaimer-modal--open"));
+
+  // Lock body scroll while the disclaimer is up.
+  const prevOverflow = document.body.style.overflow;
+  document.body.style.overflow = "hidden";
+
+  const cleanup = () => {
+    modal.classList.remove("disclaimer-modal--open");
+    document.body.style.overflow = prevOverflow;
+    accept.removeEventListener("click", onAcceptClick);
+    close.removeEventListener("click", onCancelClick);
+    backdrop.removeEventListener("click", onCancelClick);
+    document.removeEventListener("keydown", onKey);
+    // Hide after the fade-out transition completes.
+    setTimeout(() => { modal.hidden = true; }, 260);
+  };
+  const onAcceptClick = () => { setDisclaimerAcceptedCookie(); cleanup(); onAccept(); };
+  const onCancelClick = () => { cleanup(); };
+  const onKey = (e) => { if (e.key === "Escape") onCancelClick(); };
+
+  accept.addEventListener("click", onAcceptClick);
+  close.addEventListener("click", onCancelClick);
+  backdrop.addEventListener("click", onCancelClick);
+  document.addEventListener("keydown", onKey);
+
+  // Move focus into the modal for keyboard / screen-reader users.
+  setTimeout(() => accept.focus(), 0);
+}
+
+function handleViewClick() {
+  if (hasAcceptedDisclaimer()) {
+    loadData();
+  } else {
+    showDisclaimer(loadData);
   }
 }
 

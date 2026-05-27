@@ -257,8 +257,6 @@
       avg_fare:     c.count     ? Math.round(c.amount / c.count     * 100)   / 100 : 0,
     }));
 
-    // Kept for backward compatibility — chatbot engine still reads these
-    // even though the dashboard no longer renders the corresponding cards.
     // For FY-summary periods with no breakdown, enriched is [] so neither
     // top has meaningful data; emit safe placeholders.
     const topAmt = enriched.length

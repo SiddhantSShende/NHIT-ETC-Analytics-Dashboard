@@ -1,14 +1,10 @@
 /* ── Responsive overrides ────────────────────────────────────────────────────
  * Same breakpoint ladder as before — only the numeric tweaks have changed
  * to suit the new glass design.
- *
- * The 480-768 chatbot range collapses to a fullscreen takeover so the panel
- * is usable on phones; the desktop floating glass card returns above 768px.
  * ─────────────────────────────────────────────────────────────────────────── */
 
 @media (max-width: 1280px) {
   :root { --container-pad: 22px; }
-  .kpi-grid        { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 1100px) {
@@ -38,8 +34,7 @@
     padding-top: 0;
     gap: 10px;
   }
-  .sel-actions .btn-view,
-  .sel-actions .btn-ask-ai { flex: 1; }
+  .sel-actions .btn-view { flex: 1; }
 }
 
 @media (max-width: 768px) {
@@ -95,21 +90,6 @@
     gap: 4px;
     padding: 16px var(--container-pad);
   }
-
-  /* CHATBOT — fullscreen takeover for the whole phone-and-small-tablet range. */
-  .chat-panel {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100vh;
-    max-height: 100dvh;
-    border-radius: 0;
-  }
-  .chat-overlay { display: block; }
-  .chat-toast   { right: 16px; bottom: 80px; }
 }
 
 @media (max-width: 560px) {
@@ -123,10 +103,6 @@
   .hint-state    { padding: 64px 18px; }
   .hint-state h2 { font-size: 1.15rem; }
 
-  /* Slightly tighter chatbot bubble width */
-  .chat-bubble { max-width: 90%; font-size: 0.9rem; }
-  .chat-suggestions { padding: 0 14px 12px; }
-
   /* PIU 2-col is too tight on the smallest phones — drop to 1 col. */
   .sel-inline { flex-direction: column; }
   .sel-inline .sel-ctrl { width: 100%; }
@@ -135,24 +111,12 @@
 @media (max-width: 420px) {
   :root { --container-pad: 14px; }
   .sel-actions { flex-direction: column; }
-  .sel-actions .btn-view,
-  .sel-actions .btn-ask-ai { width: 100%; }
+  .sel-actions .btn-view { width: 100%; }
   .lw-sub { display: none; }
   .kpi-card { padding: 16px 18px; }
   .cat-table-wrap { padding: 16px 12px; }
   .sec-header { padding: 14px 14px; }
   .bar-wrap { padding: 12px; height: 240px; }
-}
-
-/* Phone in landscape — the chatbot input/header would otherwise eat the
-   little vertical room available. Compact the header. */
-@media (max-width: 768px) and (max-height: 500px) {
-  .chat-header  { padding: 10px 16px; }
-  .chat-avatar  { width: 34px; height: 34px; }
-  .chat-avatar svg { width: 16px; height: 16px; }
-  .chat-title   { font-size: 0.88rem; }
-  .chat-subtitle { display: none; }
-  .chat-input-wrap { padding: 10px 14px 12px; }
 }
 
 /* Honour reduced-motion preference */

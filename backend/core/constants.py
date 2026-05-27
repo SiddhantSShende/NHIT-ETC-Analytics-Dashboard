@@ -45,7 +45,7 @@ CATEGORY_ORDER: list[str] = [
     "Oversized Vehicle (VC11+)",
 ]
 
-# Short labels for compact UI surfaces (chatbot summaries, exports, etc).
+# Short labels for compact UI surfaces (exports, etc).
 CATEGORY_SHORT: dict[str, str] = {
     "Car / Jeep / Van (VC4)":         "CJV",
     "Light Commercial Vehicle (VC5)": "LCV",

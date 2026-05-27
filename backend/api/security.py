@@ -49,8 +49,8 @@ def configure_cors(app: Flask) -> None:
 def _build_csp() -> str:
     """Build the Content-Security-Policy.
 
-    `connect-src 'self'` is sufficient because the chatbot fetch is
-    same-origin (`/api/chat`). External CDNs are only needed for the
+    `connect-src 'self'` is sufficient because all fetches are
+    same-origin. External CDNs are only needed for the
     chart library and Google Fonts.
     """
     parts = [

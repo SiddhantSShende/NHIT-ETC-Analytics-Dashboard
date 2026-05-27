@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="frontend/css/base.css?v=7" />
   <link rel="stylesheet" href="frontend/css/header.css?v=7" />
   <link rel="stylesheet" href="frontend/css/selector.css?v=7" />
-  <link rel="stylesheet" href="frontend/css/dashboard.css?v=7" />
-  <link rel="stylesheet" href="frontend/css/chatbot.css?v=7" />
-  <link rel="stylesheet" href="frontend/css/animations.css?v=7" />
+  <link rel="stylesheet" href="frontend/css/dashboard.css?v=8" />
+  <link rel="stylesheet" href="frontend/css/animations.css?v=8" />
   <link rel="stylesheet" href="frontend/css/responsive.css?v=7" />
 </head>
 
@@ -128,12 +127,6 @@
       <!-- Right: action buttons, always pinned to the right -->
       <div class="sel-actions">
         <button class="btn-view" id="btnView" type="button">View Analytics</button>
-        <button class="btn-ask-ai" id="btnAskAI" type="button">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"
-            style="margin-right:6px;vertical-align:-2px">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-          </svg>Ask AI
-        </button>
       </div>
 
     </div>
@@ -197,6 +190,11 @@
           <div class="kpi-label">YoY Revenue Growth</div>
           <div class="kpi-value" id="kpiYoy">—</div>
           <div class="kpi-sub" id="kpiYoySub">&nbsp;</div>
+        </div>
+        <div class="kpi-card kpi-purple stage-item shine spotlight reveal" data-stagger>
+          <div class="kpi-label">Avg. Revenue / Day</div>
+          <div class="kpi-value" id="kpiAvgDaily">—</div>
+          <div class="kpi-sub" id="kpiAvgDailySub">&nbsp;</div>
         </div>
       </div>
 
@@ -333,96 +331,48 @@
     </div><!-- /dashboard -->
   </main>
 
+  <!-- Disclaimer modal — shown once per browser session (gated by
+       'nhit_disclaimer_accepted' session cookie) before the first
+       View Analytics action. -->
+  <div class="disclaimer-modal" id="disclaimerModal" role="dialog"
+       aria-modal="true" aria-labelledby="disclaimerTitle" hidden>
+    <div class="disclaimer-backdrop" id="disclaimerBackdrop"></div>
+    <div class="disclaimer-panel" role="document">
+      <div class="disclaimer-header">
+        <h2 id="disclaimerTitle">Important — Please Read Before Proceeding</h2>
+        <button class="disclaimer-close" id="disclaimerClose" type="button"
+                aria-label="Close disclaimer">&times;</button>
+      </div>
+      <div class="disclaimer-body" tabindex="0">
+        <p>The analytics, reports, visualisations and insights made available on this dashboard are prepared by National Highways Infra Trust (&ldquo;NHIT&rdquo;) using Electronic Toll Collection (&ldquo;ETC&rdquo;) / FASTag transaction data sourced from publicly available reports published by the Indian Highways Management Company Limited (&ldquo;IHMCL&rdquo;) on its official website.</p>
+        <p>NHIT does not own, originate, generate, or independently verify the underlying source data. The information is made available on an &ldquo;as is&rdquo; basis, as published by IHMCL, and NHIT makes no representation or warranty, express or implied, as to the completeness, accuracy, reliability, timeliness, sequence, continuity, or fitness for any particular purpose of such data or of any analysis derived from it.</p>
+        <p>The analyses, computations, aggregations, visualisations and other outputs presented on this dashboard have been prepared by NHIT based on the aforesaid third-party data and internal methodologies. While NHIT endeavours to apply reasonable and consistent analytical processes, the results remain dependent on the accuracy, completeness and stability of the underlying source data. Any errors, omissions, delays, revisions, suspensions, or withdrawals in the source data, or any processing, extraction, formatting or transmission errors, may affect the outputs displayed herein.</p>
+        <p>IHMCL may revise, update, correct, supplement, suspend or remove its published data at any time, with or without notice. NHIT assumes no obligation to update, amend, correct or otherwise revise the dashboard or any related output to reflect any subsequent change in the source data or any change in circumstances.</p>
+        <p>This dashboard is provided solely for informational and internal reference purposes. Nothing contained herein shall be construed as, or relied upon as, financial, investment, commercial, regulatory, legal, accounting, tax or other professional advice, nor as a recommendation, solicitation, endorsement, or offer to buy, sell, subscribe to, or otherwise deal in the units of NHIT. Users should conduct their own independent review and verification of all information before acting upon it, and should obtain appropriate professional advice before making any investment or business decisions related to NHIT. To the fullest extent permitted by applicable law, NHIT disclaims any and all liability arising from any decision made or action taken in reliance on the dashboard or its contents.</p>
+        <p>To the fullest extent permitted by applicable law, NHIT, its trustees, directors, officers, employees, consultants, agents and affiliates shall not be liable for any direct, indirect, incidental, special, consequential or punitive loss, damage, cost or expense of any nature whatsoever arising out of or in connection with the use of, access to, or reliance on the dashboard or its contents.</p>
+        <p>All intellectual property rights in the selection, arrangement, methodology, presentation, visual design and compilation of this dashboard are and shall remain the property of NHIT or its licensors, as applicable. The underlying ETC / FASTag transaction data remains the property of, or is otherwise controlled by, IHMCL or the relevant rights holder, as applicable. No part of this dashboard may be reproduced, redistributed, modified, republished, transmitted or commercially exploited without the prior written consent of NHIT, except to the extent expressly permitted by applicable law.</p>
+        <p>Any reference on this dashboard to the official IHMCL website is provided for convenience only. NHIT does not control, endorse or assume responsibility for the content, availability, accuracy or security of any external website or resource.</p>
+        <p>For official toll revenue or transaction figures, users should refer directly to the reports and publications made available by IHMCL on its official website at <a href="https://ihmcl.co.in" target="_blank" rel="noopener noreferrer">ihmcl.co.in</a>.</p>
+      </div>
+      <div class="disclaimer-footer">
+        <button class="disclaimer-accept" id="disclaimerAccept" type="button">I Accept</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <span>© 2026 National Highways Infra Trust</span>
     <span class="site-footer-disclaimer">The entire dashboard data is taken from publically available data from IHMCL website</span>
     <span class="site-footer-credit">Powered by AEIV Global Pvt. Ltd.</span>
   </footer>
 
-  <script src="frontend/js/utils.js?v=10"></script>
-  <script src="frontend/js/animations.js?v=10"></script>
-  <script src="frontend/js/data-layer.js?v=10"></script>
-  <script src="frontend/js/filters.js?v=10"></script>
-  <script src="frontend/js/charts.js?v=10"></script>
-  <script src="frontend/js/render.js?v=10"></script>
-  <script src="frontend/js/app.js?v=10"></script>
-
-
-  <!-- Chat panel -->
-  <div class="chat-panel" id="chatPanel" role="dialog" aria-modal="true" aria-label="Analytics Assistant">
-    <!-- Header -->
-    <div class="chat-header">
-      <div class="chat-header-left">
-        <div class="chat-avatar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4" />
-            <path d="M20 21a8 8 0 10-16 0" />
-          </svg>
-        </div>
-        <div>
-          <div class="chat-title">Analytics Assistant</div>
-          <div class="chat-subtitle" id="chatStatus">Powered by NHIT ETC Data</div>
-        </div>
-      </div>
-      <div class="chat-header-actions">
-        <button class="chat-icon-btn" id="chatClearBtn" title="Clear conversation">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="3 6 5 6 21 6" />
-            <path d="M19 6l-1 14H6L5 6M10 11v6M14 11v6M9 6V4h6v2" />
-          </svg>
-        </button>
-        <button class="chat-icon-btn chat-close-btn" id="chatCloseBtn" title="Close">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-
-
-    <!-- Message history -->
-    <div class="chat-messages" id="chatMessages">
-      <!-- Welcome bubble -->
-      <div class="chat-msg chat-msg-bot">
-        <div class="chat-bubble">
-          👋 Hi! Ask me anything about NHIT toll data — revenue, transactions, plaza comparisons, trends, and more.
-          <br><br>
-          <strong>Examples:</strong><br>
-          • Revenue for Bassi in January 2026?<br>
-          • Which plaza had the most transactions last month?<br>
-          • Compare Aroli and Kognoli revenue.
-        </div>
-        <div class="chat-time">Now</div>
-      </div>
-    </div>
-
-    <!-- Suggested prompts -->
-    <div class="chat-suggestions" id="chatSuggestions">
-      <button class="chat-chip" data-q="What is the total revenue for all plazas?">Total revenue all plazas</button>
-      <button class="chat-chip" data-q="Which plaza has the highest transactions?">Top plaza by volume</button>
-      <button class="chat-chip" data-q="Show me Bassi plaza revenue trend">Bassi trend</button>
-      <button class="chat-chip" data-q="What are the available plazas?">List all plazas</button>
-    </div>
-
-    <!-- Input -->
-    <div class="chat-input-wrap">
-      <textarea class="chat-input" id="chatInput" rows="1" placeholder="Ask our AI Assistant…"
-        aria-label="Chat message"></textarea>
-      <button class="chat-send" id="chatSend" title="Send" disabled>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <line x1="22" y1="2" x2="11" y2="13" />
-          <polygon points="22 2 15 22 11 13 2 9 22 2" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Chat overlay (mobile) -->
-  <div class="chat-overlay" id="chatOverlay"></div>
-
-  <script src="frontend/js/chatbot.js?v=4"></script>
+  <script src="frontend/js/utils.js?v=11"></script>
+  <script src="frontend/js/animations.js?v=11"></script>
+  <script src="frontend/js/data-layer.js?v=11"></script>
+  <script src="frontend/js/filters.js?v=11"></script>
+  <script src="frontend/js/charts.js?v=11"></script>
+  <script src="frontend/js/render.js?v=11"></script>
+  <script src="frontend/js/app.js?v=11"></script>
 </body>
 
 </html>

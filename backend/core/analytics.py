@@ -36,7 +36,7 @@ def aggregate_plazas_for_month(
 
     For FY-summary periods (2023-04..2024-03) plazas carry only totals,
     no per-class breakdown; we still include them in total_count /
-    total_amount via the extra_* accumulators so KPI/chatbot answers
+    total_amount via the extra_* accumulators so KPI answers
     return real figures for those months.
     """
     key = f"{year}-{month:02d}"

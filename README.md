@@ -1,6 +1,6 @@
 # NHIT — ETC Analytics Dashboard
 
-Plaza-level analytics over IHMCL VC-Wise monthly toll reports. The dashboard is a static frontend that reads pre-built JSON files; the only server-side endpoint is the chatbot proxy.
+Plaza-level analytics over IHMCL VC-Wise monthly toll reports. The dashboard is a static frontend that reads pre-built JSON files.
 
 ## Architecture
 
@@ -19,10 +19,10 @@ downloads/{vc_monthly,ETC_Monthly_Data,Monthly_Annual_Pass_Report}/*.pdf
                               ▼
                           Browser cache
 
-        server.py  ── /api/health, /api/chat (OpenRouter proxy + JSON-derived context)
+        server.py  ── /api/health (Flask, serves static files)
 ```
 
-The browser fetches JSON files directly from `downloads/json/` and aggregates in JS. The Flask server only handles chatbot prompts; it loads the same JSON files into memory at startup so the LLM context can cite real numbers.
+The browser fetches JSON files directly from `downloads/json/` and aggregates in JS. The Flask server is only needed to serve the static files locally; any static-file host (Vercel, S3, GitHub Pages, etc.) works equally well.
 
 ## Files
 
@@ -34,10 +34,10 @@ The browser fetches JSON files directly from `downloads/json/` and aggregates in
 | `taxonomy.py`             | Reads `data/Project details.xlsx`, fuzzy-matches Excel plaza names to canonical names. |
 | `scripts/build_json_export.py` | Build script. Reads every PDF, writes `downloads/json/{_index,_taxonomy,monthly/*,plazas/*}.json`. Validates every plaza's per-category sums against the PDF's `TOTAL_CNT`/`TOTAL_AMT` cells. |
 | `data-layer.js`           | Browser-side data layer: fetches `downloads/json/*`, caches via Cache Storage API + in-memory map, ports `analytics.py`'s aggregation logic to JS. Exposes `window.DataLayer`. |
-| `static_loader.py`        | Loads `downloads/json/*` into a SNAPSHOT-shaped dict (used by the chatbot). |
-| `analytics.py`            | Aggregation helpers (`aggregate_plazas_for_month`, `aggregate_plazas_for_range`). Used by the chatbot context builder. |
-| `server.py`               | Flask app. Two routes: `/api/health` + `/api/chat`. Serves static files. |
-| `index.html`, `app.js`, `styles.css`, `chatbot.js` | Frontend. |
+| `static_loader.py`        | Loads `downloads/json/*` into a SNAPSHOT-shaped dict. |
+| `analytics.py`            | Aggregation helpers (`aggregate_plazas_for_month`, `aggregate_plazas_for_range`). |
+| `server.py`               | Flask app. One route: `/api/health`. Serves static files. |
+| `index.html`, `app.js`, `styles.css` | Frontend. |
 | `data/Project details.xlsx` | SPV / Round / Project taxonomy source. |
 | `downloads/json/`         | Generated. Per-month + per-plaza JSON files served as static assets. |
 
@@ -53,20 +53,18 @@ The browser fetches JSON files directly from `downloads/json/` and aggregates in
 python scripts/build_json_export.py
 #    -> writes downloads/json/{_index,_taxonomy,monthly/*,plazas/*}.json
 
-# 3. Start the server (only needed for the chatbot — the dashboard works
-#    against any static-file host):
+# 3. Start a local server to view the dashboard:
 python server.py
 #    -> http://localhost:5051
 ```
 
-For pure-static hosting (Vercel etc.) the dashboard works with just the static files; only the chatbot needs `server.py`.
+For pure-static hosting (Vercel etc.) the dashboard works with just the static files — `server.py` is only needed locally.
 
 ## API
 
 | Method | Path | Description |
 | ------ | ---- | ----------- |
 | `GET`  | `/api/health` | Liveness + plaza/month counts + which directory is the data source. |
-| `POST` | `/api/chat`   | OpenRouter proxy. Body: `{message, history?}`. Server attaches a JSON-derived data context so the LLM cites real numbers. |
 
 All other historical `/api/*` endpoints (`/api/meta`, `/api/aggregate`, …) have been retired — the frontend reads JSON files directly.
 

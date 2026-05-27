@@ -257,8 +257,7 @@
 }
 
 /* ── Soft glow ring on focused buttons / inputs ─────────────────────────── */
-.btn-view:focus-visible,
-.btn-ask-ai:focus-visible {
+.btn-view:focus-visible {
   outline: none;
   animation: glowPulse 1.6s ease-out 1;
 }
@@ -274,30 +273,11 @@
   animation-delay: calc(var(--i, 0) * 35ms);
 }
 
-/* ── Chat panel: gentle drop entrance is in chatbot.css; we add a glow on
-   the avatar so the assistant feels alive. ─────────────────────────────── */
-.chat-avatar { animation: float 5s ease-in-out infinite; }
-.chat-avatar::after {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
-  opacity: 0;
-  animation: glowAvatar 3.5s ease-in-out infinite;
-  pointer-events: none;
-}
-@keyframes glowAvatar {
-  0%, 100% { opacity: 0; transform: scale(0.95); }
-  50%      { opacity: 0.8; transform: scale(1.05); }
-}
-
 /* ── Reduced motion: collapse everything to a static, accessible state ──── */
 @media (prefers-reduced-motion: reduce) {
   .stage > .stage-item,
   .reveal,
   .kpi-card,
-  .chat-avatar,
   .hint-icon,
   .bg-grid,
   .logo-icon::after,

@@ -2,7 +2,7 @@
 NHIT | Loader that builds a SNAPSHOT-shaped dict from the static JSON
 files in downloads/json/ produced by scripts/build_json_export.py.
 
-The legacy code path (analytics.py + chatbot context builder) expects:
+The legacy code path (analytics.py) expects:
     SNAPSHOT["data"][plaza_name][YYYY-MM] = {
         "categories": [{name, count, amount, share_count, share_amount,
                         avg_fare}],
@@ -126,7 +126,7 @@ def load_snapshot(json_dir: Path = DEFAULT_JSON_DIR) -> dict:
         for entry in doc.get("plazas", []):
             name = entry["plaza_name"]
             if name not in plaza_set:
-                # Plaza unknown to index; still keep it so chatbot search works.
+                # Plaza unknown to index; still keep it for analytics search.
                 plaza_set.add(name)
                 plaza_names.append(name)
                 data.setdefault(name, {})

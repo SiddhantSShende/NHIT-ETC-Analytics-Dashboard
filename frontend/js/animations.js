@@ -3,7 +3,7 @@
  * Handles:
  *   • Scroll-reveal (`.reveal` → `.reveal--in`) via IntersectionObserver
  *   • Cursor-follow spotlight on `.spotlight` cards
- *   • Material-style ripple on `.btn-view` and `.btn-ask-ai`
+ *   • Material-style ripple on `.btn-view`
  *   • Animated number count-up on the KPI / section-total values
  *   • A tiny `Anim` namespace exposed on window so render.js can reset
  *     reveals and re-trigger count-ups when the dashboard re-renders.
@@ -73,7 +73,7 @@
   // ── Ripple ──────────────────────────────────────────────────────────────
   function bindRipples() {
     document.addEventListener("pointerdown", (e) => {
-      const target = e.target.closest(".btn-view, .btn-ask-ai, .chat-chip, .chat-send");
+      const target = e.target.closest(".btn-view");
       if (!target || target.disabled) return;
       const r = target.getBoundingClientRect();
       const dot = document.createElement("span");
