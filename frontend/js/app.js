@@ -109,7 +109,13 @@ async function loadData() {
       showOnly("noDataState");
       return;
     }
-    if (!dataJson.record || !dataJson.record.categories?.length) {
+    // Accept a record if EITHER it has per-category breakdown OR a
+    // positive total (FY 23-24 / 24-25 months only carry totals — no
+    // VC breakdown — so categories will be []).
+    const rec = dataJson.record;
+    const hasCats = !!(rec && rec.categories?.length);
+    const hasTotals = !!(rec && (rec.total_count > 0 || rec.total_amount > 0));
+    if (!rec || (!hasCats && !hasTotals)) {
       document.getElementById("errorTitle").textContent = "No Data Found";
       document.getElementById("errorTxt").textContent = useRange
         ? `No transaction data matched the selected filters in the chosen range.`
