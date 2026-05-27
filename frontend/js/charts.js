@@ -48,8 +48,34 @@ function axisOpts(titleText, tickFn) {
   };
 }
 
+// Show a centered "—" placeholder when a chart has no data (e.g. FY
+// 2023-24 months that lack per-category breakdown). Returns true if the
+// placeholder was rendered, in which case the caller should skip Chart.js.
+function _renderEmptyChartPlaceholder(canvasId, label) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return false;
+  const ctx = canvas.getContext("2d");
+  const w = canvas.width || canvas.clientWidth || 200;
+  const h = canvas.height || canvas.clientHeight || 200;
+  ctx.clearRect(0, 0, w, h);
+  ctx.save();
+  ctx.fillStyle = CHART_MUTED;
+  ctx.font = "italic 13px system-ui, -apple-system, sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("—", w / 2, h / 2 - 10);
+  ctx.font = "12px system-ui, -apple-system, sans-serif";
+  ctx.fillText(label || "No data", w / 2, h / 2 + 14);
+  ctx.restore();
+  return true;
+}
+
 function drawPie(canvasId, labels, data, chartKey, isMoney) {
   destroy(chartKey);
+  if (!data || !data.length || data.every(v => !v)) {
+    _renderEmptyChartPlaceholder(canvasId, "No breakdown available");
+    return;
+  }
   charts[chartKey] = new Chart(document.getElementById(canvasId), {
     type: "doughnut",
     data: {
@@ -87,6 +113,10 @@ function drawPie(canvasId, labels, data, chartKey, isMoney) {
 
 function drawBar(cats) {
   destroy("barChart");
+  if (!cats || !cats.length) {
+    _renderEmptyChartPlaceholder("barChart", "No per-category breakdown for this period");
+    return;
+  }
   charts.barChart = new Chart(document.getElementById("barChart"), {
     type: "bar",
     data: {

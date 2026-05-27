@@ -126,6 +126,20 @@ function buildScopeMeta(rec) {
 }
 
 function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, prevYearCats) {
+  const body = document.getElementById(bodyId);
+  // FY 2023-24 / 2024-25 source PDFs only carry plaza totals — no
+  // VC4..VC11+ breakdown. Show a single placeholder row so the table
+  // doesn't render as an empty void below the KPI total.
+  if (!cats || !cats.length) {
+    body.innerHTML = `
+      <tr class="no-breakdown-row">
+        <td colspan="6" style="text-align:center; padding:24px 12px; color:var(--text2); font-style:italic;">
+          —&nbsp;&nbsp;Per-category breakdown not available for this period&nbsp;&nbsp;—
+        </td>
+      </tr>`;
+    return;
+  }
+
   const max = Math.max(...cats.map(valueFn), 1);
   const pmByName = new Map((prevMonthCats || []).map(c => [c.name, c]));
   const pyByName = new Map((prevYearCats  || []).map(c => [c.name, c]));
@@ -144,7 +158,7 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, pr
     return `<td class="delta-cell ${colClass} ${dirCls}" aria-label="${fmtPct(pct)} ${verb}">${arrow} ${fmtPct(pct)}</td>`;
   };
 
-  document.getElementById(bodyId).innerHTML = cats.map((c, i) => {
+  body.innerHTML = cats.map((c, i) => {
     const color = PIE_COLORS[i % PIE_COLORS.length];
     const v   = valueFn(c);
     const pct = total ? (v / total * 100).toFixed(1) : "0.0";
