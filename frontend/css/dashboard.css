@@ -108,7 +108,7 @@
 /* ── KPI cards ────────────────────────────────────────────────────────────── */
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-bottom: 22px;
 }
@@ -380,6 +380,14 @@
 }
 .cat-table-disclaimer {
   margin: 14px 0 0;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text3);
+  text-align: right;
+  letter-spacing: 0.02em;
+}
+.chart-disclaimer {
+  margin: 4px 24px 18px;
   font-size: 0.72rem;
   font-style: italic;
   color: var(--text3);
