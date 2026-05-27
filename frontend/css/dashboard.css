@@ -408,7 +408,10 @@
 .cat-table tbody tr:last-child td { border-bottom: none; }
 
 /* Per-category MoM / YoY delta cells. Color convention matches renderDelta()
-   on the section pills (green for growth, red for decline, neutral for null). */
+   on the section pills (green for growth, red for decline, neutral for null).
+   Headers are right-aligned to match the right-aligned cell content below. */
+.cat-table th.mom-col,
+.cat-table th.yoy-col { text-align: right; }
 .cat-table td.delta-cell {
   text-align: right;
   white-space: nowrap;
