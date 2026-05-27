@@ -94,21 +94,30 @@
     return _periodsSetP ||= getIndex().then(idx => new Set(idx.periods || []));
   }
 
-  // ── Meta (plazas + years + months) ────────────────────────────────────────
+  // ── Meta (plazas + years + months + per-year months) ───────────────────────
+  // `monthsByYear` lets the UI restrict the month dropdown to the months
+  // actually present for the selected year (e.g. 2023 only has Apr-Dec).
   async function getMeta() {
     const idx = await getIndex();
     const plazas = idx.plazas.map(p => p.plaza_name);
     const periods = idx.periods || [];
     const years = Array.from(new Set(periods.map(p => parseInt(p.split("-")[0])))).sort();
     const seenMonths = new Map();
+    const monthsByYear = {};
     for (const p of periods) {
-      const m = parseInt(p.split("-")[1]);
+      const [yStr, mStr] = p.split("-");
+      const y = parseInt(yStr);
+      const m = parseInt(mStr);
       if (!seenMonths.has(m)) seenMonths.set(m, MONTH_NAMES[m]);
+      (monthsByYear[y] ||= []).push(m);
+    }
+    for (const y of Object.keys(monthsByYear)) {
+      monthsByYear[y] = Array.from(new Set(monthsByYear[y])).sort((a, b) => a - b);
     }
     const months = Array.from(seenMonths.entries())
       .sort((a, b) => a[0] - b[0])
       .map(([num, name]) => ({ num, name }));
-    return { plazas, years, months };
+    return { plazas, years, months, monthsByYear, periods };
   }
 
   // ── Filter taxonomy rows the same way server.py does ──────────────────────

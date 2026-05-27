@@ -21,7 +21,34 @@ window.addEventListener("DOMContentLoaded", () => {
   ["spvSel", "roundSel"].forEach(id => {
     document.getElementById(id).addEventListener("change", refreshCascade);
   });
+
+  // Year → Month cascade: months available depend on the selected year
+  // (e.g. our data starts at Apr-2023, so 2023 only offers Apr-Dec).
+  document.getElementById("yearSel").addEventListener("change", () =>
+    refreshMonthOptions("yearSel", "monthSel"));
+  document.getElementById("startYearSel").addEventListener("change", () =>
+    refreshMonthOptions("startYearSel", "startMonthSel"));
+  document.getElementById("endYearSel").addEventListener("change", () =>
+    refreshMonthOptions("endYearSel", "endMonthSel"));
 });
+
+// Re-populate the month <select> from META.monthsByYear[year] when the
+// corresponding year <select> changes. Preserves the current month if still
+// valid; otherwise clears it so the user can't submit an invalid combo.
+function refreshMonthOptions(yearSelId, monthSelId) {
+  const yearStr = document.getElementById(yearSelId).value;
+  const monthSel = document.getElementById(monthSelId);
+  const prev = monthSel.value;
+  const allMonths = META.months || [];
+  const allowed = yearStr
+    ? new Set((META.monthsByYear || {})[yearStr] || [])
+    : null;
+  const visible = allowed
+    ? allMonths.filter(m => allowed.has(m.num))
+    : allMonths;
+  fillSelect(monthSelId, visible, m => ({ v: m.num, t: m.name }), "-- Month --");
+  if (prev && visible.some(m => String(m.num) === prev)) monthSel.value = prev;
+}
 
 // ── BOOTSTRAP ─────────────────────────────────────────────────────────────
 async function bootstrap() {
