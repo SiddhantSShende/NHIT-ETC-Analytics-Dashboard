@@ -64,7 +64,12 @@
         const hit = await store.match(url);
         if (hit) return hit.clone().json();
       }
-      const resp = await fetch(url, { cache: "default" });
+      // "no-cache" forces a conditional request (If-Modified-Since /
+      // If-None-Match) so the browser's HTTP cache can't pin a stale 404
+      // from a pre-deploy visit (e.g. monthly/2026-04.json before April was
+      // shipped) for the full 24h max-age. 304s are still fast — body comes
+      // from the cache — but content changes and prior failures revalidate.
+      const resp = await fetch(url, { cache: "no-cache" });
       if (!resp.ok) throw new Error(`HTTP ${resp.status} ${url}`);
       if (store) {
         try { await store.put(url, resp.clone()); } catch (_) { /* private mode etc. */ }
