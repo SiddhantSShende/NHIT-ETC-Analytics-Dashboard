@@ -1,18 +1,63 @@
 /* ── Responsive overrides ────────────────────────────────────────────────────
- * Same breakpoint ladder as before — only the numeric tweaks have changed
- * to suit the new glass design.
+ * Breakpoint ladder (mobile-first overrides, large → small):
+ *   1280  laptop padding
+ *   1100  KPI grid 4 → 2
+ *   980   sec-body stacks, selector inner stacks
+ *   820   tablet portrait: sec-header reflow, KPI grid 2 wide
+ *   640   phones: 2-col selector grid, KPI grid 1
+ *   480   small phones: tighter type & spacing
+ *   380   tiny phones: collapse non-essential header bits
+ *
+ * Also: touch-action, safe-area-inset, hover-gating, mobile perf cuts.
  * ─────────────────────────────────────────────────────────────────────────── */
 
+/* ── Snappier taps everywhere a finger lands ────────────────────────────── */
+.btn-view,
+.sel-ctrl,
+.range-toggle,
+.disclaimer-accept,
+.disclaimer-close {
+  touch-action: manipulation;
+}
+
+/* ── Don't waste GPU on hover-only flourishes for touch devices ─────────── */
+@media (hover: none) {
+  .spotlight::before { display: none; }
+  .shine::after      { display: none; }
+  .kpi-card:hover    { transform: none; }
+  .section-card:hover { transform: none; }
+  /* Touch UAs invent a synthetic :hover on tap which gets stuck — neuter it */
+  .sel-ctrl:hover,
+  .range-toggle:hover,
+  .btn-view:hover    { transform: none; filter: none; }
+}
+
+/* ── Safe-area-inset padding for notched phones ─────────────────────────── */
+@supports (padding: max(0px, env(safe-area-inset-left))) {
+  .hdr-inner,
+  .selector-bar,
+  .main-wrap,
+  .site-footer {
+    padding-left:  max(var(--container-pad), env(safe-area-inset-left));
+    padding-right: max(var(--container-pad), env(safe-area-inset-right));
+  }
+  .site-footer {
+    padding-bottom: max(18px, env(safe-area-inset-bottom));
+  }
+}
+
+/* ── ≤1280 laptop padding ───────────────────────────────────────────────── */
 @media (max-width: 1280px) {
   :root { --container-pad: 22px; }
 }
 
+/* ── ≤1100 KPI grid 4 → 2 ───────────────────────────────────────────────── */
 @media (max-width: 1100px) {
-  .kpi-grid        { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* ── ≤980 stack sec-body, stack selector inner ──────────────────────────── */
 @media (max-width: 980px) {
-  /* Section card body stacks pie below the table so tables stay readable. */
   .sec-body { flex-direction: column; }
   .pie-wrap {
     border-left: none;
@@ -22,7 +67,6 @@
   }
   .pie-wrap canvas { max-width: 280px !important; }
 
-  /* Selector actions — full-width row instead of pinned-right column. */
   .selector-inner {
     flex-direction: column;
     align-items: stretch;
@@ -37,10 +81,31 @@
   .sel-actions .btn-view { flex: 1; }
 }
 
+/* ── ≤820 sec-header reflow (icon+title row, then total+pills row) ──────── */
+@media (max-width: 820px) {
+  .sec-header {
+    padding: 16px 20px;
+    gap: 12px;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .sec-total {
+    font-size: 1.55rem;
+    margin-left: 0;
+    width: auto;
+    order: 3;
+  }
+  .sec-growth-pills {
+    margin-left: auto;
+    order: 4;
+  }
+}
+
+/* ── ≤768 main mobile shift ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   :root { --container-pad: 16px; }
 
-  /* Header collapses cleanly — centre label drops to its own row. */
+  /* Header collapses cleanly — centre label drops to its own row */
   .hdr-inner {
     height: auto;
     min-height: 64px;
@@ -49,77 +114,230 @@
     row-gap: 8px;
   }
   .hdr-center { width: 100%; order: 2; }
-  .portal-label { font-size: 0.85rem; }
+  .portal-label {
+    font-size: 0.82rem;
+    padding: 5px 12px;
+    text-align: center;
+    display: inline-block;
+    max-width: 100%;
+  }
 
-  /* Selector bar: every control on its own row, full-width. */
-  .selector-bar { padding: 16px 0 4px; }
-  .selector-inner { padding: 16px 18px; border-radius: 18px; }
+  /* Selector bar */
+  .selector-bar  { padding: 16px 0 4px; }
+  .selector-inner { padding: 14px 16px; border-radius: 18px; }
+
+  /* 2-column grid for filters from 540–768px (landscape phones, small tabs) */
   .sel-controls {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 12px;
     align-items: stretch;
-    gap: 10px;
     width: 100%;
   }
-  .sel-group { width: 100%; }
+  .sel-group { width: 100%; min-width: 0; }
   .sel-ctrl,
   .sel-ctrl.wide { min-width: 0; width: 100%; }
-  .range-toggle { width: 100%; justify-content: flex-start; }
-  .sel-inline { flex-direction: row; }
+  .sel-inline { flex-direction: row; gap: 8px; }
   .sel-inline .sel-ctrl { flex: 1 1 0; min-width: 0; }
+  .range-toggle { width: 100%; justify-content: flex-start; }
 
   /* Main content padding */
   .main-wrap { padding: 22px var(--container-pad) 36px; }
 
   /* Dashboard typography */
-  .rh-left h1 { font-size: 1.75rem; }
-  .rh-left p  { font-size: 0.92rem; }
-  .kpi-card   { padding: 14px 16px; }
-  .kpi-value  { font-size: 1.4rem; }
+  .result-header { margin-bottom: 22px; }
+  .rh-left h1 { font-size: 1.7rem; }
+  .rh-left p  { font-size: 0.9rem; }
+
+  /* KPI cards */
+  .kpi-grid { gap: 14px; }
+  .kpi-card { padding: 14px 16px; }
+  .kpi-value { font-size: 1.4rem; }
 
   /* Section internals scale down */
-  .sec-header { padding: 16px 18px; gap: 12px; }
-  .sec-total  { font-size: 1.5rem; width: 100%; margin-left: 0; order: 3; }
+  .sec-header { padding: 14px 16px; gap: 12px; }
+  .sec-icon { width: 38px; height: 38px; }
+  .sec-icon svg { width: 18px; height: 18px; }
+  .sec-title { font-size: 1rem; }
+  .sec-desc  { font-size: 0.78rem; }
+  .sec-total { font-size: 1.4rem; width: 100%; margin-left: 0; order: 3; padding-top: 2px; }
   .sec-growth-pills { width: 100%; margin-left: 0; order: 4; }
-  .cat-table-wrap { padding: 18px 16px; }
-  .bar-wrap { padding: 18px; height: 320px; }
+  .sec-growth-pill { flex: 1; min-width: 0; }
+
+  /* Tables — let cells breathe a bit + hint at horizontal scroll */
+  .cat-table-wrap { padding: 16px 14px; position: relative; }
+  .cat-table-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 24px;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.85));
+  }
+  .cat-table { min-width: 540px; font-size: 0.85rem; }
+  .cat-table th,
+  .cat-table td { padding: 10px 8px; }
+
+  .bar-wrap { padding: 16px 14px; height: 320px; }
 
   /* Footer wraps cleanly */
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 6px;
     padding: 16px var(--container-pad);
+    text-align: left;
   }
+  .site-footer-disclaimer { text-align: left; flex: none; }
 }
 
-@media (max-width: 560px) {
-  .kpi-grid      { grid-template-columns: 1fr; }
-  .bar-wrap      { height: 280px; }
-  .rh-left h1    { font-size: 1.5rem; }
-  .kpi-value     { font-size: 1.3rem; }
-  .sec-title     { font-size: 0.98rem; }
-  .sec-desc      { font-size: 0.78rem; }
-  .sec-growth-pill { flex: 1; min-width: 0; }
-  .hint-state    { padding: 64px 18px; }
-  .hint-state h2 { font-size: 1.15rem; }
+/* ── ≤640 phones — KPI grid → 1 col, tighter sec-header ─────────────────── */
+@media (max-width: 640px) {
+  .kpi-grid { grid-template-columns: 1fr; gap: 12px; }
+  .bar-wrap { height: 300px; }
+  .rh-left h1 { font-size: 1.5rem; }
+  .kpi-value  { font-size: 1.35rem; }
+  .sec-title  { font-size: 0.95rem; }
+  .sec-desc   { font-size: 0.74rem; }
+  .hint-state    { padding: 56px 18px; }
+  .hint-state h2 { font-size: 1.1rem; }
+  .hint-state p  { font-size: 0.88rem; }
 
-  /* PIU 2-col is too tight on the smallest phones — drop to 1 col. */
+  /* PIU 2-col is too tight on phones — drop to 1 col */
   .sel-inline { flex-direction: column; }
   .sel-inline .sel-ctrl { width: 100%; }
+
+  /* Section total + pills now share a row on phones */
+  .sec-total { font-size: 1.3rem; width: auto; padding-top: 0; }
+  .sec-growth-pills { gap: 8px; }
+  .sec-growth-pill { padding: 6px 10px; }
+  .sec-growth-pill .pill-value { font-size: 0.88rem; }
+
+  /* Disclaimer pieces */
+  .cat-table-disclaimer,
+  .chart-disclaimer { font-size: 0.74rem; padding: 10px 14px; }
 }
 
-@media (max-width: 420px) {
-  :root { --container-pad: 14px; }
+/* ── ≤520 selector → single column on small phones ──────────────────────── */
+@media (max-width: 520px) {
+  .sel-controls { grid-template-columns: 1fr; }
   .sel-actions { flex-direction: column; }
   .sel-actions .btn-view { width: 100%; }
-  .lw-sub { display: none; }
-  .kpi-card { padding: 16px 18px; }
-  .cat-table-wrap { padding: 16px 12px; }
-  .sec-header { padding: 14px 14px; }
-  .bar-wrap { padding: 12px; height: 240px; }
 }
 
-/* Honour reduced-motion preference */
+/* ── ≤480 small phones ──────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root { --container-pad: 14px; }
+
+  /* Header trims down */
+  .hdr-inner { min-height: 56px; padding: 10px var(--container-pad); }
+  .logo-icon { padding: 5px 12px; font-size: 1.05rem; }
+  .lw-nhit { font-size: 1.05rem; }
+  .lw-sub { font-size: 0.6rem; }
+  .portal-label { font-size: 0.76rem; padding: 4px 10px; }
+
+  /* Selector */
+  .selector-bar  { padding: 12px 0 0; }
+  .selector-inner { padding: 12px 14px; }
+
+  /* Dashboard */
+  .main-wrap { padding: 18px var(--container-pad) 32px; }
+  .rh-left h1 { font-size: 1.35rem; }
+  .rh-left p  { font-size: 0.85rem; }
+  .scope-meta { font-size: 0.74rem !important; }
+
+  .kpi-card { padding: 14px 16px; }
+  .kpi-label { font-size: 0.6rem; letter-spacing: 0.7px; }
+  .kpi-value { font-size: 1.25rem; }
+  .kpi-sub   { font-size: 0.66rem; }
+
+  .section-card { margin-bottom: 20px; }
+  .sec-header { padding: 12px 14px; }
+  .sec-icon { width: 34px; height: 34px; border-radius: 10px; }
+  .sec-icon svg { width: 16px; height: 16px; }
+  .cat-table-wrap { padding: 14px 10px; }
+  .cat-table { min-width: 480px; }
+  .bar-wrap { padding: 12px 10px; height: 260px; }
+}
+
+/* ── ≤380 tiny phones — drop non-essential header bits ──────────────────── */
+@media (max-width: 380px) {
+  :root { --container-pad: 12px; }
+  .lw-sub { display: none; }
+  .portal-label {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .bar-wrap { height: 230px; }
+}
+
+/* ── Mobile performance cuts ────────────────────────────────────────────── *
+ * backdrop-filter, blob blur, and looped animations are GPU-heavy. On
+ * phones we want layout fidelity, not parallax. Drop the most expensive
+ * effects so scroll / tap stay snappy on mid-range devices.
+ * ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Cheaper glass — 12px blur instead of 24 */
+  .selector-inner,
+  .kpi-card,
+  .section-card,
+  .hint-state,
+  .site-header,
+  .site-footer,
+  .pie-wrap,
+  .sec-growth-pill,
+  .sel-ctrl,
+  .range-toggle,
+  .portal-label,
+  .disclaimer-panel,
+  .disclaimer-backdrop {
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+  }
+
+  /* Freeze the animated bg grid + blobs — keeps the look, kills the work */
+  .bg-grid { animation: none; opacity: 0.35; }
+  .bg-blob {
+    filter: blur(60px);
+    animation-duration: 60s; /* slower, less wakeups */
+    opacity: 0.18;
+  }
+
+  /* Halo pulse loop wakes up every kpi card 60×/sec — disable on phones */
+  .kpi-card { animation: none; }
+  .hint-icon { animation: none; }
+
+  /* Shimmer sweep on the logo also runs continuously — disable */
+  .logo-icon::after { animation: none; display: none; }
+}
+
+/* ── Disclaimer modal already has 640px styles in dashboard.css; add an
+ *    extra-tight pass for very small phones so the panel chrome stays
+ *    proportional. ─────────────────────────────────────────────────────── */
+@media (max-width: 420px) {
+  .disclaimer-modal     { padding: 8px; }
+  .disclaimer-panel     { max-height: 94vh; max-height: 94dvh; }
+  .disclaimer-header    { padding: 14px 16px; }
+  .disclaimer-header h2 { font-size: 0.95rem; }
+  .disclaimer-close     { width: 32px; height: 32px; font-size: 1.25rem; }
+  .disclaimer-body      { padding: 14px 16px; font-size: 0.82rem; }
+  .disclaimer-footer    { padding: 12px 14px 14px; }
+  .disclaimer-accept    { height: 46px; font-size: 0.92rem; }
+}
+
+/* ── Landscape orientation on phones — shorten chart heights so the
+ *    chart + axis labels fit without forcing a long vertical scroll. ─── */
+@media (max-width: 920px) and (orientation: landscape) and (max-height: 520px) {
+  .bar-wrap     { height: 240px; }
+  .hint-state   { padding: 36px 18px; }
+  .site-header  { position: relative; } /* free the viewport */
+}
+
+/* ── Honour reduced-motion preference ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
