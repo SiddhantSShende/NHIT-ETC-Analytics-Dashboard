@@ -8,8 +8,8 @@
  * Public surface (UMD-ish, attached to window.DataLayer):
  *   getMeta(): {plazas, years, months}
  *   getTaxonomy(): {rows, spvs, rounds, unmatched}
- *   aggregate({spv, round, plaza, year, month}): {record, prev_month, prev_year}
- *     — prev_month / prev_year may be null when comparison data is missing.
+ *   aggregate({spv, round, plaza, year, month}): {record, prev_year}
+ *     — prev_year may be null when comparison data is missing.
  *   aggregateRange({spv, round, plaza, start_year, start_month, end_year, end_month}): {record}
  *   aggregateTrend({spv, round, plaza}): {trend}
  *
@@ -171,10 +171,6 @@
     return out;
   }
 
-  function _prevMonth(year, month) {
-    if (month === 1) return { year: year - 1, month: 12 };
-    return { year, month: month - 1 };
-  }
 
   // ── Per-plaza category extraction from a monthly file ─────────────────────
   // The new monthly files store `vehicles` as {label: {count, amount}} per
@@ -315,11 +311,11 @@
   }
 
   // ── Public: aggregate for a single month with filters ─────────────────────
-  // Also returns prev_month and prev_year aggregates (computed with the same
-  // resolved plaza scope) so the dashboard can render MoM / YoY deltas
-  // without making separate API-style calls. prev_month / prev_year may be
-  // null when the corresponding month file does not exist or contains no
-  // matching plaza data — callers must handle null gracefully.
+  // Also returns prev_year aggregate (computed with the same resolved plaza
+  // scope) so the dashboard can render YoY deltas without making separate
+  // API-style calls. prev_year may be null when the corresponding month file
+  // does not exist or contains no matching plaza data — callers must handle
+  // null gracefully.
   async function aggregate({ spv = "", round = "", project = "", plaza = "", year, month }) {
     if (!year || !month) throw new Error("year and month are required");
     const filters = { spv, round, project, plaza };
@@ -329,10 +325,8 @@
       err.status = 404; throw err;
     }
 
-    const pm = _prevMonth(year, month);
-    const [mainRec, prevMonthRec, prevYearRec] = await Promise.all([
-      _tryAggregateSingle(plazas, year,    month),
-      _tryAggregateSingle(plazas, pm.year, pm.month),
+    const [mainRec, prevYearRec] = await Promise.all([
+      _tryAggregateSingle(plazas, year,     month),
       _tryAggregateSingle(plazas, year - 1, month),
     ]);
 
@@ -350,9 +344,8 @@
       plaza_count: plazas.length,
     };
     return {
-      record:     mainRec,
-      prev_month: prevMonthRec,
-      prev_year:  prevYearRec,
+      record:    mainRec,
+      prev_year: prevYearRec,
     };
   }
 

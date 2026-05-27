@@ -214,7 +214,7 @@
   gap: 18px;
   margin-bottom: 22px;
 }
-/* MoM / YoY delta colours. The class is toggled by renderDelta(). */
+/* YoY delta colours. The class is toggled by renderDelta(). */
 .hl-card .hl-value.delta-up   { color: #16a34a; }
 .hl-card .hl-value.delta-down { color: #dc2626; }
 
@@ -323,7 +323,7 @@
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 
-/* Section-header growth pills — compact MoM/YoY chips beside the section total. */
+/* Section-header growth pills — compact YoY chips beside the section total. */
 .sec-growth-pills {
   display: flex;
   gap: 10px;
@@ -407,10 +407,9 @@
 .cat-table tbody tr:hover { background: rgba(0, 48, 135, 0.04); }
 .cat-table tbody tr:last-child td { border-bottom: none; }
 
-/* Per-category MoM / YoY delta cells. Color convention matches renderDelta()
+/* Per-category YoY delta cells. Color convention matches renderDelta()
    on the section pills (green for growth, red for decline, neutral for null).
    Headers are right-aligned to match the right-aligned cell content below. */
-.cat-table th.mom-col,
 .cat-table th.yoy-col { text-align: right; }
 .cat-table td.delta-cell {
   text-align: right;
@@ -420,9 +419,8 @@
 .cat-table td.delta-up   { color: #16a34a; font-weight: 600; }
 .cat-table td.delta-down { color: #dc2626; font-weight: 600; }
 
-/* Range mode has no meaningful single prior period, so hide MoM/YoY entirely
+/* Range mode has no meaningful single prior period, so hide YoY entirely
    (matches the section-header pill hiding in render.js when isRange). */
-.cat-table.is-range .mom-col,
 .cat-table.is-range .yoy-col { display: none; }
 
 .cat-dot {

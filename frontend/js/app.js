@@ -157,7 +157,7 @@ async function loadData() {
         dataJson.record,
         trendJson.trend || [],
         opts,
-        { prevMonth: dataJson.prev_month || null, prevYear: dataJson.prev_year || null },
+        { prevYear: dataJson.prev_year || null },
       );
     } catch (renderErr) {
       console.error("Render failed:", renderErr);

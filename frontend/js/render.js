@@ -42,35 +42,25 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   setText("hlAvgCntMeta", dayMeta);
   setText("hlAvgRevMeta", dayMeta);
 
-  // MoM/YoY top KPI cards + section-card pills — single-month mode only.
-  const momCard = document.getElementById("kpiMom")?.closest(".kpi-card");
+  // YoY top KPI card + section-card pills — single-month mode only.
   const yoyCard = document.getElementById("kpiYoy")?.closest(".kpi-card");
   const sectionPillWraps = document.querySelectorAll(".sec-growth-pills");
   if (isRange) {
-    momCard?.classList.add("hidden");
     yoyCard?.classList.add("hidden");
     sectionPillWraps.forEach(w => w.classList.add("hidden"));
   } else {
-    momCard?.classList.remove("hidden");
     yoyCard?.classList.remove("hidden");
     sectionPillWraps.forEach(w => w.classList.remove("hidden"));
-    const { prevMonth, prevYear } = deltas;
-    const pmLabel = prevMonthLabel(rec.year, rec.month);
+    const { prevYear } = deltas;
     const pyLabel = prevYearLabel(rec.year, rec.month);
     const fmtTxn  = v => fmtTxnL(v);
     const fmtRev  = v => "₹" + fmtRevCr(v);
-    renderDelta("kpiMom", "kpiMomSub", null,
-      rec.total_amount, prevMonth?.total_amount, pmLabel, fmtRev);
     renderDelta("kpiYoy", "kpiYoySub", null,
       rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
 
     // Section-card pills — Transaction Count uses counts, Revenue uses amounts.
-    renderDelta("countMom", "countMomSub", null,
-      rec.total_count,  prevMonth?.total_count,  pmLabel, fmtTxn);
     renderDelta("countYoy", "countYoySub", null,
       rec.total_count,  prevYear?.total_count,   pyLabel, fmtTxn);
-    renderDelta("amtMom",   "amtMomSub",   null,
-      rec.total_amount, prevMonth?.total_amount, pmLabel, fmtRev);
     renderDelta("amtYoy",   "amtYoySub",   null,
       rec.total_amount, prevYear?.total_amount,  pyLabel, fmtRev);
   }
@@ -80,20 +70,19 @@ function renderResult(rec, trendArr, opts = {}, deltas = {}) {
   setVal("totalAmount", "₹" + fmtRevCr(rec.total_amount));
 
   // Tables — strict unit rule: transactions always in Lakhs, revenue always in Crores.
-  // Per-category MoM/YoY: prior-period category arrays come from the same
-  // aggregate() call that populates the section pills; in range mode no
-  // single prior period is meaningful, so we suppress the columns entirely
-  // (CSS hides .mom-col / .yoy-col when the table has .is-range).
+  // Per-category YoY: prior-year category array comes from the same
+  // aggregate() call that populates the section pill; in range mode no
+  // single prior period is meaningful, so we suppress the column entirely
+  // (CSS hides .yoy-col when the table has .is-range).
   const cats = rec.categories;
-  const { prevMonth: prevMonthRec, prevYear: prevYearRec } = deltas || {};
-  const pmCats = isRange ? null : prevMonthRec?.categories;
+  const { prevYear: prevYearRec } = deltas || {};
   const pyCats = isRange ? null : prevYearRec?.categories;
 
   document.getElementById("countTable")?.classList.toggle("is-range", isRange);
   document.getElementById("amtTable")?.classList.toggle("is-range", isRange);
 
-  renderShareTable("countTbody", cats, rec.total_count,  c => c.count,  fmtTxnL,                pmCats, pyCats);
-  renderShareTable("amtTbody",   cats, rec.total_amount, c => c.amount, v => "₹" + fmtRevCr(v), pmCats, pyCats);
+  renderShareTable("countTbody", cats, rec.total_count,  c => c.count,  fmtTxnL,                pyCats);
+  renderShareTable("amtTbody",   cats, rec.total_amount, c => c.amount, v => "₹" + fmtRevCr(v), pyCats);
 
   // Pies + bar comparison + trend — use short labels everywhere.
   drawPie("cntPie", cats.map(c => shortCat(c.name)), cats.map(c => c.count),  "cntChart", false);
@@ -125,7 +114,7 @@ function buildScopeMeta(rec) {
   return bits.join(" · ");
 }
 
-function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, prevYearCats) {
+function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevYearCats) {
   const body = document.getElementById(bodyId);
   // FY 2023-24 / 2024-25 source PDFs only carry plaza totals — no
   // VC4..VC11+ breakdown. Show a single placeholder row so the table
@@ -133,7 +122,7 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, pr
   if (!cats || !cats.length) {
     body.innerHTML = `
       <tr class="no-breakdown-row">
-        <td colspan="6" style="text-align:center; padding:24px 12px; color:var(--text2); font-style:italic;">
+        <td colspan="5" style="text-align:center; padding:24px 12px; color:var(--text2); font-style:italic;">
           —&nbsp;&nbsp;Per-category breakdown not available for this period&nbsp;&nbsp;—
         </td>
       </tr>`;
@@ -141,7 +130,6 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, pr
   }
 
   const max = Math.max(...cats.map(valueFn), 1);
-  const pmByName = new Map((prevMonthCats || []).map(c => [c.name, c]));
   const pyByName = new Map((prevYearCats  || []).map(c => [c.name, c]));
 
   const deltaCell = (curr, prev, colClass) => {
@@ -167,7 +155,6 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, pr
       <td><span class="cat-dot" style="background:${color};color:${color}"></span>${escapeHtml(shortCat(c.name))}</td>
       <td>${fmtFn(v)}</td>
       <td>${pct}%</td>
-      ${deltaCell(v, pmByName.get(c.name), "mom-col")}
       ${deltaCell(v, pyByName.get(c.name), "yoy-col")}
       <td style="width:140px">
         <div class="share-bar-bg"><div class="share-bar-fill" style="width:${bar}%;background:${color};color:${color}"></div></div>
@@ -176,7 +163,7 @@ function renderShareTable(bodyId, cats, total, valueFn, fmtFn, prevMonthCats, pr
   }).join("");
 }
 
-// ── MoM / YoY delta rendering ───────────────────────────────────────────────
+// ── YoY delta rendering ─────────────────────────────────────────────────────
 // Writes the signed percentage into valueId, a description sentence into
 // metaId, and (optionally) the previous absolute value into prevId. When the
 // value element is inside a `.kpi-growth` KPI card, this also flips the
@@ -231,12 +218,6 @@ function renderDelta(valueId, metaId, prevId, curr, prev, comparisonLabel, fmt) 
       ? `${verb} vs ${comparisonLabel} (${fmt(prev)})`
       : `${verb} vs ${comparisonLabel}`;
   }
-}
-
-function prevMonthLabel(year, month) {
-  const m = month === 1 ? 12 : month - 1;
-  const y = month === 1 ? year - 1 : year;
-  return `${MONTH_LABELS[m].slice(0, 3)} ${y}`;
 }
 
 function prevYearLabel(year, month) {
