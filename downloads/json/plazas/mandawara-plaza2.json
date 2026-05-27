@@ -6,8 +6,44 @@
   "source_raw_names": [
     "Mandawara Toll Plaza2"
   ],
-  "period_count": 16,
+  "period_count": 17,
   "months": {
+    "2024-12": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 79,
+          "amount": 4505.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1,
+          "amount": 95.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2,
+          "amount": 305.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1,
+          "amount": 220.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2,
+          "amount": 1380.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 85,
+        "amount": 6505.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2024/Dec 2024.pdf"
+      ]
+    },
     "2025-01": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
@@ -41,7 +77,6 @@
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Jan-2025.pdf"
       ]
     },
@@ -78,7 +113,6 @@
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Feb-2025.pdf"
       ]
     },
@@ -115,7 +149,6 @@
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Mar-2025.pdf"
       ]
     },

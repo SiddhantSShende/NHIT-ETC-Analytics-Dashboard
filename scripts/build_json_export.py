@@ -214,6 +214,16 @@ def parse_vc_wise(pdf_path: Path) -> tuple[dict[str, dict], dict[str, dict]]:
                     name = str(r[plaza_idx] or "").strip()
                     if not name:
                         continue
+                    # pdfplumber occasionally merges two adjacent plaza rows
+                    # into one cell; the resulting name contains a newline
+                    # and the numeric columns are digit-soup. Same defensive
+                    # filter as parse_fy_summary().
+                    if "\n" in name:
+                        log.warning(
+                            "[%s] dropping merged row: %r",
+                            pdf_path.name, name[:80],
+                        )
+                        continue
                     pl = name.lower()
                     if pl in _SKIP_PLAZA_VALUES or "vc wise" in pl:
                         continue

@@ -4,263 +4,1328 @@
   "piu": "Ajmer",
   "ro": "Jaipur",
   "source_raw_names": [
-    "Para Plaza",
+    "Para Fee Plaza",
     "Para Toll Plaza"
   ],
-  "period_count": 37,
+  "period_count": 52,
   "months": {
-    "2023-04": {
-      "vehicles": null,
+    "2022-01": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 8389,
+          "amount": 462540.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 307,
+          "amount": 26105.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 636,
+          "amount": 116180.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 381,
+          "amount": 77990.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3002,
+          "amount": 862240.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 5390.0
+        }
+      },
       "total": {
-        "count": 14191,
-        "amount": 2242665.0
+        "count": 12729,
+        "amount": 1550445.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2022/Jan 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-02": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 8969,
+          "amount": 494200.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 291,
+          "amount": 24720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 663,
+          "amount": 118160.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 299,
+          "amount": 61490.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2652,
+          "amount": 762530.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 4955.0
+        }
+      },
+      "total": {
+        "count": 12888,
+        "amount": 1466055.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Feb 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 8281,
+          "amount": 461490.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 297,
+          "amount": 25560.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 726,
+          "amount": 132090.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 371,
+          "amount": 77770.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2812,
+          "amount": 816495.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 4430.0
+        }
+      },
+      "total": {
+        "count": 12499,
+        "amount": 1517835.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Mar 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 9017,
+          "amount": 547830.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 297,
+          "amount": 28475.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 761,
+          "amount": 150935.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 304,
+          "amount": 71980.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2718,
+          "amount": 877470.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 2050.0
+        }
+      },
+      "total": {
+        "count": 13102,
+        "amount": 1678740.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Apr 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 10173,
+          "amount": 606005.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 387,
+          "amount": 36135.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 791,
+          "amount": 154805.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 312,
+          "amount": 73190.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2605,
+          "amount": 829675.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 4245.0
+        }
+      },
+      "total": {
+        "count": 14279,
+        "amount": 1704055.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/May 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 7715,
+          "amount": 464790.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 274,
+          "amount": 26120.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 670,
+          "amount": 132175.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 293,
+          "amount": 69035.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2482,
+          "amount": 787150.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 4805.0
+        }
+      },
+      "total": {
+        "count": 11447,
+        "amount": 1484075.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Jun 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 9036,
+          "amount": 541280.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 269,
+          "amount": 25635.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 659,
+          "amount": 131645.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 332,
+          "amount": 76715.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2678,
+          "amount": 828800.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2395.0
+        }
+      },
+      "total": {
+        "count": 12981,
+        "amount": 1606470.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/July 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13718,
+          "amount": 860650.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 373,
+          "amount": 35805.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 846,
+          "amount": 172575.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 311,
+          "amount": 70695.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2275,
+          "amount": 711725.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 3530.0
+        }
+      },
+      "total": {
+        "count": 17533,
+        "amount": 1854980.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Aug 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-09": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 10625,
+          "amount": 660295.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 321,
+          "amount": 30505.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 733,
+          "amount": 147400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 262,
+          "amount": 60940.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3727,
+          "amount": 1146950.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2545.0
+        }
+      },
+      "total": {
+        "count": 15675,
+        "amount": 2048635.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Sep 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 9048,
+          "amount": 562710.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 248,
+          "amount": 23240.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 666,
+          "amount": 130455.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 291,
+          "amount": 68920.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2973,
+          "amount": 922775.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 3245.0
+        }
+      },
+      "total": {
+        "count": 13235,
+        "amount": 1711345.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Oct 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-11": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 9032,
+          "amount": 558275.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 309,
+          "amount": 28795.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 765,
+          "amount": 150555.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 322,
+          "amount": 76140.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2578,
+          "amount": 806750.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 425.0
+        }
+      },
+      "total": {
+        "count": 13007,
+        "amount": 1620940.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Nov 2022 ETC Data.pdf"
+      ]
+    },
+    "2022-12": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 8980,
+          "amount": 550965.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 327,
+          "amount": 30285.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 734,
+          "amount": 146570.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 530,
+          "amount": 122975.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3636,
+          "amount": 1091825.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 4725.0
+        }
+      },
+      "total": {
+        "count": 14221,
+        "amount": 1947345.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2022/Dec 2022 ETC Data.pdf"
+      ]
+    },
+    "2023-01": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15940,
+          "amount": 810671.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 682,
+          "amount": 50790.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 882,
+          "amount": 168470.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 569,
+          "amount": 128295.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3745,
+          "amount": 1139030.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 3180.0
+        }
+      },
+      "total": {
+        "count": 21827,
+        "amount": 2300436.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2023/Jan 2023.pdf"
+      ]
+    },
+    "2023-02": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19374,
+          "amount": 867133.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 961,
+          "amount": 57840.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1045,
+          "amount": 184430.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 594,
+          "amount": 134755.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3898,
+          "amount": 1179750.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2120.0
+        }
+      },
+      "total": {
+        "count": 25878,
+        "amount": 2426028.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2023/Feb 2023.pdf"
+      ]
+    },
+    "2023-03": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15111,
+          "amount": 715591.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 845,
+          "amount": 53820.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1078,
+          "amount": 205910.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 663,
+          "amount": 150580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3132,
+          "amount": 973510.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 3895.0
+        }
+      },
+      "total": {
+        "count": 20840,
+        "amount": 2103306.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2023/Mar 2023.pdf"
+      ]
+    },
+    "2023-04": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15159,
+          "amount": 762399.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 823,
+          "amount": 54635.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1004,
+          "amount": 201655.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 748,
+          "amount": 175710.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4191,
+          "amount": 1342095.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2875.0
+        }
+      },
+      "total": {
+        "count": 21932,
+        "amount": 2539369.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2023/Apr 2023.pdf"
       ]
     },
     "2023-05": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 21998,
+          "amount": 1051535.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 891,
+          "amount": 59355.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1217,
+          "amount": 229375.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 877,
+          "amount": 208405.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4321,
+          "amount": 1394420.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 3930.0
+        }
+      },
       "total": {
-        "count": 16198,
-        "amount": 2441035.0
+        "count": 29314,
+        "amount": 2947020.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/May 2023.pdf"
       ]
     },
     "2023-06": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 16100,
+          "amount": 802508.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 739,
+          "amount": 48055.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1033,
+          "amount": 207220.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 818,
+          "amount": 194000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5069,
+          "amount": 1657255.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 3485.0
+        }
+      },
       "total": {
-        "count": 15132,
-        "amount": 2570565.0
+        "count": 23768,
+        "amount": 2912523.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/Jun 2023.pdf"
       ]
     },
     "2023-07": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13447,
+          "amount": 714783.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 627,
+          "amount": 46150.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 911,
+          "amount": 187020.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 791,
+          "amount": 184790.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5767,
+          "amount": 1877935.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 15,
+          "amount": 5415.0
+        }
+      },
       "total": {
-        "count": 15499,
-        "amount": 2768545.0
+        "count": 21558,
+        "amount": 3016093.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/Jul 2023.pdf"
       ]
     },
     "2023-08": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14271,
+          "amount": 792985.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 653,
+          "amount": 43670.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1005,
+          "amount": 209280.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 841,
+          "amount": 198955.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6929,
+          "amount": 2225445.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 6230.0
+        }
+      },
       "total": {
-        "count": 18097,
-        "amount": 3255825.0
+        "count": 23717,
+        "amount": 3476565.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/Aug 2023.pdf"
       ]
     },
     "2023-09": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 16753,
+          "amount": 966470.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 744,
+          "amount": 49475.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1017,
+          "amount": 209100.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 667,
+          "amount": 155530.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4921,
+          "amount": 1651485.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2590.0
+        }
+      },
       "total": {
-        "count": 18330,
-        "amount": 2805075.0
+        "count": 24108,
+        "amount": 3034650.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/Sept 2023.pdf"
       ]
     },
     "2023-10": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13727,
+          "amount": 723918.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 630,
+          "amount": 47765.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1059,
+          "amount": 211050.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 832,
+          "amount": 194500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6744,
+          "amount": 2190020.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 23,
+          "amount": 9775.0
+        }
+      },
       "total": {
-        "count": 16450,
-        "amount": 3111075.0
+        "count": 23015,
+        "amount": 3377028.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/Oct 2023.pdf"
       ]
     },
     "2023-11": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14283,
+          "amount": 727583.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 550,
+          "amount": 40930.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1020,
+          "amount": 201695.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 650,
+          "amount": 150670.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4477,
+          "amount": 1475925.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 6630.0
+        }
+      },
       "total": {
-        "count": 12975,
-        "amount": 2262080.0
+        "count": 20998,
+        "amount": 2603433.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/Nov 2023.pdf"
       ]
     },
     "2023-12": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13715,
+          "amount": 724733.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 527,
+          "amount": 39965.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1080,
+          "amount": 213875.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 825,
+          "amount": 189925.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5849,
+          "amount": 1906245.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2670.0
+        }
+      },
       "total": {
-        "count": 15553,
-        "amount": 2821405.0
+        "count": 22002,
+        "amount": 3077413.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2023/Dec 2023.pdf"
       ]
     },
     "2024-01": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13321,
+          "amount": 699523.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 381,
+          "amount": 31440.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 985,
+          "amount": 200105.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 780,
+          "amount": 183035.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5914,
+          "amount": 1920410.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 4400.0
+        }
+      },
       "total": {
-        "count": 15129,
-        "amount": 2780515.0
+        "count": 21393,
+        "amount": 3038913.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2024/Jan 2024.pdf"
       ]
     },
     "2024-02": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 16713,
+          "amount": 880790.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 471,
+          "amount": 38220.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1135,
+          "amount": 229130.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 981,
+          "amount": 230070.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5750,
+          "amount": 1892650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 4290.0
+        }
+      },
       "total": {
-        "count": 17014,
-        "amount": 2931640.0
+        "count": 25060,
+        "amount": 3275150.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2024/Feb 2024.pdf"
       ]
     },
     "2024-03": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15913,
+          "amount": 843008.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 614,
+          "amount": 48200.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1525,
+          "amount": 290245.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1242,
+          "amount": 287580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6185,
+          "amount": 2020225.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2430.0
+        }
+      },
       "total": {
-        "count": 17166,
-        "amount": 3097315.0
+        "count": 25485,
+        "amount": 3491688.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
+        "downloads/ETC_Monthly_Data/2024/Mar 2024.pdf"
       ]
     },
     "2024-04": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 18483,
+          "amount": 945158.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 637,
+          "amount": 49910.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1210,
+          "amount": 238865.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1153,
+          "amount": 267190.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5230,
+          "amount": 1721080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 1780.0
+        }
+      },
       "total": {
-        "count": 16580,
-        "amount": 2809090.0
+        "count": 26717,
+        "amount": 3223983.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Apr 2024.pdf"
       ]
     },
     "2024-05": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14492,
+          "amount": 787613.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 416,
+          "amount": 37625.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1076,
+          "amount": 219680.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1028,
+          "amount": 241595.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6613,
+          "amount": 2149915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2590.0
+        }
+      },
       "total": {
-        "count": 17694,
-        "amount": 3201790.0
+        "count": 23631,
+        "amount": 3439018.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/May 2024.pdf"
       ]
     },
     "2024-06": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13252,
+          "amount": 738335.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 386,
+          "amount": 36490.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 986,
+          "amount": 206970.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 730,
+          "amount": 170935.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5703,
+          "amount": 1921720.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 910.0
+        }
+      },
       "total": {
-        "count": 15391,
-        "amount": 2807765.0
+        "count": 21059,
+        "amount": 3075360.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Jun 2024.pdf"
       ]
     },
     "2024-07": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14444,
+          "amount": 785533.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 397,
+          "amount": 35850.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1038,
+          "amount": 213000.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 695,
+          "amount": 166015.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5754,
+          "amount": 1933670.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 2195.0
+        }
+      },
       "total": {
-        "count": 15495,
-        "amount": 2819340.0
+        "count": 22333,
+        "amount": 3136263.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Jul 2024.pdf"
       ]
     },
     "2024-08": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14977,
+          "amount": 881015.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 411,
+          "amount": 38825.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1070,
+          "amount": 226955.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 650,
+          "amount": 155590.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4441,
+          "amount": 1517020.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2715.0
+        }
+      },
       "total": {
-        "count": 16468,
-        "amount": 2585440.0
+        "count": 21556,
+        "amount": 2822120.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Aug 2024.pdf"
       ]
     },
     "2024-09": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15844,
+          "amount": 942745.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 436,
+          "amount": 39720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1267,
+          "amount": 264070.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 784,
+          "amount": 187695.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5848,
+          "amount": 1980790.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 1820.0
+        }
+      },
       "total": {
-        "count": 19109,
-        "amount": 3190940.0
+        "count": 24183,
+        "amount": 3416840.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Sept 2024.pdf"
       ]
     },
     "2024-10": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14070,
+          "amount": 821630.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 424,
+          "amount": 38520.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1066,
+          "amount": 220240.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1094,
+          "amount": 263400.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6872,
+          "amount": 2313050.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 455.0
+        }
+      },
       "total": {
-        "count": 18463,
-        "amount": 3431620.0
+        "count": 23527,
+        "amount": 3657295.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Oct 2024.pdf"
       ]
     },
     "2024-11": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 17223,
+          "amount": 951700.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 422,
+          "amount": 39555.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1009,
+          "amount": 207190.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 877,
+          "amount": 207225.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4822,
+          "amount": 1657065.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2730.0
+        }
+      },
       "total": {
-        "count": 16679,
-        "amount": 2715190.0
+        "count": 24359,
+        "amount": 3065465.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Nov 2024.pdf"
       ]
     },
     "2024-12": {
-      "vehicles": null,
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14533,
+          "amount": 807165.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 383,
+          "amount": 36150.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1063,
+          "amount": 220070.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 757,
+          "amount": 184710.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6142,
+          "amount": 2065815.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 5075.0
+        }
+      },
       "total": {
-        "count": 16494,
-        "amount": 2992760.0
+        "count": 22890,
+        "amount": 3318985.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/ETC_Monthly_Data/2024/Dec 2024.pdf"
       ]
     },
     "2025-01": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 9352,
-          "amount": 581560.0
+          "count": 14685,
+          "amount": 794645.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 246,
-          "amount": 26035.0
+          "count": 346,
+          "amount": 32815.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 841,
-          "amount": 183720.0
+          "count": 974,
+          "amount": 202735.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 855,
-          "amount": 211120.0
+          "count": 872,
+          "amount": 213765.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6086,
-          "amount": 2078195.0
+          "count": 6165,
+          "amount": 2094995.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 5,
@@ -268,110 +1333,107 @@
         }
       },
       "total": {
-        "count": 17385,
-        "amount": 3082905.0
+        "count": 23047,
+        "amount": 3341230.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Jan-2025.pdf"
       ]
     },
     "2025-02": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 9256,
-          "amount": 573720.0
+          "count": 16600,
+          "amount": 867760.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 247,
-          "amount": 25945.0
+          "count": 362,
+          "amount": 33935.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 894,
-          "amount": 194520.0
+          "count": 1057,
+          "amount": 217165.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 847,
-          "amount": 205790.0
+          "count": 866,
+          "amount": 208605.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6006,
-          "amount": 2055040.0
+          "count": 6039,
+          "amount": 2062360.0
         },
         "Oversized Vehicle (VC11+)": {
-          "count": 5,
-          "amount": 2275.0
+          "count": 6,
+          "amount": 2515.0
         }
       },
       "total": {
-        "count": 17255,
-        "amount": 3057290.0
+        "count": 24930,
+        "amount": 3392340.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Feb-2025.pdf"
       ]
     },
     "2025-03": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 9400,
-          "amount": 578900.0
+          "count": 15683,
+          "amount": 825395.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 254,
-          "amount": 26930.0
+          "count": 356,
+          "amount": 33660.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 912,
-          "amount": 198960.0
+          "count": 1059,
+          "amount": 219585.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 1045,
-          "amount": 254150.0
+          "count": 1063,
+          "amount": 256720.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 5676,
-          "amount": 1965515.0
+          "count": 5773,
+          "amount": 1986635.0
         },
         "Oversized Vehicle (VC11+)": {
-          "count": 9,
-          "amount": 4015.0
+          "count": 10,
+          "amount": 4255.0
         }
       },
       "total": {
-        "count": 17296,
-        "amount": 3028470.0
+        "count": 23944,
+        "amount": 3326250.0
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Mar-2025.pdf"
       ]
     },
     "2025-04": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 9960,
-          "amount": 656260.0
+          "count": 19879,
+          "amount": 1042815.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 279,
-          "amount": 30540.0
+          "count": 382,
+          "amount": 37565.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 920,
-          "amount": 204910.0
+          "count": 1089,
+          "amount": 228190.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 1003,
-          "amount": 254840.0
+          "count": 1009,
+          "amount": 255800.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6508,
-          "amount": 2345520.0
+          "count": 6544,
+          "amount": 2353645.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 10,
@@ -379,8 +1441,8 @@
         }
       },
       "total": {
-        "count": 18680,
-        "amount": 3496650.0
+        "count": 28913,
+        "amount": 3922595.0
       },
       "annual_pass": null,
       "sources": [
@@ -390,24 +1452,24 @@
     "2025-05": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 11463,
-          "amount": 743045.0
+          "count": 21399,
+          "amount": 1138495.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 308,
-          "amount": 33300.0
+          "count": 456,
+          "amount": 43035.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 1052,
-          "amount": 232060.0
+          "count": 1195,
+          "amount": 252140.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 965,
-          "amount": 238140.0
+          "count": 974,
+          "amount": 239535.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6757,
-          "amount": 2410980.0
+          "count": 6797,
+          "amount": 2420355.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 2,
@@ -415,8 +1477,8 @@
         }
       },
       "total": {
-        "count": 20547,
-        "amount": 3658305.0
+        "count": 30823,
+        "amount": 4094340.0
       },
       "annual_pass": null,
       "sources": [
@@ -426,24 +1488,24 @@
     "2025-06": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 11504,
-          "amount": 755775.0
+          "count": 18676,
+          "amount": 1038490.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 262,
-          "amount": 28860.0
+          "count": 344,
+          "amount": 34520.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 932,
-          "amount": 205830.0
+          "count": 1032,
+          "amount": 220150.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 980,
-          "amount": 242730.0
+          "count": 984,
+          "amount": 243340.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6065,
-          "amount": 2157870.0
+          "count": 6098,
+          "amount": 2165620.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 2,
@@ -451,8 +1513,8 @@
         }
       },
       "total": {
-        "count": 19745,
-        "amount": 3392015.0
+        "count": 27136,
+        "amount": 3703070.0
       },
       "annual_pass": null,
       "sources": [
@@ -462,24 +1524,24 @@
     "2025-07": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 13731,
-          "amount": 885355.0
+          "count": 17889,
+          "amount": 1048725.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 285,
-          "amount": 29220.0
+          "count": 345,
+          "amount": 33160.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 891,
-          "amount": 200710.0
+          "count": 966,
+          "amount": 212070.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 793,
-          "amount": 197370.0
+          "count": 797,
+          "amount": 197890.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6410,
-          "amount": 2263365.0
+          "count": 6442,
+          "amount": 2270615.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 6,
@@ -487,8 +1549,8 @@
         }
       },
       "total": {
-        "count": 22116,
-        "amount": 3578530.0
+        "count": 26445,
+        "amount": 3764970.0
       },
       "annual_pass": null,
       "sources": [
@@ -498,24 +1560,24 @@
     "2025-08": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 16860,
-          "amount": 1058028.0
+          "count": 21474,
+          "amount": 1235398.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 294,
-          "amount": 30300.0
+          "count": 426,
+          "amount": 38485.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 1096,
-          "amount": 245020.0
+          "count": 1171,
+          "amount": 255660.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 849,
-          "amount": 209520.0
+          "count": 858,
+          "amount": 210825.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6090,
-          "amount": 2184975.0
+          "count": 6126,
+          "amount": 2193100.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 2,
@@ -523,11 +1585,11 @@
         }
       },
       "total": {
-        "count": 25191,
-        "amount": 3728708.0
+        "count": 30057,
+        "amount": 3934333.0
       },
       "annual_pass": {
-        "transaction_count": 732
+        "transaction_count": 800
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2025/Aug-2025-Annual-Pass-Data-2.pdf",
@@ -537,24 +1599,24 @@
     "2025-09": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 14645,
-          "amount": 810480.0
+          "count": 19166,
+          "amount": 979365.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 256,
-          "amount": 28020.0
+          "count": 361,
+          "amount": 34565.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 961,
-          "amount": 215290.0
+          "count": 1060,
+          "amount": 229530.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 947,
-          "amount": 237060.0
+          "count": 979,
+          "amount": 241670.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 7117,
-          "amount": 2540265.0
+          "count": 7179,
+          "amount": 2553890.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 10,
@@ -562,11 +1624,11 @@
         }
       },
       "total": {
-        "count": 23936,
-        "amount": 3835245.0
+        "count": 28755,
+        "amount": 4043150.0
       },
       "annual_pass": {
-        "transaction_count": 2365
+        "transaction_count": 2751
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2025/Sept-2025-Annual-Pass-Data.pdf",
@@ -576,24 +1638,24 @@
     "2025-10": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 14791,
-          "amount": 714195.0
+          "count": 20276,
+          "amount": 914820.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 280,
-          "amount": 28185.0
+          "count": 385,
+          "amount": 35085.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 916,
-          "amount": 196270.0
+          "count": 1030,
+          "amount": 211645.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 970,
-          "amount": 239085.0
+          "count": 981,
+          "amount": 240865.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6596,
-          "amount": 2291810.0
+          "count": 6644,
+          "amount": 2301970.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 9,
@@ -601,11 +1663,11 @@
         }
       },
       "total": {
-        "count": 23562,
-        "amount": 3473685.0
+        "count": 29325,
+        "amount": 3708525.0
       },
       "annual_pass": {
-        "transaction_count": 3426
+        "transaction_count": 4093
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2025/Oct-2025-Annual-Pass-Data.pdf",
@@ -615,24 +1677,24 @@
     "2025-11": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 17289,
-          "amount": 800825.0
+          "count": 24508,
+          "amount": 1060805.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 296,
-          "amount": 29540.0
+          "count": 396,
+          "amount": 35840.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 955,
-          "amount": 204000.0
+          "count": 1139,
+          "amount": 228760.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 980,
-          "amount": 240850.0
+          "count": 1002,
+          "amount": 244230.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 6889,
-          "amount": 2404165.0
+          "count": 6932,
+          "amount": 2413335.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 15,
@@ -640,11 +1702,11 @@
         }
       },
       "total": {
-        "count": 26424,
-        "amount": 3685720.0
+        "count": 33992,
+        "amount": 3989310.0
       },
       "annual_pass": {
-        "transaction_count": 4649
+        "transaction_count": 5604
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2025/Nov-2025-Annual-Pass-Data.pdf",
@@ -654,36 +1716,36 @@
     "2025-12": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 17227,
-          "amount": 772655.0
+          "count": 22851,
+          "amount": 973990.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 332,
-          "amount": 32690.0
+          "count": 413,
+          "amount": 38005.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 1045,
-          "amount": 222240.0
+          "count": 1196,
+          "amount": 243005.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 1074,
-          "amount": 261590.0
+          "count": 1093,
+          "amount": 264550.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 7765,
-          "amount": 2683375.0
+          "count": 7813,
+          "amount": 2693860.0
         },
         "Oversized Vehicle (VC11+)": {
-          "count": 0,
-          "amount": 0.0
+          "count": 1,
+          "amount": 240.0
         }
       },
       "total": {
-        "count": 27443,
-        "amount": 3972550.0
+        "count": 33367,
+        "amount": 4213650.0
       },
       "annual_pass": {
-        "transaction_count": 5304
+        "transaction_count": 6168
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Dec-2025-Annual-Pass-Data.pdf",
@@ -693,36 +1755,36 @@
     "2026-01": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 16190,
-          "amount": 710795.0
+          "count": 20773,
+          "amount": 876350.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 315,
-          "amount": 31845.0
+          "count": 382,
+          "amount": 36390.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 945,
-          "amount": 202560.0
+          "count": 1049,
+          "amount": 217720.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 1078,
-          "amount": 260185.0
+          "count": 1115,
+          "amount": 265935.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 8278,
-          "amount": 2876860.0
+          "count": 8334,
+          "amount": 2888460.0
         },
         "Oversized Vehicle (VC11+)": {
-          "count": 0,
-          "amount": 0.0
+          "count": 1,
+          "amount": 240.0
         }
       },
       "total": {
-        "count": 26806,
-        "amount": 4082245.0
+        "count": 31654,
+        "amount": 4285095.0
       },
       "annual_pass": {
-        "transaction_count": 5434
+        "transaction_count": 6156
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jan-2026-Annual-Pass-Data.pdf",
@@ -732,24 +1794,24 @@
     "2026-02": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 16245,
-          "amount": 690115.0
+          "count": 21619,
+          "amount": 876275.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 392,
-          "amount": 37125.0
+          "count": 512,
+          "amount": 44845.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 1099,
-          "amount": 235080.0
+          "count": 1293,
+          "amount": 260670.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 1120,
-          "amount": 268840.0
+          "count": 1144,
+          "amount": 272380.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 8856,
-          "amount": 3051825.0
+          "count": 8968,
+          "amount": 3073875.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 0,
@@ -757,11 +1819,11 @@
         }
       },
       "total": {
-        "count": 27712,
-        "amount": 4282985.0
+        "count": 33536,
+        "amount": 4528045.0
       },
       "annual_pass": {
-        "transaction_count": 5774
+        "transaction_count": 6768
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Feb-2026-Annual-Pass-Data.pdf",
@@ -771,24 +1833,24 @@
     "2026-03": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 16929,
-          "amount": 717280.0
+          "count": 22848,
+          "amount": 919170.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 356,
-          "amount": 33920.0
+          "count": 493,
+          "amount": 42915.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 1304,
-          "amount": 273360.0
+          "count": 1505,
+          "amount": 301075.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 1501,
-          "amount": 367345.0
+          "count": 1537,
+          "amount": 372295.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 7083,
-          "amount": 2507530.0
+          "count": 7152,
+          "amount": 2521675.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 1,
@@ -796,11 +1858,11 @@
         }
       },
       "total": {
-        "count": 27174,
-        "amount": 3899895.0
+        "count": 33536,
+        "amount": 4157590.0
       },
       "annual_pass": {
-        "transaction_count": 6282
+        "transaction_count": 7430
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Mar-2026-Annual-Pass-Data.pdf",
@@ -810,24 +1872,24 @@
     "2026-04": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
-          "count": 18235,
-          "amount": 788850.0
+          "count": 28267,
+          "amount": 1123000.0
         },
         "Light Commercial Vehicle (VC5)": {
-          "count": 363,
-          "amount": 37295.0
+          "count": 559,
+          "amount": 50280.0
         },
         "Bus / Truck - 2 Axle (VC6)": {
-          "count": 1231,
-          "amount": 265690.0
+          "count": 1460,
+          "amount": 296720.0
         },
         "3-Axle Vehicle (VC7)": {
-          "count": 1165,
-          "amount": 291600.0
+          "count": 1176,
+          "amount": 293390.0
         },
         "4-6 Axle (VC8/9/10)": {
-          "count": 8290,
-          "amount": 2899850.0
+          "count": 8330,
+          "amount": 2908290.0
         },
         "Oversized Vehicle (VC11+)": {
           "count": 0,
@@ -835,11 +1897,11 @@
         }
       },
       "total": {
-        "count": 29284,
-        "amount": 4283285.0
+        "count": 39792,
+        "amount": 4671680.0
       },
       "annual_pass": {
-        "transaction_count": 7312
+        "transaction_count": 9451
       },
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",

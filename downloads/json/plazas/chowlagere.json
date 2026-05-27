@@ -6,8 +6,44 @@
   "source_raw_names": [
     "Chowlagere Toll Plaza"
   ],
-  "period_count": 16,
+  "period_count": 17,
   "months": {
+    "2024-12": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 49374,
+          "amount": 2323190.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2676,
+          "amount": 198000.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5730,
+          "amount": 844725.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1677,
+          "amount": 270270.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5431,
+          "amount": 1361840.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 385.0
+        }
+      },
+      "total": {
+        "count": 64890,
+        "amount": 4998410.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/ETC_Monthly_Data/2024/Dec 2024.pdf"
+      ]
+    },
     "2025-01": {
       "vehicles": {
         "Car / Jeep / Van (VC4)": {
@@ -41,7 +77,6 @@
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Jan-2025.pdf"
       ]
     },
@@ -78,7 +113,6 @@
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Feb-2025.pdf"
       ]
     },
@@ -115,7 +149,6 @@
       },
       "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf",
         "downloads/vc_monthly/Mar-2025.pdf"
       ]
     },
