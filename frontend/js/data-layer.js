@@ -20,7 +20,12 @@
   "use strict";
 
   const BASE = "downloads/json";
-  const CACHE_NAME = "nhit-data-v1";
+  // Bump this whenever the JSON shape changes OR a deploy refreshes data files
+  // that may already be sitting in users' Cache Storage. The cache has no
+  // server-revalidation step, so the only way to force a refetch is to switch
+  // to a new cache name; the previous one is then orphaned (and the cleanup
+  // sweep below evicts it on next page load).
+  const CACHE_NAME = "nhit-data-v2";
   const MONTH_NAMES = [
     "", "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
@@ -34,7 +39,18 @@
     if (typeof caches === "undefined") {
       cachePromise = Promise.resolve(null);
     } else {
-      cachePromise = caches.open(CACHE_NAME).catch(() => null);
+      cachePromise = caches.open(CACHE_NAME).then(async (store) => {
+        // Evict orphaned nhit-data-vN caches from earlier deploys so they
+        // don't permanently occupy ~25MB of disk on every returning visitor.
+        try {
+          const keys = await caches.keys();
+          await Promise.all(
+            keys.filter(k => k.startsWith("nhit-data-") && k !== CACHE_NAME)
+                .map(k => caches.delete(k))
+          );
+        } catch (_) { /* private mode / unsupported — non-fatal */ }
+        return store;
+      }).catch(() => null);
     }
     return cachePromise;
   }
