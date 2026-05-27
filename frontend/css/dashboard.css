@@ -378,6 +378,14 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+.cat-table-disclaimer {
+  margin: 14px 0 0;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text3);
+  text-align: right;
+  letter-spacing: 0.02em;
+}
 .cat-table {
   width: 100%;
   border-collapse: collapse;
