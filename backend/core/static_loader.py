@@ -132,8 +132,15 @@ def load_snapshot(json_dir: Path = DEFAULT_JSON_DIR) -> dict:
                 data.setdefault(name, {})
                 monthly_totals.setdefault(name, [])
             cats, tcount, tamount = _enrich_categories(entry.get("vehicles"))
+            # FY-summary months only carry totals (no per-class breakdown).
+            # Still register them so the dashboard's KPIs / trend chart see
+            # 2023-24 data; vehicle-class views will simply show no data.
             if not cats:
-                continue
+                total = entry.get("total") or {}
+                tcount = int(total.get("count") or 0)
+                tamount = float(total.get("amount") or 0.0)
+                if tcount == 0 and tamount == 0:
+                    continue
             avg_per_txn = round(tamount / tcount, 2) if tcount else 0.0
             data[name][period] = {
                 "plaza":       name,

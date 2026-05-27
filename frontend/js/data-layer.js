@@ -25,7 +25,7 @@
   // server-revalidation step, so the only way to force a refetch is to switch
   // to a new cache name; the previous one is then orphaned (and the cleanup
   // sweep below evicts it on next page load).
-  const CACHE_NAME = "nhit-data-v2";
+  const CACHE_NAME = "nhit-data-v3";
   const MONTH_NAMES = [
     "", "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
@@ -181,24 +181,33 @@
   }
 
   // ── Single-month aggregation (port of analytics.aggregate_plazas_for_month)
+  // FY-summary periods (2023-04..2024-03) carry totals only — no vehicles.
+  // We track those contributions separately so KPIs/trend stay populated
+  // while category-driven widgets simply show no data for those months.
   function _aggregateMonth(plazaIndex, plazas, year, month) {
     const catMap = new Map();
     const plazasIncluded = [];
+    let extraCount = 0, extraAmount = 0;
     for (const plaza of plazas) {
       const rec = plazaIndex.get(plaza);
       if (!rec) continue;
       const cats = _extractCategoriesForPlaza(rec);
-      if (!cats.length) continue;
-      plazasIncluded.push(plaza);
-      for (const c of cats) {
-        const slot = catMap.get(c.name) || { count: 0, amount: 0 };
-        slot.count += c.count;
-        slot.amount += c.amount;
-        catMap.set(c.name, slot);
+      if (cats.length) {
+        plazasIncluded.push(plaza);
+        for (const c of cats) {
+          const slot = catMap.get(c.name) || { count: 0, amount: 0 };
+          slot.count += c.count;
+          slot.amount += c.amount;
+          catMap.set(c.name, slot);
+        }
+      } else if (rec.total && (rec.total.count || rec.total.amount)) {
+        plazasIncluded.push(plaza);
+        extraCount  += rec.total.count  || 0;
+        extraAmount += rec.total.amount || 0;
       }
     }
-    if (!catMap.size) return null;
-    return _enrich(catMap, plazasIncluded, year, month);
+    if (!catMap.size && extraCount === 0 && extraAmount === 0) return null;
+    return _enrich(catMap, plazasIncluded, year, month, { extraCount, extraAmount });
   }
 
   function _enrich(catMap, plazasIncluded, year, month, extra = {}) {
@@ -215,8 +224,16 @@
       }))
       .sort((a, b) => orderIx(a.name) - orderIx(b.name));
 
-    const totalCount = cats.reduce((a, c) => a + c.count, 0);
-    const totalAmount = Math.round(cats.reduce((a, c) => a + c.amount, 0) * 100) / 100;
+    // `extraCount` / `extraAmount` carry totals from FY-summary plazas that
+    // lack a per-category breakdown — they're added to the KPI totals so
+    // 2023-24 months still register, while the categories list stays
+    // truthful (empty when no VC breakdown is available).
+    const extraCount  = extra.extraCount  || 0;
+    const extraAmount = extra.extraAmount || 0;
+    const totalCount  = cats.reduce((a, c) => a + c.count, 0) + extraCount;
+    const totalAmount = Math.round(
+      (cats.reduce((a, c) => a + c.amount, 0) + extraAmount) * 100
+    ) / 100;
 
     const enriched = cats.map(c => ({
       name: c.name,
@@ -229,8 +246,14 @@
 
     // Kept for backward compatibility — chatbot engine still reads these
     // even though the dashboard no longer renders the corresponding cards.
-    const topAmt = enriched.reduce((a, b) => (b.amount > a.amount ? b : a), enriched[0]);
-    const topCnt = enriched.reduce((a, b) => (b.count  > a.count  ? b : a), enriched[0]);
+    // For FY-summary periods with no breakdown, enriched is [] so neither
+    // top has meaningful data; emit safe placeholders.
+    const topAmt = enriched.length
+      ? enriched.reduce((a, b) => (b.amount > a.amount ? b : a), enriched[0])
+      : { name: "", amount: 0 };
+    const topCnt = enriched.length
+      ? enriched.reduce((a, b) => (b.count  > a.count  ? b : a), enriched[0])
+      : { name: "", count: 0 };
 
     // Days-in-period: range mode passes pre-summed daysCount; single month
     // uses the actual calendar days. Defensive fallback = 30.
@@ -335,6 +358,7 @@
     const catMap = new Map();
     const plazasSet = new Set();
     const monthsIncluded = [];
+    let extraCount = 0, extraAmount = 0;
 
     // Load each month file lazily; missing periods are skipped.
     for (const [y, m] of months) {
@@ -347,14 +371,20 @@
         const rec = plazaIndex.get(p);
         if (!rec) continue;
         const cats = _extractCategoriesForPlaza(rec);
-        if (!cats.length) continue;
-        plazasSet.add(p);
-        monthHasData = true;
-        for (const c of cats) {
-          const slot = catMap.get(c.name) || { count: 0, amount: 0 };
-          slot.count += c.count;
-          slot.amount += c.amount;
-          catMap.set(c.name, slot);
+        if (cats.length) {
+          plazasSet.add(p);
+          monthHasData = true;
+          for (const c of cats) {
+            const slot = catMap.get(c.name) || { count: 0, amount: 0 };
+            slot.count += c.count;
+            slot.amount += c.amount;
+            catMap.set(c.name, slot);
+          }
+        } else if (rec.total && (rec.total.count || rec.total.amount)) {
+          plazasSet.add(p);
+          monthHasData = true;
+          extraCount  += rec.total.count  || 0;
+          extraAmount += rec.total.amount || 0;
         }
       }
       if (monthHasData) {
@@ -364,7 +394,7 @@
         });
       }
     }
-    if (!catMap.size) {
+    if (!catMap.size && extraCount === 0 && extraAmount === 0) {
       const err = new Error("No data found for the selected filters in the range.");
       err.status = 404; throw err;
     }
@@ -374,6 +404,8 @@
     const rec = _enrich(catMap, plazas.filter(p => plazasSet.has(p)), null, null, {
       daysCount: Math.max(daysCount, 1),
       monthsIncluded,
+      extraCount,
+      extraAmount,
       period: {
         start: { year: start_year, month: start_month },
         end:   { year: end_year,   month: end_month },
@@ -406,12 +438,19 @@
       let count = 0, amount = 0, hasData = false;
       for (const p of plazas) {
         const rec = plazaIndex.get(p);
-        if (!rec || !rec.vehicles) continue;
-        for (const v of Object.values(rec.vehicles)) {
-          count += v.count || 0;
-          amount += v.amount || 0;
+        if (!rec) continue;
+        if (rec.vehicles) {
+          for (const v of Object.values(rec.vehicles)) {
+            count += v.count || 0;
+            amount += v.amount || 0;
+          }
+          hasData = true;
+        } else if (rec.total && (rec.total.count || rec.total.amount)) {
+          // FY-summary plaza: totals only, no per-class breakdown.
+          count += rec.total.count || 0;
+          amount += rec.total.amount || 0;
+          hasData = true;
         }
-        hasData = true;
       }
       if (hasData && (count > 0 || amount > 0)) {
         trend.push({

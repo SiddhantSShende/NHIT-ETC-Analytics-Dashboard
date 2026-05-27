@@ -32,22 +32,35 @@ def aggregate_plazas_for_month(
     year: int,
     month: int,
 ) -> dict | None:
-    """Sum per-category totals across plazas for a single month."""
+    """Sum per-category totals across plazas for a single month.
+
+    For FY-summary periods (2023-04..2024-03) plazas carry only totals,
+    no per-class breakdown; we still include them in total_count /
+    total_amount via the extra_* accumulators so KPI/chatbot answers
+    return real figures for those months.
+    """
     key = f"{year}-{month:02d}"
     cat_map: dict[str, dict] = {}
     plazas_included: List[str] = []
+    extra_count = 0
+    extra_amount = 0.0
 
     for plaza in plazas:
         rec = snapshot["data"].get(plaza, {}).get(key)
         if not rec:
             continue
         plazas_included.append(plaza)
-        for c in rec.get("categories", []):
-            d = cat_map.setdefault(c["name"], {"count": 0, "amount": 0.0})
-            d["count"] += c["count"]
-            d["amount"] += c["amount"]
+        cats_for_plaza = rec.get("categories", [])
+        if cats_for_plaza:
+            for c in cats_for_plaza:
+                d = cat_map.setdefault(c["name"], {"count": 0, "amount": 0.0})
+                d["count"] += c["count"]
+                d["amount"] += c["amount"]
+        else:
+            extra_count += int(rec.get("total_count") or 0)
+            extra_amount += float(rec.get("total_amount") or 0.0)
 
-    if not cat_map:
+    if not cat_map and extra_count == 0 and extra_amount == 0.0:
         return None
 
     cats = [
@@ -56,8 +69,8 @@ def aggregate_plazas_for_month(
     ]
     cats.sort(key=lambda c: _category_sort_key(c["name"]))
 
-    total_count = sum(c["count"] for c in cats)
-    total_amount = round(sum(c["amount"] for c in cats), 2)
+    total_count = sum(c["count"] for c in cats) + extra_count
+    total_amount = round(sum(c["amount"] for c in cats) + extra_amount, 2)
 
     enriched = []
     for c in cats:
@@ -70,8 +83,8 @@ def aggregate_plazas_for_month(
             "avg_fare": round(c["amount"] / c["count"], 2) if c["count"] else 0.0,
         })
 
-    top_amt = max(enriched, key=lambda c: c["amount"])
-    top_cnt = max(enriched, key=lambda c: c["count"])
+    top_amt = max(enriched, key=lambda c: c["amount"]) if enriched else {"name": "", "amount": 0}
+    top_cnt = max(enriched, key=lambda c: c["count"])  if enriched else {"name": "", "count":  0}
 
     days = days_in_month(year, month)
 
@@ -108,6 +121,8 @@ def aggregate_plazas_for_range(
     cat_map: dict[str, dict] = {}
     plazas_set = set()
     months_included: List[dict] = []
+    extra_count = 0
+    extra_amount = 0.0
 
     for y, m in _iter_months(start_year, start_month, end_year, end_month):
         key = f"{y}-{m:02d}"
@@ -118,10 +133,15 @@ def aggregate_plazas_for_range(
                 continue
             plazas_set.add(plaza)
             month_has_data = True
-            for c in rec.get("categories", []):
-                d = cat_map.setdefault(c["name"], {"count": 0, "amount": 0.0})
-                d["count"] += c["count"]
-                d["amount"] += c["amount"]
+            cats_for_plaza = rec.get("categories", [])
+            if cats_for_plaza:
+                for c in cats_for_plaza:
+                    d = cat_map.setdefault(c["name"], {"count": 0, "amount": 0.0})
+                    d["count"] += c["count"]
+                    d["amount"] += c["amount"]
+            else:
+                extra_count += int(rec.get("total_count") or 0)
+                extra_amount += float(rec.get("total_amount") or 0.0)
         if month_has_data:
             months_included.append({
                 "year": y,
@@ -129,7 +149,7 @@ def aggregate_plazas_for_range(
                 "label": f"{MONTH_NAMES[m][:3]} {y}",
             })
 
-    if not cat_map:
+    if not cat_map and extra_count == 0 and extra_amount == 0.0:
         return None
 
     cats = [
@@ -138,8 +158,8 @@ def aggregate_plazas_for_range(
     ]
     cats.sort(key=lambda c: _category_sort_key(c["name"]))
 
-    total_count = sum(c["count"] for c in cats)
-    total_amount = round(sum(c["amount"] for c in cats), 2)
+    total_count = sum(c["count"] for c in cats) + extra_count
+    total_amount = round(sum(c["amount"] for c in cats) + extra_amount, 2)
 
     enriched = []
     for c in cats:
@@ -152,8 +172,8 @@ def aggregate_plazas_for_range(
             "avg_fare": round(c["amount"] / c["count"], 2) if c["count"] else 0.0,
         })
 
-    top_amt = max(enriched, key=lambda c: c["amount"])
-    top_cnt = max(enriched, key=lambda c: c["count"])
+    top_amt = max(enriched, key=lambda c: c["amount"]) if enriched else {"name": "", "amount": 0}
+    top_cnt = max(enriched, key=lambda c: c["count"])  if enriched else {"name": "", "count":  0}
 
     days = max(
         sum(days_in_month(mi["year"], mi["month"]) for mi in months_included),

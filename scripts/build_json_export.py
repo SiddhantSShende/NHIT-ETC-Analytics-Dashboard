@@ -64,6 +64,8 @@ _PERIOD_FROM_NAME_RE = re.compile(
     re.IGNORECASE,
 )
 
+_FY_FROM_NAME_RE = re.compile(r"FY[-_\s]*(\d{2})[-_\s]*(\d{2})", re.IGNORECASE)
+
 
 def period_from_filename(name: str) -> str | None:
     """Extract YYYY-MM period from a filename like 'Sept-2025-ETC-Data.pdf'."""
@@ -75,6 +77,26 @@ def period_from_filename(name: str) -> str | None:
     if not mon:
         return None
     return f"{yr:04d}-{mon:02d}"
+
+
+def fy_periods_from_filename(name: str) -> list[str] | None:
+    """Given 'Monthly-ETC-Data-FY-23-24-2.pdf', return Apr-Mar periods:
+    ['2023-04','2023-05',...,'2024-03']. Returns None if FY token absent."""
+    m = _FY_FROM_NAME_RE.search(name)
+    if not m:
+        return None
+    fy_a = int(m.group(1))
+    fy_b = int(m.group(2))
+    if (fy_a + 1) % 100 != fy_b:
+        return None
+    start_year = 2000 + fy_a
+    periods: list[str] = []
+    for i in range(12):
+        month = 4 + i
+        year = start_year if month <= 12 else start_year + 1
+        month = month if month <= 12 else month - 12
+        periods.append(f"{year:04d}-{month:02d}")
+    return periods
 
 
 # ---------------------------------------------------------------------------
@@ -321,6 +343,99 @@ def parse_annual_pass(pdf_path: Path) -> dict[str, dict]:
 
 
 # ---------------------------------------------------------------------------
+# FY-summary parser (12-month wide layout)
+# ---------------------------------------------------------------------------
+
+def parse_fy_summary(pdf_path: Path) -> dict[str, dict[str, dict]]:
+    """Parse a FY-summary PDF (rows: plaza | state | 12 × (Count, Amount)).
+
+    Returns: period -> raw_plaza -> {"total": {"count","amount"}}.
+    Per-vehicle-class breakdown is NOT available in FY summaries, so the
+    caller emits records with vehicles=null and only totals populated.
+
+    Header row appears only on page 1 of the PDF; pdfplumber treats the
+    first row of pages 2+ as the table header, so we accept any row whose
+    cell 0 is a non-skippable plaza name.
+    """
+    periods = fy_periods_from_filename(pdf_path.name)
+    if not periods or len(periods) != 12:
+        log.warning("Cannot infer FY periods from %s", pdf_path.name)
+        return {}
+
+    out: dict[str, dict[str, dict]] = {p: {} for p in periods}
+
+    def _is_header_row(cells: list) -> bool:
+        first = str(cells[0] or "").strip().lower()
+        if first in {"fee plaza name", "plaza name"}:
+            return True
+        # On pages 2+, pdfplumber may promote the first data row to header,
+        # so we only flag literal header markers here.
+        return False
+
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            for table in page.extract_tables() or []:
+                if not table:
+                    continue
+                for r in table:
+                    if not r or len(r) < 26:
+                        continue
+                    if _is_header_row(r):
+                        continue
+                    name = str(r[0] or "").strip()
+                    if not name:
+                        continue
+                    # pdfplumber occasionally merges two adjacent plaza rows
+                    # into one cell; the resulting name contains a newline
+                    # and the numeric columns are concatenated digit-soup.
+                    # Drop these — they corrupt downstream aggregations.
+                    if "\n" in name:
+                        log.warning("[%s] dropping merged row: %r", pdf_path.name, name[:80])
+                        continue
+                    nl = name.lower()
+                    if nl in _SKIP_PLAZA_VALUES or nl in {"total", "grand total"}:
+                        continue
+                    if "fee plaza" in nl or "plaza name" in nl:
+                        continue
+
+                    for i in range(12):
+                        ci = 2 + i * 2
+                        ai = ci + 1
+                        if ci >= len(r) or ai >= len(r):
+                            break
+                        cnt_raw = r[ci]
+                        amt_raw = r[ai]
+                        cnt = int(to_number(cnt_raw))
+                        amt = to_number(amt_raw)
+                        if cnt == 0 and amt == 0:
+                            continue
+                        bucket = out[periods[i]].setdefault(name, {
+                            "total": {"count": 0, "amount": 0.0},
+                        })
+                        bucket["total"]["count"] += cnt
+                        bucket["total"]["amount"] = round(
+                            bucket["total"]["amount"] + amt, 2
+                        )
+
+    return out
+
+
+def discover_fy_pdfs() -> list[Path]:
+    """FY-tagged summary PDFs from ETC_Monthly_Data/<year>/."""
+    out: list[Path] = []
+    etc_dir = DOWNLOADS / "ETC_Monthly_Data"
+    if not etc_dir.exists():
+        return out
+    for year_dir in sorted(etc_dir.iterdir()):
+        if not year_dir.is_dir():
+            continue
+        for p in sorted(year_dir.glob("*.pdf")):
+            if _FY_FROM_NAME_RE.search(p.name):
+                out.append(p)
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Validation
 # ---------------------------------------------------------------------------
 
@@ -455,6 +570,58 @@ def main() -> int:
             target["total"]["amount"] = round(
                 target["total"]["amount"] + float(bucket["total_extracted"]["amount"]), 2
             )
+
+    # ----- FY-summary PDFs (12 months of totals, no per-class breakdown) -----
+    # Processed AFTER per-month VC-wise PDFs so that any overlapping period
+    # (none today, but defensive) keeps the richer per-class data and only
+    # back-fills missing plazas with totals-only records.
+    fy_pdfs = discover_fy_pdfs()
+    log.info("Found %d FY-summary PDFs", len(fy_pdfs))
+    for pdf_path in fy_pdfs:
+        log.info("Parsing FY-summary %s", pdf_path.name)
+        fy_data = parse_fy_summary(pdf_path)
+        rel = str(pdf_path.relative_to(ROOT)).replace("\\", "/")
+        for period, plazas in fy_data.items():
+            if not plazas:
+                continue
+            # Skip periods already populated by per-month VC-wise PDFs.
+            # FY summaries only have totals, no per-class breakdown, and
+            # canonicalization between sources is imperfect — merging them
+            # would create duplicate plaza entries for the same period.
+            if monthly.get(period):
+                log.info(
+                    "  skipping FY period %s (already covered by VC-wise data)",
+                    period,
+                )
+                continue
+            sources_by_period[period].append(rel)
+            for raw, info in plazas.items():
+                resolved = resolver.resolve(raw)
+                if not resolved:
+                    continue
+                canon, _ = resolved
+                target = monthly[period].get(canon)
+                if target is None:
+                    target = monthly[period][canon] = {
+                        "plaza_name": canon,
+                        "plaza_slug": _slug(canon),
+                        "piu": "",
+                        "ro": "",
+                        "vehicles": None,
+                        "total": {"count": 0, "amount": 0.0},
+                        "annual_pass": None,
+                        "raw_names": set(),
+                    }
+                target["raw_names"].add(raw)
+                # Only back-fill totals when this plaza-period has no per-class
+                # data; otherwise the VC-wise extraction wins.
+                if target["vehicles"] is None:
+                    if target["total"] is None:
+                        target["total"] = {"count": 0, "amount": 0.0}
+                    target["total"]["count"] += int(info["total"]["count"])
+                    target["total"]["amount"] = round(
+                        target["total"]["amount"] + float(info["total"]["amount"]), 2
+                    )
 
     # ----- Annual-Pass PDFs -----
     ap_pdfs = discover_annual_pass_pdfs()
