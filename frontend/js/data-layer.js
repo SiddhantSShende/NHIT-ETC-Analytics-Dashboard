@@ -25,7 +25,7 @@
   // server-revalidation step, so the only way to force a refetch is to switch
   // to a new cache name; the previous one is then orphaned (and the cleanup
   // sweep below evicts it on next page load).
-  const CACHE_NAME = "nhit-data-v3";
+  const CACHE_NAME = "nhit-data-v4";
   const MONTH_NAMES = [
     "", "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
@@ -82,9 +82,17 @@
 
   let _indexP = null;
   let _taxP = null;
+  let _periodsSetP = null;
   function getIndex()    { return _indexP ||= fetchJson("_index.json"); }
   function getTaxonomy() { return _taxP   ||= fetchJson("_taxonomy.json"); }
   function getMonthFile(period) { return fetchJson(`monthly/${period}.json`); }
+  // Resolves once; subsequent checks are sync against the cached Set.
+  // We use this to short-circuit fetches for periods we know don't exist
+  // (e.g. user picks Feb 2023 — data starts at Apr 2023) so the dashboard
+  // doesn't spend ~1s per file on revalidating 404s with cache: "no-cache".
+  function getPeriodsSet() {
+    return _periodsSetP ||= getIndex().then(idx => new Set(idx.periods || []));
+  }
 
   // ── Meta (plazas + years + months) ────────────────────────────────────────
   async function getMeta() {
@@ -290,6 +298,8 @@
   async function _tryAggregateSingle(plazas, year, month) {
     if (!year || !month) return null;
     const period = `${year}-${String(month).padStart(2, "0")}`;
+    const periods = await getPeriodsSet();
+    if (!periods.has(period)) return null;
     let doc;
     try { doc = await getMonthFile(period); } catch (_) { return null; }
     return _aggregateMonth(_buildPlazaIndex(doc), plazas, year, month);
@@ -359,10 +369,12 @@
     const plazasSet = new Set();
     const monthsIncluded = [];
     let extraCount = 0, extraAmount = 0;
+    const knownPeriods = await getPeriodsSet();
 
     // Load each month file lazily; missing periods are skipped.
     for (const [y, m] of months) {
       const period = `${y}-${String(m).padStart(2, "0")}`;
+      if (!knownPeriods.has(period)) continue;
       let doc;
       try { doc = await getMonthFile(period); } catch (_) { continue; }
       const plazaIndex = _buildPlazaIndex(doc);
