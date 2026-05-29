@@ -142,8 +142,11 @@
   }
 
   // Resolve the candidate canonical plaza set for a filter.
-  // Mirrors server.py's behaviour: if no filter is set OR no taxonomy match,
-  // fall back to the full plaza universe.
+  // "All NHIT Plazas" (no filters) resolves to the UNION of every NHIT SPV
+  // plaza in the taxonomy (NEPPL + NSPPL + NWPPL) — NOT the full ~1258-plaza
+  // national index. With a filter set, it's the matched taxonomy subset.
+  // Only when a filter is set but matches no taxonomy row do we fall back to
+  // the full plaza universe (defensive — avoids silently empty results).
   async function _resolvePlazaScope(filters) {
     const tax = await getTaxonomy();
     const idx = await getIndex();
@@ -151,9 +154,10 @@
     const rows = _filterTaxonomyRows(tax, filters);
     const noFilters = !filters.spv && !filters.round && !filters.project && !filters.plaza;
     let plazas;
-    if (noFilters || rows.length === 0) {
+    if (!noFilters && rows.length === 0) {
       plazas = allPlazas.slice().sort();
     } else {
+      // noFilters → rows is the entire taxonomy, so this is the SPV union.
       plazas = Array.from(new Set(rows.map(r => r.canonical_plaza))).sort();
     }
     return { plazas, scopeRows: rows };
