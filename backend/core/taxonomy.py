@@ -34,7 +34,9 @@ EXCEL_PATH_DEFAULT = Path(__file__).resolve().parents[2] / "data" / "Project det
 # corresponds to a longer canonical name in the PDFs).
 MANUAL_ALIASES: dict[str, str] = {
     "Boharipar":                 "Bahoripar Fee Plaza",
-    "Kalajhar to Patacharkuchi": "Kalajhar Toll Plaza",
+    # "Kalajhar to Patacharkuchi" is the *section* name in the Excel; the
+    # actual NHIT fee plaza on that section is "Galia".
+    "Kalajhar to Patacharkuchi": "Galia",
     # 'Usaka' has no corresponding PDF data — leave unmatched on purpose.
 }
 
