@@ -4,8 +4,8 @@
   top: 0;
   z-index: 50;
   background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
   border-bottom: 1px solid var(--hairline);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 8px 32px rgba(15, 23, 42, 0.06);
 }
@@ -19,7 +19,17 @@
   gap: 16px;
   padding: 0 var(--container-pad);
 }
+.site-header.stage-item { --i: 0; }
+.selector-bar.stage-item { --i: 1; }
 .hdr-logo { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.logo-img {
+  width: 120px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
 .logo-icon {
   background: linear-gradient(135deg, #003087 0%, #4d8bff 100%);
   color: #fff;
@@ -77,6 +87,7 @@
   border: 1px solid var(--hairline);
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -109,8 +120,8 @@
 .site-footer {
   margin-top: 32px;
   background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-top: 1px solid var(--hairline);
   padding: 18px var(--container-pad);
   display: flex;

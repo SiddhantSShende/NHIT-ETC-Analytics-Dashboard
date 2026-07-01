@@ -5,6 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="theme-color" content="#f1f4fb" />
+  <meta name="msapplication-TileColor" content="#f1f4fb" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="frontend/img/nhit-logo.png" />
+  <link rel="icon" href="frontend/img/nhit-logo.png" type="image/png" />
   <meta name="color-scheme" content="light" />
   <title>NHIT | ETC Analytics Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,14 +38,10 @@
   <div class="bg-grain" aria-hidden="true"></div>
 
   <!-- HEADER -->
-  <header class="site-header stage-item" style="--i:0">
+  <header class="site-header stage-item">
     <div class="hdr-inner">
       <div class="hdr-logo">
-        <div class="logo-icon">
-          <span class="logo-n">n</span><span class="logo-h">h</span><span class="logo-i">i</span><span
-            class="logo-t">t</span>
-          <div class="logo-arrow"></div>
-        </div>
+        <img src="frontend/img/nhit-logo.png" alt="NHIT logo" class="logo-img" />
         <div class="logo-words">
           <span class="lw-nhit">NHIT</span>
           <span class="lw-sub">National Highways Infra Trust</span>
@@ -58,26 +59,26 @@
   </header>
 
   <!-- SELECTOR BAR -->
-  <div class="selector-bar stage-item" style="--i:1">
+  <div class="selector-bar stage-item">
     <div class="selector-inner">
 
       <!-- Left: all dropdowns/toggles, allowed to wrap to 2 lines -->
       <div class="sel-controls">
         <div class="sel-group">
           <label class="sel-label" for="spvSel">SPV</label>
-          <select id="spvSel" class="sel-ctrl">
+          <select id="spvSel" class="sel-ctrl" title="SPV">
             <option value="">All SPVs</option>
           </select>
         </div>
         <div class="sel-group">
           <label class="sel-label" for="roundSel">Round</label>
-          <select id="roundSel" class="sel-ctrl">
+          <select id="roundSel" class="sel-ctrl" title="Round">
             <option value="">All Rounds</option>
           </select>
         </div>
         <div class="sel-group">
           <label class="sel-label" for="plazaSel">Fee Plaza</label>
-          <select id="plazaSel" class="sel-ctrl wide">
+          <select id="plazaSel" class="sel-ctrl wide" title="Fee Plaza">
             <option value="">All Plazas</option>
           </select>
         </div>
@@ -90,23 +91,23 @@
         </div>
         <div class="sel-group single-only">
           <label class="sel-label" for="yearSel">Year</label>
-          <select id="yearSel" class="sel-ctrl">
+          <select id="yearSel" class="sel-ctrl" title="Year">
             <option value="">-- Year --</option>
           </select>
         </div>
         <div class="sel-group single-only">
           <label class="sel-label" for="monthSel">Month</label>
-          <select id="monthSel" class="sel-ctrl">
+          <select id="monthSel" class="sel-ctrl" title="Month">
             <option value="">-- Month --</option>
           </select>
         </div>
         <div class="sel-group range-only hidden">
           <label class="sel-label" for="startYearSel">Start</label>
           <div class="sel-inline">
-            <select id="startYearSel" class="sel-ctrl">
+            <select id="startYearSel" class="sel-ctrl" title="Start Year">
               <option value="">-- Year --</option>
             </select>
-            <select id="startMonthSel" class="sel-ctrl">
+            <select id="startMonthSel" class="sel-ctrl" title="Start Month">
               <option value="">-- Month --</option>
             </select>
           </div>
@@ -114,10 +115,10 @@
         <div class="sel-group range-only hidden">
           <label class="sel-label" for="endYearSel">End</label>
           <div class="sel-inline">
-            <select id="endYearSel" class="sel-ctrl">
+            <select id="endYearSel" class="sel-ctrl" title="End Year">
               <option value="">-- Year --</option>
             </select>
-            <select id="endMonthSel" class="sel-ctrl">
+            <select id="endMonthSel" class="sel-ctrl" title="End Month">
               <option value="">-- Month --</option>
             </select>
           </div>

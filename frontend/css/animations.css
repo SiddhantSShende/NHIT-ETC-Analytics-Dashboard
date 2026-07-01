@@ -163,8 +163,8 @@
     linear-gradient(rgba(0, 48, 135, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 48, 135, 0.045) 1px, transparent 1px);
   background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
   animation: gridShift 28s linear infinite;
   opacity: 0.55;
 }

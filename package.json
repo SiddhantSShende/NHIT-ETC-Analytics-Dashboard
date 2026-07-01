@@ -1,0 +1,27 @@
+{
+  "name": "nhit_dashboard",
+  "version": "1.0.0",
+  "description": "Plaza-level analytics over IHMCL VC-Wise monthly toll reports. The dashboard is a static frontend that reads pre-built JSON files.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiddhantSShende/NHIT-ETC-Analytics-Dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SiddhantSShende/NHIT-ETC-Analytics-Dashboard/issues"
+  },
+  "homepage": "https://github.com/SiddhantSShende/NHIT-ETC-Analytics-Dashboard#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
