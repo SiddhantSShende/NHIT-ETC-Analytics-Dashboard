@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kumbalam Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1903,6 +1903,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 499577,
+          "amount": 18818510.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 38282,
+          "amount": 2406800.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 40988,
+          "amount": 6244315.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8132,
+          "amount": 1163415.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 20947,
+          "amount": 4512945.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 3665.0
+        }
+      },
+      "total": {
+        "count": 607944,
+        "amount": 33149650.0
+      },
+      "annual_pass": {
+        "transaction_count": 41852
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

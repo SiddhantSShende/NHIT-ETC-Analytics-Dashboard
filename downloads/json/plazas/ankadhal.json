@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ankadhal"
   ],
-  "period_count": 45,
+  "period_count": 46,
   "months": {
     "2022-08": {
       "vehicles": {
@@ -1653,6 +1653,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 232457,
+          "amount": 16741265.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8775,
+          "amount": 1366550.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 31244,
+          "amount": 9786865.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4715,
+          "amount": 1824020.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22411,
+          "amount": 12230080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 297,
+          "amount": 210665.0
+        }
+      },
+      "total": {
+        "count": 299899,
+        "amount": 42159445.0
+      },
+      "annual_pass": {
+        "transaction_count": 65701
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

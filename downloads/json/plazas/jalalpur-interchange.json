@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Jalalpur Interchange",
+  "plaza_slug": "jalalpur-interchange",
+  "piu": "Baghpat",
+  "ro": "Delhi",
+  "source_raw_names": [
+    "Jalalpur Interchange"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 24163,
+          "amount": 915510.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 564,
+          "amount": 60430.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1689,
+          "amount": 311765.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 124,
+          "amount": 22295.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 594,
+          "amount": 175845.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 27134,
+        "amount": 1485845.0
+      },
+      "annual_pass": {
+        "transaction_count": 4274
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
+      ]
+    }
+  }
+}

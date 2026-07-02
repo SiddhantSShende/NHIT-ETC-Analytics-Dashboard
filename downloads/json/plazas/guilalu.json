@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Guilalu Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1895,6 +1895,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 497181,
+          "amount": 29107315.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 69737,
+          "amount": 9534390.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 170757,
+          "amount": 45875580.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 51248,
+          "amount": 23067365.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 140030,
+          "amount": 64691270.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 810,
+          "amount": 464880.0
+        }
+      },
+      "total": {
+        "count": 929763,
+        "amount": 172740800.0
+      },
+      "annual_pass": {
+        "transaction_count": 99763
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

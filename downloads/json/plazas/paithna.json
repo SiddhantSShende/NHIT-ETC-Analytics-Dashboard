@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Paithna"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-02": {
       "vehicles": {
@@ -573,6 +573,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 106327,
+          "amount": 10236300.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11614,
+          "amount": 2766750.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11649,
+          "amount": 7535425.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3635,
+          "amount": 2668215.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 18843,
+          "amount": 20381080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 16,
+          "amount": 19875.0
+        }
+      },
+      "total": {
+        "count": 152084,
+        "amount": 43607645.0
+      },
+      "annual_pass": {
+        "transaction_count": 48525
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

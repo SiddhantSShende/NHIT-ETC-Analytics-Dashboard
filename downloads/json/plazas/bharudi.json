@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bharudi Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 718740,
+          "amount": 21976045.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 34159,
+          "amount": 1880755.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 81108,
+          "amount": 10128335.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 16502,
+          "amount": 2429075.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 68128,
+          "amount": 14915105.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 233,
+          "amount": 67310.0
+        }
+      },
+      "total": {
+        "count": 918870,
+        "amount": 51396625.0
+      },
+      "annual_pass": {
+        "transaction_count": 187657
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Deogarh Toll Plaza"
   ],
-  "period_count": 32,
+  "period_count": 33,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1173,6 +1173,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13171,
+          "amount": 2514675.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 175,
+          "amount": 76065.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1758,
+          "amount": 938185.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1491,
+          "amount": 1411715.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8514,
+          "amount": 17236940.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 4810.0
+        }
+      },
+      "total": {
+        "count": 25111,
+        "amount": 22182390.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

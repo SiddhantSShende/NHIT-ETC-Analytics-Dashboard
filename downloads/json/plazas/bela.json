@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bela Toll Plaza"
   ],
-  "period_count": 39,
+  "period_count": 40,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1437,6 +1437,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 104292,
+          "amount": 6155095.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6273,
+          "amount": 718080.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10512,
+          "amount": 2605770.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2377,
+          "amount": 775180.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37244,
+          "amount": 17808530.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 12880.0
+        }
+      },
+      "total": {
+        "count": 160722,
+        "amount": 28075535.0
+      },
+      "annual_pass": {
+        "transaction_count": 31634
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

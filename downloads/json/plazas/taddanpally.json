@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Taddanpally Toll Plaza"
   ],
-  "period_count": 39,
+  "period_count": 40,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1437,6 +1437,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 197701,
+          "amount": 14789375.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8966,
+          "amount": 1559460.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 39311,
+          "amount": 14454660.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9253,
+          "amount": 4013760.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 32147,
+          "amount": 21194730.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 22,
+          "amount": 16660.0
+        }
+      },
+      "total": {
+        "count": 287400,
+        "amount": 56028645.0
+      },
+      "annual_pass": {
+        "transaction_count": 55773
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

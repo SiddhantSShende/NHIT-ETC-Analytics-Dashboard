@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karodi"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 203268,
+          "amount": 10395225.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10944,
+          "amount": 1135750.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 31247,
+          "amount": 7113600.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19756,
+          "amount": 4878120.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 38568,
+          "amount": 14053875.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 340,
+          "amount": 150645.0
+        }
+      },
+      "total": {
+        "count": 304123,
+        "amount": 37727215.0
+      },
+      "annual_pass": {
+        "transaction_count": 60960
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

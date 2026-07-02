@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chhoti Villor Fee Plaza"
   ],
-  "period_count": 49,
+  "period_count": 50,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1797,6 +1797,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 70035,
+          "amount": 1656450.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2001,
+          "amount": 88200.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19624,
+          "amount": 1814835.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5255,
+          "amount": 543150.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27337,
+          "amount": 4150720.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 75,
+          "amount": 14555.0
+        }
+      },
+      "total": {
+        "count": 124327,
+        "amount": 8267910.0
+      },
+      "annual_pass": {
+        "transaction_count": 13777
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

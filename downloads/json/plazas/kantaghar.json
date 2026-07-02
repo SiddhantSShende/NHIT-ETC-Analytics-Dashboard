@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kantaghar"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 76434,
+          "amount": 3884125.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1836,
+          "amount": 208535.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4547,
+          "amount": 1077525.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5865,
+          "amount": 1487690.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 89113,
+          "amount": 33497935.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 44,
+          "amount": 18935.0
+        }
+      },
+      "total": {
+        "count": 177839,
+        "amount": 40174745.0
+      },
+      "annual_pass": {
+        "transaction_count": 25108
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

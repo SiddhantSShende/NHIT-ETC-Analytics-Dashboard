@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Brahamarakotlu Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 345996,
+          "amount": 9300715.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 25716,
+          "amount": 1080870.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 69519,
+          "amount": 5361895.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9915,
+          "amount": 897780.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29065,
+          "amount": 4580845.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 72,
+          "amount": 10415.0
+        }
+      },
+      "total": {
+        "count": 480283,
+        "amount": 21232520.0
+      },
+      "annual_pass": {
+        "transaction_count": 55034
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Thikariya Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1903,6 +1903,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 715445,
+          "amount": 33188475.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 50111,
+          "amount": 7070825.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 153501,
+          "amount": 44683505.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 68113,
+          "amount": 22969280.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 306105,
+          "amount": 151651595.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 211,
+          "amount": 125670.0
+        }
+      },
+      "total": {
+        "count": 1293486,
+        "amount": 259689350.0
+      },
+      "annual_pass": {
+        "transaction_count": 300178
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

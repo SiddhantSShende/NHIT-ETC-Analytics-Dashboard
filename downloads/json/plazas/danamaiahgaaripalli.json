@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Danamaiahgaaripalli Toll Plaza"
   ],
-  "period_count": 49,
+  "period_count": 50,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1797,6 +1797,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 77285,
+          "amount": 3515605.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6310,
+          "amount": 673245.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17911,
+          "amount": 3373525.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4857,
+          "amount": 1207920.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17942,
+          "amount": 6985865.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 5795.0
+        }
+      },
+      "total": {
+        "count": 124317,
+        "amount": 15761955.0
+      },
+      "annual_pass": {
+        "transaction_count": 26094
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

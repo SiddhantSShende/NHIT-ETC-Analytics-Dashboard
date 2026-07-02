@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Devikulam Plaza"
   ],
-  "period_count": 19,
+  "period_count": 20,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -717,6 +717,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 102296,
+          "amount": 3092655.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2331,
+          "amount": 118110.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3810,
+          "amount": 356810.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 286,
+          "amount": 33250.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 196,
+          "amount": 33500.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 108919,
+        "amount": 3634325.0
+      },
+      "annual_pass": {
+        "transaction_count": 15939
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

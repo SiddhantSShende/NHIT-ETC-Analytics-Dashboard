@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Manoharabad"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1901,6 +1901,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 417295,
+          "amount": 22377680.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 30528,
+          "amount": 4124350.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 114437,
+          "amount": 32792855.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 50097,
+          "amount": 16911360.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 80664,
+          "amount": 39593335.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 125,
+          "amount": 71795.0
+        }
+      },
+      "total": {
+        "count": 693146,
+        "amount": 115871375.0
+      },
+      "annual_pass": {
+        "transaction_count": 87864
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

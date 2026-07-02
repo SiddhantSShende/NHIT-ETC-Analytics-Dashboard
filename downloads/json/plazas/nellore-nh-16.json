@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nellore Plaza (NH- 16)"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1895,6 +1895,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 447499,
+          "amount": 13233165.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 45973,
+          "amount": 5366865.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 119254,
+          "amount": 15447690.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 52061,
+          "amount": 6753495.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 177101,
+          "amount": 29077445.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 290,
+          "amount": 63840.0
+        }
+      },
+      "total": {
+        "count": 842178,
+        "amount": 69942500.0
+      },
+      "annual_pass": {
+        "transaction_count": 111284
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Patgaon Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 49906,
+          "amount": 3760675.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9823,
+          "amount": 1580670.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 35755,
+          "amount": 12781900.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 24745,
+          "amount": 9982065.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 59241,
+          "amount": 34121510.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 43,
+          "amount": 27780.0
+        }
+      },
+      "total": {
+        "count": 179513,
+        "amount": 62254600.0
+      },
+      "annual_pass": {
+        "transaction_count": 4858
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

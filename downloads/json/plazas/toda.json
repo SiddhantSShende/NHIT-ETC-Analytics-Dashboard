@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Toda Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 37608,
+          "amount": 1394870.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1002,
+          "amount": 80685.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3455,
+          "amount": 561575.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1072,
+          "amount": 198130.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19726,
+          "amount": 4854600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 710.0
+        }
+      },
+      "total": {
+        "count": 62865,
+        "amount": 7090570.0
+      },
+      "annual_pass": {
+        "transaction_count": 9631
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

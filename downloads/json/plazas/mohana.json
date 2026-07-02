@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mohana Toll Plaza"
   ],
-  "period_count": 7,
+  "period_count": 8,
   "months": {
     "2025-10": {
       "vehicles": {
@@ -279,6 +279,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 177090,
+          "amount": 5404195.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10533,
+          "amount": 932315.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18274,
+          "amount": 3580450.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1438,
+          "amount": 316815.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12322,
+          "amount": 4046350.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 26,
+          "amount": 7975.0
+        }
+      },
+      "total": {
+        "count": 219683,
+        "amount": 14288100.0
+      },
+      "annual_pass": {
+        "transaction_count": 88553
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

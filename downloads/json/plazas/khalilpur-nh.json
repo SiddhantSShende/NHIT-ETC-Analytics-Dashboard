@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khalilpur NH fee plaza"
   ],
-  "period_count": 8,
+  "period_count": 9,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -308,6 +308,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 259589,
+          "amount": 21905120.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9940,
+          "amount": 4924965.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 29370,
+          "amount": 42407190.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 14508,
+          "amount": 21436285.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 50881,
+          "amount": 76382525.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 15,
+          "amount": 22650.0
+        }
+      },
+      "total": {
+        "count": 364303,
+        "amount": 167078735.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

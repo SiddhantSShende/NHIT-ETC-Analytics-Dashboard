@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Manambadi"
   ],
-  "period_count": 10,
+  "period_count": 11,
   "months": {
     "2025-07": {
       "vehicles": {
@@ -393,6 +393,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 208066,
+          "amount": 13042435.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5894,
+          "amount": 860025.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15383,
+          "amount": 3949425.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2171,
+          "amount": 719550.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3391,
+          "amount": 1722560.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 5300.0
+        }
+      },
+      "total": {
+        "count": 234915,
+        "amount": 20299295.0
+      },
+      "annual_pass": {
+        "transaction_count": 68819
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lodam Toll Plaza"
   ],
-  "period_count": 39,
+  "period_count": 40,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1437,6 +1437,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 31381,
+          "amount": 1764015.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1298,
+          "amount": 114600.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8706,
+          "amount": 1682265.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1090,
+          "amount": 237590.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 14888,
+          "amount": 4855120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 5370.0
+        }
+      },
+      "total": {
+        "count": 57377,
+        "amount": 8658960.0
+      },
+      "annual_pass": {
+        "transaction_count": 3997
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

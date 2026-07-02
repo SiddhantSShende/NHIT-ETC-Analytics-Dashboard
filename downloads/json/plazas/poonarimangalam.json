@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Poonarimangalam"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 235931,
+          "amount": 11400314.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3968,
+          "amount": 348665.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7554,
+          "amount": 1078325.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5733,
+          "amount": 890155.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 36075,
+          "amount": 8226560.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 20,
+          "amount": 5315.0
+        }
+      },
+      "total": {
+        "count": 289281,
+        "amount": 21949334.0
+      },
+      "annual_pass": {
+        "transaction_count": 24921
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gummadidala Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 127266,
+          "amount": 6332395.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9694,
+          "amount": 839400.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15335,
+          "amount": 2702375.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3027,
+          "amount": 643950.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5145,
+          "amount": 1686165.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 4765.0
+        }
+      },
+      "total": {
+        "count": 160480,
+        "amount": 12209050.0
+      },
+      "annual_pass": {
+        "transaction_count": 22294
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

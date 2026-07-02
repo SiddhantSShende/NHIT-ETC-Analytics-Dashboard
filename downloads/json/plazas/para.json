@@ -7,7 +7,7 @@
     "Para Fee Plaza",
     "Para Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1906,6 +1906,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 25261,
+          "amount": 984680.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 488,
+          "amount": 46805.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1367,
+          "amount": 285480.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1044,
+          "amount": 260080.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7899,
+          "amount": 2730435.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 5085.0
+        }
+      },
+      "total": {
+        "count": 36070,
+        "amount": 4312565.0
+      },
+      "annual_pass": {
+        "transaction_count": 9174
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chokkenahalli toll plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 757238,
+          "amount": 22189840.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 96785,
+          "amount": 5481195.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 215362,
+          "amount": 24681370.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 51809,
+          "amount": 7052195.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 147088,
+          "amount": 29874075.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 852,
+          "amount": 210120.0
+        }
+      },
+      "total": {
+        "count": 1269134,
+        "amount": 89488795.0
+      },
+      "annual_pass": {
+        "transaction_count": 197497
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

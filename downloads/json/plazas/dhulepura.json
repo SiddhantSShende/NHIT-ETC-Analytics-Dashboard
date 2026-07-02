@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dhulepura Toll Plaza"
   ],
-  "period_count": 26,
+  "period_count": 27,
   "months": {
     "2024-03": {
       "vehicles": {
@@ -969,6 +969,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 85298,
+          "amount": 2220620.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5021,
+          "amount": 139605.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8709,
+          "amount": 994000.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2761,
+          "amount": 366670.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23096,
+          "amount": 4546395.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 5910.0
+        }
+      },
+      "total": {
+        "count": 124910,
+        "amount": 8273200.0
+      },
+      "annual_pass": {
+        "transaction_count": 31728
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

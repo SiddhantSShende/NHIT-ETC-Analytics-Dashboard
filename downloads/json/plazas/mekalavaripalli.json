@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mekalavaripalli Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 46384,
+          "amount": 1494210.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 619,
+          "amount": 44280.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7705,
+          "amount": 817485.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3278,
+          "amount": 463950.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2948,
+          "amount": 648220.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 770.0
+        }
+      },
+      "total": {
+        "count": 60938,
+        "amount": 3468915.0
+      },
+      "annual_pass": {
+        "transaction_count": 16185
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

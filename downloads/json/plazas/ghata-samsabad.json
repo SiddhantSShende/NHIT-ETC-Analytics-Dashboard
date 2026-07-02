@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ghata Samsabad Fee Plaza"
   ],
-  "period_count": 39,
+  "period_count": 40,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1425,6 +1425,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 65122,
+          "amount": 4329175.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2491,
+          "amount": 965155.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10561,
+          "amount": 12167365.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11644,
+          "amount": 14612075.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 30942,
+          "amount": 28826900.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1135.0
+        }
+      },
+      "total": {
+        "count": 120762,
+        "amount": 60901805.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

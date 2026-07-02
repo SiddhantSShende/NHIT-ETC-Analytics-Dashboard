@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Thenepalli Plaza"
   ],
-  "period_count": 50,
+  "period_count": 51,
   "months": {
     "2022-03": {
       "vehicles": {
@@ -1833,6 +1833,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 56424,
+          "amount": 1390060.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5471,
+          "amount": 257105.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15233,
+          "amount": 1282330.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4018,
+          "amount": 447170.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17281,
+          "amount": 2967120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 180.0
+        }
+      },
+      "total": {
+        "count": 98428,
+        "amount": 6343965.0
+      },
+      "annual_pass": {
+        "transaction_count": 21072
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

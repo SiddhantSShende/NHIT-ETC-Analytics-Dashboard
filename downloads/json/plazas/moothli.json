@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Moothli Toll Plaza"
   ],
-  "period_count": 32,
+  "period_count": 33,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1171,6 +1171,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19809,
+          "amount": 2286580.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 309,
+          "amount": 93980.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1510,
+          "amount": 939270.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 349,
+          "amount": 213200.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5709,
+          "amount": 8156000.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 9875.0
+        }
+      },
+      "total": {
+        "count": 27692,
+        "amount": 11698905.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

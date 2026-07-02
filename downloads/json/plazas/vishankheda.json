@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vishankheda"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 307281,
+          "amount": 9565065.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19548,
+          "amount": 1080340.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 43565,
+          "amount": 5180645.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 26083,
+          "amount": 3348640.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 80926,
+          "amount": 15116075.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 78,
+          "amount": 18100.0
+        }
+      },
+      "total": {
+        "count": 477481,
+        "amount": 34308865.0
+      },
+      "annual_pass": {
+        "transaction_count": 76235
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

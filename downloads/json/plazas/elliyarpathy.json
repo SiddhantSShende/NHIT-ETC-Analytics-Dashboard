@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Elliyarpathy"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 343861,
+          "amount": 24326890.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17897,
+          "amount": 2889025.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 57469,
+          "amount": 14800530.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8933,
+          "amount": 3363330.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 66552,
+          "amount": 37349695.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 760,
+          "amount": 540255.0
+        }
+      },
+      "total": {
+        "count": 495472,
+        "amount": 83269725.0
+      },
+      "annual_pass": {
+        "transaction_count": 104168
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Okhamadi Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 274953,
+          "amount": 18858180.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8460,
+          "amount": 1169785.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17788,
+          "amount": 4883315.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1495,
+          "amount": 428000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12386,
+          "amount": 5040690.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 1725.0
+        }
+      },
+      "total": {
+        "count": 315085,
+        "amount": 30381695.0
+      },
+      "annual_pass": {
+        "transaction_count": 87407
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

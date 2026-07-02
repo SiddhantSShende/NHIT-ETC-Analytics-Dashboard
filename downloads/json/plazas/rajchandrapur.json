@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rajchandrapur Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1895,6 +1895,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 810867,
+          "amount": 87231285.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 68543,
+          "amount": 12552565.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 136835,
+          "amount": 40782430.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 59277,
+          "amount": 22228875.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 142313,
+          "amount": 53367375.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 187,
+          "amount": 70125.0
+        }
+      },
+      "total": {
+        "count": 1218022,
+        "amount": 216232655.0
+      },
+      "annual_pass": {
+        "transaction_count": 84620
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

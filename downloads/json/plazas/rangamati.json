@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rangamati Fee Plaza"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -160,6 +160,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 106001,
+          "amount": 6250005.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10395,
+          "amount": 1041195.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 27637,
+          "amount": 6439545.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4908,
+          "amount": 1312395.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19920,
+          "amount": 7970425.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 48,
+          "amount": 10280.0
+        }
+      },
+      "total": {
+        "count": 168909,
+        "amount": 23023845.0
+      },
+      "annual_pass": {
+        "transaction_count": 7429
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

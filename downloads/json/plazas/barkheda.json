@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Barkheda Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 456128,
+          "amount": 27986690.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18664,
+          "amount": 2573150.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 45131,
+          "amount": 15332505.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9938,
+          "amount": 5615580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 63805,
+          "amount": 35551370.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 97,
+          "amount": 62480.0
+        }
+      },
+      "total": {
+        "count": 593763,
+        "amount": 87121775.0
+      },
+      "annual_pass": {
+        "transaction_count": 102108
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

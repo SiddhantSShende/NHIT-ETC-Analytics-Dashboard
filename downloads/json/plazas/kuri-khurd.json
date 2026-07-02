@@ -6,7 +6,7 @@
   "source_raw_names": [
     "KURI KHURD TOLL PLAZA"
   ],
-  "period_count": 10,
+  "period_count": 11,
   "months": {
     "2025-07": {
       "vehicles": {
@@ -381,6 +381,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 48850,
+          "amount": 3135785.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 600,
+          "amount": 153835.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2063,
+          "amount": 1397765.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1117,
+          "amount": 661005.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3654,
+          "amount": 2754880.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 740.0
+        }
+      },
+      "total": {
+        "count": 56286,
+        "amount": 8104010.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

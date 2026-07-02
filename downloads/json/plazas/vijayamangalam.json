@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vijayamangalam Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 924929,
+          "amount": 39468125.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 96710,
+          "amount": 9994105.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 148345,
+          "amount": 22427130.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28692,
+          "amount": 10242030.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 77630,
+          "amount": 28507950.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 154,
+          "amount": 56345.0
+        }
+      },
+      "total": {
+        "count": 1276460,
+        "amount": 110695685.0
+      },
+      "annual_pass": {
+        "transaction_count": 155085
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Patnipratapur"
   ],
-  "period_count": 30,
+  "period_count": 31,
   "months": {
     "2023-11": {
       "vehicles": {
@@ -1113,6 +1113,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 136835,
+          "amount": 4742635.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9882,
+          "amount": 847660.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 49360,
+          "amount": 9009505.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18895,
+          "amount": 3979925.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 48587,
+          "amount": 14242435.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 2580.0
+        }
+      },
+      "total": {
+        "count": 263567,
+        "amount": 32824740.0
+      },
+      "annual_pass": {
+        "transaction_count": 57033
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

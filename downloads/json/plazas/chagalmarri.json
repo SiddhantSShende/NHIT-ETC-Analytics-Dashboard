@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chagalmarri Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 175903,
+          "amount": 9697270.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9517,
+          "amount": 1309425.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 43905,
+          "amount": 10386160.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8882,
+          "amount": 4096710.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 44012,
+          "amount": 21042605.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 71,
+          "amount": 42515.0
+        }
+      },
+      "total": {
+        "count": 282290,
+        "amount": 46574685.0
+      },
+      "annual_pass": {
+        "transaction_count": 39440
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

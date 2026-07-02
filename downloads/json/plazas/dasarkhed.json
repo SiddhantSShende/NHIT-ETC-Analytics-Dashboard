@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dasarkhed Toll Plaza"
   ],
-  "period_count": 32,
+  "period_count": 33,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1185,6 +1185,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 118580,
+          "amount": 6102320.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 12024,
+          "amount": 1384695.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 60609,
+          "amount": 15242985.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20056,
+          "amount": 5814520.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 85711,
+          "amount": 35635445.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 50,
+          "amount": 23945.0
+        }
+      },
+      "total": {
+        "count": 297030,
+        "amount": 64203910.0
+      },
+      "annual_pass": {
+        "transaction_count": 36018
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

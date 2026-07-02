@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Mahanadpur toll plaza",
+  "plaza_slug": "mahanadpur",
+  "piu": "Bareilly",
+  "ro": "Lucknow - West",
+  "source_raw_names": [
+    "Mahanadpur toll plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 47778,
+          "amount": 1817770.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1263,
+          "amount": 87625.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4721,
+          "amount": 814445.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1457,
+          "amount": 282710.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2759,
+          "amount": 814130.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 57978,
+        "amount": 3816680.0
+      },
+      "annual_pass": {
+        "transaction_count": 10145
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
+      ]
+    }
+  }
+}

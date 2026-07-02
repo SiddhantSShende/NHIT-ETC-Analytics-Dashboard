@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Medininagar Toll Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-03": {
       "vehicles": {
@@ -84,6 +84,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 54962,
+          "amount": 2860275.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2269,
+          "amount": 215015.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7524,
+          "amount": 1488240.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2431,
+          "amount": 568885.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11490,
+          "amount": 4013035.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2170.0
+        }
+      },
+      "total": {
+        "count": 78682,
+        "amount": 9147620.0
+      },
+      "annual_pass": {
+        "transaction_count": 6587
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

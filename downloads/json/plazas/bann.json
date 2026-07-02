@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bann Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 399187,
+          "amount": 42311220.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11843,
+          "amount": 2772505.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 66365,
+          "amount": 30270865.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10572,
+          "amount": 6227655.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 16356,
+          "amount": 14614650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 22765.0
+        }
+      },
+      "total": {
+        "count": 504347,
+        "amount": 96219660.0
+      },
+      "annual_pass": {
+        "transaction_count": 116326
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

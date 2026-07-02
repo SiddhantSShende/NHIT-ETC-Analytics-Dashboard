@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Badaiyiguda"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 77773,
+          "amount": 3105675.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2317,
+          "amount": 190685.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14304,
+          "amount": 2383900.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7824,
+          "amount": 1439490.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 43865,
+          "amount": 12510915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 58,
+          "amount": 20330.0
+        }
+      },
+      "total": {
+        "count": 146141,
+        "amount": 19650995.0
+      },
+      "annual_pass": {
+        "transaction_count": 12524
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

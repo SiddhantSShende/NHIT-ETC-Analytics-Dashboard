@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhanera"
   ],
-  "period_count": 22,
+  "period_count": 23,
   "months": {
     "2024-07": {
       "vehicles": {
@@ -825,6 +825,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 117834,
+          "amount": 3886470.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3875,
+          "amount": 241360.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16497,
+          "amount": 2128405.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1686,
+          "amount": 253150.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5678,
+          "amount": 1219760.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 145570,
+        "amount": 7729145.0
+      },
+      "annual_pass": {
+        "transaction_count": 35723
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

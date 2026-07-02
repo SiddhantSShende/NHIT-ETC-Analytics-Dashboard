@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Talmod Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 139470,
+          "amount": 6643975.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 15602,
+          "amount": 1615240.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 48311,
+          "amount": 10332370.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17438,
+          "amount": 4332680.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 64287,
+          "amount": 22950270.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 197,
+          "amount": 83425.0
+        }
+      },
+      "total": {
+        "count": 285305,
+        "amount": 45957960.0
+      },
+      "annual_pass": {
+        "transaction_count": 24138
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

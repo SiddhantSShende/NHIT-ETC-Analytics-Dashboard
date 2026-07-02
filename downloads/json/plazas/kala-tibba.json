@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kala Tibba Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 21640,
+          "amount": 659490.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 553,
+          "amount": 38560.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1885,
+          "amount": 270130.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 155,
+          "amount": 26425.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1549,
+          "amount": 388125.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 25782,
+        "amount": 1382730.0
+      },
+      "annual_pass": {
+        "transaction_count": 6886
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

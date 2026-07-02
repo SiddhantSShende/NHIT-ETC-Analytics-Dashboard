@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhojpur Plaza DME KM 4570"
   ],
-  "period_count": 49,
+  "period_count": 50,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1779,6 +1779,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 95509,
+          "amount": 2896750.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4659,
+          "amount": 271350.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 6200,
+          "amount": 746695.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2240,
+          "amount": 244470.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6464,
+          "amount": 1012120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 19,
+          "amount": 2620.0
+        }
+      },
+      "total": {
+        "count": 115091,
+        "amount": 5174005.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

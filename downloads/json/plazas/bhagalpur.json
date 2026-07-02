@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhagalpur Toll plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 25087,
+          "amount": 517860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2827,
+          "amount": 93660.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4676,
+          "amount": 330410.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1449,
+          "amount": 112905.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27922,
+          "amount": 3387280.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 970.0
+        }
+      },
+      "total": {
+        "count": 61968,
+        "amount": 4443085.0
+      },
+      "annual_pass": {
+        "transaction_count": 3257
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

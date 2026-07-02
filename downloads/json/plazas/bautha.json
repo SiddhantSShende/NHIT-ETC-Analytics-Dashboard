@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bautha Toll Plaza"
   ],
-  "period_count": 8,
+  "period_count": 9,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -316,6 +316,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 65683,
+          "amount": 2191595.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2832,
+          "amount": 205000.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 26091,
+          "amount": 3892430.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7862,
+          "amount": 1429990.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12736,
+          "amount": 3297365.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 78,
+          "amount": 15930.0
+        }
+      },
+      "total": {
+        "count": 115282,
+        "amount": 11032310.0
+      },
+      "annual_pass": {
+        "transaction_count": 15754
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Amoli Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 257856,
+          "amount": 10066510.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7955,
+          "amount": 751885.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 64095,
+          "amount": 12452330.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9961,
+          "amount": 3180800.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 113861,
+          "amount": 35924480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 91,
+          "amount": 29120.0
+        }
+      },
+      "total": {
+        "count": 453819,
+        "amount": 62405125.0
+      },
+      "annual_pass": {
+        "transaction_count": 53216
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

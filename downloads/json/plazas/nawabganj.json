@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nawabganj Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 540576,
+          "amount": 31539845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 26828,
+          "amount": 3666010.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 84492,
+          "amount": 23904870.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25480,
+          "amount": 8429400.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 205710,
+          "amount": 90269370.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 53,
+          "amount": 30580.0
+        }
+      },
+      "total": {
+        "count": 883139,
+        "amount": 157840075.0
+      },
+      "annual_pass": {
+        "transaction_count": 147373
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Semli Kakad Toll Plaza (Ch.112+500)"
   ],
-  "period_count": 8,
+  "period_count": 9,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -310,6 +310,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 39568,
+          "amount": 3351755.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1587,
+          "amount": 490040.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15773,
+          "amount": 10845690.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6275,
+          "amount": 4669640.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5187,
+          "amount": 5329690.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 1135.0
+        }
+      },
+      "total": {
+        "count": 68391,
+        "amount": 24687950.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

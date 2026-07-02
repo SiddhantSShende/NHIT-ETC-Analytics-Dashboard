@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Peddakonduru TollPlaza",
+  "plaza_slug": "peddakonduru-tollplaza",
+  "piu": "Ongole",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Peddakonduru TollPlaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 21522,
+          "amount": 947690.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 541,
+          "amount": 55505.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4172,
+          "amount": 781660.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1073,
+          "amount": 251190.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1751,
+          "amount": 611055.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 4135.0
+        }
+      },
+      "total": {
+        "count": 29071,
+        "amount": 2651235.0
+      },
+      "annual_pass": {
+        "transaction_count": 899
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
+      ]
+    }
+  }
+}

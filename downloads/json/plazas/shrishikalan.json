@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Shrishikalan Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 41282,
+          "amount": 1136785.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 783,
+          "amount": 42580.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4764,
+          "amount": 523185.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 292,
+          "amount": 37730.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 78387,
+          "amount": 12752910.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 2830.0
+        }
+      },
+      "total": {
+        "count": 125521,
+        "amount": 14496020.0
+      },
+      "annual_pass": {
+        "transaction_count": 7594
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

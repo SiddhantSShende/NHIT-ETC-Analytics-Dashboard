@@ -6,7 +6,7 @@
   "source_raw_names": [
     "JawrToll Plaza"
   ],
-  "period_count": 12,
+  "period_count": 13,
   "months": {
     "2025-05": {
       "vehicles": {
@@ -465,6 +465,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 89326,
+          "amount": 7388615.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2368,
+          "amount": 571880.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8743,
+          "amount": 4452230.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2383,
+          "amount": 1321395.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 13576,
+          "amount": 10761960.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 6450.0
+        }
+      },
+      "total": {
+        "count": 116402,
+        "amount": 24502530.0
+      },
+      "annual_pass": {
+        "transaction_count": 40073
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Joya Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1895,6 +1895,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 758601,
+          "amount": 30456545.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 39490,
+          "amount": 4109230.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 120706,
+          "amount": 25050250.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21339,
+          "amount": 5573085.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 50768,
+          "amount": 18661360.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 68,
+          "amount": 28800.0
+        }
+      },
+      "total": {
+        "count": 990972,
+        "amount": 83879270.0
+      },
+      "annual_pass": {
+        "transaction_count": 194516
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

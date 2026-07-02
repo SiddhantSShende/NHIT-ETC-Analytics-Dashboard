@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lasedi"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 98450,
+          "amount": 5307200.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2776,
+          "amount": 408440.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17187,
+          "amount": 5418835.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8276,
+          "amount": 3006005.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 42887,
+          "amount": 22614140.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 31,
+          "amount": 20230.0
+        }
+      },
+      "total": {
+        "count": 169607,
+        "amount": 36774850.0
+      },
+      "annual_pass": {
+        "transaction_count": 23036
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

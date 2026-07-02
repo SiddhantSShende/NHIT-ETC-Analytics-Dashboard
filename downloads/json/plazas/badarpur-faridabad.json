@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Badarpur faridabad Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1666039,
+          "amount": 38367170.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 32882,
+          "amount": 1477410.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 40658,
+          "amount": 3945200.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19453,
+          "amount": 2318955.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22033,
+          "amount": 3622535.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 128,
+          "amount": 21350.0
+        }
+      },
+      "total": {
+        "count": 1781193,
+        "amount": 49752620.0
+      },
+      "annual_pass": {
+        "transaction_count": 587076
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

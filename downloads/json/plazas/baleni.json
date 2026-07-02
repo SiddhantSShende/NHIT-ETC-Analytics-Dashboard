@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Baleni Fee Plaza"
   ],
-  "period_count": 43,
+  "period_count": 44,
   "months": {
     "2022-10": {
       "vehicles": {
@@ -1581,6 +1581,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 96878,
+          "amount": 2607155.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3417,
+          "amount": 217390.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11512,
+          "amount": 1466640.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1545,
+          "amount": 230345.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3524,
+          "amount": 769625.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 116876,
+        "amount": 5291155.0
+      },
+      "annual_pass": {
+        "transaction_count": 33154
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

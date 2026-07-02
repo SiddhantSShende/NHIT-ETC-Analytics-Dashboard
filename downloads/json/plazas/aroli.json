@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Aroli"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 117555,
+          "amount": 5241055.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5004,
+          "amount": 580100.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 21662,
+          "amount": 5402700.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12336,
+          "amount": 3579535.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 45847,
+          "amount": 19461400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 38,
+          "amount": 19390.0
+        }
+      },
+      "total": {
+        "count": 202442,
+        "amount": 34284180.0
+      },
+      "annual_pass": {
+        "transaction_count": 29553
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

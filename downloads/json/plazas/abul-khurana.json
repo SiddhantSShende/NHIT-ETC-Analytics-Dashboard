@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Abul Khurana"
   ],
-  "period_count": 30,
+  "period_count": 31,
   "months": {
     "2023-11": {
       "vehicles": {
@@ -1113,6 +1113,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 35424,
+          "amount": 1925450.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1390,
+          "amount": 132910.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5187,
+          "amount": 1140440.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 679,
+          "amount": 182935.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4764,
+          "amount": 2002880.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 2045.0
+        }
+      },
+      "total": {
+        "count": 47448,
+        "amount": 5386660.0
+      },
+      "annual_pass": {
+        "transaction_count": 10202
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

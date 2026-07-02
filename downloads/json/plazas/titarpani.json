@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Titarpani"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 67855,
+          "amount": 4933950.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13763,
+          "amount": 2674560.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 61309,
+          "amount": 26576290.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 49579,
+          "amount": 23718000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 61984,
+          "amount": 41877260.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 62,
+          "amount": 51780.0
+        }
+      },
+      "total": {
+        "count": 254552,
+        "amount": 99831840.0
+      },
+      "annual_pass": {
+        "transaction_count": 13828
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

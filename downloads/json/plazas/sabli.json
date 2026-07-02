@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sabli Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 29842,
+          "amount": 931800.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 436,
+          "amount": 30040.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2943,
+          "amount": 410075.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 875,
+          "amount": 145515.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3060,
+          "amount": 725225.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 37156,
+        "amount": 2242655.0
+      },
+      "annual_pass": {
+        "transaction_count": 8426
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

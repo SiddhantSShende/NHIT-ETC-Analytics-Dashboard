@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Landhari Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1903,6 +1903,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 328699,
+          "amount": 13336860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11449,
+          "amount": 1485195.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 31549,
+          "amount": 8677185.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2921,
+          "amount": 945720.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 48525,
+          "amount": 20518000.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 16,
+          "amount": 9160.0
+        }
+      },
+      "total": {
+        "count": 423159,
+        "amount": 44972120.0
+      },
+      "annual_pass": {
+        "transaction_count": 157044
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

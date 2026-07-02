@@ -1,242 +1,50 @@
 {
-  "plaza_name": "Sarai Sundarpur",
+  "plaza_name": "Sarai Sundarpur Fee Plaza",
   "plaza_slug": "sarai-sundarpur",
-  "piu": "",
-  "ro": "",
+  "piu": "Bareilly",
+  "ro": "Lucknow - West",
   "source_raw_names": [
-    "Sarai Sundarpur"
+    "Sarai Sundarpur Fee Plaza"
   ],
-  "period_count": 21,
+  "period_count": 1,
   "months": {
-    "2023-04": {
-      "vehicles": null,
-      "total": {
-        "count": 132087,
-        "amount": 7185045.0
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 94886,
+          "amount": 1997340.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2865,
+          "amount": 123175.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23191,
+          "amount": 2074410.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11157,
+          "amount": 1144385.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23887,
+          "amount": 3397520.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 160.0
+        }
       },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-05": {
-      "vehicles": null,
       "total": {
-        "count": 143825,
-        "amount": 7563840.0
+        "count": 155987,
+        "amount": 8736990.0
       },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-06": {
-      "vehicles": null,
-      "total": {
-        "count": 142875,
-        "amount": 7209535.0
+      "annual_pass": {
+        "transaction_count": 27150
       },
-      "annual_pass": null,
       "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-07": {
-      "vehicles": null,
-      "total": {
-        "count": 126013,
-        "amount": 6340860.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-08": {
-      "vehicles": null,
-      "total": {
-        "count": 118768,
-        "amount": 5934880.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-09": {
-      "vehicles": null,
-      "total": {
-        "count": 119652,
-        "amount": 6138190.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-10": {
-      "vehicles": null,
-      "total": {
-        "count": 141403,
-        "amount": 8010345.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-11": {
-      "vehicles": null,
-      "total": {
-        "count": 146883,
-        "amount": 8086425.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2023-12": {
-      "vehicles": null,
-      "total": {
-        "count": 142601,
-        "amount": 7753965.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2024-01": {
-      "vehicles": null,
-      "total": {
-        "count": 134092,
-        "amount": 7355380.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2024-02": {
-      "vehicles": null,
-      "total": {
-        "count": 143232,
-        "amount": 7644485.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2024-03": {
-      "vehicles": null,
-      "total": {
-        "count": 146640,
-        "amount": 8015655.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2024/Monthly-ETC-Data-FY-23-24-2.pdf"
-      ]
-    },
-    "2024-04": {
-      "vehicles": null,
-      "total": {
-        "count": 143899,
-        "amount": 7990140.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-05": {
-      "vehicles": null,
-      "total": {
-        "count": 147760,
-        "amount": 8113275.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-06": {
-      "vehicles": null,
-      "total": {
-        "count": 140334,
-        "amount": 7485785.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-07": {
-      "vehicles": null,
-      "total": {
-        "count": 137648,
-        "amount": 7020350.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-08": {
-      "vehicles": null,
-      "total": {
-        "count": 134838,
-        "amount": 7016485.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-09": {
-      "vehicles": null,
-      "total": {
-        "count": 130341,
-        "amount": 7399485.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-10": {
-      "vehicles": null,
-      "total": {
-        "count": 155721,
-        "amount": 9730515.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-11": {
-      "vehicles": null,
-      "total": {
-        "count": 158877,
-        "amount": 9448695.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
-      ]
-    },
-    "2024-12": {
-      "vehicles": null,
-      "total": {
-        "count": 151478,
-        "amount": 8872745.0
-      },
-      "annual_pass": null,
-      "sources": [
-        "downloads/ETC_Monthly_Data/2025/Monthly-ETC-Data-FY-24-25-11.pdf"
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

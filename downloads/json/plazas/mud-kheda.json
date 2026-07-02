@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mud Kheda"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 98759,
+          "amount": 6153870.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 12057,
+          "amount": 2129930.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 38082,
+          "amount": 14703210.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 16738,
+          "amount": 7240235.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 32663,
+          "amount": 20401120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 17,
+          "amount": 13175.0
+        }
+      },
+      "total": {
+        "count": 198316,
+        "amount": 50641540.0
+      },
+      "annual_pass": {
+        "transaction_count": 47447
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

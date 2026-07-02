@@ -6,7 +6,7 @@
   "source_raw_names": [
     "BAGRANA TOLL PLAZA"
   ],
-  "period_count": 11,
+  "period_count": 12,
   "months": {
     "2025-06": {
       "vehicles": {
@@ -417,6 +417,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 174486,
+          "amount": 21619540.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3082,
+          "amount": 1558120.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 13066,
+          "amount": 13864570.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5679,
+          "amount": 4336425.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17729,
+          "amount": 24931300.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 20555.0
+        }
+      },
+      "total": {
+        "count": 214056,
+        "amount": 66330510.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

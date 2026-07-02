@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mandawara Toll Plaza2"
   ],
-  "period_count": 17,
+  "period_count": 18,
   "months": {
     "2024-12": {
       "vehicles": {
@@ -637,6 +637,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 11148,
+          "amount": 372180.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 457,
+          "amount": 34455.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2034,
+          "amount": 359720.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 683,
+          "amount": 130400.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1334,
+          "amount": 369100.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 320.0
+        }
+      },
+      "total": {
+        "count": 15657,
+        "amount": 1266175.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

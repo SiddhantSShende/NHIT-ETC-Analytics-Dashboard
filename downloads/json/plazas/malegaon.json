@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Malegaon Toll Plaza"
   ],
-  "period_count": 26,
+  "period_count": 27,
   "months": {
     "2024-03": {
       "vehicles": {
@@ -969,6 +969,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 124051,
+          "amount": 9009390.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4646,
+          "amount": 836405.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23762,
+          "amount": 8497600.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3801,
+          "amount": 1626935.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 21515,
+          "amount": 13678590.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 15,
+          "amount": 10920.0
+        }
+      },
+      "total": {
+        "count": 177790,
+        "amount": 33659840.0
+      },
+      "annual_pass": {
+        "transaction_count": 44124
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

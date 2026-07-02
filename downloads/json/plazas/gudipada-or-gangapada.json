@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gudipada or Gangapada Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 181522,
+          "amount": 14294220.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13954,
+          "amount": 2397350.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 50300,
+          "amount": 18716600.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 35224,
+          "amount": 14692360.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 89953,
+          "amount": 54909595.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 100,
+          "amount": 71735.0
+        }
+      },
+      "total": {
+        "count": 371053,
+        "amount": 105081860.0
+      },
+      "annual_pass": {
+        "transaction_count": 43782
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

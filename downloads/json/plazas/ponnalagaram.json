@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ponnalagaram Toll Plaza"
   ],
-  "period_count": 47,
+  "period_count": 48,
   "months": {
     "2022-02": {
       "vehicles": {
@@ -1725,6 +1725,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 96836,
+          "amount": 3181630.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4431,
+          "amount": 300720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18638,
+          "amount": 1634255.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2681,
+          "amount": 385350.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7384,
+          "amount": 1421580.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 260.0
+        }
+      },
+      "total": {
+        "count": 129971,
+        "amount": 6923795.0
+      },
+      "annual_pass": {
+        "transaction_count": 22405
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gondkhairi Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 210918,
+          "amount": 9377255.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17771,
+          "amount": 1383110.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 51160,
+          "amount": 8383175.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 16389,
+          "amount": 4925675.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37976,
+          "amount": 15793360.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 44,
+          "amount": 17820.0
+        }
+      },
+      "total": {
+        "count": 334258,
+        "amount": 39880395.0
+      },
+      "annual_pass": {
+        "transaction_count": 29907
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

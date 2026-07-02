@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ujroo toll plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 81746,
+          "amount": 13101175.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4096,
+          "amount": 1148220.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 24780,
+          "amount": 16659150.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8758,
+          "amount": 6680130.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8137,
+          "amount": 8352630.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 4720.0
+        }
+      },
+      "total": {
+        "count": 127521,
+        "amount": 45946025.0
+      },
+      "annual_pass": {
+        "transaction_count": 19917
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Tuptakli Toll Plaza"
   ],
-  "period_count": 27,
+  "period_count": 28,
   "months": {
     "2024-02": {
       "vehicles": {
@@ -1005,6 +1005,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 46720,
+          "amount": 1175935.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1054,
+          "amount": 53700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5049,
+          "amount": 487845.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 323,
+          "amount": 38795.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2966,
+          "amount": 538500.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 1135.0
+        }
+      },
+      "total": {
+        "count": 56118,
+        "amount": 2295910.0
+      },
+      "annual_pass": {
+        "transaction_count": 11738
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

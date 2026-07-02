@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Laxmipuram"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 82746,
+          "amount": 6140750.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10711,
+          "amount": 2488875.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 41260,
+          "amount": 20458620.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 31255,
+          "amount": 17238795.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 92059,
+          "amount": 73717910.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 90,
+          "amount": 87210.0
+        }
+      },
+      "total": {
+        "count": 258121,
+        "amount": 120132160.0
+      },
+      "annual_pass": {
+        "transaction_count": 22583
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

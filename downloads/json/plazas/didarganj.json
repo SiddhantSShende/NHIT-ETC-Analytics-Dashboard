@@ -6,7 +6,7 @@
   "source_raw_names": [
     "DidarGanj"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 214358,
+          "amount": 15553185.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 30968,
+          "amount": 5365390.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 40878,
+          "amount": 15229230.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10662,
+          "amount": 6163960.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 55496,
+          "amount": 32679980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 330,
+          "amount": 227580.0
+        }
+      },
+      "total": {
+        "count": 352692,
+        "amount": 75219325.0
+      },
+      "annual_pass": {
+        "transaction_count": 32085
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Johariya Sheikh Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 74476,
+          "amount": 2741610.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4308,
+          "amount": 307680.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16762,
+          "amount": 2501870.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4113,
+          "amount": 704760.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11741,
+          "amount": 3032660.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 6965.0
+        }
+      },
+      "total": {
+        "count": 111424,
+        "amount": 9295545.0
+      },
+      "annual_pass": {
+        "transaction_count": 15152
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

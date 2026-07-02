@@ -7,7 +7,7 @@
     "Chalageri",
     "Chalageri Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1894,6 +1894,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 296431,
+          "amount": 25337145.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 44180,
+          "amount": 10057940.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 88477,
+          "amount": 39151680.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22698,
+          "amount": 11920420.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 42823,
+          "amount": 33565195.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 77,
+          "amount": 69630.0
+        }
+      },
+      "total": {
+        "count": 494686,
+        "amount": 120102010.0
+      },
+      "annual_pass": {
+        "transaction_count": 66799
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

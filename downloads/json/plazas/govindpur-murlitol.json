@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Govindpur (Murlitol)"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1903,6 +1903,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 71538,
+          "amount": 2907595.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8503,
+          "amount": 504045.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17551,
+          "amount": 2391680.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6420,
+          "amount": 963220.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 50607,
+          "amount": 11058465.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 2750.0
+        }
+      },
+      "total": {
+        "count": 154629,
+        "amount": 17827755.0
+      },
+      "annual_pass": {
+        "transaction_count": 12551
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sundrapalya"
   ],
-  "period_count": 8,
+  "period_count": 9,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -310,6 +310,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 113481,
+          "amount": 4689715.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11170,
+          "amount": 1260435.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5357,
+          "amount": 1273060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2261,
+          "amount": 610940.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8726,
+          "amount": 3166945.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 3760.0
+        }
+      },
+      "total": {
+        "count": 140999,
+        "amount": 11004855.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

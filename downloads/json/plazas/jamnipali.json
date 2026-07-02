@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jamnipali Toll Plaza"
   ],
-  "period_count": 10,
+  "period_count": 11,
   "months": {
     "2025-07": {
       "vehicles": {
@@ -393,6 +393,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 56754,
+          "amount": 2670220.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3389,
+          "amount": 300540.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5541,
+          "amount": 1111200.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1612,
+          "amount": 358290.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 41413,
+          "amount": 13364710.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 23,
+          "amount": 9365.0
+        }
+      },
+      "total": {
+        "count": 108732,
+        "amount": 17814325.0
+      },
+      "annual_pass": {
+        "transaction_count": 12495
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

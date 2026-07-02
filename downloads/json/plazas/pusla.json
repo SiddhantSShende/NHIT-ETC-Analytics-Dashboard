@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pusla Toll Plaza"
   ],
-  "period_count": 6,
+  "period_count": 7,
   "months": {
     "2025-11": {
       "vehicles": {
@@ -240,6 +240,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 18478,
+          "amount": 612600.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 747,
+          "amount": 49770.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3877,
+          "amount": 578420.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 827,
+          "amount": 121950.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2847,
+          "amount": 705985.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 26776,
+        "amount": 2068725.0
+      },
+      "annual_pass": {
+        "transaction_count": 4000
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

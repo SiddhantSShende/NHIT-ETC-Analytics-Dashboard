@@ -6,7 +6,7 @@
   "source_raw_names": [
     "GHULAL Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 195373,
+          "amount": 10376280.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4528,
+          "amount": 685440.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15512,
+          "amount": 4755285.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1171,
+          "amount": 419430.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1897,
+          "amount": 1005360.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 3080.0
+        }
+      },
+      "total": {
+        "count": 218487,
+        "amount": 17244875.0
+      },
+      "annual_pass": {
+        "transaction_count": 97459
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

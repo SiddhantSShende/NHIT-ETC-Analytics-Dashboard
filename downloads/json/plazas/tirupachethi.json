@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Tirupachethi"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 237623,
+          "amount": 14981440.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7027,
+          "amount": 841275.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19699,
+          "amount": 3691985.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1081,
+          "amount": 303120.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1245,
+          "amount": 517775.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 5700.0
+        }
+      },
+      "total": {
+        "count": 266686,
+        "amount": 20341295.0
+      },
+      "annual_pass": {
+        "transaction_count": 64819
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

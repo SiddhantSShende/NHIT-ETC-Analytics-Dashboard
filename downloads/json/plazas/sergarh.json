@@ -6,7 +6,7 @@
   "source_raw_names": [
     "SERGARH TOLL PLAZA"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 242617,
+          "amount": 14191895.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19056,
+          "amount": 2728510.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 65238,
+          "amount": 20329875.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 41695,
+          "amount": 14756325.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 126921,
+          "amount": 64427070.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 175,
+          "amount": 89710.0
+        }
+      },
+      "total": {
+        "count": 495702,
+        "amount": 116523385.0
+      },
+      "annual_pass": {
+        "transaction_count": 78376
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kulhariya fee plaza"
   ],
-  "period_count": 37,
+  "period_count": 38,
   "months": {
     "2023-04": {
       "vehicles": {
@@ -1365,6 +1365,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 155092,
+          "amount": 10548050.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10705,
+          "amount": 1651380.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 41188,
+          "amount": 13184990.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17994,
+          "amount": 6512805.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 122377,
+          "amount": 64210720.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 37,
+          "amount": 22705.0
+        }
+      },
+      "total": {
+        "count": 347393,
+        "amount": 96130650.0
+      },
+      "annual_pass": {
+        "transaction_count": 39831
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

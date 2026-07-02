@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Raipur"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 127901,
+          "amount": 7036585.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7994,
+          "amount": 1241630.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 32053,
+          "amount": 10128300.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 14223,
+          "amount": 5025020.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 134283,
+          "amount": 72325275.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 97,
+          "amount": 61175.0
+        }
+      },
+      "total": {
+        "count": 316551,
+        "amount": 95817985.0
+      },
+      "annual_pass": {
+        "transaction_count": 27048
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

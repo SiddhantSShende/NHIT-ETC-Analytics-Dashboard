@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kudaiya"
   ],
-  "period_count": 9,
+  "period_count": 10,
   "months": {
     "2025-08": {
       "vehicles": {
@@ -355,6 +355,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 56191,
+          "amount": 2106165.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3419,
+          "amount": 299560.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14748,
+          "amount": 2642600.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4843,
+          "amount": 1038550.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15925,
+          "amount": 4859895.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2150.0
+        }
+      },
+      "total": {
+        "count": 95132,
+        "amount": 10948920.0
+      },
+      "annual_pass": {
+        "transaction_count": 20033
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

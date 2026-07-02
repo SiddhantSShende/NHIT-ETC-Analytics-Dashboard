@@ -6,7 +6,7 @@
   "source_raw_names": [
     "R Kothapalli Toll palza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -123,6 +123,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 21287,
+          "amount": 539845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 741,
+          "amount": 41775.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4344,
+          "amount": 409055.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1427,
+          "amount": 162000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10017,
+          "amount": 1835645.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1165.0
+        }
+      },
+      "total": {
+        "count": 37821,
+        "amount": 2989485.0
+      },
+      "annual_pass": {
+        "transaction_count": 7842
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

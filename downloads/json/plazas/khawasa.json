@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khawasa Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 153976,
+          "amount": 10389770.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16801,
+          "amount": 2914480.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 85461,
+          "amount": 31361780.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 51318,
+          "amount": 21192625.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 95218,
+          "amount": 56799875.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 123,
+          "amount": 87730.0
+        }
+      },
+      "total": {
+        "count": 402897,
+        "amount": 122746260.0
+      },
+      "annual_pass": {
+        "transaction_count": 33577
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

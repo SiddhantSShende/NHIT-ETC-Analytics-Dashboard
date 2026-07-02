@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Paluvai Toll Plaza",
+  "plaza_slug": "paluvai",
+  "piu": "Ongole",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Paluvai Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 11328,
+          "amount": 383350.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 175,
+          "amount": 12160.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3499,
+          "amount": 424235.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 520,
+          "amount": 74825.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2156,
+          "amount": 514790.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 17678,
+        "amount": 1409360.0
+      },
+      "annual_pass": {
+        "transaction_count": 883
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
+      ]
+    }
+  }
+}

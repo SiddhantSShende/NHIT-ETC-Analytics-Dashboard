@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Katha Toll Plaza",
+  "plaza_slug": "katha",
+  "piu": "Baghpat",
+  "ro": "Delhi",
+  "source_raw_names": [
+    "Katha Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 189112,
+          "amount": 13287380.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2502,
+          "amount": 453270.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5417,
+          "amount": 2138635.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 716,
+          "amount": 337420.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1826,
+          "amount": 1142480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 1015.0
+        }
+      },
+      "total": {
+        "count": 199574,
+        "amount": 17360200.0
+      },
+      "annual_pass": {
+        "transaction_count": 33375
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
+      ]
+    }
+  }
+}

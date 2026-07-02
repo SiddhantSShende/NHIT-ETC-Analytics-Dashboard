@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Medshi Sawarkheda"
   ],
-  "period_count": 22,
+  "period_count": 23,
   "months": {
     "2024-07": {
       "vehicles": {
@@ -825,6 +825,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 123394,
+          "amount": 8458390.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8868,
+          "amount": 1274235.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 41698,
+          "amount": 13318615.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11831,
+          "amount": 4259865.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 41486,
+          "amount": 22812980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 15375.0
+        }
+      },
+      "total": {
+        "count": 227302,
+        "amount": 50139460.0
+      },
+      "annual_pass": {
+        "transaction_count": 29760
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

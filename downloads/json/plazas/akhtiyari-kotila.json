@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Akhtiyari Kotila"
   ],
-  "period_count": 13,
+  "period_count": 14,
   "months": {
     "2025-04": {
       "vehicles": {
@@ -501,6 +501,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 119774,
+          "amount": 5068650.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6150,
+          "amount": 569030.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14668,
+          "amount": 2794520.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2364,
+          "amount": 547450.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10481,
+          "amount": 3556080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2035.0
+        }
+      },
+      "total": {
+        "count": 153443,
+        "amount": 12537765.0
+      },
+      "annual_pass": {
+        "transaction_count": 35651
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

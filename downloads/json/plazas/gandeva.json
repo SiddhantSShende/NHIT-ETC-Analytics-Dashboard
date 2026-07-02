@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gandeva"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -158,6 +158,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 179072,
+          "amount": 28017075.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 27854,
+          "amount": 11475460.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 62191,
+          "amount": 57266255.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17377,
+          "amount": 19678065.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 100031,
+          "amount": 128795970.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 68,
+          "amount": 104495.0
+        }
+      },
+      "total": {
+        "count": 386593,
+        "amount": 245337320.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

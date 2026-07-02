@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Darapur Toll Plaza"
   ],
-  "period_count": 37,
+  "period_count": 38,
   "months": {
     "2023-03": {
       "vehicles": {
@@ -1365,6 +1365,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 82301,
+          "amount": 3141165.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2989,
+          "amount": 253950.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9659,
+          "amount": 1643695.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1523,
+          "amount": 288970.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2378,
+          "amount": 717575.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 790.0
+        }
+      },
+      "total": {
+        "count": 98852,
+        "amount": 6046145.0
+      },
+      "annual_pass": {
+        "transaction_count": 32832
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

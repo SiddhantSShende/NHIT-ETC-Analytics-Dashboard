@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhagwada Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 457226,
+          "amount": 33143975.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 76955,
+          "amount": 13694275.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 187735,
+          "amount": 70573750.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 47816,
+          "amount": 21291940.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 290902,
+          "amount": 181917565.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 415,
+          "amount": 318745.0
+        }
+      },
+      "total": {
+        "count": 1061049,
+        "amount": 320940250.0
+      },
+      "annual_pass": {
+        "transaction_count": 156949
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

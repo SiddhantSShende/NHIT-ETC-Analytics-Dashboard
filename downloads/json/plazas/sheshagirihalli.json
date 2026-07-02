@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sheshagirihalli Toll Plaza"
   ],
-  "period_count": 38,
+  "period_count": 39,
   "months": {
     "2023-03": {
       "vehicles": {
@@ -1401,6 +1401,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 625012,
+          "amount": 53639785.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20259,
+          "amount": 4594315.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 36507,
+          "amount": 18151500.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8234,
+          "amount": 4256095.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12524,
+          "amount": 9997190.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 9140.0
+        }
+      },
+      "total": {
+        "count": 702546,
+        "amount": 90648025.0
+      },
+      "annual_pass": {
+        "transaction_count": 268990
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

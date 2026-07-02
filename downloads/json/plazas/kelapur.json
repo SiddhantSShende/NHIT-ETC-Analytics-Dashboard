@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kelapur"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 60799,
+          "amount": 3984825.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16768,
+          "amount": 3125880.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 80634,
+          "amount": 30689100.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 52499,
+          "amount": 22419210.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 82499,
+          "amount": 50768080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 105,
+          "amount": 78090.0
+        }
+      },
+      "total": {
+        "count": 293304,
+        "amount": 111065185.0
+      },
+      "annual_pass": {
+        "transaction_count": 14917
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nimgaon Khalu Toll Plaza"
   ],
-  "period_count": 17,
+  "period_count": 18,
   "months": {
     "2024-09": {
       "vehicles": {
@@ -645,6 +645,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 188576,
+          "amount": 12564870.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7856,
+          "amount": 1026450.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 29104,
+          "amount": 8006390.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7113,
+          "amount": 2346665.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27643,
+          "amount": 12695725.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 4925.0
+        }
+      },
+      "total": {
+        "count": 260302,
+        "amount": 36645025.0
+      },
+      "annual_pass": {
+        "transaction_count": 28924
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

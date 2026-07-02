@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kiratpur fee plaza"
   ],
-  "period_count": 36,
+  "period_count": 37,
   "months": {
     "2023-05": {
       "vehicles": {
@@ -1329,6 +1329,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 205989,
+          "amount": 10280575.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 26232,
+          "amount": 3093100.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 104891,
+          "amount": 24547070.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22288,
+          "amount": 6276920.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 51964,
+          "amount": 20621740.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 31,
+          "amount": 12925.0
+        }
+      },
+      "total": {
+        "count": 411395,
+        "amount": 64832330.0
+      },
+      "annual_pass": {
+        "transaction_count": 65271
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

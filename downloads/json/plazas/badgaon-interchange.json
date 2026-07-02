@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Badgaon Interchange",
+  "plaza_slug": "badgaon-interchange",
+  "piu": "Baghpat",
+  "ro": "Delhi",
+  "source_raw_names": [
+    "Badgaon Interchange"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19465,
+          "amount": 913130.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 205,
+          "amount": 24775.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 337,
+          "amount": 101125.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 74,
+          "amount": 19240.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 419,
+          "amount": 107255.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 745.0
+        }
+      },
+      "total": {
+        "count": 20501,
+        "amount": 1166270.0
+      },
+      "annual_pass": {
+        "transaction_count": 3989
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
+      ]
+    }
+  }
+}

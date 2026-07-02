@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karagadahalli Toll Plaza"
   ],
-  "period_count": 15,
+  "period_count": 16,
   "months": {
     "2025-02": {
       "vehicles": {
@@ -573,6 +573,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 274463,
+          "amount": 13630965.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 28787,
+          "amount": 3611790.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 54941,
+          "amount": 11301880.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8815,
+          "amount": 2480210.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 16576,
+          "amount": 7172630.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 21,
+          "amount": 8755.0
+        }
+      },
+      "total": {
+        "count": 383603,
+        "amount": 38206230.0
+      },
+      "annual_pass": {
+        "transaction_count": 111419
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

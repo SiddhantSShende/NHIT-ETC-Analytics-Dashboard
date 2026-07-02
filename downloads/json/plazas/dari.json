@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dari Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1905,6 +1905,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 268926,
+          "amount": 14782255.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8491,
+          "amount": 1138660.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 27719,
+          "amount": 7612590.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4261,
+          "amount": 1178420.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 34303,
+          "amount": 13494310.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 127,
+          "amount": 83180.0
+        }
+      },
+      "total": {
+        "count": 343827,
+        "amount": 38289415.0
+      },
+      "annual_pass": {
+        "transaction_count": 114593
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Madangundi"
   ],
-  "period_count": 17,
+  "period_count": 18,
   "months": {
     "2024-12": {
       "vehicles": {
@@ -645,6 +645,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 84656,
+          "amount": 2808665.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6668,
+          "amount": 418860.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 27340,
+          "amount": 3748840.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6007,
+          "amount": 976585.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 64484,
+          "amount": 14992625.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 31,
+          "amount": 7830.0
+        }
+      },
+      "total": {
+        "count": 189186,
+        "amount": 22953405.0
+      },
+      "annual_pass": {
+        "transaction_count": 20550
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

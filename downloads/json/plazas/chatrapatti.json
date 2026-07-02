@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chatrapatti Toll Plaza"
   ],
-  "period_count": 29,
+  "period_count": 30,
   "months": {
     "2023-12": {
       "vehicles": {
@@ -1077,6 +1077,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 270805,
+          "amount": 19226765.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14447,
+          "amount": 2110805.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12212,
+          "amount": 3823910.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2218,
+          "amount": 803985.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9906,
+          "amount": 5098800.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 14540.0
+        }
+      },
+      "total": {
+        "count": 309613,
+        "amount": 31078805.0
+      },
+      "annual_pass": {
+        "transaction_count": 76521
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Songir"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1893,6 +1893,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Apr-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Apr-2026.pdf"
+      ]
+    },
+    "2026-05": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 278544,
+          "amount": 13377860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 27510,
+          "amount": 3678840.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 116175,
+          "amount": 30439435.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 38263,
+          "amount": 15954403.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 123304,
+          "amount": 50897139.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 221,
+          "amount": 118700.0
+        }
+      },
+      "total": {
+        "count": 584017,
+        "amount": 114466377.0
+      },
+      "annual_pass": {
+        "transaction_count": 66533
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/May-2026.pdf"
       ]
     }
   }
