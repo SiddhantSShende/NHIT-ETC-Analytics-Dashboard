@@ -20,12 +20,13 @@
   "use strict";
 
   const BASE = "downloads/json";
-  // Bump this whenever the JSON shape changes OR a deploy refreshes data files
-  // that may already be sitting in users' Cache Storage. The cache has no
-  // server-revalidation step, so the only way to force a refetch is to switch
-  // to a new cache name; the previous one is then orphaned (and the cleanup
-  // sweep below evicts it on next page load).
-  const CACHE_NAME = "nhit-data-v4";
+  // _index.json is fetched network-first (cheap conditional request; the
+  // Cache Storage copy is only an offline/error fallback), and every other
+  // data file URL carries ?v=<index.generated_at>, so a data rebuild
+  // invalidates the whole store atomically on the next page load. Bump
+  // CACHE_NAME only when the JSON *shape* changes; entries from older data
+  // versions are swept each time a fresh index arrives.
+  const CACHE_NAME = "nhit-data-v5";
   const MONTH_NAMES = [
     "", "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
@@ -57,8 +58,12 @@
 
   async function fetchJson(path) {
     if (memCache.has(path)) return memCache.get(path);
-    const url = `${BASE}/${path}`;
     const p = (async () => {
+      // Key every data file on the current index's generated_at so a rebuild
+      // invalidates all of them at once. The index itself is loaded by
+      // _loadIndex (network-first, unversioned URL), so this cannot recurse.
+      const v = _dataVersion(await getIndex());
+      const url = `${BASE}/${path}?v=${v}`;
       const store = await _getCacheStore();
       if (store) {
         const hit = await store.match(url);
@@ -83,7 +88,51 @@
   let _indexP = null;
   let _taxP = null;
   let _periodsSetP = null;
-  function getIndex()    { return _indexP ||= fetchJson("_index.json"); }
+
+  function _dataVersion(idx) { return encodeURIComponent(idx.generated_at || "0"); }
+
+  // Network-first: returning visitors must see newly published months, so the
+  // index always revalidates (a 304 costs one round trip and no body). The
+  // Cache Storage copy — stored under the bare URL — is only an offline/error
+  // fallback, and stays self-consistent with the ?v= entries it once fetched.
+  async function _loadIndex() {
+    const url = `${BASE}/_index.json`;
+    const store = await _getCacheStore();
+    try {
+      const resp = await fetch(url, { cache: "no-cache" });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} ${url}`);
+      if (store) {
+        try { await store.put(url, resp.clone()); } catch (_) { /* private mode etc. */ }
+      }
+      const idx = await resp.json();
+      if (store) _sweepStaleVersions(store, _dataVersion(idx)); // fire-and-forget
+      return idx;
+    } catch (err) {
+      if (store) {
+        const hit = await store.match(url);
+        if (hit) return hit.clone().json();
+      }
+      throw err;
+    }
+  }
+
+  // Drop entries from older data versions so the store holds at most one
+  // ?v= generation instead of growing by ~25MB on every monthly rebuild.
+  // Compares the raw query suffix (we always build URLs as <path>?v=<v>),
+  // avoiding URLSearchParams' +/space decoding pitfalls.
+  async function _sweepStaleVersions(store, v) {
+    try {
+      const keys = await store.keys();
+      await Promise.all(keys
+        .filter(req => {
+          const q = req.url.split("?v=")[1];
+          return q !== undefined && q !== v;
+        })
+        .map(req => store.delete(req)));
+    } catch (_) { /* non-fatal */ }
+  }
+
+  function getIndex()    { return _indexP ||= _loadIndex(); }
   function getTaxonomy() { return _taxP   ||= fetchJson("_taxonomy.json"); }
   function getMonthFile(period) { return fetchJson(`monthly/${period}.json`); }
   // Resolves once; subsequent checks are sync against the cached Set.

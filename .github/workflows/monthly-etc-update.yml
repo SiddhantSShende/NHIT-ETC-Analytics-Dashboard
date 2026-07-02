@@ -1,0 +1,45 @@
+# Cloud backup for the Windows Task Scheduler job on the maintainer's PC.
+# Both run scripts/update_and_publish.py, which is idempotent (period-based
+# diff against the repo), so whichever fires first does the work and the
+# other finds nothing new.
+#
+# Known risk: ihmcl.co.in 403-blocks some datacenter IPs. If GitHub's runners
+# are blocked this workflow fails visibly here in the Actions tab and the
+# local scheduled task covers the update instead.
+name: Monthly ETC data update
+
+on:
+  schedule:
+    - cron: '23 4 1 * *' # 04:23 UTC on the 1st ≈ 09:53 IST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: etc-data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150 # full JSON rebuild re-parses every PDF
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Crawl IHMCL, rebuild JSON, publish
+        run: python scripts/update_and_publish.py
