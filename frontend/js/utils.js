@@ -114,6 +114,17 @@ function shortCat(name) {
   return CATEGORY_SHORT[name] || short(name);
 }
 
+// A few Excel "plaza" names are actually road-section names, not the name of
+// the operating fee plaza. Show the real plaza name in the UI while leaving the
+// underlying filter value (excel_plaza) untouched, so data matching in
+// data-layer.js keeps working. Keyed by excel_plaza.
+const PLAZA_DISPLAY_OVERRIDES = {
+  "Kalajhar to Patacharkuchi": "Galia",
+};
+function plazaDisplayName(name) {
+  return PLAZA_DISPLAY_OVERRIDES[name] || name;
+}
+
 // Sort an array of {name, ...} in canonical category order. Unknown names go last.
 function sortByCategoryOrder(cats) {
   const ix = n => {

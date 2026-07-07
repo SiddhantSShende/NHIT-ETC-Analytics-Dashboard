@@ -183,7 +183,7 @@
   }
 
   function _scopeLabel({ spv, round: round_, project, plaza }) {
-    if (plaza)   return plaza;
+    if (plaza)   return plazaDisplayName(plaza);
     if (project) return `${project} (${round_ || "All Rounds"}, ${spv || "All SPVs"})`;
     if (round_)  return `${spv || "All SPVs"} · ${round_}`;
     if (spv)     return `${spv} · All Rounds`;

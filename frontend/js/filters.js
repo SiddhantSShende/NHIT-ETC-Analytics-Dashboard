@@ -16,10 +16,11 @@ function fillSelect(id, items, mapper, allLabel) {
   });
 }
 
-function resetSelect(id, values, prevValue, allLabel) {
+function resetSelect(id, values, prevValue, allLabel, labelFn) {
   const sel = document.getElementById(id);
+  const label = labelFn || (v => v);
   sel.innerHTML = `<option value="">${allLabel}</option>` +
-    values.map(v => `<option value="${escapeAttr(v)}">${escapeHtml(v)}</option>`).join("");
+    values.map(v => `<option value="${escapeAttr(v)}">${escapeHtml(label(v))}</option>`).join("");
   // Preserve previous selection if still valid.
   if (values.includes(prevValue)) sel.value = prevValue;
 }
@@ -42,7 +43,7 @@ function refreshCascade() {
                 && (!newRound || r.round   === newRound))
       .map(r => r.excel_plaza)
   );
-  resetSelect("plazaSel", plazasForScope, document.getElementById("plazaSel").value, "All Plazas");
+  resetSelect("plazaSel", plazasForScope, document.getElementById("plazaSel").value, "All Plazas", plazaDisplayName);
 }
 
 function toggleRangeMode() {
