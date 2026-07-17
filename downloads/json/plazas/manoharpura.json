@@ -4,9 +4,10 @@
   "piu": "Jaipur",
   "ro": "Jaipur",
   "source_raw_names": [
+    "Manoharpura Toll Plaza",
     "Manoharpura Toll plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1945,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 299389,
+          "amount": 15331080.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 45439,
+          "amount": 6138940.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 125291,
+          "amount": 35004100.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 50718,
+          "amount": 16729460.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 192325,
+          "amount": 89285040.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 128,
+          "amount": 71380.0
+        }
+      },
+      "total": {
+        "count": 713290,
+        "amount": 162560000.0
+      },
+      "annual_pass": {
+        "transaction_count": 116038
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

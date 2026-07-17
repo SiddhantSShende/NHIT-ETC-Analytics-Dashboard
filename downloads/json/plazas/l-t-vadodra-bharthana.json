@@ -6,7 +6,7 @@
   "source_raw_names": [
     "L&T Vadodra (Bharthana)"
   ],
-  "period_count": 22,
+  "period_count": 23,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -828,6 +828,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 319958,
+          "amount": 31521065.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 62553,
+          "amount": 14110725.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 167596,
+          "amount": 76714605.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 33289,
+          "amount": 18349170.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 179775,
+          "amount": 141000225.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 720,
+          "amount": 702065.0
+        }
+      },
+      "total": {
+        "count": 763891,
+        "amount": 282397855.0
+      },
+      "annual_pass": {
+        "transaction_count": 118367
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

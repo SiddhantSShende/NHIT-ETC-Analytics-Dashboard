@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Maujpur"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1924,6 +1924,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 75898,
+          "amount": 3958510.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9501,
+          "amount": 1377205.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14313,
+          "amount": 4798790.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1729,
+          "amount": 650170.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11295,
+          "amount": 5678275.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 78,
+          "amount": 10650.0
+        }
+      },
+      "total": {
+        "count": 112814,
+        "amount": 16473600.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

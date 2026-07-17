@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Malera"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 88610,
+          "amount": 6571295.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2474,
+          "amount": 422400.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9051,
+          "amount": 3285895.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2980,
+          "amount": 1241850.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 45272,
+          "amount": 27668915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 62,
+          "amount": 41220.0
+        }
+      },
+      "total": {
+        "count": 148449,
+        "amount": 39231575.0
+      },
+      "annual_pass": {
+        "transaction_count": 32396
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

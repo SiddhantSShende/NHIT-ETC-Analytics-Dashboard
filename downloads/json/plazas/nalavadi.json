@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nalavadi"
   ],
-  "period_count": 50,
+  "period_count": 51,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1836,6 +1836,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 163435,
+          "amount": 13752075.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9230,
+          "amount": 1671120.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 35251,
+          "amount": 12447600.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7481,
+          "amount": 2992000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29984,
+          "amount": 20237400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 34,
+          "amount": 26380.0
+        }
+      },
+      "total": {
+        "count": 245415,
+        "amount": 51126575.0
+      },
+      "annual_pass": {
+        "transaction_count": 46212
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

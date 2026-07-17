@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pagara Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1934,6 +1934,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 156853,
+          "amount": 7828900.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17222,
+          "amount": 2188700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 68762,
+          "amount": 19647230.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28879,
+          "amount": 9070470.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 72501,
+          "amount": 33501905.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 104,
+          "amount": 51300.0
+        }
+      },
+      "total": {
+        "count": 344321,
+        "amount": 72288505.0
+      },
+      "annual_pass": {
+        "transaction_count": 61670
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

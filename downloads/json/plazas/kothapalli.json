@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kothapalli Toll Plaza"
   ],
-  "period_count": 8,
+  "period_count": 9,
   "months": {
     "2025-10": {
       "vehicles": {
@@ -316,6 +316,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 5579,
+          "amount": 149850.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 55,
+          "amount": 2875.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 779,
+          "amount": 79170.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 155,
+          "amount": 18450.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 191,
+          "amount": 33065.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 6759,
+        "amount": 283410.0
+      },
+      "annual_pass": {
+        "transaction_count": 1758
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

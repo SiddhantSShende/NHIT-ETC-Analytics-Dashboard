@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhalkhi Toll Plaza"
   ],
-  "period_count": 40,
+  "period_count": 41,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1466,6 +1466,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 4591,
+          "amount": 294985.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 250,
+          "amount": 64415.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 420,
+          "amount": 252945.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 140,
+          "amount": 93110.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 274,
+          "amount": 223705.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 5675,
+        "amount": 929160.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

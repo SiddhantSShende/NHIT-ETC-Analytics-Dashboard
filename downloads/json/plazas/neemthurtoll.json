@@ -6,7 +6,7 @@
   "source_raw_names": [
     "NeemthurToll Plaza"
   ],
-  "period_count": 33,
+  "period_count": 34,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1214,6 +1214,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 12623,
+          "amount": 677525.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 186,
+          "amount": 31200.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 593,
+          "amount": 238360.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 175,
+          "amount": 54110.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2408,
+          "amount": 1919060.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 680.0
+        }
+      },
+      "total": {
+        "count": 15987,
+        "amount": 2920935.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

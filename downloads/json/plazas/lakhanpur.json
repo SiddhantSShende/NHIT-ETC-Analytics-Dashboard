@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lakhanpur Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 244042,
+          "amount": 17774215.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14183,
+          "amount": 2763695.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 74843,
+          "amount": 30516510.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20778,
+          "amount": 9899145.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 44120,
+          "amount": 29551945.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 17,
+          "amount": 13170.0
+        }
+      },
+      "total": {
+        "count": 397983,
+        "amount": 90518680.0
+      },
+      "annual_pass": {
+        "transaction_count": 117069
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

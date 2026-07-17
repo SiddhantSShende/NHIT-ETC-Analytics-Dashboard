@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhagat Talai Toll Plaza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-03": {
       "vehicles": {
@@ -121,6 +121,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 18266,
+          "amount": 714915.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 349,
+          "amount": 30970.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 533,
+          "amount": 72530.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 121,
+          "amount": 30520.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 168,
+          "amount": 43820.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 685.0
+        }
+      },
+      "total": {
+        "count": 19439,
+        "amount": 893440.0
+      },
+      "annual_pass": {
+        "transaction_count": 5940
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

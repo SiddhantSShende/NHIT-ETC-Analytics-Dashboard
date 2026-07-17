@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mahuvan Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1930,6 +1930,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 539528,
+          "amount": 30848490.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 42650,
+          "amount": 6850010.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 153882,
+          "amount": 51789595.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 63915,
+          "amount": 35626255.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 123872,
+          "amount": 67306455.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 136,
+          "amount": 90285.0
+        }
+      },
+      "total": {
+        "count": 923983,
+        "amount": 192511090.0
+      },
+      "annual_pass": {
+        "transaction_count": 182258
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

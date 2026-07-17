@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sonwa Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 158952,
+          "amount": 8762070.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8237,
+          "amount": 1257670.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 29527,
+          "amount": 9825550.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10727,
+          "amount": 5862060.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 85948,
+          "amount": 43789130.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 53,
+          "amount": 24685.0
+        }
+      },
+      "total": {
+        "count": 293444,
+        "amount": 69521165.0
+      },
+      "annual_pass": {
+        "transaction_count": 67993
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Borgaon Toll Plaza"
   ],
-  "period_count": 46,
+  "period_count": 47,
   "months": {
     "2022-08": {
       "vehicles": {
@@ -1692,6 +1692,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 252298,
+          "amount": 18185675.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9031,
+          "amount": 1444380.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 28384,
+          "amount": 8549400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4083,
+          "amount": 1581100.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 14432,
+          "amount": 8534740.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 323,
+          "amount": 239500.0
+        }
+      },
+      "total": {
+        "count": 308551,
+        "amount": 38534795.0
+      },
+      "annual_pass": {
+        "transaction_count": 74810
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

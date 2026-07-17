@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hilalpur Fee Plaza"
   ],
-  "period_count": 40,
+  "period_count": 41,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1462,6 +1462,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 268780,
+          "amount": 24498770.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5273,
+          "amount": 1980720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15991,
+          "amount": 18925540.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5504,
+          "amount": 8070705.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11811,
+          "amount": 17427370.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 5555.0
+        }
+      },
+      "total": {
+        "count": 307364,
+        "amount": 70908660.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

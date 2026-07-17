@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gumanpura"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 55568,
+          "amount": 2487845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 995,
+          "amount": 93250.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8609,
+          "amount": 1631665.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1429,
+          "amount": 311045.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5641,
+          "amount": 1853335.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 1570.0
+        }
+      },
+      "total": {
+        "count": 72246,
+        "amount": 6378710.0
+      },
+      "annual_pass": {
+        "transaction_count": 18680
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

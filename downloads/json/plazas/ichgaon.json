@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ichgaon"
   ],
-  "period_count": 46,
+  "period_count": 47,
   "months": {
     "2022-08": {
       "vehicles": {
@@ -1692,6 +1692,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 187412,
+          "amount": 11307620.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6788,
+          "amount": 976540.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19144,
+          "amount": 5679280.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4339,
+          "amount": 1487635.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 25007,
+          "amount": 12611970.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 378,
+          "amount": 245310.0
+        }
+      },
+      "total": {
+        "count": 243068,
+        "amount": 32308355.0
+      },
+      "annual_pass": {
+        "transaction_count": 61336
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

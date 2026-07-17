@@ -6,7 +6,7 @@
   "source_raw_names": [
     "UMRI TOLL PLAZA"
   ],
-  "period_count": 10,
+  "period_count": 11,
   "months": {
     "2025-08": {
       "vehicles": {
@@ -396,6 +396,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 132497,
+          "amount": 6664420.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5412,
+          "amount": 620805.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23244,
+          "amount": 5332080.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3295,
+          "amount": 958475.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11304,
+          "amount": 4696005.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 6855.0
+        }
+      },
+      "total": {
+        "count": 175776,
+        "amount": 18278640.0
+      },
+      "annual_pass": {
+        "transaction_count": 35193
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

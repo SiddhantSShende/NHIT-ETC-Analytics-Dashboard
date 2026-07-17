@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sarandi"
   ],
-  "period_count": 31,
+  "period_count": 32,
   "months": {
     "2023-11": {
       "vehicles": {
@@ -1152,6 +1152,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 27801,
+          "amount": 1540740.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1726,
+          "amount": 228685.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8768,
+          "amount": 2359410.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1961,
+          "amount": 617335.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 41639,
+          "amount": 19399795.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 3330.0
+        }
+      },
+      "total": {
+        "count": 81901,
+        "amount": 24149295.0
+      },
+      "annual_pass": {
+        "transaction_count": 5725
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

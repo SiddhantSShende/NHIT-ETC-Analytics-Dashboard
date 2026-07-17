@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Halligudi Fee Plaza"
   ],
-  "period_count": 50,
+  "period_count": 51,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1836,6 +1836,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 103795,
+          "amount": 8211890.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6483,
+          "amount": 1100120.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 20042,
+          "amount": 6707420.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5865,
+          "amount": 2261700.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29217,
+          "amount": 17791525.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 143,
+          "amount": 101795.0
+        }
+      },
+      "total": {
+        "count": 165545,
+        "amount": 36174450.0
+      },
+      "annual_pass": {
+        "transaction_count": 28436
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

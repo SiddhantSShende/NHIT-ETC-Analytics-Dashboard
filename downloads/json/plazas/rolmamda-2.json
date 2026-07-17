@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rolmamda Toll Plaza"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -162,6 +162,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 121925,
+          "amount": 7098600.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18890,
+          "amount": 3242500.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 91418,
+          "amount": 32530155.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 53568,
+          "amount": 22073040.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 82637,
+          "amount": 49017625.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 95,
+          "amount": 67915.0
+        }
+      },
+      "total": {
+        "count": 368533,
+        "amount": 114029835.0
+      },
+      "annual_pass": {
+        "transaction_count": 50004
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

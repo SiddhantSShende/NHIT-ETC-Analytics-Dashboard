@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nelamangala Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1934,6 +1934,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 643945,
+          "amount": 25175520.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 35609,
+          "amount": 2715545.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 80381,
+          "amount": 10477230.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10338,
+          "amount": 2457940.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 18144,
+          "amount": 5152555.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 87,
+          "amount": 12275.0
+        }
+      },
+      "total": {
+        "count": 788504,
+        "amount": 45991065.0
+      },
+      "annual_pass": {
+        "transaction_count": 177450
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

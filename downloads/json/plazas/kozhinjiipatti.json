@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kozhinjiipatti Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 523113,
+          "amount": 24512545.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 56369,
+          "amount": 6332975.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 117085,
+          "amount": 17510580.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20158,
+          "amount": 7554140.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 75939,
+          "amount": 29813340.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 724,
+          "amount": 298170.0
+        }
+      },
+      "total": {
+        "count": 793388,
+        "amount": 86021750.0
+      },
+      "annual_pass": {
+        "transaction_count": 146844
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

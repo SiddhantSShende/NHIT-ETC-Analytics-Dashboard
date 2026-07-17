@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Dodaka Entry VME",
+  "plaza_slug": "dodaka-entry-vme",
+  "piu": "",
+  "ro": "",
+  "source_raw_names": [
+    "Dodaka Entry VME"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 17224,
+          "amount": 1485685.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1877,
+          "amount": 457470.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4873,
+          "amount": 2490175.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1963,
+          "amount": 1078305.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6737,
+          "amount": 5326375.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 5110.0
+        }
+      },
+      "total": {
+        "count": 32681,
+        "amount": 10843120.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
+      ]
+    }
+  }
+}

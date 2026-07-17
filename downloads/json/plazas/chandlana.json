@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chandlana Toll Plaza"
   ],
-  "period_count": 46,
+  "period_count": 47,
   "months": {
     "2022-08": {
       "vehicles": {
@@ -1682,6 +1682,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19306,
+          "amount": 789180.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 349,
+          "amount": 62405.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1226,
+          "amount": 455045.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 353,
+          "amount": 120360.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1747,
+          "amount": 1672540.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 22981,
+        "amount": 3099530.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

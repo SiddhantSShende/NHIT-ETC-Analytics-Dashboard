@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kashi Plaza DME KM 5823"
   ],
-  "period_count": 50,
+  "period_count": 51,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1816,6 +1816,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 630437,
+          "amount": 35499555.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20493,
+          "amount": 2552980.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 44732,
+          "amount": 11371330.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8649,
+          "amount": 1856125.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22285,
+          "amount": 6971315.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 34,
+          "amount": 13250.0
+        }
+      },
+      "total": {
+        "count": 726630,
+        "amount": 58264555.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

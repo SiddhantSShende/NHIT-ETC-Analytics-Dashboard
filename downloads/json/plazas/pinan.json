@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pinan Fee Plaza"
   ],
-  "period_count": 40,
+  "period_count": 41,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1462,6 +1462,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 50444,
+          "amount": 4286870.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1187,
+          "amount": 273525.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2942,
+          "amount": 1830845.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1092,
+          "amount": 776440.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3544,
+          "amount": 3345380.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1240.0
+        }
+      },
+      "total": {
+        "count": 59211,
+        "amount": 10514300.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

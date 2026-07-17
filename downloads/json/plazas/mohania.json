@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mohania Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 215880,
+          "amount": 9062500.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19581,
+          "amount": 1903405.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 62522,
+          "amount": 13673115.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 35866,
+          "amount": 12470610.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 260761,
+          "amount": 84255030.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 95,
+          "amount": 36510.0
+        }
+      },
+      "total": {
+        "count": 594705,
+        "amount": 121401170.0
+      },
+      "annual_pass": {
+        "transaction_count": 68035
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

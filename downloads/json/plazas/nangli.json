@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nangli Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1942,6 +1942,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 275508,
+          "amount": 6591595.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 35796,
+          "amount": 1730670.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 67538,
+          "amount": 6477370.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19401,
+          "amount": 2176045.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37976,
+          "amount": 6500410.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 45,
+          "amount": 9315.0
+        }
+      },
+      "total": {
+        "count": 436264,
+        "amount": 23485405.0
+      },
+      "annual_pass": {
+        "transaction_count": 111863
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

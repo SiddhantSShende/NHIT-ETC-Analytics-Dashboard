@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Shahabpur Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 341999,
+          "amount": 9945295.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4881,
+          "amount": 267855.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 22737,
+          "amount": 2488780.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2808,
+          "amount": 365475.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29056,
+          "amount": 5212790.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 1935.0
+        }
+      },
+      "total": {
+        "count": 401491,
+        "amount": 18282130.0
+      },
+      "annual_pass": {
+        "transaction_count": 48233
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

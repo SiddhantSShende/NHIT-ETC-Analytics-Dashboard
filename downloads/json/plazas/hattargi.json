@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hattargi"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 354072,
+          "amount": 6785085.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 42935,
+          "amount": 1591220.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 102276,
+          "amount": 7400365.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25145,
+          "amount": 2149290.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 59791,
+          "amount": 7355660.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 79,
+          "amount": 11235.0
+        }
+      },
+      "total": {
+        "count": 584298,
+        "amount": 25292855.0
+      },
+      "annual_pass": {
+        "transaction_count": 59656
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

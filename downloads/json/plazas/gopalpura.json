@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gopalpura Toll Plaza"
   ],
-  "period_count": 18,
+  "period_count": 19,
   "months": {
     "2024-12": {
       "vehicles": {
@@ -676,6 +676,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 44570,
+          "amount": 2831605.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4425,
+          "amount": 976870.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 24083,
+          "amount": 11619765.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12136,
+          "amount": 6435450.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 13507,
+          "amount": 9619065.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 3160.0
+        }
+      },
+      "total": {
+        "count": 98725,
+        "amount": 31485915.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

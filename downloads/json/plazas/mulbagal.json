@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mulbagal Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1934,6 +1934,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 353388,
+          "amount": 17717795.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 37052,
+          "amount": 4641085.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 75936,
+          "amount": 17034255.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18390,
+          "amount": 8447140.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37152,
+          "amount": 18283460.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 43,
+          "amount": 22360.0
+        }
+      },
+      "total": {
+        "count": 521961,
+        "amount": 66146095.0
+      },
+      "annual_pass": {
+        "transaction_count": 126460
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

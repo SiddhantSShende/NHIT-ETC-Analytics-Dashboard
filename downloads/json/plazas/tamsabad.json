@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Tamsabad Toll Plaza"
   ],
-  "period_count": 40,
+  "period_count": 41,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1476,6 +1476,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 270748,
+          "amount": 9885860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7846,
+          "amount": 810330.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 25639,
+          "amount": 5524445.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3730,
+          "amount": 956060.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19542,
+          "amount": 7119490.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 21,
+          "amount": 7680.0
+        }
+      },
+      "total": {
+        "count": 327526,
+        "amount": 24303865.0
+      },
+      "annual_pass": {
+        "transaction_count": 127299
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

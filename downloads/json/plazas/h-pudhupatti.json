@@ -6,7 +6,7 @@
   "source_raw_names": [
     "H. Pudhupatti"
   ],
-  "period_count": 11,
+  "period_count": 12,
   "months": {
     "2025-07": {
       "vehicles": {
@@ -432,6 +432,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 105856,
+          "amount": 6057380.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11640,
+          "amount": 1528310.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 22218,
+          "amount": 4820765.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9511,
+          "amount": 3117350.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29434,
+          "amount": 14340655.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 4000.0
+        }
+      },
+      "total": {
+        "count": 178667,
+        "amount": 29868460.0
+      },
+      "annual_pass": {
+        "transaction_count": 31634
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

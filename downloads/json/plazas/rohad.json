@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rohad Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 593793,
+          "amount": 31977665.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20143,
+          "amount": 3558790.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 36986,
+          "amount": 13977635.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5039,
+          "amount": 2276430.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 16956,
+          "amount": 11281480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 30,
+          "amount": 24705.0
+        }
+      },
+      "total": {
+        "count": 672947,
+        "amount": 63096705.0
+      },
+      "annual_pass": {
+        "transaction_count": 345572
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

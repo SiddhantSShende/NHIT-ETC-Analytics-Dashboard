@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kathpur Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 516310,
+          "amount": 23879690.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 23465,
+          "amount": 2352835.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 85843,
+          "amount": 17864585.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 31568,
+          "amount": 8041280.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 105444,
+          "amount": 38748600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 161,
+          "amount": 67100.0
+        }
+      },
+      "total": {
+        "count": 762791,
+        "amount": 90954090.0
+      },
+      "annual_pass": {
+        "transaction_count": 152417
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

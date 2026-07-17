@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lohari Toll Plaza"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-02": {
       "vehicles": {
@@ -1908,6 +1908,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 132301,
+          "amount": 9169140.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2392,
+          "amount": 542960.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12286,
+          "amount": 4941155.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2930,
+          "amount": 1510500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 16089,
+          "amount": 12075000.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 16,
+          "amount": 13760.0
+        }
+      },
+      "total": {
+        "count": 166014,
+        "amount": 28252515.0
+      },
+      "annual_pass": {
+        "transaction_count": 59957
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

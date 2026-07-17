@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jaswantpura Toll Plaza"
   ],
-  "period_count": 27,
+  "period_count": 28,
   "months": {
     "2024-03": {
       "vehicles": {
@@ -1008,6 +1008,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 33738,
+          "amount": 910260.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1633,
+          "amount": 39135.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5195,
+          "amount": 635680.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3292,
+          "amount": 452290.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 25435,
+          "amount": 5107505.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 33,
+          "amount": 7005.0
+        }
+      },
+      "total": {
+        "count": 69326,
+        "amount": 7151875.0
+      },
+      "annual_pass": {
+        "transaction_count": 12097
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

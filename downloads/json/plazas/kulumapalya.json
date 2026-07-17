@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kulumapalya toll plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 705113,
+          "amount": 13632715.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 130225,
+          "amount": 4377000.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 207876,
+          "amount": 14741985.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 51163,
+          "amount": 4255290.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 131985,
+          "amount": 16420890.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 952,
+          "amount": 144270.0
+        }
+      },
+      "total": {
+        "count": 1227314,
+        "amount": 53572150.0
+      },
+      "annual_pass": {
+        "transaction_count": 183418
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

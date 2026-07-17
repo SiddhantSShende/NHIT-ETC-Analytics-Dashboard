@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Anupalle",
+  "plaza_slug": "anupalle",
+  "piu": "Chittoor",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Anupalle"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 18108,
+          "amount": 1687250.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2909,
+          "amount": 762320.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2462,
+          "amount": 1414340.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 924,
+          "amount": 486295.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4701,
+          "amount": 4306090.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 1150.0
+        }
+      },
+      "total": {
+        "count": 29105,
+        "amount": 8657445.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
+      ]
+    }
+  }
+}

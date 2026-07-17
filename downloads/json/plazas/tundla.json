@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Tundla Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1934,6 +1934,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 410260,
+          "amount": 22333255.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 29063,
+          "amount": 4861200.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 101777,
+          "amount": 34212745.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21820,
+          "amount": 8579340.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 83539,
+          "amount": 47566245.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 61,
+          "amount": 44835.0
+        }
+      },
+      "total": {
+        "count": 646520,
+        "amount": 117597620.0
+      },
+      "annual_pass": {
+        "transaction_count": 148141
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

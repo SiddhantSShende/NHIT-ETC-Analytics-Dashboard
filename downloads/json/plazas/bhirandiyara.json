@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhirandiyara"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -756,6 +756,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 17247,
+          "amount": 991530.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1161,
+          "amount": 142650.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2838,
+          "amount": 627045.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1368,
+          "amount": 323510.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 93904,
+          "amount": 23916165.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 651,
+          "amount": 366535.0
+        }
+      },
+      "total": {
+        "count": 117169,
+        "amount": 26367435.0
+      },
+      "annual_pass": {
+        "transaction_count": 4448
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

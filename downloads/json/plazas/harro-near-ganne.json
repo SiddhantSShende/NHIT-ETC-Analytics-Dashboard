@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Harro Toll Plaza near Ganne"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 138280,
+          "amount": 7728250.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4418,
+          "amount": 583615.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11238,
+          "amount": 3139365.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1110,
+          "amount": 357150.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22304,
+          "amount": 10595895.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 4775.0
+        }
+      },
+      "total": {
+        "count": 177359,
+        "amount": 22409050.0
+      },
+      "annual_pass": {
+        "transaction_count": 45903
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

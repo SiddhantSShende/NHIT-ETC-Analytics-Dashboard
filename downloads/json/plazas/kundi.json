@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kundi Toll Plaza"
   ],
-  "period_count": 13,
+  "period_count": 14,
   "months": {
     "2025-05": {
       "vehicles": {
@@ -504,6 +504,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 94932,
+          "amount": 5409830.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6112,
+          "amount": 805920.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 22398,
+          "amount": 6140400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18137,
+          "amount": 5030355.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29465,
+          "amount": 13260560.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 30,
+          "amount": 15090.0
+        }
+      },
+      "total": {
+        "count": 171074,
+        "amount": 30662155.0
+      },
+      "annual_pass": {
+        "transaction_count": 29086
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

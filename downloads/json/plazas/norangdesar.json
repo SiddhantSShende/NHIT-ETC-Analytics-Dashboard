@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Norangdesar Toll Plaza"
   ],
-  "period_count": 33,
+  "period_count": 34,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1210,6 +1210,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15957,
+          "amount": 1975130.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 335,
+          "amount": 177890.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1229,
+          "amount": 1508955.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 900,
+          "amount": 1105990.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8470,
+          "amount": 20968060.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 4280.0
+        }
+      },
+      "total": {
+        "count": 26893,
+        "amount": 25740305.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

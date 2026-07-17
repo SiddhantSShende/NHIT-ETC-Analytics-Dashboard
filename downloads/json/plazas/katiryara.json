@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Katiryara Toll Plaza"
   ],
-  "period_count": 5,
+  "period_count": 6,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -199,6 +199,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 71039,
+          "amount": 4461650.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3557,
+          "amount": 513005.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14318,
+          "amount": 4413025.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7224,
+          "amount": 2508170.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 55639,
+          "amount": 26430390.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 17,
+          "amount": 9735.0
+        }
+      },
+      "total": {
+        "count": 151794,
+        "amount": 38335975.0
+      },
+      "annual_pass": {
+        "transaction_count": 20586
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

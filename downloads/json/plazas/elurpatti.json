@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Elurpatti Toll Plaza",
+  "plaza_slug": "elurpatti",
+  "piu": "Trichy",
+  "ro": "Chennai",
+  "source_raw_names": [
+    "Elurpatti Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 108502,
+          "amount": 3841350.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8699,
+          "amount": 604960.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17379,
+          "amount": 2512345.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6779,
+          "amount": 1151785.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10550,
+          "amount": 2658685.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 98,
+          "amount": 31150.0
+        }
+      },
+      "total": {
+        "count": 152007,
+        "amount": 10800275.0
+      },
+      "annual_pass": {
+        "transaction_count": 28132
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
+      ]
+    }
+  }
+}

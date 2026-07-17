@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chillakallu"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 358065,
+          "amount": 18394995.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 12432,
+          "amount": 1837360.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 66413,
+          "amount": 17194315.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13859,
+          "amount": 4436880.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 48495,
+          "amount": 23826075.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 50,
+          "amount": 30885.0
+        }
+      },
+      "total": {
+        "count": 499314,
+        "amount": 65720510.0
+      },
+      "annual_pass": {
+        "transaction_count": 175591
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "GELLA KI NANGAL TOLL PLAZA"
   ],
-  "period_count": 11,
+  "period_count": 12,
   "months": {
     "2025-07": {
       "vehicles": {
@@ -418,6 +418,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 28240,
+          "amount": 1591925.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 383,
+          "amount": 98690.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1439,
+          "amount": 445260.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1823,
+          "amount": 194500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1971,
+          "amount": 352890.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 700.0
+        }
+      },
+      "total": {
+        "count": 33863,
+        "amount": 2683965.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

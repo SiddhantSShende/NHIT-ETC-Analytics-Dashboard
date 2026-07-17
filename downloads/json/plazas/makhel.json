@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Makhel Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1930,6 +1930,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 53744,
+          "amount": 3481570.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3047,
+          "amount": 412655.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16477,
+          "amount": 4630135.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6642,
+          "amount": 2087055.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 213511,
+          "amount": 107076625.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 289,
+          "amount": 146445.0
+        }
+      },
+      "total": {
+        "count": 293710,
+        "amount": 117834485.0
+      },
+      "annual_pass": {
+        "transaction_count": 15232
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

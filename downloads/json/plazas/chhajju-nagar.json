@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chhajju Nagar"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1924,6 +1924,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 166854,
+          "amount": 11687270.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 28657,
+          "amount": 5583000.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 50110,
+          "amount": 22183870.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19779,
+          "amount": 11246435.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 93829,
+          "amount": 53675785.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 111,
+          "amount": 75680.0
+        }
+      },
+      "total": {
+        "count": 359340,
+        "amount": 104452040.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

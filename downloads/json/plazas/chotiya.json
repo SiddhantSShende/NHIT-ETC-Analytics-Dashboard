@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chotiya TOLL PLAZA"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 76509,
+          "amount": 4059905.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3478,
+          "amount": 360195.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16625,
+          "amount": 3745300.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2969,
+          "amount": 721755.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 36056,
+          "amount": 14030610.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 21,
+          "amount": 9870.0
+        }
+      },
+      "total": {
+        "count": 135658,
+        "amount": 22927635.0
+      },
+      "annual_pass": {
+        "transaction_count": 18289
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

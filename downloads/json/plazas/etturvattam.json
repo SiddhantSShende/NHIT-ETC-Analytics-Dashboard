@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Etturvattam Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 291829,
+          "amount": 17596599.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 30245,
+          "amount": 4545490.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 65684,
+          "amount": 17479650.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11677,
+          "amount": 4113600.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 31073,
+          "amount": 15927765.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 139,
+          "amount": 79695.0
+        }
+      },
+      "total": {
+        "count": 430647,
+        "amount": 59742799.0
+      },
+      "annual_pass": {
+        "transaction_count": 108298
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chhegaon Makhan Toll Plaza"
   ],
-  "period_count": 23,
+  "period_count": 24,
   "months": {
     "2024-07": {
       "vehicles": {
@@ -864,6 +864,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 75599,
+          "amount": 5895995.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7082,
+          "amount": 1063810.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 49907,
+          "amount": 16685670.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9289,
+          "amount": 3449070.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23097,
+          "amount": 12444765.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 15,
+          "amount": 8745.0
+        }
+      },
+      "total": {
+        "count": 164989,
+        "amount": 39548055.0
+      },
+      "annual_pass": {
+        "transaction_count": 20200
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

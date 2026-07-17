@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mundiyar Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 42838,
+          "amount": 2180240.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2589,
+          "amount": 414145.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9587,
+          "amount": 3254890.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6724,
+          "amount": 2679350.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 21414,
+          "amount": 12217120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 4890.0
+        }
+      },
+      "total": {
+        "count": 83160,
+        "amount": 20750635.0
+      },
+      "annual_pass": {
+        "transaction_count": 25018
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

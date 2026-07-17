@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhavaninagar"
   ],
-  "period_count": 13,
+  "period_count": 14,
   "months": {
     "2025-05": {
       "vehicles": {
@@ -504,6 +504,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 166689,
+          "amount": 7920195.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8154,
+          "amount": 785330.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 24059,
+          "amount": 4669735.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4573,
+          "amount": 1022560.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 24956,
+          "amount": 8188390.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 265,
+          "amount": 100530.0
+        }
+      },
+      "total": {
+        "count": 228696,
+        "amount": 22686740.0
+      },
+      "annual_pass": {
+        "transaction_count": 33178
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

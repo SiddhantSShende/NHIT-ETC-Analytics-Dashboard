@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mettupatti Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 475670,
+          "amount": 17745435.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 44389,
+          "amount": 4085765.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 97513,
+          "amount": 11446380.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18040,
+          "amount": 5500975.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 34712,
+          "amount": 11485170.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 233,
+          "amount": 84545.0
+        }
+      },
+      "total": {
+        "count": 670557,
+        "amount": 50348270.0
+      },
+      "annual_pass": {
+        "transaction_count": 152277
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

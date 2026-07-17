@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Raje Toll Plaza (T-2)"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1942,6 +1942,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 119879,
+          "amount": 10158870.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 24037,
+          "amount": 4369655.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 42180,
+          "amount": 18797220.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22723,
+          "amount": 11890815.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 54251,
+          "amount": 39916200.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 29,
+          "amount": 21855.0
+        }
+      },
+      "total": {
+        "count": 263099,
+        "amount": 85154615.0
+      },
+      "annual_pass": {
+        "transaction_count": 37907
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

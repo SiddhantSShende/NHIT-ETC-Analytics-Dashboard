@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khadaka Toll Plaza"
   ],
-  "period_count": 18,
+  "period_count": 19,
   "months": {
     "2024-12": {
       "vehicles": {
@@ -684,6 +684,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 43872,
+          "amount": 2140325.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11053,
+          "amount": 992800.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 30381,
+          "amount": 5985105.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 16624,
+          "amount": 3553030.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 46848,
+          "amount": 14575140.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 86,
+          "amount": 28280.0
+        }
+      },
+      "total": {
+        "count": 148864,
+        "amount": 27274680.0
+      },
+      "annual_pass": {
+        "transaction_count": 13690
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

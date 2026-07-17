@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Pondavakkam",
+  "plaza_slug": "pondavakkam",
+  "piu": "Chittoor",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Pondavakkam"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 22623,
+          "amount": 2557455.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2691,
+          "amount": 863625.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2180,
+          "amount": 1488160.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 897,
+          "amount": 644650.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6538,
+          "amount": 6010799.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 7155.0
+        }
+      },
+      "total": {
+        "count": 34939,
+        "amount": 11571844.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
+      ]
+    }
+  }
+}

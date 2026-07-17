@@ -6,7 +6,7 @@
   "source_raw_names": [
     "TP25 Budhanpur"
   ],
-  "period_count": 14,
+  "period_count": 15,
   "months": {
     "2025-04": {
       "vehicles": {
@@ -530,6 +530,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 9805,
+          "amount": 805860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 154,
+          "amount": 36245.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 635,
+          "amount": 381220.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 215,
+          "amount": 115775.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2622,
+          "amount": 1908715.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 3020.0
+        }
+      },
+      "total": {
+        "count": 13433,
+        "amount": 3250835.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

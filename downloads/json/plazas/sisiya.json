@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sisiya toll plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -82,6 +82,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 47321,
+          "amount": 1768675.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2389,
+          "amount": 170520.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17076,
+          "amount": 2626415.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8303,
+          "amount": 1528645.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11764,
+          "amount": 3000980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 2805.0
+        }
+      },
+      "total": {
+        "count": 86862,
+        "amount": 9098040.0
+      },
+      "annual_pass": {
+        "transaction_count": 6180
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

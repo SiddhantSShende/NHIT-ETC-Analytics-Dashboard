@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sangana Toll Plaza"
   ],
-  "period_count": 33,
+  "period_count": 34,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1208,6 +1208,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13826,
+          "amount": 1137670.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 245,
+          "amount": 51705.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1551,
+          "amount": 924940.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 647,
+          "amount": 383500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6803,
+          "amount": 9750600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 210.0
+        }
+      },
+      "total": {
+        "count": 23073,
+        "amount": 12248625.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

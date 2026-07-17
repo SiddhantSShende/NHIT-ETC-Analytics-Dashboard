@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bartana Toll Plaza"
   ],
-  "period_count": 13,
+  "period_count": 14,
   "months": {
     "2025-05": {
       "vehicles": {
@@ -504,6 +504,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 126044,
+          "amount": 4041515.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6660,
+          "amount": 607050.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9953,
+          "amount": 2016555.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2328,
+          "amount": 541125.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 16013,
+          "amount": 5229350.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 3675.0
+        }
+      },
+      "total": {
+        "count": 161007,
+        "amount": 12439270.0
+      },
+      "annual_pass": {
+        "transaction_count": 72451
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

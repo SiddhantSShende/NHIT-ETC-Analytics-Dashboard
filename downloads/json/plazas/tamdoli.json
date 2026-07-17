@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Tamdoli"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14007,
+          "amount": 634275.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 268,
+          "amount": 26040.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1206,
+          "amount": 255710.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 634,
+          "amount": 150580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5123,
+          "amount": 1721825.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2525.0
+        }
+      },
+      "total": {
+        "count": 21245,
+        "amount": 2790955.0
+      },
+      "annual_pass": {
+        "transaction_count": 4202
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

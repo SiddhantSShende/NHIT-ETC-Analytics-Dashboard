@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dongrale Toll Plaza"
   ],
-  "period_count": 31,
+  "period_count": 32,
   "months": {
     "2023-11": {
       "vehicles": {
@@ -1152,6 +1152,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 41588,
+          "amount": 1325145.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1740,
+          "amount": 103695.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 13328,
+          "amount": 1550705.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8193,
+          "amount": 1158735.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 26516,
+          "amount": 5382480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 1705.0
+        }
+      },
+      "total": {
+        "count": 91372,
+        "amount": 9522465.0
+      },
+      "annual_pass": {
+        "transaction_count": 12972
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

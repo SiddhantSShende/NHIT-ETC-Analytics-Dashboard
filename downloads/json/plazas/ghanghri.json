@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ghanghri Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 137482,
+          "amount": 12188995.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14452,
+          "amount": 2668495.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 48659,
+          "amount": 20187905.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 26324,
+          "amount": 12257800.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 125208,
+          "amount": 84307650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 107,
+          "amount": 87420.0
+        }
+      },
+      "total": {
+        "count": 352232,
+        "amount": 131698265.0
+      },
+      "annual_pass": {
+        "transaction_count": 30252
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

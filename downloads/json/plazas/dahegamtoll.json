@@ -6,7 +6,7 @@
   "source_raw_names": [
     "DahegamToll Plaza"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -748,6 +748,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 100832,
+          "amount": 7083630.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4548,
+          "amount": 1054875.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10424,
+          "amount": 4734510.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2875,
+          "amount": 1457155.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 54465,
+          "amount": 34367120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 73,
+          "amount": 55155.0
+        }
+      },
+      "total": {
+        "count": 173217,
+        "amount": 48752445.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

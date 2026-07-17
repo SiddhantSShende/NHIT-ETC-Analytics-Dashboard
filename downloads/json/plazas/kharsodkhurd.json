@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kharsodkhurd Toll Plaza"
   ],
-  "period_count": 13,
+  "period_count": 14,
   "months": {
     "2025-05": {
       "vehicles": {
@@ -504,6 +504,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 121452,
+          "amount": 9349695.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4524,
+          "amount": 855520.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10703,
+          "amount": 4324815.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2706,
+          "amount": 1154245.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 20916,
+          "amount": 13661200.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 112,
+          "amount": 92380.0
+        }
+      },
+      "total": {
+        "count": 160413,
+        "amount": 29437855.0
+      },
+      "annual_pass": {
+        "transaction_count": 43006
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

@@ -1,0 +1,51 @@
+{
+  "plaza_name": "Nathampatti Toll Plaza",
+  "plaza_slug": "nathampatti",
+  "piu": "Nagercoil",
+  "ro": "Madurai",
+  "source_raw_names": [
+    "Nathampatti Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 103509,
+          "amount": 5693520.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7666,
+          "amount": 878670.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12158,
+          "amount": 2849700.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2311,
+          "amount": 646355.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4229,
+          "amount": 1765500.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 1320.0
+        }
+      },
+      "total": {
+        "count": 129876,
+        "amount": 11835065.0
+      },
+      "annual_pass": {
+        "transaction_count": 29133
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
+      ]
+    }
+  }
+}

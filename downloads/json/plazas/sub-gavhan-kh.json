@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sub Gavhan Kh Toll Plaza"
   ],
-  "period_count": 27,
+  "period_count": 28,
   "months": {
     "2024-03": {
       "vehicles": {
@@ -1008,6 +1008,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 112016,
+          "amount": 9307915.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6936,
+          "amount": 1686975.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 41293,
+          "amount": 20140450.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13811,
+          "amount": 8081100.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 79191,
+          "amount": 67273515.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 35,
+          "amount": 34375.0
+        }
+      },
+      "total": {
+        "count": 253282,
+        "amount": 106524330.0
+      },
+      "annual_pass": {
+        "transaction_count": 48680
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

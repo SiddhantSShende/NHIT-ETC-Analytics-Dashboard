@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rupakheda Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 122391,
+          "amount": 4632775.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4020,
+          "amount": 441090.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14758,
+          "amount": 3288670.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5555,
+          "amount": 1189435.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19443,
+          "amount": 7233295.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 74,
+          "amount": 7980.0
+        }
+      },
+      "total": {
+        "count": 166241,
+        "amount": 16793245.0
+      },
+      "annual_pass": {
+        "transaction_count": 55913
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

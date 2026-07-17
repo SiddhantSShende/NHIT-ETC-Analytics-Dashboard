@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Manapuram Toll Plaza"
   ],
-  "period_count": 9,
+  "period_count": 10,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -357,6 +357,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 102981,
+          "amount": 3805950.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3836,
+          "amount": 281065.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23237,
+          "amount": 3154795.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6904,
+          "amount": 1214900.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 50740,
+          "amount": 13844165.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 33,
+          "amount": 9830.0
+        }
+      },
+      "total": {
+        "count": 187731,
+        "amount": 22310705.0
+      },
+      "annual_pass": {
+        "transaction_count": 23623
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

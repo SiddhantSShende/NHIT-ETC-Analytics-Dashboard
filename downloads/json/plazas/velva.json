@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Velva Toll Plaza"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -756,6 +756,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 130917,
+          "amount": 5129060.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2643,
+          "amount": 295010.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10301,
+          "amount": 2196855.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1487,
+          "amount": 352265.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 24807,
+          "amount": 8077230.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 131,
+          "amount": 66090.0
+        }
+      },
+      "total": {
+        "count": 170286,
+        "amount": 16116510.0
+      },
+      "annual_pass": {
+        "transaction_count": 63316
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

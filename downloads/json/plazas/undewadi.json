@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Undewadi Toll Plaza"
   ],
-  "period_count": 28,
+  "period_count": 29,
   "months": {
     "2024-02": {
       "vehicles": {
@@ -1044,6 +1044,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 91206,
+          "amount": 4721545.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7594,
+          "amount": 703445.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15780,
+          "amount": 3050160.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2955,
+          "amount": 690225.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9397,
+          "amount": 3261840.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 21,
+          "amount": 8905.0
+        }
+      },
+      "total": {
+        "count": 126953,
+        "amount": 12436120.0
+      },
+      "annual_pass": {
+        "transaction_count": 20164
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

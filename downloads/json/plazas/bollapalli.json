@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bollapalli Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 294908,
+          "amount": 24659210.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 23344,
+          "amount": 6356535.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 77875,
+          "amount": 40854870.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 27092,
+          "amount": 23212115.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 84508,
+          "amount": 75918665.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 127,
+          "amount": 141840.0
+        }
+      },
+      "total": {
+        "count": 507854,
+        "amount": 171143235.0
+      },
+      "annual_pass": {
+        "transaction_count": 141206
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

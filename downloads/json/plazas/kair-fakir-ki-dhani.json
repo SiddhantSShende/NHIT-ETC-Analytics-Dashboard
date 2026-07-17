@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kair Fakir Ki Dhani toll plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 21660,
+          "amount": 1049705.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 426,
+          "amount": 39780.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3354,
+          "amount": 636315.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1423,
+          "amount": 288010.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4703,
+          "amount": 1484350.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 132,
+          "amount": 48375.0
+        }
+      },
+      "total": {
+        "count": 31698,
+        "amount": 3546535.0
+      },
+      "annual_pass": {
+        "transaction_count": 4352
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

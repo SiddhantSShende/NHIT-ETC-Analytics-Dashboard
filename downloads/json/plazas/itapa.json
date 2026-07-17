@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Itapa Toll Plaza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -121,6 +121,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 177222,
+          "amount": 10507410.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5965,
+          "amount": 744840.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 25544,
+          "amount": 6611850.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23169,
+          "amount": 5037500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 148007,
+          "amount": 57895070.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 68,
+          "amount": 35110.0
+        }
+      },
+      "total": {
+        "count": 379975,
+        "amount": 80831780.0
+      },
+      "annual_pass": {
+        "transaction_count": 39042
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

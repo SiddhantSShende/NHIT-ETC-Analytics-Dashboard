@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kusthala Toll Plaza"
   ],
-  "period_count": 24,
+  "period_count": 25,
   "months": {
     "2024-06": {
       "vehicles": {
@@ -886,6 +886,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 82762,
+          "amount": 11276440.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5412,
+          "amount": 3359450.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 28361,
+          "amount": 35526155.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13792,
+          "amount": 18470245.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 18025,
+          "amount": 31271070.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 9745.0
+        }
+      },
+      "total": {
+        "count": 148358,
+        "amount": 99913105.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

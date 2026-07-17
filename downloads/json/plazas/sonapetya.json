@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sonapetya"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1924,6 +1924,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 287686,
+          "amount": 23679040.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13945,
+          "amount": 2037425.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 44373,
+          "amount": 13584505.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25221,
+          "amount": 8763400.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 126657,
+          "amount": 64911565.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 60,
+          "amount": 32090.0
+        }
+      },
+      "total": {
+        "count": 497942,
+        "amount": 113008025.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

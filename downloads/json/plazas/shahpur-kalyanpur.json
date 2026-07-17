@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Shahpur Kalyanpur Fee Plaza"
   ],
-  "period_count": 5,
+  "period_count": 6,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -201,6 +201,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 141445,
+          "amount": 6613435.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2939,
+          "amount": 282700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14800,
+          "amount": 2927900.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1356,
+          "amount": 295715.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7270,
+          "amount": 2241990.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 167810,
+        "amount": 12361740.0
+      },
+      "annual_pass": {
+        "transaction_count": 43136
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

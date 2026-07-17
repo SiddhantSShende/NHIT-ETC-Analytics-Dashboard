@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Srirampur toll plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 46686,
+          "amount": 3326615.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 862,
+          "amount": 157840.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11052,
+          "amount": 4231880.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25288,
+          "amount": 9601075.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 85597,
+          "amount": 53963630.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 478,
+          "amount": 276730.0
+        }
+      },
+      "total": {
+        "count": 169963,
+        "amount": 71557770.0
+      },
+      "annual_pass": {
+        "transaction_count": 17466
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

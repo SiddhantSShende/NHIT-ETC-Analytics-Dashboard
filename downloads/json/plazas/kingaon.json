@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kingaon Toll Plaza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-03": {
       "vehicles": {
@@ -121,6 +121,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 34261,
+          "amount": 1225425.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1238,
+          "amount": 93360.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7488,
+          "amount": 1197940.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1453,
+          "amount": 250000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4313,
+          "amount": 1149965.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 48753,
+        "amount": 3916690.0
+      },
+      "annual_pass": {
+        "transaction_count": 9627
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

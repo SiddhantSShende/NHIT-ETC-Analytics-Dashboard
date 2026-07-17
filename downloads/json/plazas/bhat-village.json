@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhat Village Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -80,6 +80,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 130301,
+          "amount": 11869655.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3480,
+          "amount": 813995.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5240,
+          "amount": 2834780.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1026,
+          "amount": 622010.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8247,
+          "amount": 8217175.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 50,
+          "amount": 53160.0
+        }
+      },
+      "total": {
+        "count": 148344,
+        "amount": 24410775.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

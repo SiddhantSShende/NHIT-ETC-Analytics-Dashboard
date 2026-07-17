@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pahammawlein Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1944,6 +1944,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 195878,
+          "amount": 14929250.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4568,
+          "amount": 619440.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 34826,
+          "amount": 10385060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6396,
+          "amount": 2006285.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 36290,
+          "amount": 17493580.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 16,
+          "amount": 8115.0
+        }
+      },
+      "total": {
+        "count": 277974,
+        "amount": 45441730.0
+      },
+      "annual_pass": {
+        "transaction_count": 12776
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

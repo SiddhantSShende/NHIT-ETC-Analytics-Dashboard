@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rasampalayam Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 334263,
+          "amount": 11698770.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 33453,
+          "amount": 3033885.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 67843,
+          "amount": 9056985.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 15969,
+          "amount": 4615035.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 49254,
+          "amount": 15533845.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 778,
+          "amount": 258320.0
+        }
+      },
+      "total": {
+        "count": 501560,
+        "amount": 44196840.0
+      },
+      "annual_pass": {
+        "transaction_count": 101489
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

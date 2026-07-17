@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hitnal"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1934,6 +1934,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 232304,
+          "amount": 8657945.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 31475,
+          "amount": 2369705.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 112408,
+          "amount": 17347900.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 66997,
+          "amount": 14851650.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 181707,
+          "amount": 43426015.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1090,
+          "amount": 346010.0
+        }
+      },
+      "total": {
+        "count": 625981,
+        "amount": 86999225.0
+      },
+      "annual_pass": {
+        "transaction_count": 55221
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jamli Toll Pllaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1932,6 +1932,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 188977,
+          "amount": 12931185.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 31137,
+          "amount": 5577705.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 106336,
+          "amount": 42971370.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 45138,
+          "amount": 30066195.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 127503,
+          "amount": 83761610.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 305,
+          "amount": 205875.0
+        }
+      },
+      "total": {
+        "count": 499396,
+        "amount": 175513940.0
+      },
+      "annual_pass": {
+        "transaction_count": 64889
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }

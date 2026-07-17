@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dukkavanipalem Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1942,6 +1942,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/May-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/May-2026.pdf"
+      ]
+    },
+    "2026-06": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 131336,
+          "amount": 3939060.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16841,
+          "amount": 1160600.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 48025,
+          "amount": 7249650.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 32776,
+          "amount": 5547070.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 105604,
+          "amount": 25503610.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 106,
+          "amount": 30775.0
+        }
+      },
+      "total": {
+        "count": 334688,
+        "amount": 43430765.0
+      },
+      "annual_pass": {
+        "transaction_count": 48669
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/June-2026.pdf"
       ]
     }
   }
