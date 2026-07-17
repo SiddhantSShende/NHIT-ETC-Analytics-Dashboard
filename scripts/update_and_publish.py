@@ -1,15 +1,18 @@
 """
 NHIT | Crawl IHMCL -> rebuild JSON -> publish (git push -> Vercel deploy).
 
-The single entry point for scheduled data refreshes; both the Windows Task
-Scheduler job and the GitHub Actions workflow run this script. Steps:
+The single entry point for scheduled data refreshes. The Windows Task
+Scheduler job ("NHIT ETC Data Refresh", monthly on the 15th) runs this; the
+GitHub Actions workflow is a manual fallback only, because ihmcl.co.in
+403-blocks GitHub's datacenter IPs. Steps:
 
-    1. git pull --rebase          (converge with whatever the other scheduler
-                                   already pushed; best-effort)
+    1. git pull --rebase          (converge with anything pushed elsewhere;
+                                   best-effort)
     2. crawl IHMCL                (scripts/ihmcl_crawler.py — period-based
                                    diff, downloads only what is missing)
-    3. rebuild JSON               (scripts/build_json_export.py, 1-2 h —
-                                   it re-parses every PDF from scratch)
+    3. rebuild JSON               (scripts/build_json_export.py — incremental:
+                                   parses only periods with no monthly JSON,
+                                   ~90s for a typical month)
     4. sanity gate                (new periods present, plaza_count > 0,
                                    validation_warnings did not increase)
     5. commit + push              (state-based staging: untracked report PDFs
@@ -51,8 +54,10 @@ LOCK_FILE = LOGS_DIR / "update.lock"
 LOCK_STALE_SECONDS = 4 * 3600
 INDEX_JSON = ROOT / "downloads" / "json" / "_index.json"
 MONTHLY_DIR = ROOT / "downloads" / "json" / "monthly"
-BUILD_TIMEOUT = 7200  # seconds; the full rebuild re-parses every PDF and
-# takes well over an hour on a laptop (pdfplumber table extraction dominates)
+BUILD_TIMEOUT = 7200  # seconds. The incremental build only parses periods
+# with no monthly JSON yet, so a normal month costs ~90s. This ceiling is
+# sized for build_json_export.py --full (~105 min: pdfplumber table
+# extraction over every PDF), which a human may run after a parser change.
 
 # Directories whose PDFs are data sources; gitignored but force-added so the
 # repo keeps a complete archive. This matters beyond archival: the GitHub
@@ -170,7 +175,7 @@ def read_index() -> dict:
 
 
 def run_build() -> None:
-    log.info("Rebuilding JSON exports (full re-parse; can take 1-2 hours)...")
+    log.info("Rebuilding JSON exports (parsing only periods with no JSON yet)...")
     proc = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "build_json_export.py")],
         cwd=ROOT,
@@ -292,8 +297,14 @@ def main(argv: list[str] | None = None) -> int:
             return 0
 
         # Periods needing a rebuild: this run's downloads plus any report PDFs
-        # a previous crashed/unpushed run left uncommitted.
-        new_periods = {r.period for r, _ in result.downloaded if r.period}
+        # a previous crashed/unpushed run left uncommitted. Archive-only
+        # families are excluded — nothing parses them, so claiming their period
+        # is "new" would make sanity_check() demand a monthly JSON that no
+        # build was ever going to produce.
+        new_periods = {
+            r.period for r, _ in result.downloaded
+            if r.period and r.family in ("etc", "annual_pass")
+        }
         new_periods.update(
             p
             for f in pending_pdfs

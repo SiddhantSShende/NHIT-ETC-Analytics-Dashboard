@@ -8,10 +8,13 @@ downloads the ones whose period is not yet present locally:
     Monthly Annual Pass   -> downloads/Monthly_Annual_Pass_Report/<year>/
     MLFF plaza data       -> downloads/MLFF_Plaza_Data/   (archive only,
                              not consumed by build_json_export.py)
+    unrecognized monthly  -> downloads/unclassified/      (archive only, and
+                             logged at WARNING — see classify())
 
 Comparison is by period (YYYY-MM) per family, mirroring the discovery
 semantics of scripts/build_json_export.py, so IHMCL filename churn
 ("Aug-2025-ETC-Data.pdf", "...-2.pdf" re-uploads) never creates duplicates.
+Archive-only families diff by filename instead, having no period semantics.
 
 Run:  python scripts/ihmcl_crawler.py [--dry-run] [--verbose]
 Exit: 0 ok (possibly nothing new), 1 fatal (page unreachable / layout
@@ -52,6 +55,9 @@ VC_MONTHLY_DIR = DOWNLOADS / "vc_monthly"
 ETC_MONTHLY_DIR = DOWNLOADS / "ETC_Monthly_Data"
 ANNUAL_PASS_DIR = DOWNLOADS / "Monthly_Annual_Pass_Report"
 MLFF_DIR = DOWNLOADS / "MLFF_Plaza_Data"
+# Monthly-looking PDFs we have no parser for. Kept out of PDF_DATA_DIRS in
+# update_and_publish.py, so these are archived locally and never committed.
+UNCLASSIFIED_DIR = DOWNLOADS / "unclassified"
 
 # Non-data documents that also live on the page.
 EXCLUDE_RE = re.compile(r"ANNUAL-RETURN|ANNUAL-REPORT|FAQ", re.I)
@@ -82,6 +88,7 @@ class LocalState:
     etc: dict[str, str]  # period -> filename already on disk
     ap: dict[str, str]
     mlff_names: set[str]
+    unclassified_names: set[str]
 
 
 @dataclass
@@ -94,6 +101,8 @@ class CrawlResult:
 
 
 def dest_dir(report: RemoteReport) -> Path:
+    if report.family == "unclassified":
+        return UNCLASSIFIED_DIR
     if report.family == "etc":
         return VC_MONTHLY_DIR
     if report.family == "annual_pass":
@@ -143,10 +152,20 @@ def classify(url: str) -> RemoteReport | None:
         return None
     if name.upper().startswith("MLFF"):
         return RemoteReport(url, name, "mlff", None)
+    period = period_from_filename(name)
     if not MONTH_START_RE.match(name):
+        # MONTH_START_RE is anchored, so a report only counts as monthly when
+        # its name *starts* with a month. If IHMCL renamed the main report to
+        # something like VC_Wise_Monthly_Data_June_2026.pdf, every month would
+        # fail that test, the tripwire below would still be satisfied by the
+        # older links left on the page, and the crawler would report "0 new"
+        # and exit 0 forever while the dashboard quietly froze. A name that
+        # carries a month+year but fails the anchor is exactly that case, so
+        # archive it and say so loudly rather than dropping it at DEBUG.
+        if period:
+            return RemoteReport(url, name, "unclassified", period)
         log.debug("Ignoring non-monthly PDF: %s", name)
         return None
-    period = period_from_filename(name)
     if not period:
         log.warning("Monthly-looking file without parseable period: %s", name)
         return None
@@ -186,7 +205,11 @@ def local_state() -> LocalState:
                     ap.setdefault(period, p.name)
 
     mlff = {p.name for p in MLFF_DIR.glob("*.pdf")} if MLFF_DIR.exists() else set()
-    return LocalState(etc, ap, mlff)
+    unclassified = (
+        {p.name for p in UNCLASSIFIED_DIR.glob("*.pdf")}
+        if UNCLASSIFIED_DIR.exists() else set()
+    )
+    return LocalState(etc, ap, mlff, unclassified)
 
 
 def plan_downloads(
@@ -202,10 +225,14 @@ def plan_downloads(
     to_download: list[RemoteReport] = []
     variants: list[RemoteReport] = []
     for r in reports:
-        if r.family == "mlff":
-            if r.filename not in local.mlff_names:
+        if r.family in ("mlff", "unclassified"):
+            # Archive-only families diff by filename: nothing parses them, so
+            # there is no period to reason about and a re-upload under a new
+            # name is simply another file to keep.
+            seen = local.mlff_names if r.family == "mlff" else local.unclassified_names
+            if r.filename not in seen:
                 to_download.append(r)
-                local.mlff_names.add(r.filename)
+                seen.add(r.filename)
             continue
         have = local.etc if r.family == "etc" else local.ap
         existing = have.get(r.period)
@@ -283,6 +310,18 @@ def crawl(dry_run: bool = False) -> CrawlResult:
         )
         log.error(result.fatal)
         return result
+
+    for r in reports:
+        if r.family == "unclassified":
+            # ASCII only: the console stream this is captured on under Task
+            # Scheduler is cp1252, and non-ASCII lands in scheduled_runs.log
+            # as mojibake.
+            log.warning(
+                "Unrecognized monthly-looking PDF: %s (period %s) - archiving to "
+                "%s/, NOT ingested. If IHMCL has renamed the main monthly report, "
+                "teach classify() the new name or the dashboard will stop updating.",
+                r.filename, r.period, UNCLASSIFIED_DIR.name,
+            )
 
     result.planned, result.variants = plan_downloads(reports, local_state())
     for v in result.variants:

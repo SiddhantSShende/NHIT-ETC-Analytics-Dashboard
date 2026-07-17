@@ -28,6 +28,9 @@ downloads/Monthly_Annual_Pass_Report/
 downloads/VC_Wise_Monthly_ETC_FASTag_Report/
 downloads/vc_monthly/
 downloads/MLFF_Plaza_Data/
+# Monthly-looking PDFs the crawler could not classify. Archived for a human to
+# look at; deliberately never force-added by update_and_publish.py.
+downloads/unclassified/
 *.pdf
 *.csv
 

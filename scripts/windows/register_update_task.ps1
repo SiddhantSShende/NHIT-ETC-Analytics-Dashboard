@@ -15,7 +15,7 @@
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File register_update_task.ps1
-    # monthly on day 1 at 10:07 (the default)
+    # monthly on day 15 at 10:07 (the default)
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File register_update_task.ps1 -Cadence Weekly
@@ -29,8 +29,11 @@ param(
     [string]$Cadence = "Monthly",
 
     # Day of month for -Cadence Monthly (1-28 so it exists in every month).
+    # 15th, not the 1st: IHMCL publishes month M's report on an unpredictable
+    # day *during* M+1, so a run on the 1st usually finds nothing and the data
+    # waits another month. By mid-month the previous month is reliably up.
     [ValidateRange(1, 28)]
-    [int]$DayOfMonth = 1,
+    [int]$DayOfMonth = 15,
 
     # Day of week for -Cadence Weekly.
     [ValidateSet("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")]

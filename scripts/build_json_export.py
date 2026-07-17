@@ -13,10 +13,22 @@ vc_monthly and ETC_Monthly_Data per-month PDFs share the same 17-column
 VC-wise layout, so `parser.parse_pdf` handles both. Annual-Pass PDFs use
 a 5-column layout parsed locally.
 
-Run:  python scripts/build_json_export.py
+Incremental by default: a period that already has monthly/<YYYY-MM>.json is
+NOT re-parsed — its record is rehydrated from that file instead. Parsing a
+PDF costs ~2 minutes (pdfplumber table extraction), so a full re-parse of
+every period grew to ~105 min against the orchestrator's 120 min
+BUILD_TIMEOUT. Only new periods cost anything now; the index and per-plaza
+files are re-derived from the monthly JSON, which is cheap.
+
+Pass --full to force a re-parse of everything (e.g. after changing a parser
+or to correct a period whose PDF was re-published). --full is authoritative:
+its output is what incremental builds must reproduce.
+
+Run:  python scripts/build_json_export.py [--full]
 """
 from __future__ import annotations
 
+import argparse
 import json
 import logging
 import re
@@ -42,6 +54,13 @@ DOWNLOADS = ROOT / "downloads"
 OUT_DIR = DOWNLOADS / "json"
 MONTHLY_DIR = OUT_DIR / "monthly"
 PLAZAS_DIR = OUT_DIR / "plazas"
+# Per-period validation_warnings, kept beside the exports. Warnings are
+# produced at parse time, so a rehydrated period cannot recompute its own —
+# without this cache, _index.json's validation_warnings would silently drop
+# to "warnings from PDFs parsed this run" and the orchestrator's sanity gate
+# would compare against a moving baseline. Absent file == all zeros, which
+# matches the committed index.
+BUILD_CACHE = OUT_DIR / "_build_cache.json"
 
 CATEGORY_ORDER = [
     CATEGORY_LABEL["CAR_JEEP"],
@@ -122,6 +141,28 @@ class PlazaResolver:
         }
         self._raw_to_canonical: dict[str, str] = {}
         self.unmapped_to_nhit: set[str] = set()
+
+    def seed(self, canonical: str, raws: list[str]) -> None:
+        """Replay a decision this resolver made on an earlier run.
+
+        resolve() is order-dependent: the first raw name seen for a key
+        becomes that key's canonical. An incremental build skips most PDFs,
+        so those raw names are never seen and a new period's plaza could be
+        canonicalized differently than it was historically. Seeding from the
+        already-emitted monthly JSON restores the same state a full parse
+        would have reached by this point.
+
+        setdefault throughout: NHIT_PLAZAS preferred names are installed in
+        __init__ and must keep winning over anything learned from a PDF.
+        """
+        for raw in raws:
+            self._raw_to_canonical.setdefault(raw, canonical)
+            raw_key = normalize_plaza_name(raw)
+            if raw_key:
+                self._key_to_canonical.setdefault(raw_key, canonical)
+        key = normalize_plaza_name(canonical)
+        if key:
+            self._key_to_canonical.setdefault(key, canonical)
 
     def resolve(self, raw: str) -> tuple[str, str] | None:
         raw = (raw or "").strip()
@@ -524,29 +565,149 @@ def discover_annual_pass_pdfs() -> list[tuple[str, Path]]:
 
 
 # ---------------------------------------------------------------------------
+# Incremental rehydration
+# ---------------------------------------------------------------------------
+
+def existing_periods() -> set[str]:
+    """Periods that already have a monthly export and so need no re-parse."""
+    if not MONTHLY_DIR.exists():
+        return set()
+    return {
+        p.stem for p in MONTHLY_DIR.glob("*.json")
+        if re.fullmatch(r"\d{4}-\d{2}", p.stem)
+    }
+
+
+def load_prev_unmapped() -> set[str]:
+    """The previous build's unmapped_to_nhit set.
+
+    resolve() records a raw name here the first time it invents a canonical
+    for an unknown key. On an incremental build those first sightings happened
+    on an earlier run and never recur — resolve() short-circuits on the
+    memoized raw — so the set has to be carried forward or _index.json would
+    report only the raw names a single new period happened to introduce.
+    """
+    index_path = OUT_DIR / "_index.json"
+    if not index_path.exists():
+        return set()
+    try:
+        doc = json.loads(index_path.read_text(encoding="utf-8"))
+        return set(doc.get("unmapped_to_nhit_canonical", []))
+    except Exception as exc:
+        log.warning("Ignoring unreadable _index.json: %s", exc)
+        return set()
+
+
+def load_warnings_cache() -> dict[str, int]:
+    if not BUILD_CACHE.exists():
+        return {}
+    try:
+        doc = json.loads(BUILD_CACHE.read_text(encoding="utf-8"))
+        return {str(k): int(v) for k, v in doc.get("warnings_by_period", {}).items()}
+    except Exception as exc:  # corrupt cache must never break a build
+        log.warning("Ignoring unreadable %s: %s", BUILD_CACHE.name, exc)
+        return {}
+
+
+def hydrate_period(
+    period: str,
+    monthly: dict[str, dict[str, dict]],
+    sources_by_period: dict[str, list[str]],
+    resolver: PlazaResolver,
+) -> bool:
+    """Rebuild a period's in-memory state from its monthly JSON.
+
+    Must round-trip exactly: the emit step downstream rewrites every period,
+    so any field lost here shows up immediately as a diff on a file that
+    should not have changed. That is the intended check — see the git diff
+    step in the plan.
+    """
+    path = MONTHLY_DIR / f"{period}.json"
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        log.warning("Cannot reuse %s (%s) — will re-parse from PDF", path.name, exc)
+        return False
+
+    sources_by_period[period] = list(doc.get("sources", []))
+    for rec in doc.get("plazas", []):
+        canon = rec["plaza_name"]
+        raws = rec.get("source_raw_names", [])
+        monthly[period][canon] = {
+            "plaza_name": canon,
+            "plaza_slug": rec["plaza_slug"],
+            "piu": rec["piu"],
+            "ro": rec["ro"],
+            "vehicles": rec["vehicles"],
+            "total": rec["total"],
+            "annual_pass": rec["annual_pass"],
+            "raw_names": set(raws),
+        }
+        resolver.seed(canon, raws)
+    return True
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Export IHMCL report PDFs to JSON under downloads/json/."
+    )
+    parser.add_argument(
+        "--full",
+        action="store_true",
+        help="re-parse every PDF instead of reusing existing monthly JSON "
+             "(slow: ~105 min; needed after a parser change)",
+    )
+    args = parser.parse_args(argv)
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     MONTHLY_DIR.mkdir(parents=True, exist_ok=True)
     PLAZAS_DIR.mkdir(parents=True, exist_ok=True)
 
     resolver = PlazaResolver()
-    total_warnings = 0
 
     # period -> canonical_name -> plaza record
     monthly: dict[str, dict[str, dict]] = defaultdict(dict)
     # period -> [pdf_relpaths]
     sources_by_period: dict[str, list[str]] = defaultdict(list)
 
+    # ----- Reuse periods already exported -----
+    # Rehydrate before any parsing so the resolver has seen every historical
+    # raw name by the time a new period resolves its plazas.
+    reused: set[str] = set()
+    if not args.full:
+        for period in sorted(existing_periods()):
+            if hydrate_period(period, monthly, sources_by_period, resolver):
+                reused.add(period)
+        if reused:
+            resolver.unmapped_to_nhit |= load_prev_unmapped()
+            log.info(
+                "Reusing %d already-exported period(s): %s .. %s",
+                len(reused), min(reused), max(reused),
+            )
+    else:
+        log.info("--full: re-parsing every PDF from scratch")
+
+    warnings_cache = {} if args.full else load_warnings_cache()
+    warnings_by_period: dict[str, int] = {
+        p: warnings_cache.get(p, 0) for p in reused
+    }
+
     # ----- VC-wise PDFs -----
     vc_pdfs = discover_vc_pdfs()
-    log.info("Found %d VC-wise PDFs", len(vc_pdfs))
+    log.info("Found %d VC-wise PDFs (%d to parse)",
+             len(vc_pdfs), sum(1 for p, _ in vc_pdfs if p not in reused))
     for period, pdf_path in vc_pdfs:
+        if period in reused:
+            continue
         log.info("Parsing VC-wise %s -> %s", pdf_path.name, period)
         per_plaza, pdf_totals = parse_vc_wise(pdf_path)
-        total_warnings += validate_totals(pdf_path.name, per_plaza, pdf_totals)
+        warnings_by_period[period] = warnings_by_period.get(period, 0) + validate_totals(
+            pdf_path.name, per_plaza, pdf_totals
+        )
         sources_by_period[period].append(str(pdf_path.relative_to(ROOT)).replace("\\", "/"))
 
         for raw, bucket in per_plaza.items():
@@ -588,6 +749,12 @@ def main() -> int:
     fy_pdfs = discover_fy_pdfs()
     log.info("Found %d FY-summary PDFs", len(fy_pdfs))
     for pdf_path in fy_pdfs:
+        # An FY summary spans 12 periods. Once all of them are exported it can
+        # contribute nothing (the per-period guard below drops it anyway), so
+        # skip the parse rather than pay for it and throw the result away.
+        fy_periods = fy_periods_from_filename(pdf_path.name) or []
+        if fy_periods and all(p in reused for p in fy_periods):
+            continue
         log.info("Parsing FY-summary %s", pdf_path.name)
         fy_data = parse_fy_summary(pdf_path)
         rel = str(pdf_path.relative_to(ROOT)).replace("\\", "/")
@@ -635,8 +802,11 @@ def main() -> int:
 
     # ----- Annual-Pass PDFs -----
     ap_pdfs = discover_annual_pass_pdfs()
-    log.info("Found %d Annual-Pass PDFs", len(ap_pdfs))
+    log.info("Found %d Annual-Pass PDFs (%d to parse)",
+             len(ap_pdfs), sum(1 for p, _ in ap_pdfs if p not in reused))
     for period, pdf_path in ap_pdfs:
+        if period in reused:
+            continue
         log.info("Parsing Annual-Pass %s -> %s", pdf_path.name, period)
         ap_rows = parse_annual_pass(pdf_path)
         sources_by_period[period].append(str(pdf_path.relative_to(ROOT)).replace("\\", "/"))
@@ -701,7 +871,13 @@ def main() -> int:
     # ----- Emit per-plaza files -----
     plaza_index: dict[str, dict] = {}
     for period in sorted(monthly):
-        for canon, rec in monthly[period].items():
+        # Sorted, not insertion order: the slug de-duplication below hands out
+        # "-2"/"-3" suffixes by first-seen order, so iteration order decides
+        # which of two colliding plazas keeps the bare slug. Insertion order is
+        # PDF row order when parsed but sorted order when rehydrated, which
+        # would make incremental and --full disagree. Sorting pins it for both.
+        for canon in sorted(monthly[period]):
+            rec = monthly[period][canon]
             slot = plaza_index.setdefault(canon, {
                 "plaza_name": canon,
                 "plaza_slug": rec["plaza_slug"],
@@ -747,6 +923,14 @@ def main() -> int:
         path.write_text(json.dumps(doc, indent=2, ensure_ascii=False), encoding="utf-8")
     log.info("Wrote %d plaza files -> %s", len(plaza_index), PLAZAS_DIR)
 
+    # plaza_index is rebuilt from every period each run, so any file not named
+    # above belongs to a slug that no longer exists in the source data.
+    stale = [p for p in PLAZAS_DIR.glob("*.json") if p.stem not in used_slugs]
+    for p in stale:
+        p.unlink()
+    if stale:
+        log.info("Pruned %d stale plaza file(s)", len(stale))
+
     # ----- Taxonomy (SPV / Round / Project / Plaza) -----
     canonical_plazas_list = sorted(plaza_index.keys())
     canonical_to_slug = {p: plaza_index[p]["plaza_slug"] for p in canonical_plazas_list}
@@ -771,6 +955,17 @@ def main() -> int:
     )
 
     # ----- Index -----
+    # Rehydrated periods carry their warning count forward from the cache;
+    # only periods parsed this run can contribute a new one.
+    total_warnings = sum(warnings_by_period.values())
+    BUILD_CACHE.write_text(
+        json.dumps(
+            {"warnings_by_period": {p: warnings_by_period.get(p, 0) for p in sorted(monthly)}},
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
     index_doc = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "periods": sorted(monthly),
@@ -794,8 +989,9 @@ def main() -> int:
     )
 
     log.info(
-        "Done. periods=%d plazas=%d validation_warnings=%d",
-        len(monthly), len(plaza_index), total_warnings,
+        "Done. periods=%d (%d reused, %d parsed) plazas=%d validation_warnings=%d",
+        len(monthly), len(reused), len(monthly) - len(reused),
+        len(plaza_index), total_warnings,
     )
     return 0
 

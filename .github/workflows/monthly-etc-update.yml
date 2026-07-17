@@ -1,16 +1,19 @@
-# Cloud backup for the Windows Task Scheduler job on the maintainer's PC.
-# Both run scripts/update_and_publish.py, which is idempotent (period-based
-# diff against the repo), so whichever fires first does the work and the
-# other finds nothing new.
+# Manual fallback for the Windows Task Scheduler job on the maintainer's PC
+# (task "NHIT ETC Data Refresh", monthly on the 15th), which is the real
+# scheduler. Both run scripts/update_and_publish.py, which is idempotent
+# (period-based diff against the repo), so running this by hand is safe at
+# any time.
 #
-# Known risk: ihmcl.co.in 403-blocks some datacenter IPs. If GitHub's runners
-# are blocked this workflow fails visibly here in the Actions tab and the
-# local scheduled task covers the update instead.
+# The schedule is deliberately removed. ihmcl.co.in 403-blocks GitHub's
+# datacenter IP ranges — confirmed 2026-07-02 via workflow_dispatch: 403 even
+# with a Chrome UA. A cron here could therefore only ever fail, emailing the
+# maintainer every month about a job that cannot succeed. Kept dispatch-only
+# so it is one click away if IHMCL ever stops blocking; restore the cron then:
+#   schedule:
+#     - cron: '23 4 15 * *' # 04:23 UTC on the 15th ~= 09:53 IST
 name: Monthly ETC data update
 
 on:
-  schedule:
-    - cron: '23 4 1 * *' # 04:23 UTC on the 1st ≈ 09:53 IST
   workflow_dispatch: {}
 
 permissions:
