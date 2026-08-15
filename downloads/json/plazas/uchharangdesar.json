@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Uchharangdesar Toll Plaza"
   ],
-  "period_count": 34,
+  "period_count": 35,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1247,6 +1247,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 7353,
+          "amount": 654665.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 247,
+          "amount": 59215.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1114,
+          "amount": 951750.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 835,
+          "amount": 774590.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9546,
+          "amount": 12438895.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 1665.0
+        }
+      },
+      "total": {
+        "count": 19096,
+        "amount": 14880780.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

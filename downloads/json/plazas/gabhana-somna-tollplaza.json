@@ -6,7 +6,7 @@
   "source_raw_names": [
     "GABHANA(somna) Tollplaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1973,6 +1973,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 322931,
+          "amount": 26186620.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 32631,
+          "amount": 9275405.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 92220,
+          "amount": 50422070.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20311,
+          "amount": 18649815.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 57904,
+          "amount": 52364225.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 32,
+          "amount": 36720.0
+        }
+      },
+      "total": {
+        "count": 526029,
+        "amount": 156934855.0
+      },
+      "annual_pass": {
+        "transaction_count": 145723
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

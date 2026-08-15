@@ -6,7 +6,7 @@
   "source_raw_names": [
     "SAHSON Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1961,6 +1961,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19780,
+          "amount": 1098660.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1263,
+          "amount": 193070.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5450,
+          "amount": 1360760.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 770,
+          "amount": 310130.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10433,
+          "amount": 5416255.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1185.0
+        }
+      },
+      "total": {
+        "count": 37698,
+        "amount": 8380060.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

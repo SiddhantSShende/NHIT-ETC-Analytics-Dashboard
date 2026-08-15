@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Enamkariyandal Toll Plaza"
   ],
-  "period_count": 47,
+  "period_count": 48,
   "months": {
     "2022-08": {
       "vehicles": {
@@ -1731,6 +1731,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 142280,
+          "amount": 3499370.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5306,
+          "amount": 269670.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15781,
+          "amount": 1450665.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4128,
+          "amount": 458330.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9259,
+          "amount": 1688925.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 975.0
+        }
+      },
+      "total": {
+        "count": 176760,
+        "amount": 7367935.0
+      },
+      "annual_pass": {
+        "transaction_count": 35966
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

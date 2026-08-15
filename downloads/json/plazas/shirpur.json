@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Shirpur"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 167832,
+          "amount": 12122655.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 25919,
+          "amount": 5409863.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 104890,
+          "amount": 43589260.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 37126,
+          "amount": 24735762.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 117549,
+          "amount": 77236333.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 165,
+          "amount": 139865.0
+        }
+      },
+      "total": {
+        "count": 453481,
+        "amount": 163233738.0
+      },
+      "annual_pass": {
+        "transaction_count": 60335
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

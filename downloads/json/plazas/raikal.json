@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Raikal Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1973,6 +1973,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 782536,
+          "amount": 37142390.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 73854,
+          "amount": 8964475.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 194237,
+          "amount": 42446790.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 59539,
+          "amount": 25940535.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 145774,
+          "amount": 63690365.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 161,
+          "amount": 75275.0
+        }
+      },
+      "total": {
+        "count": 1256101,
+        "amount": 178259830.0
+      },
+      "annual_pass": {
+        "transaction_count": 207666
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

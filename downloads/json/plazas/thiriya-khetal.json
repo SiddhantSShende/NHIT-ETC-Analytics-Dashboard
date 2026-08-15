@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Thiriya Khetal Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1973,6 +1973,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 315653,
+          "amount": 21477215.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19635,
+          "amount": 4480805.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 78059,
+          "amount": 34802400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 15280,
+          "amount": 11787985.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 40592,
+          "amount": 30723100.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 15,
+          "amount": 14935.0
+        }
+      },
+      "total": {
+        "count": 469234,
+        "amount": 103286440.0
+      },
+      "annual_pass": {
+        "transaction_count": 126516
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

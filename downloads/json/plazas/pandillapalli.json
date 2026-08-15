@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pandillapalli Toll plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 62329,
+          "amount": 2190745.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3282,
+          "amount": 254235.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16477,
+          "amount": 2435450.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3640,
+          "amount": 637155.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 18011,
+          "amount": 4816590.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1455.0
+        }
+      },
+      "total": {
+        "count": 103744,
+        "amount": 10335630.0
+      },
+      "annual_pass": {
+        "transaction_count": 16856
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

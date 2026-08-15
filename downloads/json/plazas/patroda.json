@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Patroda Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1947,6 +1947,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 28125,
+          "amount": 2022445.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 371,
+          "amount": 59810.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5941,
+          "amount": 1877980.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 927,
+          "amount": 368950.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7067,
+          "amount": 4144380.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 2765.0
+        }
+      },
+      "total": {
+        "count": 42435,
+        "amount": 8476330.0
+      },
+      "annual_pass": {
+        "transaction_count": 7783
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

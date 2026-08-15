@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bansidhar Toll Plaza"
   ],
-  "period_count": 6,
+  "period_count": 7,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -238,6 +238,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 22496,
+          "amount": 1535860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1401,
+          "amount": 182145.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4121,
+          "amount": 1225045.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1411,
+          "amount": 486000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 13501,
+          "amount": 6454465.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 2340.0
+        }
+      },
+      "total": {
+        "count": 42934,
+        "amount": 9885855.0
+      },
+      "annual_pass": {
+        "transaction_count": 2180
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

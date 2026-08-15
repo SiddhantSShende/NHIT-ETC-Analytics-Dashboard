@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karigawan fee"
   ],
-  "period_count": 37,
+  "period_count": 38,
   "months": {
     "2023-06": {
       "vehicles": {
@@ -1371,6 +1371,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 68691,
+          "amount": 3560750.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8428,
+          "amount": 806840.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 20241,
+          "amount": 4800650.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4938,
+          "amount": 1373080.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 77767,
+          "amount": 29481060.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 6450.0
+        }
+      },
+      "total": {
+        "count": 180078,
+        "amount": 40028830.0
+      },
+      "annual_pass": {
+        "transaction_count": 18142
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

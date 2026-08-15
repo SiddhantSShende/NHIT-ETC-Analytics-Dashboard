@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ponguturu"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -117,6 +117,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 47674,
+          "amount": 3663025.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5472,
+          "amount": 1470555.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12025,
+          "amount": 6503825.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6291,
+          "amount": 3019685.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 31293,
+          "amount": 28320170.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 9630.0
+        }
+      },
+      "total": {
+        "count": 102767,
+        "amount": 42986890.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

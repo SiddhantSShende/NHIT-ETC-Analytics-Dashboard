@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Seetharampuram Toll Plaza"
   ],
-  "period_count": 34,
+  "period_count": 35,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1263,6 +1263,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 52955,
+          "amount": 2089725.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2731,
+          "amount": 243100.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8288,
+          "amount": 1441185.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3770,
+          "amount": 789030.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6189,
+          "amount": 2039565.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 4305.0
+        }
+      },
+      "total": {
+        "count": 73946,
+        "amount": 6606910.0
+      },
+      "annual_pass": {
+        "transaction_count": 15984
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

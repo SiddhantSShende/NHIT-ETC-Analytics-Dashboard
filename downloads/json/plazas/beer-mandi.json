@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Beer Mandi Toll Plaza"
   ],
-  "period_count": 49,
+  "period_count": 50,
   "months": {
     "2022-06": {
       "vehicles": {
@@ -1803,6 +1803,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 51870,
+          "amount": 3327065.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3188,
+          "amount": 611260.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15181,
+          "amount": 6008755.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7309,
+          "amount": 3244125.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23023,
+          "amount": 14160310.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 13350.0
+        }
+      },
+      "total": {
+        "count": 100589,
+        "amount": 27364865.0
+      },
+      "annual_pass": {
+        "transaction_count": 25085
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

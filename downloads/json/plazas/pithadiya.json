@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pithadiya Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 394454,
+          "amount": 9556105.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19277,
+          "amount": 783415.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 55608,
+          "amount": 5502280.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11023,
+          "amount": 1320635.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 50413,
+          "amount": 8333170.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 128,
+          "amount": 28630.0
+        }
+      },
+      "total": {
+        "count": 530903,
+        "amount": 25524235.0
+      },
+      "annual_pass": {
+        "transaction_count": 114832
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jogewal Toll Plaza"
   ],
-  "period_count": 25,
+  "period_count": 26,
   "months": {
     "2024-06": {
       "vehicles": {
@@ -927,6 +927,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 25166,
+          "amount": 649820.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 475,
+          "amount": 22255.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3378,
+          "amount": 350500.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 387,
+          "amount": 52285.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4664,
+          "amount": 1024665.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 1340.0
+        }
+      },
+      "total": {
+        "count": 34074,
+        "amount": 2100865.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

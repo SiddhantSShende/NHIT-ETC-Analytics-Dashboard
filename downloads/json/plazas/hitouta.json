@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hitouta Toll Plaza"
   ],
-  "period_count": 51,
+  "period_count": 52,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1875,6 +1875,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 52726,
+          "amount": 1478145.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2449,
+          "amount": 137350.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18926,
+          "amount": 2318150.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7055,
+          "amount": 1009930.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 13786,
+          "amount": 2660440.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 840.0
+        }
+      },
+      "total": {
+        "count": 94946,
+        "amount": 7604855.0
+      },
+      "annual_pass": {
+        "transaction_count": 13091
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

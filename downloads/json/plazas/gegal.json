@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gegal"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 511632,
+          "amount": 20549335.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 24176,
+          "amount": 2640075.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 77213,
+          "amount": 16620300.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22123,
+          "amount": 7952945.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 224276,
+          "amount": 81060650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 213,
+          "amount": 79345.0
+        }
+      },
+      "total": {
+        "count": 859633,
+        "amount": 128902650.0
+      },
+      "annual_pass": {
+        "transaction_count": 176091
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

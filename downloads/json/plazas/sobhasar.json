@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sobhasar"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 93410,
+          "amount": 3589325.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2058,
+          "amount": 198900.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12262,
+          "amount": 2515920.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7569,
+          "amount": 1701080.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 48037,
+          "amount": 15654815.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 5055.0
+        }
+      },
+      "total": {
+        "count": 163349,
+        "amount": 23665095.0
+      },
+      "annual_pass": {
+        "transaction_count": 35745
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

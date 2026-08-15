@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Fatehpur Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 74796,
+          "amount": 3274525.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4010,
+          "amount": 634805.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10835,
+          "amount": 3923855.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6743,
+          "amount": 2952810.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22993,
+          "amount": 14221475.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 23,
+          "amount": 16330.0
+        }
+      },
+      "total": {
+        "count": 119400,
+        "amount": 25023800.0
+      },
+      "annual_pass": {
+        "transaction_count": 34175
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

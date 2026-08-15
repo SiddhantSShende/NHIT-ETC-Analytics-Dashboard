@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhagan Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1973,6 +1973,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1591449,
+          "amount": 77191505.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 105594,
+          "amount": 17400850.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 196731,
+          "amount": 69832170.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 41209,
+          "amount": 16842825.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 116508,
+          "amount": 67438150.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 134,
+          "amount": 90695.0
+        }
+      },
+      "total": {
+        "count": 2051625,
+        "amount": 248796195.0
+      },
+      "annual_pass": {
+        "transaction_count": 686198
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

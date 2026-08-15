@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ganga EP Ramp Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -80,6 +80,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 28001,
+          "amount": 1169240.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1338,
+          "amount": 218520.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3174,
+          "amount": 1111095.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1588,
+          "amount": 671340.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5981,
+          "amount": 3614285.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 4540.0
+        }
+      },
+      "total": {
+        "count": 40088,
+        "amount": 6789020.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

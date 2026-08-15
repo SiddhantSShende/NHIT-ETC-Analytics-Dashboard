@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dalsagar Toll Plaza"
   ],
-  "period_count": 38,
+  "period_count": 39,
   "months": {
     "2023-05": {
       "vehicles": {
@@ -1407,6 +1407,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 71877,
+          "amount": 4291150.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7398,
+          "amount": 1085440.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17095,
+          "amount": 5323415.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4415,
+          "amount": 1536735.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 59828,
+          "amount": 28292770.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 3085.0
+        }
+      },
+      "total": {
+        "count": 160618,
+        "amount": 40532595.0
+      },
+      "annual_pass": {
+        "transaction_count": 15785
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

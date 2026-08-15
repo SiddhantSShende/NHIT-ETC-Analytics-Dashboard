@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Somanahalli"
   ],
-  "period_count": 14,
+  "period_count": 15,
   "months": {
     "2025-05": {
       "vehicles": {
@@ -543,6 +543,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 333184,
+          "amount": 15949610.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 24086,
+          "amount": 2554760.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 52058,
+          "amount": 10384435.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5988,
+          "amount": 1570590.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7113,
+          "amount": 2743110.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 40,
+          "amount": 14825.0
+        }
+      },
+      "total": {
+        "count": 422469,
+        "amount": 33217330.0
+      },
+      "annual_pass": {
+        "transaction_count": 91841
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

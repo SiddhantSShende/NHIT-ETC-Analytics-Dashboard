@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chapirevula"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 129457,
+          "amount": 8455905.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7517,
+          "amount": 1496105.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 24726,
+          "amount": 9896480.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7371,
+          "amount": 4722500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27369,
+          "amount": 18168220.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 59,
+          "amount": 49005.0
+        }
+      },
+      "total": {
+        "count": 196499,
+        "amount": 42788215.0
+      },
+      "annual_pass": {
+        "transaction_count": 55842
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

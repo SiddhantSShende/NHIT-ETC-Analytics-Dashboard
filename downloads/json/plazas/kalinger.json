@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kalinger Fee Plaza"
   ],
-  "period_count": 41,
+  "period_count": 42,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1499,6 +1499,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 22765,
+          "amount": 1160115.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1091,
+          "amount": 574400.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4478,
+          "amount": 6003625.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3341,
+          "amount": 4721840.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11496,
+          "amount": 10894950.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 4880.0
+        }
+      },
+      "total": {
+        "count": 43173,
+        "amount": 23359810.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

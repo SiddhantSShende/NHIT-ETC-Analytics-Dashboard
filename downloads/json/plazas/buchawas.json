@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Buchawas Toll Plaza"
   ],
-  "period_count": 47,
+  "period_count": 48,
   "months": {
     "2022-08": {
       "vehicles": {
@@ -1719,6 +1719,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19053,
+          "amount": 959160.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 573,
+          "amount": 114150.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1518,
+          "amount": 663640.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 421,
+          "amount": 210675.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10634,
+          "amount": 3179315.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 32199,
+        "amount": 5126940.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

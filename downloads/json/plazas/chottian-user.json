@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chottian User fee Plaza"
   ],
-  "period_count": 30,
+  "period_count": 31,
   "months": {
     "2024-01": {
       "vehicles": {
@@ -1119,6 +1119,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 20131,
+          "amount": 634730.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 763,
+          "amount": 53630.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2855,
+          "amount": 416480.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 300,
+          "amount": 51530.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1312,
+          "amount": 339870.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 25361,
+        "amount": 1496240.0
+      },
+      "annual_pass": {
+        "transaction_count": 6803
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

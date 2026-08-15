@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kesla Plaza"
   ],
-  "period_count": 16,
+  "period_count": 17,
   "months": {
     "2025-03": {
       "vehicles": {
@@ -615,6 +615,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 36743,
+          "amount": 1568005.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2517,
+          "amount": 260820.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7657,
+          "amount": 1843825.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 935,
+          "amount": 246495.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 34800,
+          "amount": 13140835.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 11675.0
+        }
+      },
+      "total": {
+        "count": 82677,
+        "amount": 17071655.0
+      },
+      "annual_pass": {
+        "transaction_count": 12863
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

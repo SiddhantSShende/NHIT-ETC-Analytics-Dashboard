@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pullur Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 397681,
+          "amount": 28865140.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 50985,
+          "amount": 11095355.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 142685,
+          "amount": 62482470.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 48058,
+          "amount": 24390335.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 123083,
+          "amount": 92144175.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 153,
+          "amount": 138885.0
+        }
+      },
+      "total": {
+        "count": 762645,
+        "amount": 219116360.0
+      },
+      "annual_pass": {
+        "transaction_count": 144821
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

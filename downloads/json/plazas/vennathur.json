@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vennathur Toll Plaza"
   ],
-  "period_count": 49,
+  "period_count": 50,
   "months": {
     "2022-06": {
       "vehicles": {
@@ -1803,6 +1803,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 51823,
+          "amount": 1385400.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1665,
+          "amount": 83580.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4083,
+          "amount": 423360.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 842,
+          "amount": 98905.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 732,
+          "amount": 136465.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 775.0
+        }
+      },
+      "total": {
+        "count": 59149,
+        "amount": 2128485.0
+      },
+      "annual_pass": {
+        "transaction_count": 11894
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

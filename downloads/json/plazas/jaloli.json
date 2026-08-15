@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jaloli Fee Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 365474,
+          "amount": 16214125.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7852,
+          "amount": 1237490.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19984,
+          "amount": 6209965.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4957,
+          "amount": 1929245.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5885,
+          "amount": 3355480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 16,
+          "amount": 9650.0
+        }
+      },
+      "total": {
+        "count": 404168,
+        "amount": 28955955.0
+      },
+      "annual_pass": {
+        "transaction_count": 147282
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

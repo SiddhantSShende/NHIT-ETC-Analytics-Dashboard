@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dakhina Shekpur Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 358207,
+          "amount": 23638335.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11232,
+          "amount": 1892130.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 36315,
+          "amount": 12020995.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4520,
+          "amount": 1750690.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 18713,
+          "amount": 10885910.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 19,
+          "amount": 11095.0
+        }
+      },
+      "total": {
+        "count": 429006,
+        "amount": 50199155.0
+      },
+      "annual_pass": {
+        "transaction_count": 95077
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Wadgaon"
   ],
-  "period_count": 37,
+  "period_count": 38,
   "months": {
     "2023-06": {
       "vehicles": {
@@ -1371,6 +1371,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 42029,
+          "amount": 1143580.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 865,
+          "amount": 49300.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4235,
+          "amount": 506265.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 874,
+          "amount": 132025.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 16013,
+          "amount": 2119785.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 1005.0
+        }
+      },
+      "total": {
+        "count": 64022,
+        "amount": 3951960.0
+      },
+      "annual_pass": {
+        "transaction_count": 6987
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

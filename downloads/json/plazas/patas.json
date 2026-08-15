@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Patas Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 459581,
+          "amount": 30362850.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 35806,
+          "amount": 4724655.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 108464,
+          "amount": 31336375.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19036,
+          "amount": 8475780.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 108873,
+          "amount": 51666020.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 392,
+          "amount": 232290.0
+        }
+      },
+      "total": {
+        "count": 732152,
+        "amount": 126797970.0
+      },
+      "annual_pass": {
+        "transaction_count": 81694
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

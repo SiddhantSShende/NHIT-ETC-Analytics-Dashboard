@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Abubshehar Toll Plaza"
   ],
-  "period_count": 25,
+  "period_count": 26,
   "months": {
     "2024-06": {
       "vehicles": {
@@ -927,6 +927,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 1021,
+          "amount": 13535.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20,
+          "amount": 395.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 94,
+          "amount": 3905.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4,
+          "amount": 215.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 61,
+          "amount": 4615.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 1200,
+        "amount": 22665.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

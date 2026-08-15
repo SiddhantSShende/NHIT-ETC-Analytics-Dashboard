@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kodikottai Toll Plaza"
   ],
-  "period_count": 49,
+  "period_count": 50,
   "months": {
     "2022-06": {
       "vehicles": {
@@ -1803,6 +1803,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 72813,
+          "amount": 2246890.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2354,
+          "amount": 137655.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 6135,
+          "amount": 748510.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2122,
+          "amount": 275640.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 927,
+          "amount": 195815.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 275.0
+        }
+      },
+      "total": {
+        "count": 84352,
+        "amount": 3604785.0
+      },
+      "annual_pass": {
+        "transaction_count": 14060
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

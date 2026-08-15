@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mungwari Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 49802,
+          "amount": 812185.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5450,
+          "amount": 152100.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 17985,
+          "amount": 1098910.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5661,
+          "amount": 372085.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23612,
+          "amount": 2436660.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 1350.0
+        }
+      },
+      "total": {
+        "count": 102524,
+        "amount": 4873290.0
+      },
+      "annual_pass": {
+        "transaction_count": 10064
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

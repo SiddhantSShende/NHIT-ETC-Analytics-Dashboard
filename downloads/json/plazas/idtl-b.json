@@ -6,7 +6,7 @@
   "source_raw_names": [
     "IDTL Toll Plaza-B"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 265462,
+          "amount": 5102610.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 21252,
+          "amount": 726720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 43160,
+          "amount": 3144950.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21175,
+          "amount": 1659440.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19440,
+          "amount": 2350295.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 46,
+          "amount": 6795.0
+        }
+      },
+      "total": {
+        "count": 370535,
+        "amount": 12990810.0
+      },
+      "annual_pass": {
+        "transaction_count": 34364
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

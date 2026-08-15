@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pantangi"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1981,6 +1981,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 845680,
+          "amount": 39139235.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 51937,
+          "amount": 5867000.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 173459,
+          "amount": 37312715.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 41436,
+          "amount": 11032100.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 152536,
+          "amount": 58436290.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 134,
+          "amount": 61195.0
+        }
+      },
+      "total": {
+        "count": 1265182,
+        "amount": 151848535.0
+      },
+      "annual_pass": {
+        "transaction_count": 282916
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

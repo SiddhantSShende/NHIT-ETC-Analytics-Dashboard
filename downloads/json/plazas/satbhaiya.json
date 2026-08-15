@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Satbhaiya Fee Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 67614,
+          "amount": 2649460.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4416,
+          "amount": 423565.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19098,
+          "amount": 4077655.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17115,
+          "amount": 4092390.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 36659,
+          "amount": 12569740.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2605.0
+        }
+      },
+      "total": {
+        "count": 144909,
+        "amount": 23815415.0
+      },
+      "annual_pass": {
+        "transaction_count": 7716
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Yerraboinapalli"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -117,6 +117,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 5404,
+          "amount": 161880.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 63,
+          "amount": 7140.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 236,
+          "amount": 60155.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 99,
+          "amount": 17325.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 235,
+          "amount": 104650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 6037,
+        "amount": 351150.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

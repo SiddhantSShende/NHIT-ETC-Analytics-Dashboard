@@ -1,12 +1,12 @@
 {
   "plaza_name": "Baletiya",
   "plaza_slug": "baletiya",
-  "piu": "",
-  "ro": "",
+  "piu": "Godhra",
+  "ro": "Gandhinagar",
   "source_raw_names": [
     "Baletiya"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-06": {
       "vehicles": {
@@ -43,6 +43,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 7305,
+          "amount": 337645.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 177,
+          "amount": 22710.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 340,
+          "amount": 100230.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 58,
+          "amount": 18380.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 308,
+          "amount": 128300.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 8188,
+        "amount": 607265.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Deshnok Toll Plaza"
   ],
-  "period_count": 34,
+  "period_count": 35,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1247,6 +1247,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 18580,
+          "amount": 2241595.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 496,
+          "amount": 182955.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2586,
+          "amount": 2323740.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1633,
+          "amount": 1466920.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11089,
+          "amount": 20958735.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 2970.0
+        }
+      },
+      "total": {
+        "count": 34386,
+        "amount": 27176915.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

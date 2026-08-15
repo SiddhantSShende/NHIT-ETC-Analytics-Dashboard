@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hassangarh"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-11": {
       "vehicles": {
@@ -747,6 +747,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 115328,
+          "amount": 8849885.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4076,
+          "amount": 1081275.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12893,
+          "amount": 7318415.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4323,
+          "amount": 2764945.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 13000,
+          "amount": 12899595.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 5775.0
+        }
+      },
+      "total": {
+        "count": 149626,
+        "amount": 32919890.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

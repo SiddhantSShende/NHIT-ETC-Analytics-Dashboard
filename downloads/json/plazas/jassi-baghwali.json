@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jassi Baghwali"
   ],
-  "period_count": 6,
+  "period_count": 7,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -232,6 +232,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 58010,
+          "amount": 2449255.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1434,
+          "amount": 147435.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11168,
+          "amount": 2677325.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3072,
+          "amount": 1047810.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 28843,
+          "amount": 14797410.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 4040.0
+        }
+      },
+      "total": {
+        "count": 102536,
+        "amount": 21123275.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

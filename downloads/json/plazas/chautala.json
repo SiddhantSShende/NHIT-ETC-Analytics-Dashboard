@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chautala Toll Plaza"
   ],
-  "period_count": 25,
+  "period_count": 26,
   "months": {
     "2024-06": {
       "vehicles": {
@@ -927,6 +927,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19524,
+          "amount": 757985.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 449,
+          "amount": 43360.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1901,
+          "amount": 368895.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 348,
+          "amount": 87945.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7332,
+          "amount": 2870185.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 310.0
+        }
+      },
+      "total": {
+        "count": 29555,
+        "amount": 4128680.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gulzarpura Tharua"
   ],
-  "period_count": 9,
+  "period_count": 10,
   "months": {
     "2025-10": {
       "vehicles": {
@@ -349,6 +349,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 57544,
+          "amount": 3880620.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2433,
+          "amount": 576280.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7753,
+          "amount": 4039900.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2318,
+          "amount": 1432910.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10843,
+          "amount": 8489730.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1750.0
+        }
+      },
+      "total": {
+        "count": 80893,
+        "amount": 18421190.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

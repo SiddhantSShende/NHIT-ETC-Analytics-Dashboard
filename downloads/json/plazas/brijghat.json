@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Brijghat Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1973,6 +1973,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 991037,
+          "amount": 56205270.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 48438,
+          "amount": 8229510.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 121407,
+          "amount": 41191580.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21051,
+          "amount": 9080730.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 55244,
+          "amount": 33221750.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 43,
+          "amount": 33000.0
+        }
+      },
+      "total": {
+        "count": 1237220,
+        "amount": 147961840.0
+      },
+      "annual_pass": {
+        "transaction_count": 422026
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

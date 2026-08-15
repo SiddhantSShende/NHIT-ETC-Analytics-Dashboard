@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Boothakudi"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 355736,
+          "amount": 21242650.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 27508,
+          "amount": 4382860.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 63527,
+          "amount": 19824375.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11133,
+          "amount": 3988075.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 35649,
+          "amount": 19505395.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 510,
+          "amount": 344310.0
+        }
+      },
+      "total": {
+        "count": 494063,
+        "amount": 69287665.0
+      },
+      "annual_pass": {
+        "transaction_count": 113801
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bawani Khera"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-03": {
       "vehicles": {
@@ -160,6 +160,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 71420,
+          "amount": 2379590.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2854,
+          "amount": 211525.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5803,
+          "amount": 987030.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 577,
+          "amount": 134280.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12894,
+          "amount": 3968465.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 1155.0
+        }
+      },
+      "total": {
+        "count": 93551,
+        "amount": 7682045.0
+      },
+      "annual_pass": {
+        "transaction_count": 31456
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

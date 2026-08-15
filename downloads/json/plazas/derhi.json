@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Derhi Toll Plaza"
   ],
-  "period_count": 23,
+  "period_count": 24,
   "months": {
     "2024-01": {
       "vehicles": {
@@ -867,6 +867,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 130762,
+          "amount": 5654235.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4845,
+          "amount": 448920.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16203,
+          "amount": 3320980.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1343,
+          "amount": 319215.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 33442,
+          "amount": 11673050.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 395.0
+        }
+      },
+      "total": {
+        "count": 186596,
+        "amount": 21416795.0
+      },
+      "annual_pass": {
+        "transaction_count": 24845
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karaunda Interchange"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -84,6 +84,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 42791,
+          "amount": 1659285.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 725,
+          "amount": 93300.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1824,
+          "amount": 507995.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 412,
+          "amount": 124910.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4497,
+          "amount": 2108640.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 10130.0
+        }
+      },
+      "total": {
+        "count": 50267,
+        "amount": 4504260.0
+      },
+      "annual_pass": {
+        "transaction_count": 6868
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

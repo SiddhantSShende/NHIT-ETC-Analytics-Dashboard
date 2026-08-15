@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mirzapur / Kyampur Toll Plaza"
   ],
-  "period_count": 39,
+  "period_count": 40,
   "months": {
     "2023-04": {
       "vehicles": {
@@ -1443,6 +1443,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 131708,
+          "amount": 8649705.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4586,
+          "amount": 771825.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 13693,
+          "amount": 4974635.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1753,
+          "amount": 770525.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29678,
+          "amount": 17679310.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 5390.0
+        }
+      },
+      "total": {
+        "count": 181425,
+        "amount": 32851390.0
+      },
+      "annual_pass": {
+        "transaction_count": 38303
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

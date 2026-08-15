@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Thiruvangad Toll Plaza"
   ],
-  "period_count": 28,
+  "period_count": 29,
   "months": {
     "2024-03": {
       "vehicles": {
@@ -1047,6 +1047,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 150457,
+          "amount": 8928400.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13886,
+          "amount": 1514235.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18327,
+          "amount": 4273590.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4715,
+          "amount": 1219580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 21782,
+          "amount": 8426790.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 2450.0
+        }
+      },
+      "total": {
+        "count": 209172,
+        "amount": 24365045.0
+      },
+      "annual_pass": {
+        "transaction_count": 19886
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

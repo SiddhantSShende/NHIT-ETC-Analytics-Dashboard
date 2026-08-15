@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dattigaon"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1961,6 +1961,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 91338,
+          "amount": 8575995.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11949,
+          "amount": 2668635.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 36771,
+          "amount": 16614255.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10589,
+          "amount": 7673180.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 67099,
+          "amount": 49158505.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 339,
+          "amount": 318300.0
+        }
+      },
+      "total": {
+        "count": 218085,
+        "amount": 85008870.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

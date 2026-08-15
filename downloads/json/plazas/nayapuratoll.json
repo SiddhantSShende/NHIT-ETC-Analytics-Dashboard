@@ -6,7 +6,7 @@
   "source_raw_names": [
     "NayapuraToll Plaza"
   ],
-  "period_count": 34,
+  "period_count": 35,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1251,6 +1251,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 10161,
+          "amount": 1377630.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2520,
+          "amount": 1160255.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10102,
+          "amount": 9950535.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5117,
+          "amount": 5560320.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9717,
+          "amount": 14584085.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 2190.0
+        }
+      },
+      "total": {
+        "count": 37619,
+        "amount": 32635015.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

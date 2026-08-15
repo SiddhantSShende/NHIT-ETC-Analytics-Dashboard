@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gadha Plaza"
   ],
-  "period_count": 25,
+  "period_count": 26,
   "months": {
     "2024-06": {
       "vehicles": {
@@ -939,6 +939,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 51282,
+          "amount": 2858490.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3493,
+          "amount": 527080.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12974,
+          "amount": 4137060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4240,
+          "amount": 1511215.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 26542,
+          "amount": 13800770.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 11060.0
+        }
+      },
+      "total": {
+        "count": 98555,
+        "amount": 22845675.0
+      },
+      "annual_pass": {
+        "transaction_count": 14502
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

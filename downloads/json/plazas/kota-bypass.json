@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kota Bypass Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 146449,
+          "amount": 5285810.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6907,
+          "amount": 860490.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 27141,
+          "amount": 7150405.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18673,
+          "amount": 5223340.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 84842,
+          "amount": 34706785.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 61,
+          "amount": 32165.0
+        }
+      },
+      "total": {
+        "count": 284073,
+        "amount": 53258995.0
+      },
+      "annual_pass": {
+        "transaction_count": 56644
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

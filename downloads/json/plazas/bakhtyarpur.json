@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bakhtyarpur Toll Plaza"
   ],
-  "period_count": 5,
+  "period_count": 6,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -197,6 +197,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 53526,
+          "amount": 1767115.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2132,
+          "amount": 170350.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7976,
+          "amount": 1285330.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1201,
+          "amount": 233575.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17513,
+          "amount": 4292715.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1300.0
+        }
+      },
+      "total": {
+        "count": 82353,
+        "amount": 7750385.0
+      },
+      "annual_pass": {
+        "transaction_count": 12677
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

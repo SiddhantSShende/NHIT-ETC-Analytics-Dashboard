@@ -1,0 +1,49 @@
+{
+  "plaza_name": "GomangalamPuthur Toll Plaza",
+  "plaza_slug": "gomangalamputhur",
+  "piu": "Dindigul",
+  "ro": "Madurai",
+  "source_raw_names": [
+    "GomangalamPuthur Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 41002,
+          "amount": 4191315.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2452,
+          "amount": 541500.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3166,
+          "amount": 1411930.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 901,
+          "amount": 463195.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1791,
+          "amount": 1367645.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 6725.0
+        }
+      },
+      "total": {
+        "count": 49320,
+        "amount": 7982310.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    }
+  }
+}

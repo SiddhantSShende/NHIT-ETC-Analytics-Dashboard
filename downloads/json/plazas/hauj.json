@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hauj Fee Plaza"
   ],
-  "period_count": 43,
+  "period_count": 44,
   "months": {
     "2022-12": {
       "vehicles": {
@@ -1587,6 +1587,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 202277,
+          "amount": 14406420.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 15032,
+          "amount": 2803015.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 41844,
+          "amount": 16523885.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13401,
+          "amount": 6244830.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 63431,
+          "amount": 41577290.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 9295.0
+        }
+      },
+      "total": {
+        "count": 335998,
+        "amount": 81564735.0
+      },
+      "annual_pass": {
+        "transaction_count": 57863
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

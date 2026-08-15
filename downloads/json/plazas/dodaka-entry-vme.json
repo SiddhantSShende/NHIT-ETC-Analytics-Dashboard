@@ -1,12 +1,12 @@
 {
   "plaza_name": "Dodaka Entry VME",
   "plaza_slug": "dodaka-entry-vme",
-  "piu": "",
-  "ro": "",
+  "piu": "Vadodhra",
+  "ro": "Gandhinagar",
   "source_raw_names": [
     "Dodaka Entry VME"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-06": {
       "vehicles": {
@@ -43,6 +43,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 23565,
+          "amount": 1849320.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3629,
+          "amount": 950050.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9565,
+          "amount": 5145500.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6039,
+          "amount": 3345455.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 13417,
+          "amount": 10765705.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 8320.0
+        }
+      },
+      "total": {
+        "count": 56224,
+        "amount": 22064350.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

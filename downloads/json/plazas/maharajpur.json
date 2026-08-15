@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Maharajpur Toll Plaza"
   ],
-  "period_count": 41,
+  "period_count": 42,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1515,6 +1515,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 33702,
+          "amount": 1719835.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1110,
+          "amount": 113260.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3944,
+          "amount": 883155.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1033,
+          "amount": 258805.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7309,
+          "amount": 2929450.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 16,
+          "amount": 6685.0
+        }
+      },
+      "total": {
+        "count": 47114,
+        "amount": 5911190.0
+      },
+      "annual_pass": {
+        "transaction_count": 5775
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

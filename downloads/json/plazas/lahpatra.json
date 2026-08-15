@@ -1,0 +1,49 @@
+{
+  "plaza_name": "Lahpatra Toll Plaza",
+  "plaza_slug": "lahpatra",
+  "piu": "",
+  "ro": "",
+  "source_raw_names": [
+    "Lahpatra Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 7284,
+          "amount": 273955.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 304,
+          "amount": 22015.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1640,
+          "amount": 253790.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 174,
+          "amount": 29355.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2220,
+          "amount": 584820.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 1005.0
+        }
+      },
+      "total": {
+        "count": 11626,
+        "amount": 1164940.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    }
+  }
+}

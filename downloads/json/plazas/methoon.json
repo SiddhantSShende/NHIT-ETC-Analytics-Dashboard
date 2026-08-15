@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Methoon Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 70599,
+          "amount": 2820135.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3182,
+          "amount": 290380.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12172,
+          "amount": 2289445.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4904,
+          "amount": 1090515.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19794,
+          "amount": 6236765.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 15,
+          "amount": 5530.0
+        }
+      },
+      "total": {
+        "count": 110666,
+        "amount": 12732770.0
+      },
+      "annual_pass": {
+        "transaction_count": 22538
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

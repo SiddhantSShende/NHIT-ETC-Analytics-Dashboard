@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hedaginabele Toll Plaza KM 14"
   ],
-  "period_count": 10,
+  "period_count": 11,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -386,6 +386,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 136417,
+          "amount": 8710945.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8197,
+          "amount": 1599215.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 6120,
+          "amount": 2271290.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2085,
+          "amount": 874285.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8200,
+          "amount": 6095625.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 1255.0
+        }
+      },
+      "total": {
+        "count": 161020,
+        "amount": 19552615.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

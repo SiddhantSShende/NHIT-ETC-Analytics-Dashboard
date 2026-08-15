@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jajoosan"
   ],
-  "period_count": 6,
+  "period_count": 7,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -234,6 +234,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13314,
+          "amount": 1426680.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 217,
+          "amount": 97020.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1032,
+          "amount": 1244290.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 614,
+          "amount": 635975.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3695,
+          "amount": 4970555.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 735.0
+        }
+      },
+      "total": {
+        "count": 18877,
+        "amount": 8375255.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

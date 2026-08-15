@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lalanagar Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1971,6 +1971,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 210768,
+          "amount": 23771405.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20723,
+          "amount": 7285590.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 59156,
+          "amount": 44840470.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 27962,
+          "amount": 24514800.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 107859,
+          "amount": 136838135.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 121,
+          "amount": 122970.0
+        }
+      },
+      "total": {
+        "count": 426589,
+        "amount": 237373370.0
+      },
+      "annual_pass": {
+        "transaction_count": 74096
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

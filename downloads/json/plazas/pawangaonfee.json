@@ -6,7 +6,7 @@
   "source_raw_names": [
     "PawangaonFee Plaza"
   ],
-  "period_count": 16,
+  "period_count": 17,
   "months": {
     "2025-03": {
       "vehicles": {
@@ -615,6 +615,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 38322,
+          "amount": 1654005.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5354,
+          "amount": 535785.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19869,
+          "amount": 4415610.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13888,
+          "amount": 3277540.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 54629,
+          "amount": 18709890.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 134,
+          "amount": 46405.0
+        }
+      },
+      "total": {
+        "count": 132196,
+        "amount": 28639235.0
+      },
+      "annual_pass": {
+        "transaction_count": 10988
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

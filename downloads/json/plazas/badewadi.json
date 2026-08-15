@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Badewadi TOLL PLAZA"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 43671,
+          "amount": 1593310.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1467,
+          "amount": 97005.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9501,
+          "amount": 1314980.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 600,
+          "amount": 94375.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2278,
+          "amount": 559185.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1145.0
+        }
+      },
+      "total": {
+        "count": 57522,
+        "amount": 3660000.0
+      },
+      "annual_pass": {
+        "transaction_count": 6229
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

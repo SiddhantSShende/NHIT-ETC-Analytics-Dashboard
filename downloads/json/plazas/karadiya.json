@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karadiya Toll Plaza"
   ],
-  "period_count": 19,
+  "period_count": 20,
   "months": {
     "2024-12": {
       "vehicles": {
@@ -711,6 +711,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 31258,
+          "amount": 1210360.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 915,
+          "amount": 120250.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2412,
+          "amount": 718150.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1179,
+          "amount": 352545.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5427,
+          "amount": 2218915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2290.0
+        }
+      },
+      "total": {
+        "count": 41197,
+        "amount": 4622510.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

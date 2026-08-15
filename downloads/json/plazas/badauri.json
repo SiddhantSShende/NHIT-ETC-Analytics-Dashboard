@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Badauri Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 173021,
+          "amount": 11627675.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19406,
+          "amount": 3731005.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 67217,
+          "amount": 26562790.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 30701,
+          "amount": 14141225.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 111260,
+          "amount": 74885025.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 83,
+          "amount": 64955.0
+        }
+      },
+      "total": {
+        "count": 401688,
+        "amount": 131012675.0
+      },
+      "annual_pass": {
+        "transaction_count": 54864
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

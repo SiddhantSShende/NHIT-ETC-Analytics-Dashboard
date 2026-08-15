@@ -6,7 +6,7 @@
   "source_raw_names": [
     "JATL Dhilwan Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 429976,
+          "amount": 17535840.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18354,
+          "amount": 1726265.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 58233,
+          "amount": 11313140.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9989,
+          "amount": 2238115.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15550,
+          "amount": 5277640.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 5415.0
+        }
+      },
+      "total": {
+        "count": 532116,
+        "amount": 38096415.0
+      },
+      "annual_pass": {
+        "transaction_count": 138071
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

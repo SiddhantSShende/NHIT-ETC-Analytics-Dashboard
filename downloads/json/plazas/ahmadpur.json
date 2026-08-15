@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ahmadpur Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 380499,
+          "amount": 24226255.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 28146,
+          "amount": 4471400.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 69436,
+          "amount": 23468690.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19599,
+          "amount": 7957710.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 58142,
+          "amount": 33894010.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 28,
+          "amount": 20720.0
+        }
+      },
+      "total": {
+        "count": 555850,
+        "amount": 94038785.0
+      },
+      "annual_pass": {
+        "transaction_count": 112268
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

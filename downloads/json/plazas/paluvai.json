@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Paluvai Toll Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -84,6 +84,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 33045,
+          "amount": 1060685.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 818,
+          "amount": 54155.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11414,
+          "amount": 1318695.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1802,
+          "amount": 260530.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9110,
+          "amount": 2193140.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 3500.0
+        }
+      },
+      "total": {
+        "count": 56203,
+        "amount": 4890705.0
+      },
+      "annual_pass": {
+        "transaction_count": 7776
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

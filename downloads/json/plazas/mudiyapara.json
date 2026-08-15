@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mudiyapara Fee Plaza"
   ],
-  "period_count": 48,
+  "period_count": 49,
   "months": {
     "2022-07": {
       "vehicles": {
@@ -1763,6 +1763,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19347,
+          "amount": 570365.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2410,
+          "amount": 171020.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10597,
+          "amount": 1637520.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5051,
+          "amount": 872790.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 28284,
+          "amount": 7030560.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 39,
+          "amount": 11635.0
+        }
+      },
+      "total": {
+        "count": 65728,
+        "amount": 10293890.0
+      },
+      "annual_pass": {
+        "transaction_count": 4910
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

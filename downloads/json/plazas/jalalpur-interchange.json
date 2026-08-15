@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jalalpur Interchange"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -84,6 +84,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 37170,
+          "amount": 1294615.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1236,
+          "amount": 142835.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4190,
+          "amount": 809525.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 265,
+          "amount": 49030.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1301,
+          "amount": 412135.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 260.0
+        }
+      },
+      "total": {
+        "count": 44163,
+        "amount": 2708400.0
+      },
+      "annual_pass": {
+        "transaction_count": 5308
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Shahapur"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1973,6 +1973,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 119282,
+          "amount": 5591355.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 26100,
+          "amount": 2738540.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 92299,
+          "amount": 19724670.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 37950,
+          "amount": 12977950.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 126958,
+          "amount": 44417340.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1076,
+          "amount": 457605.0
+        }
+      },
+      "total": {
+        "count": 403665,
+        "amount": 85907460.0
+      },
+      "annual_pass": {
+        "transaction_count": 26475
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

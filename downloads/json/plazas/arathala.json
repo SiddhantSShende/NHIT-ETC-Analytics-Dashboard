@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Arathala"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-06": {
       "vehicles": {
@@ -43,6 +43,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 6503,
+          "amount": 276040.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 557,
+          "amount": 59070.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 780,
+          "amount": 131710.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 340,
+          "amount": 46485.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1114,
+          "amount": 270020.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 9294,
+        "amount": 783325.0
+      },
+      "annual_pass": {
+        "transaction_count": 964
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

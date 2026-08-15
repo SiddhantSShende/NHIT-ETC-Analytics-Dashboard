@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lanela Plaza"
   ],
-  "period_count": 11,
+  "period_count": 12,
   "months": {
     "2025-08": {
       "vehicles": {
@@ -433,6 +433,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 28893,
+          "amount": 1320700.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 655,
+          "amount": 64555.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1629,
+          "amount": 325175.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 979,
+          "amount": 187365.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6442,
+          "amount": 1943745.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 4500.0
+        }
+      },
+      "total": {
+        "count": 38609,
+        "amount": 3846040.0
+      },
+      "annual_pass": {
+        "transaction_count": 5714
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

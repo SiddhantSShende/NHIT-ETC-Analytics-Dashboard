@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kadhavani Toll Plaza"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-11": {
       "vehicles": {
@@ -759,6 +759,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 73307,
+          "amount": 3103385.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9442,
+          "amount": 962955.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12226,
+          "amount": 2129575.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6159,
+          "amount": 1506080.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 24018,
+          "amount": 8619400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 6280.0
+        }
+      },
+      "total": {
+        "count": 125177,
+        "amount": 16327675.0
+      },
+      "annual_pass": {
+        "transaction_count": 20698
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Balgudar Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 41497,
+          "amount": 1861435.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2753,
+          "amount": 237200.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5511,
+          "amount": 1022820.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1003,
+          "amount": 202085.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5548,
+          "amount": 1704105.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 325.0
+        }
+      },
+      "total": {
+        "count": 56313,
+        "amount": 5027970.0
+      },
+      "annual_pass": {
+        "transaction_count": 6898
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

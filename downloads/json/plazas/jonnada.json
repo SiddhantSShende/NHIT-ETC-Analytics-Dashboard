@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jonnada Toll Plaza"
   ],
-  "period_count": 24,
+  "period_count": 25,
   "months": {
     "2024-07": {
       "vehicles": {
@@ -903,6 +903,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 245488,
+          "amount": 8377920.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7274,
+          "amount": 554170.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 40208,
+          "amount": 5318135.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6465,
+          "amount": 1252090.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 49238,
+          "amount": 14597935.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 31,
+          "amount": 10300.0
+        }
+      },
+      "total": {
+        "count": 348704,
+        "amount": 30110550.0
+      },
+      "annual_pass": {
+        "transaction_count": 38444
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

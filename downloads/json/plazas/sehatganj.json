@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sehatganj"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 137925,
+          "amount": 2939980.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4606,
+          "amount": 160365.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9648,
+          "amount": 731280.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1823,
+          "amount": 152025.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5245,
+          "amount": 691560.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 520.0
+        }
+      },
+      "total": {
+        "count": 159251,
+        "amount": 4675730.0
+      },
+      "annual_pass": {
+        "transaction_count": 19023
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

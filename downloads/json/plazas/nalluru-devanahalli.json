@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nalluru Devanahalli"
   ],
-  "period_count": 32,
+  "period_count": 33,
   "months": {
     "2023-11": {
       "vehicles": {
@@ -1191,6 +1191,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 364479,
+          "amount": 21299505.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 70780,
+          "amount": 8541570.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 96023,
+          "amount": 24658960.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 38909,
+          "amount": 11007695.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 84816,
+          "amount": 35888405.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 185,
+          "amount": 75715.0
+        }
+      },
+      "total": {
+        "count": 655192,
+        "amount": 101471850.0
+      },
+      "annual_pass": {
+        "transaction_count": 113195
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

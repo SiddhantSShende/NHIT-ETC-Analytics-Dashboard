@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sundarpara"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-11": {
       "vehicles": {
@@ -759,6 +759,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 130721,
+          "amount": 4094685.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2268,
+          "amount": 231600.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9310,
+          "amount": 1959870.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1156,
+          "amount": 271760.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17567,
+          "amount": 5569985.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 107,
+          "amount": 51485.0
+        }
+      },
+      "total": {
+        "count": 161129,
+        "amount": 12179385.0
+      },
+      "annual_pass": {
+        "transaction_count": 52030
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

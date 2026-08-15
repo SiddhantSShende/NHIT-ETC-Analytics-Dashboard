@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jat Guwana Toll Plaza"
   ],
-  "period_count": 47,
+  "period_count": 48,
   "months": {
     "2022-08": {
       "vehicles": {
@@ -1719,6 +1719,43 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 48003,
+          "amount": 5230075.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3748,
+          "amount": 1622445.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 13881,
+          "amount": 13490515.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7866,
+          "amount": 8037420.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 40420,
+          "amount": 39098065.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 22060.0
+        }
+      },
+      "total": {
+        "count": 113932,
+        "amount": 67500580.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

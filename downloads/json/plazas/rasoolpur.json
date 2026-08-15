@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rasoolpur Fee Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -84,6 +84,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 200438,
+          "amount": 15114345.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4310,
+          "amount": 1063155.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10625,
+          "amount": 5374830.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1383,
+          "amount": 831340.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7394,
+          "amount": 4387535.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 5835.0
+        }
+      },
+      "total": {
+        "count": 224156,
+        "amount": 26777040.0
+      },
+      "annual_pass": {
+        "transaction_count": 30031
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }

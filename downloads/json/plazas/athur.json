@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Athur Toll Plaza"
   ],
-  "period_count": 54,
+  "period_count": 55,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1983,6 +1983,45 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jun-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/June-2026.pdf"
+      ]
+    },
+    "2026-07": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 856756,
+          "amount": 40486475.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 80892,
+          "amount": 8274235.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 143042,
+          "amount": 29176365.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 31087,
+          "amount": 7539555.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 84743,
+          "amount": 30989675.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 465,
+          "amount": 213205.0
+        }
+      },
+      "total": {
+        "count": 1196985,
+        "amount": 116679510.0
+      },
+      "annual_pass": {
+        "transaction_count": 259974
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/Jul-2026-1.pdf"
       ]
     }
   }
