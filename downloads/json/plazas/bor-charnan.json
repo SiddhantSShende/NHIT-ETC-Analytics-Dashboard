@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bor Charnan Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 29185,
+          "amount": 1176885.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 938,
+          "amount": 69930.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7165,
+          "amount": 1142555.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1241,
+          "amount": 217700.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11396,
+          "amount": 3104220.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 109,
+          "amount": 37825.0
+        }
+      },
+      "total": {
+        "count": 50034,
+        "amount": 5749115.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

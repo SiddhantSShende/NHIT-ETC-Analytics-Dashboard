@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rudravaram Toll plaza"
   ],
-  "period_count": 10,
+  "period_count": 11,
   "months": {
     "2025-10": {
       "vehicles": {
@@ -396,6 +396,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 57112,
+          "amount": 3899910.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1792,
+          "amount": 312375.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12108,
+          "amount": 3738840.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1163,
+          "amount": 500825.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5735,
+          "amount": 3766670.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 4110.0
+        }
+      },
+      "total": {
+        "count": 77916,
+        "amount": 12222730.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

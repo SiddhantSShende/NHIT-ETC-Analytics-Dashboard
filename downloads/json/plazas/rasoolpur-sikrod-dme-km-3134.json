@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rasoolpur Sikrod DME KM 3134"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1892,6 +1892,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 192883,
+          "amount": 5252505.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10486,
+          "amount": 677675.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15783,
+          "amount": 2443745.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5165,
+          "amount": 896330.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15717,
+          "amount": 3551830.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 5965.0
+        }
+      },
+      "total": {
+        "count": 240052,
+        "amount": 12828050.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

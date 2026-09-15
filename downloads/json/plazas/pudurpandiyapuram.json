@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pudurpandiyapuram"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 255066,
+          "amount": 16599345.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16549,
+          "amount": 2592360.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 48450,
+          "amount": 12710675.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 24178,
+          "amount": 6524175.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 97828,
+          "amount": 45320450.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1430,
+          "amount": 860190.0
+        }
+      },
+      "total": {
+        "count": 443501,
+        "amount": 84607195.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

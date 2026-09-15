@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Behram"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 343018,
+          "amount": 19289395.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6874,
+          "amount": 1029780.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 30900,
+          "amount": 9507980.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7216,
+          "amount": 2499880.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8050,
+          "amount": 4301350.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 3530.0
+        }
+      },
+      "total": {
+        "count": 396064,
+        "amount": 36631915.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

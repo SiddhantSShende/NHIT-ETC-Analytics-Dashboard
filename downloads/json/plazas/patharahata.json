@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Patharahata Toll Plaza"
   ],
-  "period_count": 25,
+  "period_count": 26,
   "months": {
     "2024-07": {
       "vehicles": {
@@ -942,6 +942,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 44822,
+          "amount": 1983545.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2253,
+          "amount": 189825.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8052,
+          "amount": 1538205.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2040,
+          "amount": 416220.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22190,
+          "amount": 6607840.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1950.0
+        }
+      },
+      "total": {
+        "count": 79362,
+        "amount": 10737585.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

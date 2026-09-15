@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nekawala"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 98916,
+          "amount": 4208015.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4035,
+          "amount": 398385.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18040,
+          "amount": 3815505.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9056,
+          "amount": 2117565.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 28057,
+          "amount": 9280980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 3570.0
+        }
+      },
+      "total": {
+        "count": 158115,
+        "amount": 19824020.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

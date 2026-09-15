@@ -7,7 +7,7 @@
     "Nashirabad",
     "Nashirabad Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2023,6 +2023,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 198789,
+          "amount": 10370650.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9956,
+          "amount": 1493620.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 42778,
+          "amount": 14160650.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17010,
+          "amount": 6575940.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 74960,
+          "amount": 43082050.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 50,
+          "amount": 34185.0
+        }
+      },
+      "total": {
+        "count": 343543,
+        "amount": 75717095.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

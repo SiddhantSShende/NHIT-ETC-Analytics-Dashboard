@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Barkheda Barod Toll Plaza (Ch. 74+684)"
   ],
-  "period_count": 11,
+  "period_count": 12,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -421,6 +421,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 7731,
+          "amount": 398970.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 134,
+          "amount": 15080.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 374,
+          "amount": 93555.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 104,
+          "amount": 19310.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 582,
+          "amount": 205845.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 14975.0
+        }
+      },
+      "total": {
+        "count": 8950,
+        "amount": 747735.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

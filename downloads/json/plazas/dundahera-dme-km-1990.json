@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dundahera Plaza DME KM 1990"
   ],
-  "period_count": 52,
+  "period_count": 53,
   "months": {
     "2022-04": {
       "vehicles": {
@@ -1892,6 +1892,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 104145,
+          "amount": 4433400.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2305,
+          "amount": 289620.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3950,
+          "amount": 1110380.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 998,
+          "amount": 310725.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 694,
+          "amount": 326435.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 3555.0
+        }
+      },
+      "total": {
+        "count": 112098,
+        "amount": 6474115.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

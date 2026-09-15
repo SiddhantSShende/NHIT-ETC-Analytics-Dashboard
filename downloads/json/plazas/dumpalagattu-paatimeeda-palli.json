@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dumpalagattu Paatimeeda Palli"
   ],
-  "period_count": 46,
+  "period_count": 47,
   "months": {
     "2022-10": {
       "vehicles": {
@@ -1686,6 +1686,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 248205,
+          "amount": 7428735.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10464,
+          "amount": 707160.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 55926,
+          "amount": 6967970.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10672,
+          "amount": 2477480.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 41764,
+          "amount": 10271650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 41,
+          "amount": 7055.0
+        }
+      },
+      "total": {
+        "count": 367072,
+        "amount": 27860050.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

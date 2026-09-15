@@ -6,7 +6,7 @@
   "source_raw_names": [
     "SUNDAR PURA TOLL PLAZA"
   ],
-  "period_count": 13,
+  "period_count": 14,
   "months": {
     "2025-07": {
       "vehicles": {
@@ -492,6 +492,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 11527,
+          "amount": 456945.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 84,
+          "amount": 7965.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 256,
+          "amount": 43060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 52,
+          "amount": 16680.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 702,
+          "amount": 283235.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 550.0
+        }
+      },
+      "total": {
+        "count": 12623,
+        "amount": 808435.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

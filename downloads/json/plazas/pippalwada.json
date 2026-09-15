@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pippalwada"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2018,6 +2018,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 54821,
+          "amount": 2987885.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16883,
+          "amount": 2812510.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 81775,
+          "amount": 28201390.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 52695,
+          "amount": 20463055.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 88381,
+          "amount": 49209440.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 89,
+          "amount": 59640.0
+        }
+      },
+      "total": {
+        "count": 294644,
+        "amount": 103733920.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

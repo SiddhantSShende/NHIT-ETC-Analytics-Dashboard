@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kappalur"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 669860,
+          "amount": 39258583.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 51944,
+          "amount": 7649388.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 136689,
+          "amount": 33921283.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18381,
+          "amount": 6391130.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 34232,
+          "amount": 18539250.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 58,
+          "amount": 32695.0
+        }
+      },
+      "total": {
+        "count": 911164,
+        "amount": 105792329.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

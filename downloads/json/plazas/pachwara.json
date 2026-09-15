@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pachwara Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 74090,
+          "amount": 3554140.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5419,
+          "amount": 573705.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9496,
+          "amount": 2721385.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2793,
+          "amount": 972615.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15239,
+          "amount": 7507480.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 2880.0
+        }
+      },
+      "total": {
+        "count": 107042,
+        "amount": 15332205.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

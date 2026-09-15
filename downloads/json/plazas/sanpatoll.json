@@ -6,7 +6,7 @@
   "source_raw_names": [
     "SanpaToll Plaza"
   ],
-  "period_count": 22,
+  "period_count": 23,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -820,6 +820,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 43769,
+          "amount": 2803275.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3253,
+          "amount": 753400.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4942,
+          "amount": 2635505.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1534,
+          "amount": 671845.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 14482,
+          "amount": 10237270.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 17,
+          "amount": 10180.0
+        }
+      },
+      "total": {
+        "count": 67997,
+        "amount": 17111475.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

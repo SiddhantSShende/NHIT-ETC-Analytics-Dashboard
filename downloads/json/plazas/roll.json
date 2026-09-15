@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Roll Toll Plaza"
   ],
-  "period_count": 24,
+  "period_count": 25,
   "months": {
     "2024-08": {
       "vehicles": {
@@ -906,6 +906,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 10646,
+          "amount": 349655.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 737,
+          "amount": 48345.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2398,
+          "amount": 306560.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 387,
+          "amount": 57825.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5953,
+          "amount": 1450250.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 1625.0
+        }
+      },
+      "total": {
+        "count": 20129,
+        "amount": 2214260.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

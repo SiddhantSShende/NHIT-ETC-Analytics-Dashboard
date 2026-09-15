@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Binaswas Toll Plaza"
   ],
-  "period_count": 51,
+  "period_count": 52,
   "months": {
     "2022-05": {
       "vehicles": {
@@ -1878,6 +1878,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 133223,
+          "amount": 8406275.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6015,
+          "amount": 801605.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23946,
+          "amount": 6775035.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5217,
+          "amount": 1769235.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 28859,
+          "amount": 14878130.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 20,
+          "amount": 12280.0
+        }
+      },
+      "total": {
+        "count": 197280,
+        "amount": 32642560.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

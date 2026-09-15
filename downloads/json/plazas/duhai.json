@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Duhai"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2000,6 +2000,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 204445,
+          "amount": 6729080.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 12171,
+          "amount": 1265495.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11844,
+          "amount": 2999665.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3803,
+          "amount": 1137650.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9931,
+          "amount": 5008110.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 47,
+          "amount": 3405.0
+        }
+      },
+      "total": {
+        "count": 242241,
+        "amount": 17143405.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

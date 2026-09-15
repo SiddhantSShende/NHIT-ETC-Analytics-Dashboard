@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Padalshingi TP"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 278716,
+          "amount": 17181670.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14426,
+          "amount": 2494595.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 69697,
+          "amount": 24731565.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 33824,
+          "amount": 14416780.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 68027,
+          "amount": 41633895.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 251,
+          "amount": 183465.0
+        }
+      },
+      "total": {
+        "count": 464941,
+        "amount": 100641970.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Itaunja Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 421912,
+          "amount": 14925675.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20117,
+          "amount": 1572780.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 60159,
+          "amount": 9846940.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 15004,
+          "amount": 4533905.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 47716,
+          "amount": 13931400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 20,
+          "amount": 7145.0
+        }
+      },
+      "total": {
+        "count": 564928,
+        "amount": 44817845.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Halaharvi TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 86541,
+          "amount": 2920425.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1762,
+          "amount": 126910.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12875,
+          "amount": 1818110.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3612,
+          "amount": 631985.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12093,
+          "amount": 3173045.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 116883,
+        "amount": 8670475.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

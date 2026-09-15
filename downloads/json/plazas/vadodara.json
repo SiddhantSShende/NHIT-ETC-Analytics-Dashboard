@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vadodara Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2004,6 +2004,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 478412,
+          "amount": 35279125.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 37156,
+          "amount": 5911520.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 93225,
+          "amount": 33538220.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20314,
+          "amount": 7138815.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 97072,
+          "amount": 56929735.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 52,
+          "amount": 29335.0
+        }
+      },
+      "total": {
+        "count": 726231,
+        "amount": 138826750.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Issapur Kheri"
   ],
-  "period_count": 21,
+  "period_count": 22,
   "months": {
     "2024-11": {
       "vehicles": {
@@ -784,6 +784,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 20448,
+          "amount": 885315.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1251,
+          "amount": 194090.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3202,
+          "amount": 1578510.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 664,
+          "amount": 233490.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2423,
+          "amount": 1660860.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 2310.0
+        }
+      },
+      "total": {
+        "count": 27990,
+        "amount": 4554575.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

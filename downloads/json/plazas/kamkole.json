@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kamkole"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 442007,
+          "amount": 30263205.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 30715,
+          "amount": 5188560.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 91887,
+          "amount": 30774395.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 26695,
+          "amount": 11038875.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 82086,
+          "amount": 50050240.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 168,
+          "amount": 85410.0
+        }
+      },
+      "total": {
+        "count": 673558,
+        "amount": 127400685.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

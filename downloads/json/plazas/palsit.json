@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Palsit"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 314486,
+          "amount": 22175245.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 23818,
+          "amount": 3830280.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 80135,
+          "amount": 27155180.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 39174,
+          "amount": 15498710.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 245073,
+          "amount": 132159050.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 81,
+          "amount": 52830.0
+        }
+      },
+      "total": {
+        "count": 702767,
+        "amount": 200871295.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

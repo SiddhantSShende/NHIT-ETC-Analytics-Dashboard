@@ -6,7 +6,7 @@
   "source_raw_names": [
     "VeeraValli TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2020,6 +2020,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 262150,
+          "amount": 21203350.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20797,
+          "amount": 5140805.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 64067,
+          "amount": 31772820.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 39865,
+          "amount": 21219655.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 85718,
+          "amount": 74532210.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 85,
+          "amount": 84820.0
+        }
+      },
+      "total": {
+        "count": 472682,
+        "amount": 153953660.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ahmednagar Bypass Toll Plaza"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-12": {
       "vehicles": {
@@ -760,6 +760,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 77063,
+          "amount": 5025405.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11353,
+          "amount": 1535780.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 54156,
+          "amount": 16004955.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23848,
+          "amount": 7793565.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 103664,
+          "amount": 48608730.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 103,
+          "amount": 58760.0
+        }
+      },
+      "total": {
+        "count": 270187,
+        "amount": 79027195.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

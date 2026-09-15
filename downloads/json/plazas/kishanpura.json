@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kishanpura toll plaza"
   ],
-  "period_count": 17,
+  "period_count": 18,
   "months": {
     "2025-03": {
       "vehicles": {
@@ -654,6 +654,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 32432,
+          "amount": 1592715.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1337,
+          "amount": 126625.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4898,
+          "amount": 1098575.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1329,
+          "amount": 333705.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6256,
+          "amount": 2492710.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 415.0
+        }
+      },
+      "total": {
+        "count": 46253,
+        "amount": 5644745.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

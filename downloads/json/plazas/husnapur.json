@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Husnapur"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 101015,
+          "amount": 7446825.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5781,
+          "amount": 894295.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 27285,
+          "amount": 8992320.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3738,
+          "amount": 1432370.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 20921,
+          "amount": 12161590.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 5840.0
+        }
+      },
+      "total": {
+        "count": 158748,
+        "amount": 30933240.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

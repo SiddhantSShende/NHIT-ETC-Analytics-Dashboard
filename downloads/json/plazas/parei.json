@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Parei Toll Plaza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -121,6 +121,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14940,
+          "amount": 425000.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 403,
+          "amount": 20580.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2050,
+          "amount": 211845.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 781,
+          "amount": 83440.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4251,
+          "amount": 690400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 22425,
+        "amount": 1431265.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

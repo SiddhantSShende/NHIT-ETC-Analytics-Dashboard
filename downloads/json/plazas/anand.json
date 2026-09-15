@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Anand Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2004,6 +2004,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 140346,
+          "amount": 5826775.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14875,
+          "amount": 1222470.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 30354,
+          "amount": 5588115.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9607,
+          "amount": 1898540.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27436,
+          "amount": 7920245.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 76,
+          "amount": 14660.0
+        }
+      },
+      "total": {
+        "count": 222694,
+        "amount": 22470805.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

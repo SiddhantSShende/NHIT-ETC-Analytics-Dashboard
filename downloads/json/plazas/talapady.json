@@ -6,7 +6,7 @@
   "source_raw_names": [
     "TALAPADY TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 426575,
+          "amount": 15579135.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16462,
+          "amount": 984090.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 55985,
+          "amount": 6330265.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6369,
+          "amount": 1533465.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 33619,
+          "amount": 8286300.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 2805.0
+        }
+      },
+      "total": {
+        "count": 539020,
+        "amount": 32716060.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

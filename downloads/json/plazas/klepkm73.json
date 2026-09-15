@@ -6,7 +6,7 @@
   "source_raw_names": [
     "klepkm73"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-07": {
       "vehicles": {
@@ -43,6 +43,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 20732,
+          "amount": 2570795.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 379,
+          "amount": 149420.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 998,
+          "amount": 836105.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 350,
+          "amount": 336395.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1775,
+          "amount": 1763450.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 24234,
+        "amount": 5656165.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

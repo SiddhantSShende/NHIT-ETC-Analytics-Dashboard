@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Newada Toll Plaza"
   ],
-  "period_count": 34,
+  "period_count": 35,
   "months": {
     "2023-10": {
       "vehicles": {
@@ -1266,6 +1266,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 208387,
+          "amount": 13537195.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6777,
+          "amount": 1408635.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 29695,
+          "amount": 12320555.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9017,
+          "amount": 4492125.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23760,
+          "amount": 17028675.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 9555.0
+        }
+      },
+      "total": {
+        "count": 277648,
+        "amount": 48796740.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gamjal Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2018,6 +2018,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 164947,
+          "amount": 5812975.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19860,
+          "amount": 2005835.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 99347,
+          "amount": 20787860.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 55061,
+          "amount": 13387945.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 105553,
+          "amount": 36618575.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 119,
+          "amount": 48395.0
+        }
+      },
+      "total": {
+        "count": 444887,
+        "amount": 78661585.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

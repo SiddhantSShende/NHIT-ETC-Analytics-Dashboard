@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chandi Toll Plaza"
   ],
-  "period_count": 13,
+  "period_count": 14,
   "months": {
     "2025-07": {
       "vehicles": {
@@ -510,6 +510,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 168362,
+          "amount": 5912850.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6664,
+          "amount": 828730.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 21017,
+          "amount": 5417380.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3244,
+          "amount": 964075.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7461,
+          "amount": 3322490.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 6410.0
+        }
+      },
+      "total": {
+        "count": 206761,
+        "amount": 16451935.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

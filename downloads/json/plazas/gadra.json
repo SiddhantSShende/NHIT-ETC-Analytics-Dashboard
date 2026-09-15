@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gadra Toll Plaza"
   ],
-  "period_count": 8,
+  "period_count": 9,
   "months": {
     "2025-12": {
       "vehicles": {
@@ -318,6 +318,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 8763,
+          "amount": 326490.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 180,
+          "amount": 3325.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 822,
+          "amount": 115290.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 124,
+          "amount": 20180.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 282,
+          "amount": 63980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 680.0
+        }
+      },
+      "total": {
+        "count": 10173,
+        "amount": 529945.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

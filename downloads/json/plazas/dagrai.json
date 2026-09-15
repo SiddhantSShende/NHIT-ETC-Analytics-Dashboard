@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dagrai Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 166640,
+          "amount": 10294235.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 12754,
+          "amount": 3006585.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 60664,
+          "amount": 29828850.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 47536,
+          "amount": 26781280.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 60568,
+          "amount": 47876265.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 44,
+          "amount": 42465.0
+        }
+      },
+      "total": {
+        "count": 348206,
+        "amount": 117829680.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

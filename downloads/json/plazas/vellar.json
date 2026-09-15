@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vellar"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -121,6 +121,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 73564,
+          "amount": 2050760.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7100,
+          "amount": 396065.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9893,
+          "amount": 1050545.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2900,
+          "amount": 392845.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15078,
+          "amount": 2948400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 3120.0
+        }
+      },
+      "total": {
+        "count": 108549,
+        "amount": 6841735.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pandutala Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 17946,
+          "amount": 1121280.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2743,
+          "amount": 394190.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10401,
+          "amount": 3341745.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4911,
+          "amount": 1761660.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 28884,
+          "amount": 14835990.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 14890.0
+        }
+      },
+      "total": {
+        "count": 64909,
+        "amount": 21469755.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

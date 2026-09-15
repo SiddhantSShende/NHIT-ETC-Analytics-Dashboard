@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Daroada"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 61708,
+          "amount": 3789305.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 17099,
+          "amount": 3330900.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 80135,
+          "amount": 32754965.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 53537,
+          "amount": 24472460.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 84250,
+          "amount": 55157330.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 115,
+          "amount": 86095.0
+        }
+      },
+      "total": {
+        "count": 296844,
+        "amount": 119591055.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

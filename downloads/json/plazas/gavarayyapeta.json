@@ -1,0 +1,48 @@
+{
+  "plaza_name": "Gavarayyapeta Toll plaza",
+  "plaza_slug": "gavarayyapeta",
+  "piu": "Rajahmundry",
+  "ro": "Vijayawada",
+  "source_raw_names": [
+    "Gavarayyapeta Toll plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 4054,
+          "amount": 186155.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 50,
+          "amount": 4755.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 641,
+          "amount": 118775.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 112,
+          "amount": 22140.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 120,
+          "amount": 34860.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 4977,
+        "amount": 366685.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
+      ]
+    }
+  }
+}

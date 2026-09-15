@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Komalla Fee Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 361845,
+          "amount": 26719905.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8995,
+          "amount": 1502990.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 35537,
+          "amount": 11464015.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3290,
+          "amount": 1301425.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 61017,
+          "amount": 35521530.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 19,
+          "amount": 14555.0
+        }
+      },
+      "total": {
+        "count": 470703,
+        "amount": 76524420.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

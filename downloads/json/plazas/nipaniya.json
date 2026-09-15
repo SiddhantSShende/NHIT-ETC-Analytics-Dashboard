@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nipaniya Fee Plaza"
   ],
-  "period_count": 29,
+  "period_count": 30,
   "months": {
     "2024-03": {
       "vehicles": {
@@ -1086,6 +1086,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 75248,
+          "amount": 3826140.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1952,
+          "amount": 223340.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10628,
+          "amount": 2598765.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3223,
+          "amount": 914315.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6316,
+          "amount": 2660145.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 128,
+          "amount": 67645.0
+        }
+      },
+      "total": {
+        "count": 97495,
+        "amount": 10290350.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

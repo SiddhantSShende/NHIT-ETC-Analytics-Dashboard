@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ponnambalapatti Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 259302,
+          "amount": 19814185.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19769,
+          "amount": 3590070.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 42373,
+          "amount": 11936580.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4966,
+          "amount": 3158435.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10364,
+          "amount": 6758845.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 33,
+          "amount": 20945.0
+        }
+      },
+      "total": {
+        "count": 336807,
+        "amount": 45279060.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vedurupavuluru"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -160,6 +160,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 249154,
+          "amount": 10039350.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18694,
+          "amount": 2247765.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 46987,
+          "amount": 12066305.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 27822,
+          "amount": 7515600.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 80128,
+          "amount": 32872855.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 110,
+          "amount": 56040.0
+        }
+      },
+      "total": {
+        "count": 422895,
+        "amount": 64797915.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

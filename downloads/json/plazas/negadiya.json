@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Negadiya Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 376154,
+          "amount": 27141375.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13498,
+          "amount": 2643350.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 44445,
+          "amount": 19866330.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13235,
+          "amount": 5639760.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 40319,
+          "amount": 30653805.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 321,
+          "amount": 19425.0
+        }
+      },
+      "total": {
+        "count": 487972,
+        "amount": 85964045.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

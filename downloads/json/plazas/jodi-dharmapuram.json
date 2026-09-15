@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jodi Dharmapuram Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 40696,
+          "amount": 1508855.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2727,
+          "amount": 247600.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15691,
+          "amount": 2998800.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7986,
+          "amount": 1666285.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 40762,
+          "amount": 13011920.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 8630.0
+        }
+      },
+      "total": {
+        "count": 107886,
+        "amount": 19442090.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

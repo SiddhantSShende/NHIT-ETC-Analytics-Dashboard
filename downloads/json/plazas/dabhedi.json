@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dabhedi Toll Plaza"
   ],
-  "period_count": 17,
+  "period_count": 18,
   "months": {
     "2025-03": {
       "vehicles": {
@@ -654,6 +654,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 68999,
+          "amount": 3589345.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4638,
+          "amount": 683145.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 13451,
+          "amount": 4020120.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1619,
+          "amount": 550080.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5416,
+          "amount": 2741410.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 94123,
+        "amount": 11584100.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

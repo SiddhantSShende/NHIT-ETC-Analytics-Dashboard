@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vavadi Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 146927,
+          "amount": 9779250.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11369,
+          "amount": 2276195.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 46661,
+          "amount": 18345135.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6563,
+          "amount": 3908550.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 42306,
+          "amount": 29064205.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 119,
+          "amount": 105865.0
+        }
+      },
+      "total": {
+        "count": 253945,
+        "amount": 63479200.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

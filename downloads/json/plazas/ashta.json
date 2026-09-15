@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ashta Toll Plaza"
   ],
-  "period_count": 30,
+  "period_count": 31,
   "months": {
     "2024-02": {
       "vehicles": {
@@ -1122,6 +1122,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 166574,
+          "amount": 8378480.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5085,
+          "amount": 735825.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 30748,
+          "amount": 8859100.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4076,
+          "amount": 1366670.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 19184,
+          "amount": 10130230.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 19,
+          "amount": 10725.0
+        }
+      },
+      "total": {
+        "count": 225686,
+        "amount": 29481030.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

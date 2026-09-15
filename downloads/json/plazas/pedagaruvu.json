@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pedagaruvu Toll Plaza"
   ],
-  "period_count": 7,
+  "period_count": 8,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -279,6 +279,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 16532,
+          "amount": 673280.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 586,
+          "amount": 47250.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2720,
+          "amount": 366135.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 221,
+          "amount": 33580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 212,
+          "amount": 59235.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 20271,
+        "amount": 1179480.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

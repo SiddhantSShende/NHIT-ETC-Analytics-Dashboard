@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Dangiyawas"
   ],
-  "period_count": 24,
+  "period_count": 25,
   "months": {
     "2024-08": {
       "vehicles": {
@@ -906,6 +906,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 118312,
+          "amount": 3999935.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5335,
+          "amount": 419940.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 15839,
+          "amount": 2736285.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7061,
+          "amount": 1325560.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 38286,
+          "amount": 10775125.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 5750.0
+        }
+      },
+      "total": {
+        "count": 184851,
+        "amount": 19262595.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

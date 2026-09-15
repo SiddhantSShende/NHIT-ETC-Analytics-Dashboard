@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Linglapura"
   ],
-  "period_count": 26,
+  "period_count": 27,
   "months": {
     "2024-06": {
       "vehicles": {
@@ -978,6 +978,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 131237,
+          "amount": 8952635.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8733,
+          "amount": 1204365.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 31149,
+          "amount": 8408385.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5609,
+          "amount": 1788545.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9670,
+          "amount": 4740590.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 1545.0
+        }
+      },
+      "total": {
+        "count": 186401,
+        "amount": 25096065.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

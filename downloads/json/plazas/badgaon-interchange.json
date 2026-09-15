@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Badgaon Interchange"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -123,6 +123,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 27014,
+          "amount": 1246830.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 615,
+          "amount": 93685.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1548,
+          "amount": 467605.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 192,
+          "amount": 68875.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 690,
+          "amount": 236660.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 610.0
+        }
+      },
+      "total": {
+        "count": 30062,
+        "amount": 2114265.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

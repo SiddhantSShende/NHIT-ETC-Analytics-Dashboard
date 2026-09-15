@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gurau (Formerly Semra Atikabad) Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 129632,
+          "amount": 8603310.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18844,
+          "amount": 3549700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 61312,
+          "amount": 23530140.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19600,
+          "amount": 8650815.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 72631,
+          "amount": 45258495.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 44,
+          "amount": 34980.0
+        }
+      },
+      "total": {
+        "count": 302063,
+        "amount": 89627440.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

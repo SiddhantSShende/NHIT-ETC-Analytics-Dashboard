@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karrapur Fee Plaza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -121,6 +121,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 63129,
+          "amount": 2793295.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2738,
+          "amount": 289140.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16658,
+          "amount": 3512785.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2551,
+          "amount": 623970.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 14959,
+          "amount": 5417100.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1755.0
+        }
+      },
+      "total": {
+        "count": 100040,
+        "amount": 12638045.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

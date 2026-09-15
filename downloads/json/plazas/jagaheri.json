@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jagaheri fee plaza"
   ],
-  "period_count": 31,
+  "period_count": 32,
   "months": {
     "2024-01": {
       "vehicles": {
@@ -1158,6 +1158,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 214866,
+          "amount": 8818075.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5780,
+          "amount": 770025.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19742,
+          "amount": 5483410.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5944,
+          "amount": 1956385.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 20531,
+          "amount": 9269845.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 7275.0
+        }
+      },
+      "total": {
+        "count": 266876,
+        "amount": 26305015.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bisalwas Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 49481,
+          "amount": 1420470.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1326,
+          "amount": 75750.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3894,
+          "amount": 456050.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 281,
+          "amount": 40295.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5653,
+          "amount": 1146090.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 930.0
+        }
+      },
+      "total": {
+        "count": 60639,
+        "amount": 3139585.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

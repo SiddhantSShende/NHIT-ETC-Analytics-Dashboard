@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chalakwadi toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 344222,
+          "amount": 32432150.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 37054,
+          "amount": 7139855.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 80418,
+          "amount": 32472080.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13267,
+          "amount": 6403695.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29827,
+          "amount": 20988375.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 58,
+          "amount": 50025.0
+        }
+      },
+      "total": {
+        "count": 504846,
+        "amount": 99486180.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

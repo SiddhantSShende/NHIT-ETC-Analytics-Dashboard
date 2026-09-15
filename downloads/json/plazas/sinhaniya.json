@@ -1,12 +1,12 @@
 {
   "plaza_name": "Sinhaniya",
   "plaza_slug": "sinhaniya",
-  "piu": "",
-  "ro": "",
+  "piu": "Jaisalmer",
+  "ro": "Jaipur",
   "source_raw_names": [
     "Sinhaniya"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2025-11": {
       "vehicles": {
@@ -43,6 +43,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2025/Nov-2025-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Nov-2025.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 626,
+          "amount": 28175.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4,
+          "amount": 360.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 26,
+          "amount": 4630.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19,
+          "amount": 3790.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 28,
+          "amount": 7840.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 703,
+        "amount": 44795.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Faridpur Toll Plaza"
   ],
-  "period_count": 40,
+  "period_count": 41,
   "months": {
     "2023-04": {
       "vehicles": {
@@ -1480,6 +1480,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 258561,
+          "amount": 17044090.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 12741,
+          "amount": 2551790.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 60436,
+          "amount": 24812245.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18056,
+          "amount": 8967085.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 45268,
+          "amount": 31925035.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 19,
+          "amount": 15275.0
+        }
+      },
+      "total": {
+        "count": 395081,
+        "amount": 85315520.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Banaundi Toll Plaza"
   ],
-  "period_count": 11,
+  "period_count": 12,
   "months": {
     "2025-09": {
       "vehicles": {
@@ -435,6 +435,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 62213,
+          "amount": 1900280.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2535,
+          "amount": 204330.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4316,
+          "amount": 742060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1467,
+          "amount": 269975.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4660,
+          "amount": 1277750.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 375.0
+        }
+      },
+      "total": {
+        "count": 75192,
+        "amount": 4394770.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

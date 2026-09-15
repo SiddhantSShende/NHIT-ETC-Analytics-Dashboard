@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rahua Toll Plaza"
   ],
-  "period_count": 5,
+  "period_count": 6,
   "months": {
     "2026-03": {
       "vehicles": {
@@ -197,6 +197,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15565,
+          "amount": 418755.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 894,
+          "amount": 41730.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2631,
+          "amount": 260385.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 683,
+          "amount": 73285.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4023,
+          "amount": 613330.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 23796,
+        "amount": 1407485.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

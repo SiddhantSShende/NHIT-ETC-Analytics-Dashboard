@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gorribanda Toll Plaza"
   ],
-  "period_count": 41,
+  "period_count": 42,
   "months": {
     "2023-03": {
       "vehicles": {
@@ -1518,6 +1518,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 26180,
+          "amount": 597240.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 767,
+          "amount": 34560.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5292,
+          "amount": 376310.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 155,
+          "amount": 18825.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1443,
+          "amount": 242685.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 33837,
+        "amount": 1269620.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kurungudi"
   ],
-  "period_count": 25,
+  "period_count": 26,
   "months": {
     "2024-07": {
       "vehicles": {
@@ -942,6 +942,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 50960,
+          "amount": 1466060.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 983,
+          "amount": 66725.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2314,
+          "amount": 294285.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 314,
+          "amount": 43330.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 896,
+          "amount": 190920.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 240.0
+        }
+      },
+      "total": {
+        "count": 55468,
+        "amount": 2061560.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

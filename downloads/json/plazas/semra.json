@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Semra Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 72902,
+          "amount": 1607565.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2265,
+          "amount": 90125.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10430,
+          "amount": 839235.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 410,
+          "amount": 40430.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3499,
+          "amount": 510775.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 165.0
+        }
+      },
+      "total": {
+        "count": 89507,
+        "amount": 3088295.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

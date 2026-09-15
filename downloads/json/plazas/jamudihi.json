@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jamudihi Toll Plaza"
   ],
-  "period_count": 40,
+  "period_count": 41,
   "months": {
     "2023-04": {
       "vehicles": {
@@ -1482,6 +1482,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15275,
+          "amount": 871545.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 324,
+          "amount": 41550.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 1193,
+          "amount": 322100.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1037,
+          "amount": 275400.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 101271,
+          "amount": 38579980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 17,
+          "amount": 8035.0
+        }
+      },
+      "total": {
+        "count": 119117,
+        "amount": 40098610.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

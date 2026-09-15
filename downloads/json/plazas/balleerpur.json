@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Balleerpur Toll plaza"
   ],
-  "period_count": 17,
+  "period_count": 18,
   "months": {
     "2025-03": {
       "vehicles": {
@@ -654,6 +654,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 109811,
+          "amount": 6138945.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5882,
+          "amount": 600205.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14151,
+          "amount": 3768315.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3158,
+          "amount": 967320.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6265,
+          "amount": 2822400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 4320.0
+        }
+      },
+      "total": {
+        "count": 139277,
+        "amount": 14301505.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

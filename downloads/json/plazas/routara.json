@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Routara Toll Plaza"
   ],
-  "period_count": 26,
+  "period_count": 27,
   "months": {
     "2024-06": {
       "vehicles": {
@@ -978,6 +978,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 87732,
+          "amount": 4637540.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1951,
+          "amount": 245625.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3211,
+          "amount": 849025.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1187,
+          "amount": 348475.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7292,
+          "amount": 2992345.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 4960.0
+        }
+      },
+      "total": {
+        "count": 101385,
+        "amount": 9077970.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

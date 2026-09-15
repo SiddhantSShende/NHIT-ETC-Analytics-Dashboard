@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ghagga Toll Plaza"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-07": {
       "vehicles": {
@@ -43,6 +43,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 25914,
+          "amount": 2014780.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 873,
+          "amount": 186375.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3252,
+          "amount": 1817725.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1023,
+          "amount": 515010.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4549,
+          "amount": 3426445.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1855.0
+        }
+      },
+      "total": {
+        "count": 35613,
+        "amount": 7962190.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

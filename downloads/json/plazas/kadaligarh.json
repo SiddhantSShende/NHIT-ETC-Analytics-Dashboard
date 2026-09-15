@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kadaligarh Toll Plaza"
   ],
-  "period_count": 30,
+  "period_count": 31,
   "months": {
     "2024-02": {
       "vehicles": {
@@ -1122,6 +1122,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 24202,
+          "amount": 1108950.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1032,
+          "amount": 82930.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4972,
+          "amount": 821205.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2071,
+          "amount": 375700.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10631,
+          "amount": 2994680.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1750.0
+        }
+      },
+      "total": {
+        "count": 42913,
+        "amount": 5385215.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

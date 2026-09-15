@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bandalo/Manguli Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 505975,
+          "amount": 40335150.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 22575,
+          "amount": 4800385.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 78433,
+          "amount": 35640140.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 43530,
+          "amount": 31975020.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 129671,
+          "amount": 95428370.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 227,
+          "amount": 187700.0
+        }
+      },
+      "total": {
+        "count": 780411,
+        "amount": 208366765.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

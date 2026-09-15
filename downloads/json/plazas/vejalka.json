@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vejalka toll plaza"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -156,6 +156,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 71986,
+          "amount": 4053865.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3494,
+          "amount": 541815.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 9726,
+          "amount": 2642345.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1790,
+          "amount": 673180.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15816,
+          "amount": 8145660.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 20,
+          "amount": 13345.0
+        }
+      },
+      "total": {
+        "count": 102832,
+        "amount": 16070210.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

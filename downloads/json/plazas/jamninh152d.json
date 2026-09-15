@@ -6,7 +6,7 @@
   "source_raw_names": [
     "JamniNH152D"
   ],
-  "period_count": 18,
+  "period_count": 19,
   "months": {
     "2025-02": {
       "vehicles": {
@@ -676,6 +676,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 40484,
+          "amount": 1899565.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2020,
+          "amount": 367515.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8320,
+          "amount": 3596930.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3067,
+          "amount": 1674305.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8511,
+          "amount": 6540315.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 4065.0
+        }
+      },
+      "total": {
+        "count": 62427,
+        "amount": 14082695.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Vantada Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 260573,
+          "amount": 6752225.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13601,
+          "amount": 749940.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 57096,
+          "amount": 6243880.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 30052,
+          "amount": 3962045.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 102783,
+          "amount": 19168435.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 111,
+          "amount": 24385.0
+        }
+      },
+      "total": {
+        "count": 464216,
+        "amount": 36900910.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

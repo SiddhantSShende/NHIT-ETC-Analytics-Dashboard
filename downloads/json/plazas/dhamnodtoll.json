@@ -6,7 +6,7 @@
   "source_raw_names": [
     "DhamnodToll Plaza"
   ],
-  "period_count": 35,
+  "period_count": 36,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1288,6 +1288,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 13108,
+          "amount": 1158090.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 266,
+          "amount": 79555.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 948,
+          "amount": 629885.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 346,
+          "amount": 221590.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2358,
+          "amount": 2124195.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 3560.0
+        }
+      },
+      "total": {
+        "count": 17030,
+        "amount": 4216875.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

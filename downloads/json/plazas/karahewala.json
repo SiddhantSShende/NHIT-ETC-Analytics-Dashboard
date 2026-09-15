@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karahewala Toll Plaza"
   ],
-  "period_count": 43,
+  "period_count": 44,
   "months": {
     "2023-01": {
       "vehicles": {
@@ -1590,6 +1590,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 52743,
+          "amount": 1303700.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3244,
+          "amount": 161190.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10011,
+          "amount": 1077760.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2752,
+          "amount": 339740.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11819,
+          "amount": 2142920.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 235.0
+        }
+      },
+      "total": {
+        "count": 80570,
+        "amount": 5025545.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

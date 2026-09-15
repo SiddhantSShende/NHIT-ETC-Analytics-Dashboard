@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Main Plaza Village Jakhauli"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2000,6 +2000,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 491167,
+          "amount": 21971510.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 43400,
+          "amount": 7413820.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 57432,
+          "amount": 23114675.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 18788,
+          "amount": 9417635.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 69401,
+          "amount": 44359700.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 81,
+          "amount": 40025.0
+        }
+      },
+      "total": {
+        "count": 680269,
+        "amount": 106317365.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

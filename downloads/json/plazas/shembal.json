@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Shembal Toll Plaza"
   ],
-  "period_count": 39,
+  "period_count": 40,
   "months": {
     "2023-05": {
       "vehicles": {
@@ -1446,6 +1446,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 74796,
+          "amount": 1930845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2503,
+          "amount": 106050.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8129,
+          "amount": 758895.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2269,
+          "amount": 252350.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37929,
+          "amount": 5982600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 2390.0
+        }
+      },
+      "total": {
+        "count": 125638,
+        "amount": 9033130.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

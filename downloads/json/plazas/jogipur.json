@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jogipur Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 135231,
+          "amount": 5769005.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14148,
+          "amount": 1558200.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 67105,
+          "amount": 16430655.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25529,
+          "amount": 6848125.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 65111,
+          "amount": 25807880.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 58,
+          "amount": 26785.0
+        }
+      },
+      "total": {
+        "count": 307182,
+        "amount": 56440650.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

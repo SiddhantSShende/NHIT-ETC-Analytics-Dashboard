@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Doli Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 76200,
+          "amount": 4073555.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2938,
+          "amount": 341055.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14784,
+          "amount": 3635265.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3603,
+          "amount": 1004330.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 21165,
+          "amount": 9588725.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 15,
+          "amount": 7845.0
+        }
+      },
+      "total": {
+        "count": 118705,
+        "amount": 18650775.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

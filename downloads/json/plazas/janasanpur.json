@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Janasanpur Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 20586,
+          "amount": 1013080.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3157,
+          "amount": 338965.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 13140,
+          "amount": 2959635.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23482,
+          "amount": 5499250.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 83956,
+          "amount": 26590130.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 36,
+          "amount": 15280.0
+        }
+      },
+      "total": {
+        "count": 144357,
+        "amount": 36416340.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

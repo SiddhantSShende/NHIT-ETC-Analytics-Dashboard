@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Netra"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 84694,
+          "amount": 3963530.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3509,
+          "amount": 370145.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 22268,
+          "amount": 4833210.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8650,
+          "amount": 2219375.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 35275,
+          "amount": 13534070.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 2910.0
+        }
+      },
+      "total": {
+        "count": 154402,
+        "amount": 24923240.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ganeshpur Toll plaza"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -160,6 +160,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 548785,
+          "amount": 40294050.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 16742,
+          "amount": 3448240.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 50231,
+          "amount": 21025605.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3648,
+          "amount": 1744200.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10319,
+          "amount": 7085805.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 820.0
+        }
+      },
+      "total": {
+        "count": 629726,
+        "amount": 73598720.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

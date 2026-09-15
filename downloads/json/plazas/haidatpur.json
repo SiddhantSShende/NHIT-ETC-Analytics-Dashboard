@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Haidatpur Toll Plaza"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-07": {
       "vehicles": {
@@ -43,6 +43,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 57470,
+          "amount": 1814970.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2453,
+          "amount": 132725.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12538,
+          "amount": 1526325.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 854,
+          "amount": 94510.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2253,
+          "amount": 484130.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 75568,
+        "amount": 4052660.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "AIT Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2004,6 +2004,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 139579,
+          "amount": 8279260.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10043,
+          "amount": 2023035.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 45682,
+          "amount": 18601660.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21810,
+          "amount": 10264560.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 113784,
+          "amount": 70635645.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 55,
+          "amount": 43860.0
+        }
+      },
+      "total": {
+        "count": 330953,
+        "amount": 109848020.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

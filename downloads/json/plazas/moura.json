@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Moura Fee Plaza"
   ],
-  "period_count": 37,
+  "period_count": 38,
   "months": {
     "2023-07": {
       "vehicles": {
@@ -1374,6 +1374,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 270044,
+          "amount": 32139445.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6770,
+          "amount": 1759650.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 46813,
+          "amount": 25227815.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3486,
+          "amount": 1932510.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 33562,
+          "amount": 28425370.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1970.0
+        }
+      },
+      "total": {
+        "count": 360677,
+        "amount": 89486760.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

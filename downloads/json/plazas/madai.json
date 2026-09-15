@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Madai Fee Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 123317,
+          "amount": 8198810.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18268,
+          "amount": 3211520.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 91122,
+          "amount": 34513050.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 53724,
+          "amount": 22681500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 101688,
+          "amount": 61700880.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 115,
+          "amount": 83115.0
+        }
+      },
+      "total": {
+        "count": 388234,
+        "amount": 130388875.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

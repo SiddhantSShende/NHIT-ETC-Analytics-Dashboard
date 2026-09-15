@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Karanja Bahiram"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-07": {
       "vehicles": {
@@ -43,6 +43,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 18100,
+          "amount": 591180.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1129,
+          "amount": 75890.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2408,
+          "amount": 342080.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 805,
+          "amount": 140365.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2351,
+          "amount": 586895.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 24793,
+        "amount": 1736410.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

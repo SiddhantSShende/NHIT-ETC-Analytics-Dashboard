@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Managethi Toll Plaza"
   ],
-  "period_count": 51,
+  "period_count": 52,
   "months": {
     "2022-05": {
       "vehicles": {
@@ -1878,6 +1878,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 79380,
+          "amount": 3573975.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3864,
+          "amount": 384850.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10603,
+          "amount": 2147990.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2297,
+          "amount": 543140.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4952,
+          "amount": 1670115.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 31,
+          "amount": 12995.0
+        }
+      },
+      "total": {
+        "count": 101127,
+        "amount": 8333065.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

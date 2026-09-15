@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kelwad"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 138066,
+          "amount": 7336275.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3719,
+          "amount": 484440.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8790,
+          "amount": 2186010.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2074,
+          "amount": 647010.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11596,
+          "amount": 5002915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 5435.0
+        }
+      },
+      "total": {
+        "count": 164255,
+        "amount": 15662085.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

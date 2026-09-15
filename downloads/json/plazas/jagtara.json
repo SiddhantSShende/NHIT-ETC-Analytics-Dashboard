@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jagtara TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 135676,
+          "amount": 4780625.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2748,
+          "amount": 197250.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16135,
+          "amount": 2394045.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6005,
+          "amount": 1033060.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 47638,
+          "amount": 12110060.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 59,
+          "amount": 17330.0
+        }
+      },
+      "total": {
+        "count": 208261,
+        "amount": 20532370.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

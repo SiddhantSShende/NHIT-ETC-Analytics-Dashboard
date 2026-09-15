@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Etaura Bujurg Toll Plaza"
   ],
-  "period_count": 16,
+  "period_count": 17,
   "months": {
     "2025-04": {
       "vehicles": {
@@ -618,6 +618,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 126534,
+          "amount": 6698370.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5641,
+          "amount": 688080.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14284,
+          "amount": 3559800.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1675,
+          "amount": 487575.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 20032,
+          "amount": 8136405.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 2550.0
+        }
+      },
+      "total": {
+        "count": 168175,
+        "amount": 19572780.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

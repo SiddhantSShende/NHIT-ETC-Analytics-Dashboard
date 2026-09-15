@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Usma"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 93126,
+          "amount": 8050185.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4114,
+          "amount": 894945.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 24466,
+          "amount": 11159440.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6582,
+          "amount": 3850230.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22526,
+          "amount": 19231650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 1995.0
+        }
+      },
+      "total": {
+        "count": 150816,
+        "amount": 43188445.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

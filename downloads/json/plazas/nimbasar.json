@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nimbasar"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 38181,
+          "amount": 1931395.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 740,
+          "amount": 73150.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4136,
+          "amount": 844970.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1899,
+          "amount": 405405.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9241,
+          "amount": 3079915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 128,
+          "amount": 54480.0
+        }
+      },
+      "total": {
+        "count": 54325,
+        "amount": 6389315.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

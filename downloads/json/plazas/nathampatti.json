@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nathampatti Toll Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-06": {
       "vehicles": {
@@ -84,6 +84,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 228741,
+          "amount": 12452710.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 15188,
+          "amount": 1773465.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 40846,
+          "amount": 6484690.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5754,
+          "amount": 1508555.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8683,
+          "amount": 3711335.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2725.0
+        }
+      },
+      "total": {
+        "count": 299219,
+        "amount": 25933480.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

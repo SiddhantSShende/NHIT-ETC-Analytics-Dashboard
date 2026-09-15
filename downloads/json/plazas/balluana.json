@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Balluana Toll Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-03": {
       "vehicles": {
@@ -1950,6 +1950,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 118102,
+          "amount": 4194310.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3843,
+          "amount": 316700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14819,
+          "amount": 2542785.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2657,
+          "amount": 527160.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8019,
+          "amount": 2476650.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 330.0
+        }
+      },
+      "total": {
+        "count": 147441,
+        "amount": 10057935.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

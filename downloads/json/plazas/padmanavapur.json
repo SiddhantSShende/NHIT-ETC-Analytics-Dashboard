@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Padmanavapur Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 82427,
+          "amount": 3576825.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4305,
+          "amount": 485085.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14924,
+          "amount": 3526495.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9205,
+          "amount": 2461340.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 41934,
+          "amount": 16802035.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 50,
+          "amount": 22115.0
+        }
+      },
+      "total": {
+        "count": 152845,
+        "amount": 26873895.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

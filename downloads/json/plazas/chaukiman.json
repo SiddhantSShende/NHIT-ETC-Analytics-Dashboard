@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chaukiman Toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 305810,
+          "amount": 12086040.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8590,
+          "amount": 799225.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 25066,
+          "amount": 4966300.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6067,
+          "amount": 1323755.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10186,
+          "amount": 3517200.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 1985.0
+        }
+      },
+      "total": {
+        "count": 355724,
+        "amount": 22694505.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

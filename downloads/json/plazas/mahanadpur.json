@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mahanadpur toll plaza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -123,6 +123,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 67334,
+          "amount": 2387860.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2658,
+          "amount": 193190.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 6155,
+          "amount": 1120145.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1678,
+          "amount": 334610.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2417,
+          "amount": 783475.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 80242,
+        "amount": 4819280.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

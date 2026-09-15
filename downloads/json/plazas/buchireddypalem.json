@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Buchireddypalem Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 117611,
+          "amount": 3146900.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2409,
+          "amount": 141525.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19568,
+          "amount": 1792995.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3617,
+          "amount": 455410.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27747,
+          "amount": 5667225.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 34,
+          "amount": 8940.0
+        }
+      },
+      "total": {
+        "count": 170986,
+        "amount": 11212995.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

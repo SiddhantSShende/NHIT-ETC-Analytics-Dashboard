@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bellur Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 545014,
+          "amount": 21721490.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 27098,
+          "amount": 2299180.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 69082,
+          "amount": 10052185.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11104,
+          "amount": 2894805.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23568,
+          "amount": 7114415.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 3900.0
+        }
+      },
+      "total": {
+        "count": 675878,
+        "amount": 44085975.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

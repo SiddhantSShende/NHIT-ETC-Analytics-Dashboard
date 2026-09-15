@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Paraghat Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 123695,
+          "amount": 6372730.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4881,
+          "amount": 546210.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11195,
+          "amount": 2903775.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2584,
+          "amount": 629720.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 49862,
+          "amount": 19388930.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 28,
+          "amount": 14285.0
+        }
+      },
+      "total": {
+        "count": 192245,
+        "amount": 29855650.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

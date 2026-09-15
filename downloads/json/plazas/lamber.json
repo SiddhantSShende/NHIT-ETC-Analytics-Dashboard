@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Lamber toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 61654,
+          "amount": 9875775.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 3698,
+          "amount": 1272780.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18444,
+          "amount": 13741980.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7805,
+          "amount": 6360330.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8930,
+          "amount": 10520880.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 12,
+          "amount": 13825.0
+        }
+      },
+      "total": {
+        "count": 100543,
+        "amount": 41785570.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

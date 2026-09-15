@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Omalur Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 658725,
+          "amount": 29143965.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 63833,
+          "amount": 8401120.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 156626,
+          "amount": 32068435.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 31559,
+          "amount": 16080680.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 84078,
+          "amount": 45258080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 747,
+          "amount": 417480.0
+        }
+      },
+      "total": {
+        "count": 995568,
+        "amount": 131369760.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

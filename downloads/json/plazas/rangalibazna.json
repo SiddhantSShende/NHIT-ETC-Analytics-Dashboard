@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rangalibazna Fee Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 52072,
+          "amount": 3116165.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8083,
+          "amount": 1091105.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 35370,
+          "amount": 10155450.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25269,
+          "amount": 8051785.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 72069,
+          "amount": 32795660.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 38,
+          "amount": 19725.0
+        }
+      },
+      "total": {
+        "count": 192901,
+        "amount": 55229890.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

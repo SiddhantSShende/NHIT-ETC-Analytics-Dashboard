@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pidhi Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 24270,
+          "amount": 1230440.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 871,
+          "amount": 108710.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3171,
+          "amount": 782565.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 449,
+          "amount": 130975.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6053,
+          "amount": 2486365.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 34814,
+        "amount": 4739055.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

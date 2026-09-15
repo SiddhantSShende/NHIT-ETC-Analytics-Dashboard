@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Saidpur Patedha Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 247541,
+          "amount": 17780525.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 21785,
+          "amount": 3264095.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 34928,
+          "amount": 11544530.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7060,
+          "amount": 2680045.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 42155,
+          "amount": 23623120.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 18,
+          "amount": 9285.0
+        }
+      },
+      "total": {
+        "count": 353487,
+        "amount": 58901600.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

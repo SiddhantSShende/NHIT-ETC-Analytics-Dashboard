@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chikhalikala"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 28673,
+          "amount": 1474430.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1422,
+          "amount": 145870.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5349,
+          "amount": 1275265.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 755,
+          "amount": 203580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1714,
+          "amount": 698600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 37913,
+        "amount": 3797745.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

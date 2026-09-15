@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Marripalem Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2020,6 +2020,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 195864,
+          "amount": 6198265.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 18311,
+          "amount": 1325080.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 52564,
+          "amount": 8197780.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 34566,
+          "amount": 6044130.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 110656,
+          "amount": 27864720.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 104,
+          "amount": 31250.0
+        }
+      },
+      "total": {
+        "count": 412065,
+        "amount": 49661225.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

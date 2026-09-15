@@ -6,7 +6,7 @@
   "source_raw_names": [
     "SURAPATTU TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 548769,
+          "amount": 26871275.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 83520,
+          "amount": 8965990.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 47261,
+          "amount": 10744645.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 25730,
+          "amount": 6373070.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 108541,
+          "amount": 39557620.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 278,
+          "amount": 111330.0
+        }
+      },
+      "total": {
+        "count": 814099,
+        "amount": 92623930.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Raha"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 217274,
+          "amount": 19474210.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8031,
+          "amount": 1463540.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 56946,
+          "amount": 22037570.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8576,
+          "amount": 3740960.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 31269,
+          "amount": 20261775.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 59,
+          "amount": 43570.0
+        }
+      },
+      "total": {
+        "count": 322155,
+        "amount": 67021625.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Choundha"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 180468,
+          "amount": 9709915.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 25162,
+          "amount": 3796375.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 89867,
+          "amount": 29914130.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 62061,
+          "amount": 22882415.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 127284,
+          "amount": 62146980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 62,
+          "amount": 39170.0
+        }
+      },
+      "total": {
+        "count": 484904,
+        "amount": 128488985.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Barajore toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 457036,
+          "amount": 34157685.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 31691,
+          "amount": 8417980.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 99514,
+          "amount": 54125505.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 39315,
+          "amount": 24621935.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 187727,
+          "amount": 156993765.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 172,
+          "amount": 161505.0
+        }
+      },
+      "total": {
+        "count": 815455,
+        "amount": 278478375.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

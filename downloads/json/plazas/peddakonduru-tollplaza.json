@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Peddakonduru TollPlaza"
   ],
-  "period_count": 3,
+  "period_count": 4,
   "months": {
     "2026-05": {
       "vehicles": {
@@ -123,6 +123,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 26432,
+          "amount": 1135530.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 673,
+          "amount": 68820.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5694,
+          "amount": 1107210.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1441,
+          "amount": 313520.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 1988,
+          "amount": 716620.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 5230.0
+        }
+      },
+      "total": {
+        "count": 36242,
+        "amount": 3346930.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

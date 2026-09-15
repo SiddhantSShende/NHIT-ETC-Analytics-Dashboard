@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kothagudem Toll Plaza"
   ],
-  "period_count": 6,
+  "period_count": 7,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -240,6 +240,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 19273,
+          "amount": 1022520.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 664,
+          "amount": 69420.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 962,
+          "amount": 261905.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 220,
+          "amount": 55620.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 867,
+          "amount": 350835.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 2410.0
+        }
+      },
+      "total": {
+        "count": 21991,
+        "amount": 1762710.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

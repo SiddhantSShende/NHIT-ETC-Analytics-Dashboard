@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Yedashi Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 167667,
+          "amount": 8165060.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9859,
+          "amount": 1215555.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 47672,
+          "amount": 11934020.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 30057,
+          "amount": 8568750.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 57103,
+          "amount": 23749320.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 310,
+          "amount": 154530.0
+        }
+      },
+      "total": {
+        "count": 312668,
+        "amount": 53787235.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

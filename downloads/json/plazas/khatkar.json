@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khatkar Toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 142689,
+          "amount": 6416700.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5928,
+          "amount": 1031545.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14987,
+          "amount": 5114635.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2960,
+          "amount": 1313885.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 9676,
+          "amount": 6275675.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 13,
+          "amount": 8060.0
+        }
+      },
+      "total": {
+        "count": 176253,
+        "amount": 20160500.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

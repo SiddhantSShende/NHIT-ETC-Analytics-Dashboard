@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Penur Toll Plaza"
   ],
-  "period_count": 33,
+  "period_count": 34,
   "months": {
     "2023-11": {
       "vehicles": {
@@ -1230,6 +1230,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 151691,
+          "amount": 9817800.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5413,
+          "amount": 796410.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 27244,
+          "amount": 7638390.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2865,
+          "amount": 945060.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 12831,
+          "amount": 6487160.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 130,
+          "amount": 85370.0
+        }
+      },
+      "total": {
+        "count": 200174,
+        "amount": 25770190.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

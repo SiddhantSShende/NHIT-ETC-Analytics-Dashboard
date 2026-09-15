@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chhara Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 98670,
+          "amount": 3655360.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 20182,
+          "amount": 1940760.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18917,
+          "amount": 4070935.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6614,
+          "amount": 1657320.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 31659,
+          "amount": 10677830.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 3940.0
+        }
+      },
+      "total": {
+        "count": 176051,
+        "amount": 22006145.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

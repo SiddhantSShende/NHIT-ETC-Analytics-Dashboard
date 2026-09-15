@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sikandra Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 375324,
+          "amount": 20092955.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9855,
+          "amount": 1417765.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 69505,
+          "amount": 20429125.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10014,
+          "amount": 4716000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 113473,
+          "amount": 53825995.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 63,
+          "amount": 29925.0
+        }
+      },
+      "total": {
+        "count": 578234,
+        "amount": 100511765.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

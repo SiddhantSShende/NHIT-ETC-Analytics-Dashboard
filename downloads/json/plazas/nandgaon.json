@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nandgaon Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1998,6 +1998,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 268099,
+          "amount": 16989420.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13068,
+          "amount": 2207855.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 49677,
+          "amount": 17531910.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13884,
+          "amount": 7320315.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 45449,
+          "amount": 26740600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 49,
+          "amount": 38890.0
+        }
+      },
+      "total": {
+        "count": 390226,
+        "amount": 70828990.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

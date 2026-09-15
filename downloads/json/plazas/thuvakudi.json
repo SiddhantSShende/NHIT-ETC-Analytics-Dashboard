@@ -1,12 +1,12 @@
 {
   "plaza_name": "Thuvakudi Plaza",
   "plaza_slug": "thuvakudi",
-  "piu": "",
-  "ro": "",
+  "piu": "Trichy",
+  "ro": "Madurai",
   "source_raw_names": [
     "Thuvakudi Plaza"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2024-04": {
       "vehicles": {
@@ -78,6 +78,42 @@
       "annual_pass": null,
       "sources": [
         "downloads/ETC_Monthly_Data/2024/May 2024.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 6,
+          "amount": 2040.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 6,
+        "amount": 2040.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

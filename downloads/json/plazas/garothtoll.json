@@ -6,7 +6,7 @@
   "source_raw_names": [
     "GarothToll Plaza"
   ],
-  "period_count": 35,
+  "period_count": 36,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1288,6 +1288,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 48342,
+          "amount": 2607065.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1401,
+          "amount": 232145.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 12338,
+          "amount": 4352265.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6474,
+          "amount": 2481460.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 5085,
+          "amount": 3301290.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 23,
+          "amount": 30720.0
+        }
+      },
+      "total": {
+        "count": 73663,
+        "amount": 13004945.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

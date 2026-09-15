@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sitarampura Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 244844,
+          "amount": 8654395.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 19706,
+          "amount": 1784625.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 50600,
+          "amount": 9932100.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 20561,
+          "amount": 4466305.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 144479,
+          "amount": 47150025.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 313,
+          "amount": 97730.0
+        }
+      },
+      "total": {
+        "count": 480503,
+        "amount": 72085180.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Samayapuram Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2002,6 +2002,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 638129,
+          "amount": 20660795.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 36250,
+          "amount": 3025575.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 137148,
+          "amount": 17647225.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 21190,
+          "amount": 5148045.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 50656,
+          "amount": 13370115.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 447,
+          "amount": 131115.0
+        }
+      },
+      "total": {
+        "count": 883820,
+        "amount": 59982870.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

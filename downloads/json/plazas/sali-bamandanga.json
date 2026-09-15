@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sali Bamandanga"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 122288,
+          "amount": 8359945.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14625,
+          "amount": 2207610.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 40696,
+          "amount": 13410540.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 15550,
+          "amount": 5944650.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 88927,
+          "amount": 42749920.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 53,
+          "amount": 35125.0
+        }
+      },
+      "total": {
+        "count": 282139,
+        "amount": 72707790.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

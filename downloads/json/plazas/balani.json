@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Balani plaza"
   ],
-  "period_count": 18,
+  "period_count": 19,
   "months": {
     "2025-02": {
       "vehicles": {
@@ -690,6 +690,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 14977,
+          "amount": 847370.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 639,
+          "amount": 80780.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2656,
+          "amount": 726820.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2325,
+          "amount": 620775.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 25237,
+          "amount": 11271035.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 5115.0
+        }
+      },
+      "total": {
+        "count": 45844,
+        "amount": 13551895.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

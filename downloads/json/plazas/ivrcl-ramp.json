@@ -6,7 +6,7 @@
   "source_raw_names": [
     "IVRCL ramp plaza"
   ],
-  "period_count": 18,
+  "period_count": 19,
   "months": {
     "2025-02": {
       "vehicles": {
@@ -668,6 +668,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 94967,
+          "amount": 1860045.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11295,
+          "amount": 626250.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 35607,
+          "amount": 4123730.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 10170,
+          "amount": 1335640.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 64161,
+          "amount": 12225695.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 319,
+          "amount": 74565.0
+        }
+      },
+      "total": {
+        "count": 216519,
+        "amount": 20245925.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

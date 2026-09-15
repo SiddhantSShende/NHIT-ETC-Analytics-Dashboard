@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Varshamedi Fee Plaza"
   ],
-  "period_count": 7,
+  "period_count": 8,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -277,6 +277,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 120530,
+          "amount": 3734290.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8261,
+          "amount": 515640.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11996,
+          "amount": 1607350.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17000,
+          "amount": 1969260.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 76670,
+          "amount": 13561640.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 137,
+          "amount": 34560.0
+        }
+      },
+      "total": {
+        "count": 234594,
+        "amount": 21422740.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

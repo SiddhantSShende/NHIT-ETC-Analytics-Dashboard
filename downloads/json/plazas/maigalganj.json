@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Maigalganj Toll Plaza"
   ],
-  "period_count": 34,
+  "period_count": 35,
   "months": {
     "2023-10": {
       "vehicles": {
@@ -1264,6 +1264,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 108929,
+          "amount": 8444355.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8893,
+          "amount": 1899200.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 42447,
+          "amount": 18073120.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 15593,
+          "amount": 8079205.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 29728,
+          "amount": 22082010.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 14,
+          "amount": 9560.0
+        }
+      },
+      "total": {
+        "count": 205604,
+        "amount": 58587450.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

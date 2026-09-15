@@ -4,9 +4,10 @@
   "piu": "Nashik",
   "ro": "Mumbai",
   "source_raw_names": [
+    "Ghoti Plaza",
     "Ghoti toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2011,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 351602,
+          "amount": 17765085.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 33080,
+          "amount": 3296270.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 72318,
+          "amount": 15314310.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 11882,
+          "amount": 2981940.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 63149,
+          "amount": 22815995.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 78,
+          "amount": 35250.0
+        }
+      },
+      "total": {
+        "count": 532109,
+        "amount": 62208850.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

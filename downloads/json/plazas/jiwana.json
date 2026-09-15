@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Jiwana Toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 78806,
+          "amount": 3960315.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10586,
+          "amount": 1409640.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 22418,
+          "amount": 6267525.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2871,
+          "amount": 958500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 8109,
+          "amount": 3906240.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 2520.0
+        }
+      },
+      "total": {
+        "count": 122794,
+        "amount": 16504740.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

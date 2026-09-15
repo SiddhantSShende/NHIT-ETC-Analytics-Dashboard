@@ -6,7 +6,7 @@
   "source_raw_names": [
     "SamiyalaToll Plaza"
   ],
-  "period_count": 22,
+  "period_count": 23,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -820,6 +820,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 156893,
+          "amount": 12418090.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 7238,
+          "amount": 1328740.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8523,
+          "amount": 3806715.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2868,
+          "amount": 1089305.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 15074,
+          "amount": 10129770.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 37,
+          "amount": 17640.0
+        }
+      },
+      "total": {
+        "count": 190633,
+        "amount": 28790260.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gulalpurva Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 93373,
+          "amount": 3489775.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2792,
+          "amount": 184770.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 21886,
+          "amount": 3122485.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9092,
+          "amount": 1740900.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 14068,
+          "amount": 3676770.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 4,
+          "amount": 1400.0
+        }
+      },
+      "total": {
+        "count": 141215,
+        "amount": 12216100.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

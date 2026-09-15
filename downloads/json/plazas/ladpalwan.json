@@ -6,7 +6,7 @@
   "source_raw_names": [
     "LADPALWAN TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 201995,
+          "amount": 12596075.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5318,
+          "amount": 980735.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 29115,
+          "amount": 10926455.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12313,
+          "amount": 7538765.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37247,
+          "amount": 23178290.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 16,
+          "amount": 13565.0
+        }
+      },
+      "total": {
+        "count": 286004,
+        "amount": 55233885.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

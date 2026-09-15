@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Salasar Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2004,6 +2004,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 71329,
+          "amount": 3684335.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2946,
+          "amount": 235430.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 6934,
+          "amount": 1181385.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1632,
+          "amount": 414845.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22621,
+          "amount": 8278460.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 17,
+          "amount": 7775.0
+        }
+      },
+      "total": {
+        "count": 105479,
+        "amount": 13802230.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

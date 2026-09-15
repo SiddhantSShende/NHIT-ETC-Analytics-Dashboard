@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Shahpura"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-03": {
       "vehicles": {
@@ -1950,6 +1950,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 98767,
+          "amount": 1869985.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4883,
+          "amount": 174740.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 13915,
+          "amount": 1040625.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6013,
+          "amount": 493350.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 4847,
+          "amount": 635940.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 24,
+          "amount": 2815.0
+        }
+      },
+      "total": {
+        "count": 128449,
+        "amount": 4217455.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

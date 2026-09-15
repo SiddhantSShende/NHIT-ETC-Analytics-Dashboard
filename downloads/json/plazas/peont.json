@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Peont"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 80347,
+          "amount": 2991055.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2155,
+          "amount": 250950.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7884,
+          "amount": 1795410.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1261,
+          "amount": 342240.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11438,
+          "amount": 4654530.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 103085,
+        "amount": 10034185.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

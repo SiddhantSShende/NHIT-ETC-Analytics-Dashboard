@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Biratiya Toll Plaza"
   ],
-  "period_count": 51,
+  "period_count": 52,
   "months": {
     "2022-05": {
       "vehicles": {
@@ -1878,6 +1878,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 134165,
+          "amount": 7435235.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 5746,
+          "amount": 692720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 21932,
+          "amount": 5510440.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7252,
+          "amount": 1943580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 55514,
+          "amount": 23173330.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 34,
+          "amount": 17655.0
+        }
+      },
+      "total": {
+        "count": 224643,
+        "amount": 38772960.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

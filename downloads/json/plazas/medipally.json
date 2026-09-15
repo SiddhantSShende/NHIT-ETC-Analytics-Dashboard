@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Medipally"
   ],
-  "period_count": 22,
+  "period_count": 23,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -834,6 +834,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 41053,
+          "amount": 1024685.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 632,
+          "amount": 28550.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 8656,
+          "amount": 750795.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 867,
+          "amount": 84650.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37092,
+          "amount": 4554545.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 1720.0
+        }
+      },
+      "total": {
+        "count": 88308,
+        "amount": 6444945.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

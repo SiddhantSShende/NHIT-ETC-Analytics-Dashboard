@@ -7,7 +7,7 @@
     "Bahoripar Fee Plaza",
     "Bahoripar TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2011,6 +2011,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 135880,
+          "amount": 12114565.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9331,
+          "amount": 2188215.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 37755,
+          "amount": 19768725.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 9348,
+          "amount": 5195080.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 53292,
+          "amount": 46212320.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 67,
+          "amount": 71135.0
+        }
+      },
+      "total": {
+        "count": 245673,
+        "amount": 85550040.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

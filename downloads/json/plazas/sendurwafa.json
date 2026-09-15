@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Sendurwafa"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 117893,
+          "amount": 8141230.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13850,
+          "amount": 2270245.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 67493,
+          "amount": 22602735.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23582,
+          "amount": 13563535.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 112567,
+          "amount": 65057415.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 108,
+          "amount": 62600.0
+        }
+      },
+      "total": {
+        "count": 335493,
+        "amount": 111697760.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

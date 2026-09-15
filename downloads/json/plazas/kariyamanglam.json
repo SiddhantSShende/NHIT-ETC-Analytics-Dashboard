@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kariyamanglam Toll Plaza"
   ],
-  "period_count": 23,
+  "period_count": 24,
   "months": {
     "2024-09": {
       "vehicles": {
@@ -870,6 +870,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 206430,
+          "amount": 7939890.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14384,
+          "amount": 1192055.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 33042,
+          "amount": 5070240.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5026,
+          "amount": 1020680.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10699,
+          "amount": 3240630.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 3365.0
+        }
+      },
+      "total": {
+        "count": 269592,
+        "amount": 18466860.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

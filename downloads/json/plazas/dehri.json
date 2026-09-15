@@ -1,0 +1,48 @@
+{
+  "plaza_name": "Dehri Toll Plaza",
+  "plaza_slug": "dehri",
+  "piu": "Meerut",
+  "ro": "Delhi",
+  "source_raw_names": [
+    "Dehri Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 7789,
+          "amount": 174400.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 118,
+          "amount": 5230.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 767,
+          "amount": 73260.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 172,
+          "amount": 19140.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 357,
+          "amount": 57970.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 9203,
+        "amount": 330000.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
+      ]
+    }
+  }
+}

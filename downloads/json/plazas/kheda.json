@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kheda"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2008,6 +2008,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 306094,
+          "amount": 18472730.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 52485,
+          "amount": 7895955.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 88468,
+          "amount": 28771570.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28300,
+          "amount": 10746980.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 84327,
+          "amount": 45670110.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 713,
+          "amount": 502955.0
+        }
+      },
+      "total": {
+        "count": 560387,
+        "amount": 112060300.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

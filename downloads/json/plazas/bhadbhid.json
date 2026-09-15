@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bhadbhid Fee Plaza"
   ],
-  "period_count": 53,
+  "period_count": 54,
   "months": {
     "2022-03": {
       "vehicles": {
@@ -1950,6 +1950,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 257913,
+          "amount": 12073250.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13871,
+          "amount": 1684700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 32990,
+          "amount": 8093825.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7070,
+          "amount": 2069065.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 58905,
+          "amount": 24274875.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 48,
+          "amount": 24255.0
+        }
+      },
+      "total": {
+        "count": 370797,
+        "amount": 48219970.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

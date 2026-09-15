@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Beel Akbarpur"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2000,6 +2000,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 236188,
+          "amount": 8088570.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 23414,
+          "amount": 3195860.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 36290,
+          "amount": 11517335.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 13122,
+          "amount": 5681355.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 46217,
+          "amount": 29640450.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 143,
+          "amount": 23695.0
+        }
+      },
+      "total": {
+        "count": 355374,
+        "amount": 58147265.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

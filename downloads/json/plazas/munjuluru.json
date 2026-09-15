@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Munjuluru Toll Plaza"
   ],
-  "period_count": 43,
+  "period_count": 44,
   "months": {
     "2023-01": {
       "vehicles": {
@@ -1590,6 +1590,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 82984,
+          "amount": 2478420.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2761,
+          "amount": 186720.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10403,
+          "amount": 1311805.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3842,
+          "amount": 616630.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7643,
+          "amount": 1898780.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 8,
+          "amount": 1975.0
+        }
+      },
+      "total": {
+        "count": 107641,
+        "amount": 6494330.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

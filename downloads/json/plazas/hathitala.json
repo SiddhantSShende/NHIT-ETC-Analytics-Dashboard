@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Hathitala Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 34548,
+          "amount": 1613065.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 863,
+          "amount": 79230.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 6734,
+          "amount": 1268115.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1237,
+          "amount": 262775.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 11008,
+          "amount": 3593900.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 111,
+          "amount": 46195.0
+        }
+      },
+      "total": {
+        "count": 54501,
+        "amount": 6863280.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -7,7 +7,7 @@
     "Madanpur",
     "Madanpur Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2023,6 +2023,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 442435,
+          "amount": 36166900.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 50073,
+          "amount": 8269535.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 84992,
+          "amount": 31591925.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28407,
+          "amount": 12703665.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 108585,
+          "amount": 55395110.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 200,
+          "amount": 131030.0
+        }
+      },
+      "total": {
+        "count": 714692,
+        "amount": 144258165.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

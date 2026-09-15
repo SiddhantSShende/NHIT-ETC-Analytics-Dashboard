@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Bandlapalli Toll Plaza"
   ],
-  "period_count": 51,
+  "period_count": 52,
   "months": {
     "2022-05": {
       "vehicles": {
@@ -1878,6 +1878,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 62814,
+          "amount": 2096070.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6506,
+          "amount": 483705.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 19582,
+          "amount": 2929325.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5576,
+          "amount": 1057180.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 21092,
+          "amount": 5996955.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 11,
+          "amount": 3685.0
+        }
+      },
+      "total": {
+        "count": 115581,
+        "amount": 12566920.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

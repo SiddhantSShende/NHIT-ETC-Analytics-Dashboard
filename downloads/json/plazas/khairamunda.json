@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khairamunda Toll Plaza"
   ],
-  "period_count": 22,
+  "period_count": 23,
   "months": {
     "2024-10": {
       "vehicles": {
@@ -834,6 +834,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 45560,
+          "amount": 4596070.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1098,
+          "amount": 281285.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 5805,
+          "amount": 3152300.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2249,
+          "amount": 1290180.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 50222,
+          "amount": 42525220.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 41,
+          "amount": 44040.0
+        }
+      },
+      "total": {
+        "count": 104975,
+        "amount": 51889095.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

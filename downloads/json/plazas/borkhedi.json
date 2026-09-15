@@ -6,7 +6,7 @@
   "source_raw_names": [
     "BORKHEDI TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 186960,
+          "amount": 15483250.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 25548,
+          "amount": 4154485.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 93077,
+          "amount": 28503600.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 55269,
+          "amount": 23653660.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 109432,
+          "amount": 51629930.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 134,
+          "amount": 85360.0
+        }
+      },
+      "total": {
+        "count": 470420,
+        "amount": 123510285.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

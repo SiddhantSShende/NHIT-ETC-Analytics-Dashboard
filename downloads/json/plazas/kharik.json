@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kharik"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 61335,
+          "amount": 2979795.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 10559,
+          "amount": 933045.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 21120,
+          "amount": 4176260.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5586,
+          "amount": 1196760.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 64196,
+          "amount": 20062400.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 10,
+          "amount": 3675.0
+        }
+      },
+      "total": {
+        "count": 162806,
+        "amount": 29351935.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

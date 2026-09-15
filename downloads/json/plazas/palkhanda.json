@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Palkhanda"
   ],
-  "period_count": 35,
+  "period_count": 36,
   "months": {
     "2023-09": {
       "vehicles": {
@@ -1302,6 +1302,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 327236,
+          "amount": 14958755.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14302,
+          "amount": 1496700.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 51567,
+          "amount": 11744875.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 19433,
+          "amount": 5063515.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 40364,
+          "amount": 15112980.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 133,
+          "amount": 56660.0
+        }
+      },
+      "total": {
+        "count": 453035,
+        "amount": 48433485.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

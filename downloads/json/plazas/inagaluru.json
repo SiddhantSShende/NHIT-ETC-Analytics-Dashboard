@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Inagaluru Toll plaza"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -162,6 +162,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 50818,
+          "amount": 2429160.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2101,
+          "amount": 238930.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10269,
+          "amount": 2187915.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1075,
+          "amount": 305085.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17790,
+          "amount": 7264895.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 3195.0
+        }
+      },
+      "total": {
+        "count": 82060,
+        "amount": 12429180.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

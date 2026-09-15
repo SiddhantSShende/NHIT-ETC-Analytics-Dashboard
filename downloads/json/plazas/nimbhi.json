@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nimbhi"
   ],
-  "period_count": 20,
+  "period_count": 21,
   "months": {
     "2024-12": {
       "vehicles": {
@@ -762,6 +762,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 60666,
+          "amount": 1849845.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2503,
+          "amount": 135800.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 10864,
+          "amount": 1132480.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1217,
+          "amount": 173410.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3653,
+          "amount": 783095.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 30,
+          "amount": 5320.0
+        }
+      },
+      "total": {
+        "count": 78933,
+        "amount": 4079950.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

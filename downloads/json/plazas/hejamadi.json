@@ -6,7 +6,7 @@
   "source_raw_names": [
     "HEJAMADI TOLL PLAZA"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 499068,
+          "amount": 19124080.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 30312,
+          "amount": 2395590.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 89522,
+          "amount": 13179910.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 14905,
+          "amount": 3595985.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 45062,
+          "amount": 11721350.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 69,
+          "amount": 18630.0
+        }
+      },
+      "total": {
+        "count": 678938,
+        "amount": 50035545.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

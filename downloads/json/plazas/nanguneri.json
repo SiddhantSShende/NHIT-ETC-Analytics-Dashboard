@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Nanguneri Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 386979,
+          "amount": 24766745.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 25550,
+          "amount": 3962260.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 65149,
+          "amount": 18072156.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12509,
+          "amount": 4250480.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 23387,
+          "amount": 12684950.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 47,
+          "amount": 29840.0
+        }
+      },
+      "total": {
+        "count": 513621,
+        "amount": 63766431.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

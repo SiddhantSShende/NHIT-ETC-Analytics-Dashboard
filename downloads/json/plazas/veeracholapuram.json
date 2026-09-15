@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Veeracholapuram Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 308478,
+          "amount": 11645555.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 33656,
+          "amount": 3346955.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 71196,
+          "amount": 10929540.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 12377,
+          "amount": 4031520.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 22083,
+          "amount": 7769260.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 186,
+          "amount": 68080.0
+        }
+      },
+      "total": {
+        "count": 447976,
+        "amount": 37790910.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

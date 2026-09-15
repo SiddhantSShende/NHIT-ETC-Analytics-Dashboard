@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Balenahalli Toll Plaza"
   ],
-  "period_count": 23,
+  "period_count": 24,
   "months": {
     "2024-09": {
       "vehicles": {
@@ -870,6 +870,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 94857,
+          "amount": 6569135.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8650,
+          "amount": 1221385.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 30785,
+          "amount": 8753180.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5386,
+          "amount": 1793165.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 41009,
+          "amount": 21488410.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 113,
+          "amount": 77660.0
+        }
+      },
+      "total": {
+        "count": 180800,
+        "amount": 39902935.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

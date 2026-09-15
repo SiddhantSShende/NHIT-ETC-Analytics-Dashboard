@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Barsalpur Toll Plaza"
   ],
-  "period_count": 51,
+  "period_count": 52,
   "months": {
     "2022-05": {
       "vehicles": {
@@ -1878,6 +1878,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 4275,
+          "amount": 250825.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 36,
+          "amount": 3630.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 235,
+          "amount": 51865.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 554,
+          "amount": 136070.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2418,
+          "amount": 839370.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        }
+      },
+      "total": {
+        "count": 7518,
+        "amount": 1281760.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

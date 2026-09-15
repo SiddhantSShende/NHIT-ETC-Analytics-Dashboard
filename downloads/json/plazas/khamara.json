@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Khamara Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 37385,
+          "amount": 1575850.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1296,
+          "amount": 77555.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 7040,
+          "amount": 685700.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 7800,
+          "amount": 1650425.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 64760,
+          "amount": 19780740.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 48,
+          "amount": 17875.0
+        }
+      },
+      "total": {
+        "count": 118329,
+        "amount": 23788145.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

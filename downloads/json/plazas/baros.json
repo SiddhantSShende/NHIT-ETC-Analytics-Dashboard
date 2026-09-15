@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Baros Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 179268,
+          "amount": 4301525.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 9455,
+          "amount": 481900.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 25197,
+          "amount": 2638605.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5405,
+          "amount": 1011500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 21631,
+          "amount": 3809500.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 4760.0
+        }
+      },
+      "total": {
+        "count": 240981,
+        "amount": 12247790.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

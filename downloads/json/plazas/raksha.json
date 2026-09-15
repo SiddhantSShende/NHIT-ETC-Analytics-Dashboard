@@ -7,7 +7,7 @@
     "Raksha",
     "Raksha Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2011,6 +2011,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 96874,
+          "amount": 6505985.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6662,
+          "amount": 1440210.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 35054,
+          "amount": 15466015.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17045,
+          "amount": 8656025.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 58516,
+          "amount": 42503950.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 52,
+          "amount": 43500.0
+        }
+      },
+      "total": {
+        "count": 214203,
+        "amount": 74615685.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

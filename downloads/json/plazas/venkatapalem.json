@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Venkatapalem Toll Plaza"
   ],
-  "period_count": 4,
+  "period_count": 5,
   "months": {
     "2026-04": {
       "vehicles": {
@@ -162,6 +162,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 301965,
+          "amount": 14392725.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 21353,
+          "amount": 2822205.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 53501,
+          "amount": 14859025.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 64235,
+          "amount": 16421375.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 113036,
+          "amount": 48731850.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 132,
+          "amount": 74250.0
+        }
+      },
+      "total": {
+        "count": 554222,
+        "amount": 97301430.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Methwada"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -1998,6 +1998,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 155104,
+          "amount": 12815780.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 15328,
+          "amount": 3361285.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23809,
+          "amount": 11199650.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 4250,
+          "amount": 3300125.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 17002,
+          "amount": 13506915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 34,
+          "amount": 32205.0
+        }
+      },
+      "total": {
+        "count": 215527,
+        "amount": 44215960.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

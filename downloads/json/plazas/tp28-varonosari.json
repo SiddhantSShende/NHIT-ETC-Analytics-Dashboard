@@ -6,7 +6,7 @@
   "source_raw_names": [
     "TP28 Varonosari"
   ],
-  "period_count": 16,
+  "period_count": 17,
   "months": {
     "2025-04": {
       "vehicles": {
@@ -604,6 +604,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 8801,
+          "amount": 1229205.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 350,
+          "amount": 208555.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2574,
+          "amount": 3595340.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1169,
+          "amount": 2320490.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 42937,
+          "amount": 106279465.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 42,
+          "amount": 62190.0
+        }
+      },
+      "total": {
+        "count": 55873,
+        "amount": 113695245.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

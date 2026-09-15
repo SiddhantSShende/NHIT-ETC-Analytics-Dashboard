@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rajatadripura Toll Plaza"
   ],
-  "period_count": 41,
+  "period_count": 42,
   "months": {
     "2023-03": {
       "vehicles": {
@@ -1518,6 +1518,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 134359,
+          "amount": 9222995.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8723,
+          "amount": 1164605.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 27814,
+          "amount": 7250605.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 5012,
+          "amount": 1455640.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7186,
+          "amount": 3300975.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 31,
+          "amount": 13770.0
+        }
+      },
+      "total": {
+        "count": 183125,
+        "amount": 22408590.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

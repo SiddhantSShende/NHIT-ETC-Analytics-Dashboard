@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Beliyad toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 144318,
+          "amount": 9341190.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13049,
+          "amount": 2046595.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 49308,
+          "amount": 16178030.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 32360,
+          "amount": 11201630.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 135324,
+          "amount": 69929785.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 147,
+          "amount": 84420.0
+        }
+      },
+      "total": {
+        "count": 374506,
+        "amount": 108781650.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

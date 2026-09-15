@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Mada toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2022,6 +2022,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 81582,
+          "amount": 13098920.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4967,
+          "amount": 1674250.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 23943,
+          "amount": 17698340.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 8826,
+          "amount": 7238245.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 10664,
+          "amount": 12620300.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 25,
+          "amount": 31045.0
+        }
+      },
+      "total": {
+        "count": 130007,
+        "amount": 52361100.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

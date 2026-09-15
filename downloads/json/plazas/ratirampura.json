@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Ratirampura"
   ],
-  "period_count": 36,
+  "period_count": 37,
   "months": {
     "2023-08": {
       "vehicles": {
@@ -1338,6 +1338,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 40700,
+          "amount": 850200.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1789,
+          "amount": 71300.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 2491,
+          "amount": 212165.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 743,
+          "amount": 67580.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 2048,
+          "amount": 283600.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 3,
+          "amount": 400.0
+        }
+      },
+      "total": {
+        "count": 47774,
+        "amount": 1485245.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

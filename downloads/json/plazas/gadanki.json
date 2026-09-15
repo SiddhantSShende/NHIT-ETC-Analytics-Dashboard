@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gadanki toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2020,6 +2020,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 425951,
+          "amount": 27785565.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 21110,
+          "amount": 3886050.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 85267,
+          "amount": 27590795.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23028,
+          "amount": 10077120.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 65122,
+          "amount": 43357185.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 43,
+          "amount": 34920.0
+        }
+      },
+      "total": {
+        "count": 620521,
+        "amount": 112731635.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

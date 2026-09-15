@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Gurthari"
   ],
-  "period_count": 7,
+  "period_count": 8,
   "months": {
     "2026-01": {
       "vehicles": {
@@ -267,6 +267,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 3995,
+          "amount": 71355.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 49,
+          "amount": 1715.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 416,
+          "amount": 29120.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 171,
+          "amount": 13680.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 3428,
+          "amount": 377080.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 110.0
+        }
+      },
+      "total": {
+        "count": 8060,
+        "amount": 493060.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

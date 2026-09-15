@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kiranj Toll Plaza"
   ],
-  "period_count": 41,
+  "period_count": 42,
   "months": {
     "2023-03": {
       "vehicles": {
@@ -1518,6 +1518,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 449622,
+          "amount": 28992810.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 22637,
+          "amount": 5004220.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 32563,
+          "amount": 15442290.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17702,
+          "amount": 9200755.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 37041,
+          "amount": 27191925.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 20,
+          "amount": 18095.0
+        }
+      },
+      "total": {
+        "count": 559585,
+        "amount": 85850095.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

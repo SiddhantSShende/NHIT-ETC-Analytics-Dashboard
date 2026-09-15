@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Tidagundi"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 144651,
+          "amount": 8666620.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 11292,
+          "amount": 2063115.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 56105,
+          "amount": 20732465.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28443,
+          "amount": 11975475.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 72727,
+          "amount": 44905965.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 559,
+          "amount": 419555.0
+        }
+      },
+      "total": {
+        "count": 313777,
+        "amount": 88763195.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

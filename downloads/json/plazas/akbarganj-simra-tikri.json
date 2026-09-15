@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Akbarganj Simra (Tikri) Plaza"
   ],
-  "period_count": 12,
+  "period_count": 13,
   "months": {
     "2025-08": {
       "vehicles": {
@@ -472,6 +472,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 38828,
+          "amount": 1106825.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 716,
+          "amount": 44210.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3766,
+          "amount": 497775.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1694,
+          "amount": 242705.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 6756,
+          "amount": 1392735.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 2,
+          "amount": 470.0
+        }
+      },
+      "total": {
+        "count": 51762,
+        "amount": 3284720.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

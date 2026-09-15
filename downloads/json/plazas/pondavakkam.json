@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Pondavakkam"
   ],
-  "period_count": 2,
+  "period_count": 3,
   "months": {
     "2026-06": {
       "vehicles": {
@@ -82,6 +82,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 49835,
+          "amount": 5102010.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4342,
+          "amount": 1363900.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3971,
+          "amount": 2513225.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1538,
+          "amount": 1085640.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 13973,
+          "amount": 12165820.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 9,
+          "amount": 10220.0
+        }
+      },
+      "total": {
+        "count": 73668,
+        "amount": 22240815.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

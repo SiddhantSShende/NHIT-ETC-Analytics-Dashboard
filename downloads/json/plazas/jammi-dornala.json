@@ -1,12 +1,12 @@
 {
   "plaza_name": "Jammi Dornala Toll Plaza",
   "plaza_slug": "jammi-dornala",
-  "piu": "",
-  "ro": "",
+  "piu": "Kurnool",
+  "ro": "Vijayawada",
   "source_raw_names": [
     "Jammi Dornala Toll Plaza"
   ],
-  "period_count": 1,
+  "period_count": 2,
   "months": {
     "2026-07": {
       "vehicles": {
@@ -43,6 +43,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 85081,
+          "amount": 1552705.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2632,
+          "amount": 82160.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 16612,
+          "amount": 1060060.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2142,
+          "amount": 164250.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 7807,
+          "amount": 935285.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 21,
+          "amount": 2275.0
+        }
+      },
+      "total": {
+        "count": 114295,
+        "amount": 3796735.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

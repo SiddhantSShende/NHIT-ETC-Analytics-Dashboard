@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Varwade Toll Plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2010,6 +2010,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 250296,
+          "amount": 13733245.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 21532,
+          "amount": 2508440.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 76810,
+          "amount": 18312480.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 16273,
+          "amount": 6656370.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 110991,
+          "amount": 45470915.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 372,
+          "amount": 189720.0
+        }
+      },
+      "total": {
+        "count": 476274,
+        "amount": 86871170.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

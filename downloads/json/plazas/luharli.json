@@ -6,7 +6,7 @@
   "source_raw_names": [
     "LUHARLI Toll plaza"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 820853,
+          "amount": 48573320.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 46191,
+          "amount": 9376755.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 120404,
+          "amount": 49413025.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 23813,
+          "amount": 16692955.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 79698,
+          "amount": 54001240.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 101,
+          "amount": 31580.0
+        }
+      },
+      "total": {
+        "count": 1091060,
+        "amount": 178088875.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

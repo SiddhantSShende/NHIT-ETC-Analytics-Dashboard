@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Chollang"
   ],
-  "period_count": 55,
+  "period_count": 56,
   "months": {
     "2022-01": {
       "vehicles": {
@@ -2012,6 +2012,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 314531,
+          "amount": 19396150.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 13465,
+          "amount": 2107110.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 64138,
+          "amount": 21449685.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 28000,
+          "amount": 9994700.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 40677,
+          "amount": 20552100.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 27,
+          "amount": 17785.0
+        }
+      },
+      "total": {
+        "count": 460838,
+        "amount": 73517530.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }

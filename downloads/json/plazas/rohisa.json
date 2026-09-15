@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Rohisa Toll Plaza"
   ],
-  "period_count": 25,
+  "period_count": 26,
   "months": {
     "2024-07": {
       "vehicles": {
@@ -942,6 +942,42 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Jul-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Jul-2026-1.pdf"
+      ]
+    },
+    "2026-08": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 124892,
+          "amount": 6212930.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 4942,
+          "amount": 808315.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14401,
+          "amount": 4732425.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 2682,
+          "amount": 1037850.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 27674,
+          "amount": 15819940.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 33,
+          "amount": 24180.0
+        }
+      },
+      "total": {
+        "count": 174624,
+        "amount": 28635640.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/vc_monthly/Aug-2026.pdf"
       ]
     }
   }
