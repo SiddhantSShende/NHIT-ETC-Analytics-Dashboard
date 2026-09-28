@@ -12,6 +12,20 @@ class TestCrawlerClassification(unittest.TestCase):
         self.assertEqual(report.family, "mlff")
         self.assertEqual(report.period, "2026-08")
 
+    def test_september_etc_report_is_classified(self):
+        report = classify("https://ihmcl.co.in/reports/Sept-2026-ETC-Data.pdf")
+
+        self.assertEqual(report.family, "etc")
+        self.assertEqual(report.period, "2026-09")
+
+    def test_september_annual_pass_report_is_classified(self):
+        report = classify(
+            "https://ihmcl.co.in/reports/Sept-2026-Annual-Pass-Data.pdf"
+        )
+
+        self.assertEqual(report.family, "annual_pass")
+        self.assertEqual(report.period, "2026-09")
+
 
 if __name__ == "__main__":
     unittest.main()

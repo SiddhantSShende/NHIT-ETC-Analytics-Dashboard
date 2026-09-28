@@ -777,6 +777,11 @@ def hydrate_period(
     return True
 
 
+def source_is_new(relative_source: str, exported_sources: list[str]) -> bool:
+    """Return whether a source PDF has not yet contributed to a period export."""
+    return relative_source not in exported_sources
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -934,13 +939,21 @@ def main(argv: list[str] | None = None) -> int:
     # ----- Annual-Pass PDFs -----
     ap_pdfs = discover_annual_pass_pdfs()
     log.info("Found %d Annual-Pass PDFs (%d to parse)",
-             len(ap_pdfs), sum(1 for p, _ in ap_pdfs if p not in reused))
+             len(ap_pdfs), sum(
+                 1 for period, path in ap_pdfs
+                 if period not in reused or source_is_new(
+                     str(path.relative_to(ROOT)).replace("\\", "/"),
+                     sources_by_period.get(period, []),
+                 )
+             ))
     for period, pdf_path in ap_pdfs:
-        if period in reused:
+        source = str(pdf_path.relative_to(ROOT)).replace("\\", "/")
+        if period in reused and not source_is_new(source, sources_by_period.get(period, [])):
             continue
         log.info("Parsing Annual-Pass %s -> %s", pdf_path.name, period)
         ap_rows = parse_annual_pass(pdf_path)
-        sources_by_period[period].append(str(pdf_path.relative_to(ROOT)).replace("\\", "/"))
+        if source_is_new(source, sources_by_period.setdefault(period, [])):
+            sources_by_period[period].append(source)
 
         for raw, info in ap_rows.items():
             resolved = resolver.resolve(raw)
