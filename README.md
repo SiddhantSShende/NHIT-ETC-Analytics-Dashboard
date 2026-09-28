@@ -62,15 +62,17 @@ For pure-static hosting (Vercel etc.) the dashboard works with just the static f
 
 ## Automated monthly publishing
 
-The Windows Task Scheduler task `NHIT ETC Data Refresh` runs on the 15th at 10:07 local time. It crawls IHMCL, builds and validates the JSON, pushes the data commit to `main`, and checks the production `_index.json` until it matches the generated data. The GitHub Actions workflow is manual-only because IHMCL blocks its hosted runners.
+The Windows Task Scheduler task `NHIT ETC Data Refresh` runs on the 15th at 10:07 local time. It crawls IHMCL, builds and validates the JSON, then pushes data to the only branch, `main`. IHMCL blocks GitHub-hosted crawlers, so crawling remains on the Windows machine.
 
-To make deployment independent of Vercel's Git integration, create a Vercel Deploy Hook for the production `main` branch and set it in the Windows user environment (do not commit the hook URL):
+Vercel Hobby blocks Git-triggered production deployments for this private repository when the commit author is not a project collaborator. The `Deploy dashboard` GitHub Actions workflow instead deploys `main` with the Vercel CLI under the account owner. It runs after every push to `main` and can be manually run on `main` to repair production.
 
-```powershell
-[Environment]::SetEnvironmentVariable("VERCEL_DEPLOY_HOOK_URL", "<deploy-hook-url>", "User")
-```
+Configure these GitHub repository Actions secrets before using that workflow:
 
-Sign out and back in so scheduled tasks inherit the updated environment, then run the task once. When production data is behind, the publisher calls the hook and waits up to 15 minutes for the live index to match. Without a hook it still waits for Git integration; a mismatch is logged as a failed task instead of being reported as a successful dashboard update. Rerunning `python scripts/update_and_publish.py` can also repair a stale deployment even when the crawl finds no new reports.
+- `VERCEL_TOKEN`: a token created by the Vercel account that owns the project.
+- `VERCEL_ORG_ID`: the Vercel team/account ID from `.vercel/project.json` after linking the project.
+- `VERCEL_PROJECT_ID`: the project ID from `.vercel/project.json` or Project Settings → General.
+
+After a data push, the Windows publisher waits up to 15 minutes for production `_index.json` to match the locally generated index. A mismatch is reported as a failed scheduled run. If there is no new data commit but production is stale, run `Deploy dashboard` manually on `main`.
 
 ## API
 

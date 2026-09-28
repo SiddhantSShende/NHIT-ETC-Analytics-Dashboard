@@ -180,15 +180,16 @@ def read_index() -> dict:
 
 
 def fetch_live_generated_at() -> str | None:
+    url = f"{LIVE_INDEX_URL}?verify={time.time_ns()}"
     request = Request(
-        LIVE_INDEX_URL,
+        url,
         headers={"Cache-Control": "no-cache, no-store", "Pragma": "no-cache"},
     )
     with urlopen(request, timeout=20) as response:
         return json.load(response).get("generated_at")
 
 
-def ensure_deployed(wait_for_git: bool = True) -> None:
+def ensure_deployed(wait_for_push: bool = True) -> None:
     expected = read_index().get("generated_at")
     if not expected:
         raise RuntimeError("Local downloads/json/_index.json has no generated_at value.")
@@ -202,22 +203,12 @@ def ensure_deployed(wait_for_git: bool = True) -> None:
         log.info("Production dashboard is current (%s).", expected)
         return
 
-    hook_url = os.environ.get("VERCEL_DEPLOY_HOOK_URL", "").strip()
-    if hook_url:
-        log.info("Production index is stale; triggering the configured Vercel deploy hook.")
-        request = Request(hook_url, data=b"", method="POST")
-        with urlopen(request, timeout=20) as response:
-            log.info("Vercel deploy hook accepted the request (HTTP %s).", response.status)
-    else:
-        if not wait_for_git:
-            raise RuntimeError(
-                "Production dashboard is stale and no new commit was pushed. "
-                "Configure VERCEL_DEPLOY_HOOK_URL to trigger a repair deployment."
-            )
-        log.warning(
-            "Production index is stale and VERCEL_DEPLOY_HOOK_URL is not set; "
-            "waiting for the Git integration to deploy the pushed commit."
+    if not wait_for_push:
+        raise RuntimeError(
+            "Production dashboard is stale and no new commit was pushed. "
+            "Run the 'Deploy dashboard' workflow on main to repair it."
         )
+    log.info("Production index is stale; waiting for the main-branch Vercel CLI deployment.")
 
     deadline = time.monotonic() + DEPLOY_TIMEOUT
     while time.monotonic() < deadline:
@@ -233,8 +224,8 @@ def ensure_deployed(wait_for_git: bool = True) -> None:
 
     raise RuntimeError(
         f"Production dashboard is still at generated_at={live!r}; "
-        f"expected {expected!r}. Check the Vercel production branch/deployment, "
-        "or configure VERCEL_DEPLOY_HOOK_URL for the main branch."
+        f"expected {expected!r}. Check the Vercel CLI deployment in GitHub Actions "
+        "('Deploy dashboard' on main)."
     )
 
 
@@ -359,7 +350,7 @@ def main(argv: list[str] | None = None) -> int:
         if not result.downloaded and not pending_pdfs and not unpushed and not args.force_build:
             log.info("Everything up to date — nothing downloaded, staged, or unpushed.")
             if not args.no_push:
-                ensure_deployed(wait_for_git=False)
+                ensure_deployed(wait_for_push=False)
             return 0
 
         # Periods needing a rebuild: this run's downloads plus any report PDFs
