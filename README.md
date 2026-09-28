@@ -5,12 +5,13 @@ Plaza-level analytics over IHMCL VC-Wise monthly toll reports. The dashboard is 
 ## Architecture
 
 ```
-downloads/{vc_monthly,ETC_Monthly_Data,Monthly_Annual_Pass_Report}/*.pdf
+downloads/{vc_monthly,ETC_Monthly_Data,Monthly_Annual_Pass_Report,MLFF_Plaza_Data}/*.pdf
                               │  scripts/build_json_export.py  (one-time, ~7 min)
                               ▼
         downloads/json/_index.json
         downloads/json/_taxonomy.json   ◀── built from data/Project details.xlsx
         downloads/json/monthly/<YYYY-MM>.json
+        downloads/json/mlff/<YYYY-MM>.json   (separate MLFF metrics)
         downloads/json/plazas/<slug>.json
                               │
                               ▼
@@ -32,14 +33,14 @@ The browser fetches JSON files directly from `downloads/json/` and aggregates in
 | `parser.py`               | PDF table extraction (vc_monthly + ETC_Monthly_Data layout). Pure functions. |
 | `ingestor.py`             | Plaza-name normalisation + alias map. |
 | `taxonomy.py`             | Reads `data/Project details.xlsx`, fuzzy-matches Excel plaza names to canonical names. |
-| `scripts/build_json_export.py` | Build script. Reads every PDF, writes `downloads/json/{_index,_taxonomy,monthly/*,plazas/*}.json`. Validates every plaza's per-category sums against the PDF's `TOTAL_CNT`/`TOTAL_AMT` cells. |
+| `scripts/build_json_export.py` | Build script. Writes ETC/annual-pass JSON under `monthly/` and `plazas/`, plus separate period JSON for MLFF PDFs under `mlff/`. Validates ETC plaza totals against the source PDFs. |
 | `data-layer.js`           | Browser-side data layer: fetches `downloads/json/*`, caches via Cache Storage API + in-memory map, ports `analytics.py`'s aggregation logic to JS. Exposes `window.DataLayer`. |
 | `static_loader.py`        | Loads `downloads/json/*` into a SNAPSHOT-shaped dict. |
 | `analytics.py`            | Aggregation helpers (`aggregate_plazas_for_month`, `aggregate_plazas_for_range`). |
 | `server.py`               | Flask app. One route: `/api/health`. Serves static files. |
 | `index.html`, `app.js`, `styles.css` | Frontend. |
 | `data/Project details.xlsx` | SPV / Round / Project taxonomy source. |
-| `downloads/json/`         | Generated. Per-month + per-plaza JSON files served as static assets. |
+| `downloads/json/`         | Generated. ETC per-month, separate MLFF per-period, and per-plaza JSON files served as static assets. |
 
 ## Usage
 

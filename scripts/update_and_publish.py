@@ -262,15 +262,28 @@ def sanity_check(
             "source PDFs are missing. Blocking publish."
         )
     for p in sorted(new_periods):
-        if p not in periods:
+        mlff_reports = {
+            report["period"]: report
+            for report in idx.get("mlff_reports", [])
+        }
+        if p not in periods and p not in mlff_reports:
             raise RuntimeError(f"Period {p} missing from rebuilt _index.json.")
         month_file = MONTHLY_DIR / f"{p}.json"
-        if not month_file.exists():
-            raise RuntimeError(f"{month_file.name} was not generated.")
-        doc = json.loads(month_file.read_text(encoding="utf-8"))
-        if not doc.get("plaza_count"):
-            raise RuntimeError(f"{month_file.name} has plaza_count 0 — bad parse.")
-        log.info("Sanity OK: %s (%d plazas)", p, doc["plaza_count"])
+        if p in periods:
+            if not month_file.exists():
+                raise RuntimeError(f"{month_file.name} was not generated.")
+            doc = json.loads(month_file.read_text(encoding="utf-8"))
+            if not doc.get("plaza_count"):
+                raise RuntimeError(f"{month_file.name} has plaza_count 0 — bad parse.")
+            log.info("Sanity OK: %s (%d ETC plazas)", p, doc["plaza_count"])
+        if p in mlff_reports:
+            mlff_file = INDEX_JSON.parent / mlff_reports[p]["path"]
+            if not mlff_file.exists():
+                raise RuntimeError(f"{mlff_file.name} was not generated.")
+            mlff_doc = json.loads(mlff_file.read_text(encoding="utf-8"))
+            if not mlff_doc.get("plaza_count"):
+                raise RuntimeError(f"{mlff_file.name} has plaza_count 0 — bad parse.")
+            log.info("Sanity OK: %s (%d MLFF plazas)", p, mlff_doc["plaza_count"])
     warnings = int(idx.get("validation_warnings", 0))
     if warnings > prev_warnings:
         msg = (
@@ -360,13 +373,12 @@ def main(argv: list[str] | None = None) -> int:
         # build was ever going to produce.
         new_periods = {
             r.period for r, _ in result.downloaded
-            if r.period and r.family in ("etc", "annual_pass")
+            if r.period and r.family in ("etc", "annual_pass", "mlff")
         }
         new_periods.update(
             p
             for f in pending_pdfs
-            if not f.startswith("downloads/MLFF_Plaza_Data")
-            and (p := period_from_filename(Path(f).name))
+            if (p := period_from_filename(Path(f).name))
         )
 
         if new_periods or args.force_build:

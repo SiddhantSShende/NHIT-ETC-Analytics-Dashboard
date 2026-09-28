@@ -1,17 +1,18 @@
 """
 NHIT | Per-month + per-plaza JSON exporter.
 
-Reads the IHMCL PDFs in `downloads/{vc_monthly,ETC_Monthly_Data,Monthly_Annual_Pass_Report}/`
+Reads IHMCL PDFs in `downloads/{vc_monthly,ETC_Monthly_Data,Monthly_Annual_Pass_Report,MLFF_Plaza_Data}/`
 and emits structured JSON files into `downloads/json/`:
 
     downloads/json/
       monthly/<YYYY-MM>.json   one file per period, all plazas
+            mlff/<YYYY-MM>.json      separate MLFF report data per period
       plazas/<slug>.json       one file per plaza, all periods
       _index.json              periods, plazas, sources, unmapped names
 
 vc_monthly and ETC_Monthly_Data per-month PDFs share the same 17-column
-VC-wise layout, so `parser.parse_pdf` handles both. Annual-Pass PDFs use
-a 5-column layout parsed locally.
+VC-wise layout. Annual-Pass PDFs and MLFF PDFs use distinct layouts and are
+parsed separately. MLFF output stays separate from ETC dashboard totals.
 
 Incremental by default: a period that already has monthly/<YYYY-MM>.json is
 NOT re-parsed — its record is rehydrated from that file instead. Parsing a
@@ -54,6 +55,7 @@ DOWNLOADS = ROOT / "downloads"
 OUT_DIR = DOWNLOADS / "json"
 MONTHLY_DIR = OUT_DIR / "monthly"
 PLAZAS_DIR = OUT_DIR / "plazas"
+MLFF_DIR = OUT_DIR / "mlff"
 # Per-period validation_warnings, kept beside the exports. Warnings are
 # produced at parse time, so a rehydrated period cannot recompute its own —
 # without this cache, _index.json's validation_warnings would silently drop
@@ -79,7 +81,7 @@ VALIDATION_TOLERANCE = 0.005  # 0.5%
 # ---------------------------------------------------------------------------
 
 _PERIOD_FROM_NAME_RE = re.compile(
-    r"(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*[-_\s]*(\d{4})",
+    r"(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*[-_\s]*(\d{4}|\d{2})",
     re.IGNORECASE,
 )
 
@@ -93,6 +95,8 @@ def period_from_filename(name: str) -> str | None:
         return None
     mon = MONTH_MAP.get(m.group(1).lower())
     yr = int(m.group(2))
+    if yr < 100:
+        yr += 2000
     if not mon:
         return None
     return f"{yr:04d}-{mon:02d}"
@@ -393,6 +397,111 @@ def parse_annual_pass(pdf_path: Path) -> dict[str, dict]:
     return out
 
 
+def _mlff_metric_key(header: str, category: str, offset: int, width: int) -> str:
+    compact = re.sub(r"[^A-Z]", "", header.upper())
+    if "ANNUALPASS" in compact:
+        return "annual_pass_count"
+    if "ENOTICE" in compact and "AMOUNT" in compact:
+        return "e_notice_amount_received"
+    if "ENOTICE" in compact:
+        return "e_notice_count"
+    if "ETCTXNCOUNT" in compact:
+        return "transaction_count"
+    if "ETCTXNAMOUNT" in compact:
+        return "transaction_amount"
+
+    if category.strip().lower() == "total":
+        return (
+            "transaction_count",
+            "transaction_amount",
+            "e_notice_count",
+            "e_notice_amount_received",
+        )[offset]
+    if offset == 0:
+        return "transaction_count"
+    if offset == 1:
+        return "transaction_amount"
+    if width == 4 and offset == 2:
+        return "annual_pass_count"
+    return "e_notice_count"
+
+
+def parse_mlff_table(table: list[list]) -> list[dict]:
+    """Parse one IHMCL MLFF monthly table without merging it into ETC data."""
+    header_idx = next(
+        (
+            index
+            for index, row in enumerate(table[:4])
+            if "PLAZA NAME" in " ".join(str(cell or "") for cell in row).upper()
+            and "MONTH-YEAR" in " ".join(str(cell or "") for cell in row).upper()
+        ),
+        None,
+    )
+    if header_idx is None or header_idx == 0 or header_idx + 1 >= len(table):
+        return []
+
+    current_header = table[header_idx]
+    category_terms = ("CAR", "JEEP", "VAN", "LCV", "BUS", "AXLE", "MAV", "OSV", "TOTAL")
+    has_group_headers = any(
+        any(term in str(cell or "").upper() for term in category_terms)
+        for cell in current_header[4:]
+    )
+    group_row = current_header if has_group_headers else table[header_idx - 1]
+    metric_row = table[header_idx + 1] if has_group_headers else current_header
+    data_start = header_idx + 2 if has_group_headers else header_idx + 1
+    starts = [
+        index for index, value in enumerate(group_row)
+        if index >= 4 and str(value or "").strip()
+    ]
+    if not starts:
+        return []
+
+    rows = []
+    for row in table[data_start:]:
+        if len(row) < 4:
+            continue
+        plaza_name = str(row[1] or "").strip()
+        if not plaza_name or plaza_name.lower() in {"plaza name", "total", "grand total"}:
+            continue
+        vehicles = {}
+        total = {}
+        for group_index, start in enumerate(starts):
+            end = starts[group_index + 1] if group_index + 1 < len(starts) else len(group_row)
+            category = str(group_row[start] or "").strip()
+            values = {}
+            for column in range(start, end):
+                if column >= len(row):
+                    continue
+                metric = _mlff_metric_key(
+                    str(metric_row[column] or ""), category, column - start, end - start
+                )
+                number = to_number(row[column])
+                values[metric] = int(number) if metric.endswith("count") else round(number, 2)
+            if category.lower() == "total":
+                total = values
+            elif any(values.values()):
+                vehicles[category] = values
+        rows.append({
+            "reporting_period_raw": str(row[0] or "").strip(),
+            "plaza_name": plaza_name,
+            "piu": str(row[2] or "").strip(),
+            "ro": str(row[3] or "").strip(),
+            "vehicles": vehicles,
+            "total": total,
+        })
+    return rows
+
+
+def parse_mlff_pdf(pdf_path: Path) -> list[dict]:
+    """Extract plaza rows from an IHMCL MLFF monthly report PDF."""
+    rows = []
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            for table in page.extract_tables() or []:
+                rows.extend(parse_mlff_table(table))
+    return rows
+
+
 # ---------------------------------------------------------------------------
 # FY-summary parser (12-month wide layout)
 # ---------------------------------------------------------------------------
@@ -564,6 +673,27 @@ def discover_annual_pass_pdfs() -> list[tuple[str, Path]]:
     return sorted(out.items())
 
 
+def discover_mlff_pdfs() -> list[tuple[str, Path]]:
+    """Find MLFF monthly reports in the archive and prior unclassified downloads."""
+    out: dict[str, Path] = {}
+    for source_dir in (DOWNLOADS / "MLFF_Plaza_Data", DOWNLOADS / "unclassified"):
+        if not source_dir.exists():
+            continue
+        for path in sorted(source_dir.rglob("*.pdf")):
+            name = path.name
+            if not (
+                name.upper().startswith("MLFF")
+                or re.match(r"^VC[_\s-]*Wise[_\s-]*Monthly[_\s-]*Data_", name, re.I)
+            ):
+                continue
+            period = period_from_filename(name)
+            if period:
+                out.setdefault(period, path)
+            else:
+                log.warning("Cannot infer period from MLFF report filename: %s", path)
+    return sorted(out.items())
+
+
 # ---------------------------------------------------------------------------
 # Incremental rehydration
 # ---------------------------------------------------------------------------
@@ -666,6 +796,7 @@ def main(argv: list[str] | None = None) -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     MONTHLY_DIR.mkdir(parents=True, exist_ok=True)
     PLAZAS_DIR.mkdir(parents=True, exist_ok=True)
+    MLFF_DIR.mkdir(parents=True, exist_ok=True)
 
     resolver = PlazaResolver()
 
@@ -837,6 +968,38 @@ def main(argv: list[str] | None = None) -> int:
             ap["transaction_count"] += int(info["transaction_count"])
             target["annual_pass"] = ap
 
+    # ----- Separate MLFF monthly JSON (not part of the ETC dashboard totals) -----
+    mlff_reports = []
+    for period, pdf_path in discover_mlff_pdfs():
+        log.info("Parsing MLFF report %s -> %s", pdf_path.name, period)
+        rows = parse_mlff_pdf(pdf_path)
+        if not rows:
+            log.warning("No plaza rows parsed from MLFF report %s", pdf_path.name)
+        relative_path = str(pdf_path.relative_to(ROOT)).replace("\\", "/")
+        doc = {
+            "period": period,
+            "year": int(period[:4]),
+            "month": MONTH_NAMES[int(period[5:])],
+            "source": relative_path,
+            "report_type": "mlff_monthly",
+            "plaza_count": len(rows),
+            "plazas": rows,
+        }
+        (MLFF_DIR / f"{period}.json").write_text(
+            json.dumps(doc, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        mlff_reports.append({
+            "period": period,
+            "source": relative_path,
+            "path": f"mlff/{period}.json",
+            "plaza_count": len(rows),
+        })
+    known_mlff_periods = {report["period"] for report in mlff_reports}
+    for stale in MLFF_DIR.glob("*.json"):
+        if stale.stem not in known_mlff_periods:
+            stale.unlink()
+            log.info("Pruned stale MLFF JSON %s", stale.name)
+
     # ----- Emit per-month files -----
     for period in sorted(monthly):
         year, mon = period.split("-")
@@ -969,6 +1132,7 @@ def main(argv: list[str] | None = None) -> int:
     index_doc = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "periods": sorted(monthly),
+        "mlff_reports": mlff_reports,
         "plaza_count": len(plaza_index),
         "plazas": [
             {

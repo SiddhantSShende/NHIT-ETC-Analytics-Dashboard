@@ -61,6 +61,7 @@ UNCLASSIFIED_DIR = DOWNLOADS / "unclassified"
 
 # Non-data documents that also live on the page.
 EXCLUDE_RE = re.compile(r"ANNUAL-RETURN|ANNUAL-REPORT|FAQ", re.I)
+MLFF_VC_REPORT_RE = re.compile(r"^VC[_\s-]*Wise[_\s-]*Monthly[_\s-]*Data_", re.I)
 # Monthly reports are the only files named <month-token><sep><4-digit-year>...
 MONTH_START_RE = re.compile(
     r"^(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*[-_\s]*\d{4}",
@@ -150,8 +151,8 @@ def classify(url: str) -> RemoteReport | None:
     name = unquote(urlparse(url).path.rsplit("/", 1)[-1])
     if EXCLUDE_RE.search(name):
         return None
-    if name.upper().startswith("MLFF"):
-        return RemoteReport(url, name, "mlff", None)
+    if name.upper().startswith("MLFF") or MLFF_VC_REPORT_RE.match(name):
+        return RemoteReport(url, name, "mlff", period_from_filename(name))
     period = period_from_filename(name)
     if not MONTH_START_RE.match(name):
         # MONTH_START_RE is anchored, so a report only counts as monthly when
