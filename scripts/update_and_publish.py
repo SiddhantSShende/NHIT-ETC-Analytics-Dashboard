@@ -206,9 +206,9 @@ def ensure_deployed(wait_for_push: bool = True) -> None:
     if not wait_for_push:
         raise RuntimeError(
             "Production dashboard is stale and no new commit was pushed. "
-            "Run the 'Deploy dashboard' workflow on main to repair it."
+            "Run this script with --force-build to publish the current JSON and trigger a Vercel deployment."
         )
-    log.info("Production index is stale; waiting for the main-branch Vercel CLI deployment.")
+    log.info("Production index is stale; waiting for Vercel to deploy the pushed main commit.")
 
     deadline = time.monotonic() + DEPLOY_TIMEOUT
     while time.monotonic() < deadline:
@@ -224,8 +224,8 @@ def ensure_deployed(wait_for_push: bool = True) -> None:
 
     raise RuntimeError(
         f"Production dashboard is still at generated_at={live!r}; "
-        f"expected {expected!r}. Check the Vercel CLI deployment in GitHub Actions "
-        "('Deploy dashboard' on main)."
+        f"expected {expected!r}. Check that Vercel is connected to this public repository, "
+        "uses main as its production branch, and the latest production deployment is Ready."
     )
 
 

@@ -14,7 +14,7 @@ class TestProductionDeployment(unittest.TestCase):
         ):
             publisher.ensure_deployed()
 
-    def test_ensure_deployed_waits_for_main_branch_cli_deployment(self):
+    def test_ensure_deployed_waits_for_main_branch_git_deployment(self):
         stale = "2026-08-15T11:53:07+00:00"
         with (
             patch.object(publisher, "read_index", return_value={"generated_at": self.generated_at}),
@@ -28,7 +28,7 @@ class TestProductionDeployment(unittest.TestCase):
             patch.object(publisher, "read_index", return_value={"generated_at": self.generated_at}),
             patch.object(publisher, "fetch_live_generated_at", return_value="2026-08-15T11:53:07+00:00"),
             patch.object(publisher.time, "sleep", side_effect=AssertionError("should fail immediately")),
-            self.assertRaisesRegex(RuntimeError, "Deploy dashboard.*main"),
+            self.assertRaisesRegex(RuntimeError, "--force-build"),
         ):
             publisher.ensure_deployed(wait_for_push=False)
 
@@ -38,7 +38,7 @@ class TestProductionDeployment(unittest.TestCase):
             patch.object(publisher, "fetch_live_generated_at", return_value="2026-08-15T11:53:07+00:00"),
             patch.object(publisher.time, "sleep", side_effect=AssertionError("should fail immediately")),
             patch.object(publisher, "DEPLOY_TIMEOUT", 0),
-            self.assertRaisesRegex(RuntimeError, "Deploy dashboard.*main"),
+            self.assertRaisesRegex(RuntimeError, "latest production deployment is Ready"),
         ):
             publisher.ensure_deployed()
 

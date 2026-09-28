@@ -64,15 +64,9 @@ For pure-static hosting (Vercel etc.) the dashboard works with just the static f
 
 The Windows Task Scheduler task `NHIT ETC Data Refresh` runs on the 15th at 10:07 local time. It crawls IHMCL, builds and validates the JSON, then pushes data to the only branch, `main`. IHMCL blocks GitHub-hosted crawlers, so crawling remains on the Windows machine.
 
-Vercel Hobby blocks Git-triggered production deployments for this private repository when the commit author is not a project collaborator. The `Deploy dashboard` GitHub Actions workflow instead deploys `main` with the Vercel CLI under the account owner. It runs after every push to `main` and can be manually run on `main` to repair production.
+The repository is public, so Vercel Hobby can deploy the connected GitHub repository without private-repository collaborator restrictions. Vercel's production branch must be set to `main`. Each successful data push to `main` triggers its production deployment; the publisher checks the live index afterward and fails visibly if the dashboard doesn't catch up.
 
-Configure these GitHub repository Actions secrets before using that workflow:
-
-- `VERCEL_TOKEN`: a token created by the Vercel account that owns the project.
-- `VERCEL_ORG_ID`: the Vercel team/account ID from `.vercel/project.json` after linking the project.
-- `VERCEL_PROJECT_ID`: the project ID from `.vercel/project.json` or Project Settings → General.
-
-After a data push, the Windows publisher waits up to 15 minutes for production `_index.json` to match the locally generated index. A mismatch is reported as a failed scheduled run. If there is no new data commit but production is stale, run `Deploy dashboard` manually on `main`.
+After a data push, the Windows publisher waits up to 15 minutes for production `_index.json` to match the locally generated index. A mismatch is reported as a failed scheduled run. If production is stale but there is no new data commit, run `python scripts/update_and_publish.py --force-build` to publish the current JSON and trigger a fresh Vercel deployment.
 
 ## API
 
