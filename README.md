@@ -63,7 +63,7 @@ For pure-static hosting (Vercel etc.) the dashboard works with just the static f
 
 ## Automated monthly publishing
 
-The Windows Task Scheduler task `NHIT ETC Data Refresh` runs on the 15th at 10:07 local time. It crawls IHMCL, builds and validates the JSON, then pushes data to the only branch, `main`. IHMCL blocks GitHub-hosted crawlers, so crawling remains on the Windows machine.
+The Windows Task Scheduler task `NHIT ETC Data Refresh` runs on the 15th at 10:07 local time. It wakes the PC from sleep, crawls IHMCL, builds and validates the JSON, then pushes data to the only branch, `main`. Transient failures retry up to three times at 15-minute intervals. IHMCL blocks GitHub-hosted crawlers, so crawling remains on the Windows machine. The PC must be powered on (not shut down) and the Windows account signed in; a missed run starts when Task Scheduler is available again.
 
 The repository is public, so Vercel Hobby can deploy the connected GitHub repository without private-repository collaborator restrictions. Vercel's production branch must be set to `main`. Each successful data push to `main` triggers its production deployment; the publisher checks the live index afterward and fails visibly if the dashboard doesn't catch up.
 

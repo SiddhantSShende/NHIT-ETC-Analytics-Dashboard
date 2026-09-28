@@ -121,6 +121,11 @@ $schedule
     <Enabled>true</Enabled>
     <Hidden>false</Hidden>
     <ExecutionTimeLimit>PT3H</ExecutionTimeLimit>
+    <WakeToRun>true</WakeToRun>
+    <RestartOnFailure>
+      <Interval>PT15M</Interval>
+      <Count>3</Count>
+    </RestartOnFailure>
     <Priority>7</Priority>
   </Settings>
   <Actions Context="Author">
