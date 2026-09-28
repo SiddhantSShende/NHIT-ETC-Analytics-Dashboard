@@ -8,6 +8,8 @@
   ],
   "routes": [
     { "src": "/api/(.*)",            "dest": "/server.py" },
+    { "src": "/downloads/json/_index\\.json", "dest": "/downloads/json/_index.json",
+      "headers": { "Cache-Control": "no-store, max-age=0" } },
     { "src": "/frontend/(.*)",       "dest": "/frontend/$1",
       "headers": { "Cache-Control": "public, max-age=86400" } },
     { "src": "/downloads/json/(.*)", "dest": "/downloads/json/$1",

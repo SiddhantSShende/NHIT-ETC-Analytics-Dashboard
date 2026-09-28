@@ -60,6 +60,18 @@ python server.py
 
 For pure-static hosting (Vercel etc.) the dashboard works with just the static files — `server.py` is only needed locally.
 
+## Automated monthly publishing
+
+The Windows Task Scheduler task `NHIT ETC Data Refresh` runs on the 15th at 10:07 local time. It crawls IHMCL, builds and validates the JSON, pushes the data commit to `main`, and checks the production `_index.json` until it matches the generated data. The GitHub Actions workflow is manual-only because IHMCL blocks its hosted runners.
+
+To make deployment independent of Vercel's Git integration, create a Vercel Deploy Hook for the production `main` branch and set it in the Windows user environment (do not commit the hook URL):
+
+```powershell
+[Environment]::SetEnvironmentVariable("VERCEL_DEPLOY_HOOK_URL", "<deploy-hook-url>", "User")
+```
+
+Sign out and back in so scheduled tasks inherit the updated environment, then run the task once. When production data is behind, the publisher calls the hook and waits up to 15 minutes for the live index to match. Without a hook it still waits for Git integration; a mismatch is logged as a failed task instead of being reported as a successful dashboard update. Rerunning `python scripts/update_and_publish.py` can also repair a stale deployment even when the crawl finds no new reports.
+
 ## API
 
 | Method | Path | Description |

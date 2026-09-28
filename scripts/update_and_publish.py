@@ -20,12 +20,13 @@ GitHub Actions workflow is a manual fallback only, because ihmcl.co.in
                                    so a crashed or unpushed previous run is
                                    picked up and completed by the next one)
 
-Nothing is committed or pushed if any earlier step fails, so the dashboard
-keeps serving the last good data.
+No data commit is pushed if crawling, building, or validation fails. After a
+push, production is checked against the generated index; deployment failures
+are reported even though the data commit may already be on GitHub.
 
 Run:  python scripts/update_and_publish.py
           [--dry-run] [--no-push] [--force-build] [--allow-warnings]
-Exit: 0 ok (including "nothing new"), 1 failure (nothing published),
+Exit: 0 ok (including "nothing new"), 1 pipeline/deployment failure,
       2 published but some downloads failed (partial).
 """
 from __future__ import annotations
@@ -39,6 +40,7 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
+from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -54,6 +56,9 @@ LOCK_FILE = LOGS_DIR / "update.lock"
 LOCK_STALE_SECONDS = 4 * 3600
 INDEX_JSON = ROOT / "downloads" / "json" / "_index.json"
 MONTHLY_DIR = ROOT / "downloads" / "json" / "monthly"
+LIVE_INDEX_URL = "https://nhit-etc-analytics-dashboard.vercel.app/downloads/json/_index.json"
+DEPLOY_TIMEOUT = 900
+DEPLOY_POLL_SECONDS = 15
 BUILD_TIMEOUT = 7200  # seconds. The incremental build only parses periods
 # with no monthly JSON yet, so a normal month costs ~90s. This ceiling is
 # sized for build_json_export.py --full (~105 min: pdfplumber table
@@ -172,6 +177,65 @@ def read_index() -> dict:
     if not INDEX_JSON.exists():
         return {}
     return json.loads(INDEX_JSON.read_text(encoding="utf-8"))
+
+
+def fetch_live_generated_at() -> str | None:
+    request = Request(
+        LIVE_INDEX_URL,
+        headers={"Cache-Control": "no-cache, no-store", "Pragma": "no-cache"},
+    )
+    with urlopen(request, timeout=20) as response:
+        return json.load(response).get("generated_at")
+
+
+def ensure_deployed(wait_for_git: bool = True) -> None:
+    expected = read_index().get("generated_at")
+    if not expected:
+        raise RuntimeError("Local downloads/json/_index.json has no generated_at value.")
+
+    try:
+        live = fetch_live_generated_at()
+    except Exception as exc:
+        log.warning("Could not read the production index yet: %s", exc)
+        live = None
+    if live == expected:
+        log.info("Production dashboard is current (%s).", expected)
+        return
+
+    hook_url = os.environ.get("VERCEL_DEPLOY_HOOK_URL", "").strip()
+    if hook_url:
+        log.info("Production index is stale; triggering the configured Vercel deploy hook.")
+        request = Request(hook_url, data=b"", method="POST")
+        with urlopen(request, timeout=20) as response:
+            log.info("Vercel deploy hook accepted the request (HTTP %s).", response.status)
+    else:
+        if not wait_for_git:
+            raise RuntimeError(
+                "Production dashboard is stale and no new commit was pushed. "
+                "Configure VERCEL_DEPLOY_HOOK_URL to trigger a repair deployment."
+            )
+        log.warning(
+            "Production index is stale and VERCEL_DEPLOY_HOOK_URL is not set; "
+            "waiting for the Git integration to deploy the pushed commit."
+        )
+
+    deadline = time.monotonic() + DEPLOY_TIMEOUT
+    while time.monotonic() < deadline:
+        time.sleep(DEPLOY_POLL_SECONDS)
+        try:
+            live = fetch_live_generated_at()
+        except Exception as exc:
+            log.warning("Production index check failed; retrying: %s", exc)
+            continue
+        if live == expected:
+            log.info("Production dashboard is current (%s).", expected)
+            return
+
+    raise RuntimeError(
+        f"Production dashboard is still at generated_at={live!r}; "
+        f"expected {expected!r}. Check the Vercel production branch/deployment, "
+        "or configure VERCEL_DEPLOY_HOOK_URL for the main branch."
+    )
 
 
 def run_build() -> None:
@@ -294,6 +358,8 @@ def main(argv: list[str] | None = None) -> int:
         unpushed = 0 if args.no_push else commits_ahead()
         if not result.downloaded and not pending_pdfs and not unpushed and not args.force_build:
             log.info("Everything up to date — nothing downloaded, staged, or unpushed.")
+            if not args.no_push:
+                ensure_deployed(wait_for_git=False)
             return 0
 
         # Periods needing a rebuild: this run's downloads plus any report PDFs
@@ -325,10 +391,11 @@ def main(argv: list[str] | None = None) -> int:
             log.info("--no-push set: stopping before git stage/commit/push.")
         else:
             publish(new_periods)
+            ensure_deployed()
 
         return 2 if result.errors else 0
     except Exception:
-        log.exception("Update failed — nothing was published.")
+        log.exception("Update failed; inspect the log to see whether data was already pushed.")
         return 1
     finally:
         release_lock()
