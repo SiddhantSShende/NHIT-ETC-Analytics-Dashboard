@@ -1,0 +1,100 @@
+{
+  "period": "2026-05",
+  "year": 2026,
+  "month": "May",
+  "source": "downloads/MLFF_Plaza_Data/MLFF-Plaza-Data-May-26_v1.pdf",
+  "report_type": "mlff_monthly",
+  "plaza_count": 2,
+  "plazas": [
+    {
+      "reporting_period_raw": "From 01-05-2026 to 31-\n05-2026",
+      "plaza_name": "Choryast",
+      "piu": "Surat",
+      "ro": "Gandhinagar",
+      "vehicles": {
+        "Car / Jeep": {
+          "transaction_count": 332103,
+          "transaction_amount": 30622325.0,
+          "annual_pass_count": 240704,
+          "e_notice_count": 144977
+        },
+        "LCV": {
+          "transaction_count": 54835,
+          "transaction_amount": 9008700.0,
+          "e_notice_count": 4918
+        },
+        "Bus / Truck": {
+          "transaction_count": 180197,
+          "transaction_amount": 61403160.0,
+          "e_notice_count": 9441
+        },
+        "3-Axle": {
+          "transaction_count": 26531,
+          "transaction_amount": 11397880.0,
+          "e_notice_count": 1192
+        },
+        "4-6 Axle": {
+          "transaction_count": 100142,
+          "transaction_amount": 57563880.0,
+          "e_notice_count": 8705
+        },
+        "7 OSV": {
+          "transaction_count": 517,
+          "transaction_amount": 393495.0,
+          "e_notice_count": 10
+        }
+      },
+      "total": {
+        "transaction_count": 935029,
+        "transaction_amount": 170389440.0,
+        "e_notice_count": 169243,
+        "e_notice_amount_received": 14376345.0
+      }
+    },
+    {
+      "reporting_period_raw": "From 11-05-2026 to 31-\n05-2026",
+      "plaza_name": "Mundka",
+      "piu": "Dwarka",
+      "ro": "Delhi",
+      "vehicles": {
+        "Car / Jeep": {
+          "transaction_count": 280525,
+          "transaction_amount": 47642440.0,
+          "annual_pass_count": 604781,
+          "e_notice_count": 111550
+        },
+        "LCV": {
+          "transaction_count": 14729,
+          "transaction_amount": 4772830.0,
+          "e_notice_count": 2942
+        },
+        "Bus / Truck": {
+          "transaction_count": 6413,
+          "transaction_amount": 4575935.0,
+          "e_notice_count": 2206
+        },
+        "3-Axle": {
+          "transaction_count": 2194,
+          "transaction_amount": 1709080.0,
+          "e_notice_count": 577
+        },
+        "4-6 Axle": {
+          "transaction_count": 2028,
+          "transaction_amount": 2325930.0,
+          "e_notice_count": 64
+        },
+        "7 OSV": {
+          "transaction_count": 3,
+          "transaction_amount": 3690.0,
+          "e_notice_count": 0
+        }
+      },
+      "total": {
+        "transaction_count": 910673,
+        "transaction_amount": 61029905.0,
+        "e_notice_count": 117339,
+        "e_notice_amount_received": 6902030.0
+      }
+    }
+  ]
+}
