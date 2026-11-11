@@ -68,6 +68,16 @@ MONTH_START_RE = re.compile(
     re.I,
 )
 ANNUAL_PASS_RE = re.compile(r"annual[-_\s]*pass", re.I)
+# Since Sep-2026 IHMCL names the main report VC-wise-ETC-Data-<Mon>-<Year>.pdf
+# (month in the middle, not at the start). The two reports it replaced were
+# "<Mon>-<Year>.pdf" and "<Mon>-<Year>-ETC-Data.pdf".
+ETC_NAME_RE = re.compile(r"^VC[-_\s]*wise[-_\s]*ETC[-_\s]*Data", re.I)
+# Typos IHMCL has published, rewritten before classification. Narrow on purpose:
+# anchored and required to be followed by a year. "Set-2026-Annual-Pass-Data.pdf"
+# is September (its own rows say "Sep-26").
+NAME_TYPOS = ((re.compile(r"^set(?=[-_\s]*\d{4})", re.I), "Sep"),)
+# First-page title of the main per-plaza report, however the file is named.
+MAIN_REPORT_TITLE_RE = re.compile(r"VC\s*Wise\s+Monthly\s+ETC\s+FASTag\s+Data", re.I)
 HREF_PDF_RE = re.compile(r'href=["\']([^"\']+\.pdf)["\']', re.I)
 
 MIN_PDF_BYTES = 10_240
@@ -147,22 +157,35 @@ def extract_pdf_links(html: str) -> list[str]:
     return links
 
 
+def normalize_name(name: str) -> str:
+    for pattern, replacement in NAME_TYPOS:
+        name = pattern.sub(replacement, name, count=1)
+    return name
+
+
 def classify(url: str) -> RemoteReport | None:
-    name = unquote(urlparse(url).path.rsplit("/", 1)[-1])
+    # The URL keeps IHMCL's spelling; the filename (what we save as, and what
+    # build_json_export.period_from_filename later reads) is the normalized one.
+    name = normalize_name(unquote(urlparse(url).path.rsplit("/", 1)[-1]))
     if EXCLUDE_RE.search(name):
         return None
     if name.upper().startswith("MLFF") or MLFF_VC_REPORT_RE.match(name):
         return RemoteReport(url, name, "mlff", period_from_filename(name))
     period = period_from_filename(name)
-    if not MONTH_START_RE.match(name):
-        # MONTH_START_RE is anchored, so a report only counts as monthly when
-        # its name *starts* with a month. If IHMCL renamed the main report to
-        # something like VC_Wise_Monthly_Data_June_2026.pdf, every month would
-        # fail that test, the tripwire below would still be satisfied by the
-        # older links left on the page, and the crawler would report "0 new"
-        # and exit 0 forever while the dashboard quietly froze. A name that
-        # carries a month+year but fails the anchor is exactly that case, so
-        # archive it and say so loudly rather than dropping it at DEBUG.
+    if ANNUAL_PASS_RE.search(name):
+        if not period:
+            log.warning("Annual-pass file without parseable period: %s", name)
+            return None
+        return RemoteReport(url, name, "annual_pass", period)
+    if not (MONTH_START_RE.match(name) or ETC_NAME_RE.match(name)):
+        # A report only counts as the main monthly one when its name starts
+        # with a month (the old styles) or is VC-wise-ETC-Data-... (the current
+        # one). A name that carries a month+year but fits neither is how
+        # IHMCL's renames have broken this crawler before: every month fails
+        # the match, the tripwire below is still satisfied by the older links
+        # left on the page, and the crawler reports "0 new" and exits 0 while
+        # the dashboard quietly freezes. Keep it as "unclassified" so crawl()
+        # can inspect its contents and, failing that, report it as an error.
         if period:
             return RemoteReport(url, name, "unclassified", period)
         log.debug("Ignoring non-monthly PDF: %s", name)
@@ -170,8 +193,59 @@ def classify(url: str) -> RemoteReport | None:
     if not period:
         log.warning("Monthly-looking file without parseable period: %s", name)
         return None
-    family = "annual_pass" if ANNUAL_PASS_RE.search(name) else "etc"
-    return RemoteReport(url, name, family, period)
+    return RemoteReport(url, name, "etc", period)
+
+
+def looks_like_main_etc_report(path: Path) -> bool:
+    """True if the PDF's first-page title is the main per-plaza ETC report.
+
+    The fallback for the next IHMCL rename: the file's *content* identifies it
+    even when its name matches nothing we know.
+    """
+    try:
+        import pdfplumber  # heavy; only needed on this rare path
+
+        with pdfplumber.open(path) as pdf:
+            title = (pdf.pages[0].extract_text() or "")[:300]
+    except Exception as exc:
+        log.warning("Could not read %s to identify it: %s", path.name, exc)
+        return False
+    return bool(MAIN_REPORT_TITLE_RE.search(title))
+
+
+def promote_unclassified(
+    reports: list[RemoteReport], downloaded: list[tuple[RemoteReport, Path]]
+) -> list[RemoteReport]:
+    """Move unclassified files that are really the main ETC report into vc_monthly/.
+
+    Returns the unclassified reports that remain unidentified.
+    """
+    have = local_state().etc
+    unresolved: list[RemoteReport] = []
+    for r in reports:
+        if r.family != "unclassified":
+            continue
+        src = UNCLASSIFIED_DIR / r.filename
+        if not src.exists():
+            unresolved.append(r)
+            continue
+        if r.period in have:
+            continue  # period already covered; nothing is being lost
+        if not looks_like_main_etc_report(src):
+            unresolved.append(r)
+            continue
+        VC_MONTHLY_DIR.mkdir(parents=True, exist_ok=True)
+        dst = VC_MONTHLY_DIR / r.filename
+        _replace_with_retry(src, dst)
+        have[r.period] = r.filename
+        promoted = RemoteReport(r.url, r.filename, "etc", r.period)
+        downloaded.append((promoted, dst))
+        log.warning(
+            "%s is not a known filename but its title identifies it as the main "
+            "monthly report: ingesting as %s. Teach classify() the new name.",
+            r.filename, r.period,
+        )
+    return unresolved
 
 
 def local_state() -> LocalState:
@@ -351,6 +425,25 @@ def crawl(dry_run: bool = False) -> CrawlResult:
             log.error(msg)
             result.errors.append(msg)
         time.sleep(1.5)
+
+    # Inspect every unclassified report on the page (not just this run's
+    # downloads) so a file left over from an earlier run is retried too.
+    unresolved = promote_unclassified(reports, result.downloaded)
+    etc_periods = local_state().etc
+    latest_etc = max(etc_periods) if etc_periods else ""
+    for r in unresolved:
+        if r.period > latest_etc:
+            # Newer than anything ingested, so this is very likely the month
+            # the dashboard is waiting for. Surface it as an error: a WARNING
+            # with exit 0 is how Sep and Oct 2026 went unnoticed.
+            msg = (
+                f"Unrecognized report {r.filename} (period {r.period}) is newer than "
+                f"the latest ingested month ({latest_etc or 'none'}) and was NOT "
+                "ingested - the dashboard will not update until classify() "
+                "learns this name."
+            )
+            log.error(msg)
+            result.errors.append(msg)
     return result
 
 

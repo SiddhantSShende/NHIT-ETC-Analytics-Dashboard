@@ -244,6 +244,70 @@ def run_build() -> None:
         raise RuntimeError(f"build_json_export.py exited {proc.returncode}")
 
 
+# A new month is compared with the nearest earlier month that has ETC totals.
+# These bounds are deliberately loose (real months move ~10%, e.g. Sep->Oct
+# 2026 was +9%): they exist to catch a misread layout, not to police traffic.
+VOLUME_RATIO_LIMITS = (0.5, 2.0)  # national transaction count
+PLAZA_RATIO_LIMITS = (0.7, 1.4)   # plazas reporting totals
+
+
+def period_stats(period: str) -> tuple[int, int] | None:
+    """(plazas with ETC totals, total transaction count), or None if no totals."""
+    path = MONTHLY_DIR / f"{period}.json"
+    if not path.exists():
+        return None
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    counts = [
+        p["total"]["count"]
+        for p in doc.get("plazas", [])
+        if p.get("total") and p["total"].get("count")
+    ]
+    return (len(counts), int(sum(counts))) if counts else None
+
+
+def check_plausible_volume(period: str, all_periods: list[str], allow_warnings: bool) -> None:
+    """Block a new month whose size is wildly off the previous one.
+
+    Needed because the October 2026 report shipped without TOTAL_CNT/TOTAL_AMT
+    columns, so validate_totals() had nothing to compare against and a column
+    mix-up would have produced plausible-looking but wrong data with 0 warnings.
+    """
+    stats = period_stats(period)
+    if stats is None:
+        return  # no ETC totals yet (e.g. only an Annual Pass file so far)
+    prev = next(
+        (
+            (p, s)
+            for p in sorted((q for q in all_periods if q < period), reverse=True)
+            if (s := period_stats(p)) is not None
+        ),
+        None,
+    )
+    if prev is None:
+        return
+    prev_period, (prev_plazas, prev_count) = prev
+    plazas, count = stats
+    problems = []
+    for label, now, before, (lo, hi) in (
+        ("transaction count", count, prev_count, VOLUME_RATIO_LIMITS),
+        ("plaza count", plazas, prev_plazas, PLAZA_RATIO_LIMITS),
+    ):
+        ratio = now / before
+        if not lo <= ratio <= hi:
+            problems.append(
+                f"{label} {now:,} is {ratio:.2f}x {prev_period}'s {before:,} "
+                f"(allowed {lo}-{hi}x)"
+            )
+    if not problems:
+        log.info("Plausibility OK: %s (%d plazas, %s transactions)", period, plazas, f"{count:,}")
+        return
+    msg = f"{period}: " + "; ".join(problems) + " - the PDF layout may have changed."
+    if allow_warnings:
+        log.warning("%s (--allow-warnings set, continuing)", msg)
+    else:
+        raise RuntimeError(msg + " Blocking publish (use --allow-warnings to override).")
+
+
 def sanity_check(
     new_periods: set[str],
     prev_periods: set[str],
@@ -276,6 +340,7 @@ def sanity_check(
             if not doc.get("plaza_count"):
                 raise RuntimeError(f"{month_file.name} has plaza_count 0 — bad parse.")
             log.info("Sanity OK: %s (%d ETC plazas)", p, doc["plaza_count"])
+            check_plausible_volume(p, sorted(periods), allow_warnings)
         if p in mlff_reports:
             mlff_file = INDEX_JSON.parent / mlff_reports[p]["path"]
             if not mlff_file.exists():
@@ -361,10 +426,19 @@ def main(argv: list[str] | None = None) -> int:
         pending_pdfs = untracked_data_pdfs()
         unpushed = 0 if args.no_push else commits_ahead()
         if not result.downloaded and not pending_pdfs and not unpushed and not args.force_build:
-            log.info("Everything up to date — nothing downloaded, staged, or unpushed.")
+            if result.errors:
+                # Nothing to publish, but the crawl itself reported problems (a
+                # report it could not ingest, or a failed download). That is not
+                # "up to date": exit non-zero so the scheduled run shows red.
+                log.error(
+                    "Nothing new was ingested, and the crawl reported %d problem(s): %s",
+                    len(result.errors), "; ".join(result.errors),
+                )
+            else:
+                log.info("Everything up to date — nothing downloaded, staged, or unpushed.")
             if not args.no_push:
                 ensure_deployed(wait_for_push=False)
-            return 0
+            return 2 if result.errors else 0
 
         # Periods needing a rebuild: this run's downloads plus any report PDFs
         # a previous crashed/unpushed run left uncommitted. Archive-only
