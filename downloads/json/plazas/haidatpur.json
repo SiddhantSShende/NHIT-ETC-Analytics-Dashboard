@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Haidatpur Toll Plaza"
   ],
-  "period_count": 2,
+  "period_count": 4,
   "months": {
     "2026-07": {
       "vehicles": {
@@ -82,6 +82,92 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Aug-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Aug-2026.pdf"
+      ]
+    },
+    "2026-09": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 42504,
+          "amount": 1231080.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1920,
+          "amount": 101615.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 11206,
+          "amount": 1306875.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 935,
+          "amount": 104835.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "4-6 Axle": {
+          "count": 2264,
+          "amount": 473755.0
+        }
+      },
+      "total": {
+        "count": 58829,
+        "amount": 3218160.0
+      },
+      "annual_pass": {
+        "transaction_count": 6076
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Sep-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Sept-2026.pdf"
+      ]
+    },
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 41878,
+          "amount": 1185110.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 2110,
+          "amount": 111730.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14063,
+          "amount": 1640700.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1248,
+          "amount": 146000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "4-6 Axle": {
+          "count": 2600,
+          "amount": 527330.0
+        }
+      },
+      "total": {
+        "count": 61899,
+        "amount": 3610870.0
+      },
+      "annual_pass": {
+        "transaction_count": 6059
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
       ]
     }
   }

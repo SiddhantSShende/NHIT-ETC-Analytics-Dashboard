@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Kothagudem Toll Plaza"
   ],
-  "period_count": 7,
+  "period_count": 9,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -279,6 +279,92 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Aug-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Aug-2026.pdf"
+      ]
+    },
+    "2026-09": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 15819,
+          "amount": 781480.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 655,
+          "amount": 68770.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 883,
+          "amount": 202400.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 134,
+          "amount": 34890.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 1,
+          "amount": 520.0
+        },
+        "4-6 Axle": {
+          "count": 815,
+          "amount": 331675.0
+        }
+      },
+      "total": {
+        "count": 18307,
+        "amount": 1419735.0
+      },
+      "annual_pass": {
+        "transaction_count": 4092
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Sep-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Sept-2026.pdf"
+      ]
+    },
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 20156,
+          "amount": 1018120.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 721,
+          "amount": 78195.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 997,
+          "amount": 229280.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 238,
+          "amount": 60495.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "4-6 Axle": {
+          "count": 1500,
+          "amount": 562110.0
+        }
+      },
+      "total": {
+        "count": 23612,
+        "amount": 1948200.0
+      },
+      "annual_pass": {
+        "transaction_count": 5193
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
       ]
     }
   }

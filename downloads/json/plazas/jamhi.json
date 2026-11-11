@@ -1,0 +1,53 @@
+{
+  "plaza_name": "Jamhi Toll Plaza",
+  "plaza_slug": "jamhi",
+  "piu": "Dhamtari",
+  "ro": "Raipur",
+  "source_raw_names": [
+    "Jamhi Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 7261,
+          "amount": 187405.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 210,
+          "amount": 10020.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 806,
+          "amount": 81185.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 110,
+          "amount": 12610.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "4-6 Axle": {
+          "count": 5864,
+          "amount": 1022580.0
+        }
+      },
+      "total": {
+        "count": 14251,
+        "amount": 1313800.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
+      ]
+    }
+  }
+}

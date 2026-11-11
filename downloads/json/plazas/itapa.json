@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Itapa Toll Plaza"
   ],
-  "period_count": 6,
+  "period_count": 8,
   "months": {
     "2026-02": {
       "vehicles": {
@@ -238,6 +238,92 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Aug-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Aug-2026.pdf"
+      ]
+    },
+    "2026-09": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 156896,
+          "amount": 8386515.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6327,
+          "amount": 818140.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 24893,
+          "amount": 6952680.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 17876,
+          "amount": 4735400.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 86,
+          "amount": 43235.0
+        },
+        "4-6 Axle": {
+          "count": 127641,
+          "amount": 52780440.0
+        }
+      },
+      "total": {
+        "count": 333719,
+        "amount": 73716410.0
+      },
+      "annual_pass": {
+        "transaction_count": 38373
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Sep-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Sept-2026.pdf"
+      ]
+    },
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 174806,
+          "amount": 9326835.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 6526,
+          "amount": 839580.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 29597,
+          "amount": 8122155.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 22753,
+          "amount": 6070560.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 91,
+          "amount": 45475.0
+        },
+        "4-6 Axle": {
+          "count": 157654,
+          "amount": 63844195.0
+        }
+      },
+      "total": {
+        "count": 391427,
+        "amount": 88248800.0
+      },
+      "annual_pass": {
+        "transaction_count": 44232
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
       ]
     }
   }

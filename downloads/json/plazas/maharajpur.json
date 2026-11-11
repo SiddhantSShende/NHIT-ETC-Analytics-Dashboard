@@ -6,7 +6,7 @@
   "source_raw_names": [
     "Maharajpur Toll Plaza"
   ],
-  "period_count": 43,
+  "period_count": 45,
   "months": {
     "2023-02": {
       "vehicles": {
@@ -1593,6 +1593,92 @@
       "sources": [
         "downloads/Monthly_Annual_Pass_Report/2026/Aug-2026-Annual-Pass-Data.pdf",
         "downloads/vc_monthly/Aug-2026.pdf"
+      ]
+    },
+    "2026-09": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 30218,
+          "amount": 1422800.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 969,
+          "amount": 100425.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3913,
+          "amount": 907770.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 751,
+          "amount": 213000.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 7,
+          "amount": 2675.0
+        },
+        "4-6 Axle": {
+          "count": 5427,
+          "amount": 2216005.0
+        }
+      },
+      "total": {
+        "count": 41285,
+        "amount": 4862675.0
+      },
+      "annual_pass": {
+        "transaction_count": 6241
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Sep-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Sept-2026.pdf"
+      ]
+    },
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 36366,
+          "amount": 1753680.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1240,
+          "amount": 129675.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 4092,
+          "amount": 951780.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 1187,
+          "amount": 317850.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 31,
+          "amount": 11490.0
+        },
+        "4-6 Axle": {
+          "count": 8087,
+          "amount": 3246070.0
+        }
+      },
+      "total": {
+        "count": 51003,
+        "amount": 6410545.0
+      },
+      "annual_pass": {
+        "transaction_count": 7267
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
       ]
     }
   }

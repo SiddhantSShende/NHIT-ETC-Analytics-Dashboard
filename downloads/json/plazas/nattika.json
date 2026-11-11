@@ -1,0 +1,53 @@
+{
+  "plaza_name": "Nattika Toll Plaza",
+  "plaza_slug": "nattika",
+  "piu": "Cochin/Kochi",
+  "ro": "Kerala",
+  "source_raw_names": [
+    "Nattika Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 206618,
+          "amount": 17218740.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 8533,
+          "amount": 1482535.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 18838,
+          "amount": 6764790.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3964,
+          "amount": 1527730.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 5,
+          "amount": 2860.0
+        },
+        "4-6 Axle": {
+          "count": 14039,
+          "amount": 8044105.0
+        }
+      },
+      "total": {
+        "count": 251997,
+        "amount": 35040760.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
+      ]
+    }
+  }
+}

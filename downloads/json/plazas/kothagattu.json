@@ -1,0 +1,53 @@
+{
+  "plaza_name": "Kothagattu Toll Plaza",
+  "plaza_slug": "kothagattu",
+  "piu": "Warangal",
+  "ro": "Hyderabad",
+  "source_raw_names": [
+    "Kothagattu Toll Plaza"
+  ],
+  "period_count": 1,
+  "months": {
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 66358,
+          "amount": 6848485.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 1831,
+          "amount": 390985.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 14689,
+          "amount": 6261025.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 3070,
+          "amount": 1636515.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 6,
+          "amount": 5235.0
+        },
+        "4-6 Axle": {
+          "count": 26058,
+          "amount": 20680675.0
+        }
+      },
+      "total": {
+        "count": 112012,
+        "amount": 35822920.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
+      ]
+    }
+  }
+}

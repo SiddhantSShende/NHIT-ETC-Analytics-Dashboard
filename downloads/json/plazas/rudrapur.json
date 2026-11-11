@@ -1,0 +1,96 @@
+{
+  "plaza_name": "Rudrapur Toll Plaza",
+  "plaza_slug": "rudrapur",
+  "piu": "Amravati - NGP",
+  "ro": "Nagpur",
+  "source_raw_names": [
+    "Rudrapur Toll Plaza"
+  ],
+  "period_count": 2,
+  "months": {
+    "2026-09": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 375,
+          "amount": 6530.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 14,
+          "amount": 520.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 101,
+          "amount": 7550.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 6,
+          "amount": 500.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "4-6 Axle": {
+          "count": 28,
+          "amount": 3520.0
+        }
+      },
+      "total": {
+        "count": 524,
+        "amount": 18620.0
+      },
+      "annual_pass": null,
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Sep-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Sept-2026.pdf"
+      ]
+    },
+    "2026-10": {
+      "vehicles": {
+        "Car / Jeep / Van (VC4)": {
+          "count": 16367,
+          "amount": 254185.0
+        },
+        "Light Commercial Vehicle (VC5)": {
+          "count": 671,
+          "amount": 24100.0
+        },
+        "Bus / Truck - 2 Axle (VC6)": {
+          "count": 3424,
+          "amount": 245365.0
+        },
+        "3-Axle Vehicle (VC7)": {
+          "count": 304,
+          "amount": 24640.0
+        },
+        "4-6 Axle (VC8/9/10)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "Oversized Vehicle (VC11+)": {
+          "count": 0,
+          "amount": 0.0
+        },
+        "4-6 Axle": {
+          "count": 1406,
+          "amount": 172340.0
+        }
+      },
+      "total": {
+        "count": 22172,
+        "amount": 720630.0
+      },
+      "annual_pass": {
+        "transaction_count": 2496
+      },
+      "sources": [
+        "downloads/Monthly_Annual_Pass_Report/2026/Oct-2026-Annual-Pass-Data.pdf",
+        "downloads/vc_monthly/VC-wise-ETC-Data-Oct-2026.pdf"
+      ]
+    }
+  }
+}
